@@ -7,14 +7,27 @@ ms.date: 07/31/2017
 ms.topic: article
 ms.assetid: 36ea641e-4d49-4881-84eb-a9ca85b1cdf4
 ms.custom: seodec18
-ms.openlocfilehash: 3eee7ff6d1f8302e98cde84fccabf5d9113c83f2
-ms.sourcegitcommit: ca08a78925880ed3eccf88edb30def16c83f2543
+ms.openlocfilehash: 2567e68ca0e9897a7b7bc7315760b81ff4923c1a
+ms.sourcegitcommit: 8c74868b8d8ff0106e15e4bce5e8337642883ec1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2019
-ms.locfileid: "59063633"
+ms.lasthandoff: 05/01/2019
+ms.locfileid: "64988264"
 ---
 # <a name="release-notes-for-windows-subsystem-for-linux"></a>Notas de la versión para el subsistema de Windows para Linux
+
+## <a name="build-18890"></a>Compilación 18890
+Para Windows general, visite información sobre las compilación 18890 el [blog Windows](https://blogs.windows.com/windowsexperience/2019/05/01/announcing-windows-10-insider-preview-build-18890/).
+
+### <a name="wsl"></a>WSL
+* Pérdida de socket de no bloqueo [GH 2913]
+* Entrada EOF al terminal puede bloquear las lecturas subsiguientes [GH 3421]
+* Actualizar resolv.conf encabezado para hacer referencia a wsl.conf [descritos en GH 3928]
+* Interbloqueo en epoll eliminar código [GH 3922]
+* Controlar los espacios en los argumentos--importar y – exportar [GH 3932]
+* Archivos de extensión mmap no funciona correctamente [GH 3939]
+* Solución de problemas con ARM64 \\acceso de $ wsl no funciona correctamente
+* Agregar una mejor icono predeterminado para wsl.exe
 
 ## <a name="build-18342"></a>Compilación 18342
 Para Windows general, visite información sobre las compilación 18342 el [blog Windows](https://blogs.windows.com/windowsexperience/2019/02/20/announcing-windows-10-insider-preview-build-18342/).
@@ -349,8 +362,7 @@ Para Windows general, visite información sobre las compilación 17627 el [Blog 
 * Agregar compatibilidad para las operaciones basadas en la pi futex. [GH 1006]
     * Tenga en cuenta que las prioridades no son actualmente una característica WSL admitida por lo que existen limitaciones, pero debe desbloquearse uso estándar.
 * Compatibilidad con el firewall de Windows para los procesos WSL. [GH 1852]
-    * Por ejemplo, para permitir el WSL python procesa para que escuche en cualquier puerto, utilice el cmd de Windows con privilegios elevados:
-```netsh.exe advfirewall firewall add rule name=wsl_python dir=in action=allow program="C:\users\<username>\appdata\local\packages\canonicalgrouplimited.ubuntuonwindows_79rhkp1fndgsc\localstate\rootfs\usr\bin\python2.7" enable=yes```
+    * Por ejemplo, para permitir el WSL python procesa para que escuche en cualquier puerto, utilice el cmd de Windows con privilegios elevados: ```netsh.exe advfirewall firewall add rule name=wsl_python dir=in action=allow program="C:\users\<username>\appdata\local\packages\canonicalgrouplimited.ubuntuonwindows_79rhkp1fndgsc\localstate\rootfs\usr\bin\python2.7" enable=yes```
     * Para obtener más información sobre cómo agregar reglas de firewall, consulte [vínculo](https://support.microsoft.com/en-us/help/947709/how-to-use-the-netsh-advfirewall-firewall-context-instead-of-the-netsh)
 * Respetar el shell predeterminado del usuario cuando se usa wsl.exe. [GH 2372]
 * Informe todas las interfaces de red como ethernet. [GH 2996]
@@ -793,7 +805,7 @@ A continuación se muestran una lista de nuevas o mejoradas syscalls que tienen 
 `prlimit64`<br/>
 
 ### <a name="known-issues"></a>Problemas conocidos
-#### [<a name="github-issue-2392-windows-folders-not-recognized-by-wsl-"></a>GitHub Issue 2392: Carpetas de Windows no reconoce WSL...](https://github.com/Microsoft/BashOnWindows/issues/2392)
+#### <a name="github-issue-2392-windows-folders-not-recognized-by-wsl-httpsgithubcommicrosoftbashonwindowsissues2392"></a>[GitHub Issue 2392: Carpetas de Windows no reconoce WSL...](https://github.com/Microsoft/BashOnWindows/issues/2392)
 En la compilación 16257, WSL tiene problemas al enumerar los archivos o carpetas de Windows a través de `/mnt/c/...`.
 Este problema se ha corregido y deberían liberarse en Insider durante la semana del 14/8/2017.
 

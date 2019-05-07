@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 7ca59bd7-d9d3-4f6d-8b92-b8faa9bcf250
 ms.custom: seodec18
 ms.openlocfilehash: c806552750f413fcb75f989d868a57cc939af64a
-ms.sourcegitcommit: ca08a78925880ed3eccf88edb30def16c83f2543
+ms.sourcegitcommit: ae0956bc0543b1c45765f3620ce9a55c9afe55da
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59063503"
 ---
 # <a name="manage-and-configure-windows-subsystem-for-linux"></a>Administrar y configurar el subsistema de Windows para Linux
@@ -23,9 +23,9 @@ ms.locfileid: "59063503"
 
 Hay muchas maneras de ejecutar Linux con el subsistema de Windows para Linux.
 
-1. `[distro]` ie `ubuntu`
-1. `wsl.exe` o bien `bash.exe`
-1. `wsl [command]` o bien `bash -c [command]`
+1. `[distro]` es decir `ubuntu`
+1. `wsl.exe` o `bash.exe`
+1. `wsl [command]` o `bash -c [command]`
 
 Qué método debe usar depende de lo que está haciendo.
 
@@ -43,7 +43,7 @@ También puede ejecutar la distribución de la línea de comandos ejecutando `[d
 
 La desventaja de la ejecución de una distribución de la línea de comandos de esta manera es que cambiará automáticamente el directorio de trabajo desde el directorio actual al directorio principal de la distribución.
 
-**Por ejemplo:**
+**Ejemplo:**
 
 ```console
 PS C:\Users\sarah> pwd
@@ -66,7 +66,7 @@ PS C:\Users\sarah>
 
 La mejor manera de ejecutar WSL desde la línea de comandos usa `wsl.exe`.
 
-**Por ejemplo:**
+**Ejemplo:**
 
 ```console
 PS C:\Users\sarah> pwd
@@ -83,7 +83,7 @@ scooley@scooley-elmer:/mnt/c/Users/sarah$ pwd
 
 No sólo hace `wsl` mantener el directorio de trabajo actual en su lugar, le permite ejecutar un comando único a lo largo de los comandos de Windows de lado.
 
-**Por ejemplo:**
+**Ejemplo:**
 
 ```console
 PS C:\Users\sarah> Get-Date
@@ -100,7 +100,7 @@ PS C:\Users\sarah> wsl date
 Sun Mar 11 19:55:47 DST 2018
 ```
 
-**Por ejemplo:**
+**Ejemplo:**
 
 ```console
 PS C:\Users\sarah> Get-VM
@@ -147,7 +147,7 @@ La distribución de WSL predeterminada es la que se ejecuta cuando se ejecuta `w
 
 La distribución predeterminada se establece en `<DistributionName>`.
 
-**Por ejemplo:**  
+**Ejemplo:**  
 `wsl -s Ubuntu` establecer la distribución de forma predeterminada en Ubuntu.  Ahora cuando ejecuto `wsl npm init` se ejecutará en Ubuntu.  Si ejecuto `wsl` abrirá una sesión de Ubuntu.
 
 #### <a name="unregister-and-reinstall-a-distribution"></a>Anular el registro y volver a instalar una distribución
@@ -213,7 +213,7 @@ La distribución de WSL predeterminada es la que se ejecuta cuando se ejecuta `w
 
 La distribución predeterminada se establece en `<DistributionName>`.
 
-**Por ejemplo:**  
+**Ejemplo:**  
 `wslconfig /setdefault Ubuntu` establecer la distribución de forma predeterminada en Ubuntu.  Ahora cuando ejecuto `wsl npm init` se ejecutará en Ubuntu.  Si ejecuto `wsl` abrirá una sesión de Ubuntu.
 
 #### <a name="unregister-and-reinstall-a-distribution"></a>Anular el registro y volver a instalar una distribución

@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: f70e685f-24c6-4908-9546-bf4f0291d8fd
 ms.custom: seodec18
 ms.openlocfilehash: 5820d701d5c0e22f14bf76e3dc6fe70bacb5213a
-ms.sourcegitcommit: ca08a78925880ed3eccf88edb30def16c83f2543
+ms.sourcegitcommit: ae0956bc0543b1c45765f3620ce9a55c9afe55da
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59063603"
 ---
 # <a name="user-accounts-and-permissions-for-windows-subsystem-for-linux"></a>Las cuentas de usuario y los permisos para el subsistema de Windows para Linux
@@ -132,12 +132,12 @@ Cuando se ejecuta Linux en WSL, Linux tendrán los mismos permisos de Windows qu
 
 Los permisos de Windows anteriores son independientes de los permisos dentro de una instancia de Linux: "Privilegios de raíz" de Linux afecten solo a los derechos del usuario dentro del entorno de Linux & del sistema de archivos; no tienen ningún impacto en los privilegios de Windows concedidos. Por lo tanto, que se ejecuta un proceso de Linux como raíz (por ejemplo, mediante `sudo`) solo concede que procesan los derechos de administrador en el entorno de Linux.
 
-**Por ejemplo:**    
+**Ejemplo:**    
 Puede tener acceso una sesión de Bash con privilegios de administrador de Windows `cd /mnt/c/Users/Administrator` mientras una sesión de Bash sin privilegios de Administrador vería un error "Permiso denegado".
 
 En Linux, escriba `sudo cd /mnt/c/Users/Administrator` no concederá acceso al directorio del administrador porque los permisos dentro de Windows administrados por Windows.
 
 El modelo de permisos de Linux es importante cuando se encuentra dentro del entorno de Linux donde el usuario tenga permisos en función del usuario actual de Linux.
 
-**Por ejemplo:**  
+**Ejemplo:**  
 Puede ejecutar un usuario en el grupo de sudo `sudo apt update`.

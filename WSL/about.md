@@ -8,12 +8,13 @@ ms.date: 07/11/2016
 ms.topic: article
 ms.assetid: 3cefe0db-7616-4848-a2b6-9296746a178b
 ms.custom: seodec18
-ms.openlocfilehash: a9c8d32f2b87319b45b1b757b4d71c0a4c41292c
-ms.sourcegitcommit: ca08a78925880ed3eccf88edb30def16c83f2543
+ms.localizationpriority: High
+ms.openlocfilehash: ad582d1b3a3d4277ee1b9b7adb0dc63a644abce9
+ms.sourcegitcommit: ae0956bc0543b1c45765f3620ce9a55c9afe55da
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2019
-ms.locfileid: "59063513"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59529069"
 ---
 # <a name="windows-subsystem-for-linux-documentation"></a>Subsistema de Windows para la documentación de Linux
 
@@ -43,7 +44,7 @@ Se puede hacer lo siguiente:
 * [Subsistema de Windows para Linux Blog](https://blogs.msdn.microsoft.com/wsl/) (historial)
 
 ## <a name="posts--articles"></a>Artículos y publicaciones
-* [Ejecutar Bash en Ubuntu en Windows](https://blogs.windows.com/buildingapps/2016/03/30/run-bash-on-ubuntu-on-windows/)
+* [Ejecución de Bash en Ubuntu en Windows](https://blogs.windows.com/buildingapps/2016/03/30/run-bash-on-ubuntu-on-windows/)
 * [Los desarrolladores pueden ejecutar Bash y archivos binarios de Usermode Ubuntu Linux en Windows 10](https://www.hanselman.com/blog/DevelopersCanRunBashShellAndUsermodeUbuntuLinuxBinariesOnWindows10.aspx)
 * [Ubuntu en Windows: el Ubuntu Userspace para desarrolladores de Windows](https://insights.ubuntu.com/2016/03/30/ubuntu-on-windows-the-ubuntu-userspace-for-windows-developers/) 
 
