@@ -7,6 +7,6 @@
 # [Windows Subsystem for Linux para empresas](./enterprise.md)
 # [Interoperabilidad](./interop.md)
 # [Compilar una distribución personalizada](./build-custom-distro.md)
-# [Preguntas más frecuentes](./faq.md)
+# [Preguntas frecuentes](./faq.md)
 # [Solución de problemas](./troubleshooting.md)
 # [Notas de la versión](./release-notes.md)
