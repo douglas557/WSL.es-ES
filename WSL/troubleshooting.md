@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 6753f1b2-200e-49cc-93a5-4323e1117246
 ms.custom: seodec18
 ms.openlocfilehash: 055bdc02dcf8f078caa014abd6dd755a47c99cfe
-ms.sourcegitcommit: ca08a78925880ed3eccf88edb30def16c83f2543
+ms.sourcegitcommit: ae0956bc0543b1c45765f3620ce9a55c9afe55da
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/04/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59063303"
 ---
 # <a name="troubleshooting-windows-subsystem-for-linux"></a>Solución de problemas de subsistema de Windows para Linux
@@ -114,11 +114,11 @@ Algunos usuarios han informado de problemas con aplicaciones específicas de fir
 En algunos casos si se desactiva el firewall permite el acceso.  En algunos casos solo hecho de tener instalado el servidor de seguridad busca para bloquear el acceso.
 
 ### <a name="permission-denied-error-when-using-ping"></a>Error de permiso denegado cuando usa el comando ping
-#### [<a name="anniversary-update"></a>Actualización de aniversario](https://msdn.microsoft.com/en-us/commandline/wsl/release_notes#build-14388-to-windows-10-anniversary-update) 
+#### <a name="anniversary-updatehttpsmsdnmicrosoftcomen-uscommandlinewslreleasenotesbuild-14388-to-windows-10-anniversary-update"></a>[Actualización de aniversario](https://msdn.microsoft.com/en-us/commandline/wsl/release_notes#build-14388-to-windows-10-anniversary-update) 
 
 Se requieren privilegios de administrador en Windows para ejecutar ping en WSL.  Para ejecutar el comando ping, ejecute Bash en Ubuntu en Windows como administrador o ejecute bash.exe desde un símbolo del sistema CMD/PowerShell con privilegios de administrador.
 
-#### [<a name="build-14926"></a>Compilación 14926 +](https://msdn.microsoft.com/en-us/commandline/wsl/release_notes#build-14926)
+#### <a name="build-14926httpsmsdnmicrosoftcomen-uscommandlinewslreleasenotesbuild-14926"></a>[Compilación 14926 +](https://msdn.microsoft.com/en-us/commandline/wsl/release_notes#build-14926)
   Privilegios de administrador ya no es necesarios.
 
 ### <a name="bash-is-hung"></a>Bash se ha bloqueado
