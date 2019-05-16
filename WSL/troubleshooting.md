@@ -86,7 +86,7 @@ Para desactivar consola heredado:
 1. Haga clic en Aceptar
 
 ### <a name="error-0x80040154-after-windows-update"></a>"Error: 0 x 80040154 "después de actualización de Windows
-El subsistema de Windows para Linux característica puede deshabilitarse durante una actualización de Windows. Si esto ocurre se debe volver a habilitar la característica de Windows. Instrucciones para habilitar el subsistema Windows para Linux se puede encontrar en el [Guía de instalación](https://msdn.microsoft.com/en-us/commandline/wsl/install_guide#enable-the-windows-subsystem-for-linux-feature-gui https://msdn.microsoft.com/en-us/commandline/wsl/install_guide#enable-the-windows-subsystem-for-linux-feature-gui).
+El subsistema de Windows para Linux característica puede deshabilitarse durante una actualización de Windows. Si esto ocurre se debe volver a habilitar la característica de Windows. Instrucciones para habilitar el subsistema Windows para Linux se puede encontrar en el [Guía de instalación](https://msdn.microsoft.com/en-us/commandline/wsl/install_guide#enable-the-windows-subsystem-for-linux-feature-guihttps://msdn.microsoft.com/en-us/commandline/wsl/install_guide#enable-the-windows-subsystem-for-linux-feature-gui).
 
 ### <a name="changing-the-display-language"></a>Cambiar el idioma para mostrar
 Instalación WSL intentará cambiar automáticamente la configuración regional de Ubuntu para que coincida con la configuración regional de la instalación de Windows.  Si no desea este comportamiento se puede ejecutar este comando para cambiar la configuración regional de Ubuntu después de que se complete la instalación.  Tendrá que reiniciar bash.exe para que este cambio surta efecto.
