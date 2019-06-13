@@ -8,12 +8,12 @@ ms.date: 03/27/2018
 ms.topic: article
 ms.assetid: a5095219-0c82-4ce5-9a6d-5c2fc00835a3
 ms.custom: seodec18
-ms.openlocfilehash: b98101c19d7d450548531521c3f8ee15ce62f9f1
-ms.sourcegitcommit: ae0956bc0543b1c45765f3620ce9a55c9afe55da
+ms.openlocfilehash: 4072df5fa81f65fd9a3ff875ab887c03b234bce1
+ms.sourcegitcommit: db69625e26bc141ea379a830790b329e51ed466b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59063263"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67040775"
 ---
 # <a name="creating-a-custom-linux-distro-for-wsl"></a>Creación de una distribución de Linux personalizada para WSL
 
@@ -24,7 +24,7 @@ Este proyecto permite:
 * A los desarrolladores crear distribuciones de Linux personalizadas que pueden transferir localmente en su equipo de desarrollo
 
 ## <a name="background"></a>Background
-Distribuimos distribuciones de Linux para WSL como aplicaciones para UWP a través de la Microsoft Store. Puede instalar las aplicaciones que se ejecutarán en WSL - el subsistema que se encuentra en el kernel de Windows. Este mecanismo de entrega tiene muchas ventajas, como se describe en una entrada de blog anterior.
+Distribuimos distribuciones de Linux para WSL como aplicaciones para UWP a través de la Microsoft Store. Puede instalar las aplicaciones que se ejecutarán en WSL - el subsistema que se encuentra en el kernel de Windows. Este mecanismo de entrega tiene muchas ventajas, como se describe en un [anteriores de blog](https://blogs.msdn.microsoft.com/commandline/2017/07/10/ubuntu-now-available-from-the-windows-store/).
 
 ## <a name="sideloading-a-custom-linux-distro-package"></a>Instalación de prueba un paquete de distribución de Linux personalizada
 Puede crear un paquete personalizado de distribución de Linux como una aplicación para transferir localmente en su equipo personal. Tenga en cuenta que el paquete personalizado no se distribuyen a través de la Microsoft Store a menos que se envía como un mantenedor de distribución.
@@ -42,6 +42,6 @@ Siga las instrucciones de la [repositorio de GitHub de distribución del iniciad
 * [Blog de línea de comandos](https://blogs.msdn.microsoft.com/commandline/)
 
 ## <a name="provide-feedback"></a>Proporcionar comentarios
-* [Repositorio de Github del iniciador de distribución](https://github.com/Microsoft/WSL-DistroLauncher)
+* [Repositorio de GitHub del iniciador de distribución](https://github.com/Microsoft/WSL-DistroLauncher)
 * [Seguimiento de problemas de GitHub de WSL](https://github.com/Microsoft/BashOnWindows/issues)
 * [Portal de UserVoice de línea de comandos](https://wpdev.uservoice.com/forums/266908-command-prompt-console-bash-on-ubuntu-on-windo/category/161892-bash)

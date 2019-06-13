@@ -8,12 +8,12 @@ ms.date: 09/11/2017
 ms.topic: article
 ms.assetid: f70e685f-24c6-4908-9546-bf4f0291d8fd
 ms.custom: seodec18
-ms.openlocfilehash: 5820d701d5c0e22f14bf76e3dc6fe70bacb5213a
-ms.sourcegitcommit: ae0956bc0543b1c45765f3620ce9a55c9afe55da
+ms.openlocfilehash: 0d00b43d059e72edd4e2a5b9591c29441f461fca
+ms.sourcegitcommit: db69625e26bc141ea379a830790b329e51ed466b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59063603"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67040826"
 ---
 # <a name="user-accounts-and-permissions-for-windows-subsystem-for-linux"></a>Las cuentas de usuario y los permisos para el subsistema de Windows para Linux
 
@@ -128,11 +128,11 @@ Cuando se ejecuta Linux en WSL, Linux tendrán los mismos permisos de Windows qu
 * Normal (sin privilegios elevados): Linux se ejecuta con los permisos del usuario que inició sesión
 * Administración/con privilegios elevados: Linux se ejecuta con permisos de administrador con permisos elevados/Windows
 
-> Dado que eleva procesos pueden cambiar o daños datos y la configuración de todo el sistema y puede acceso o modificar carpetas y archivos protegidos, **Evite** iniciar elevados procesos a menos que sea absolutamente necesario - ya sean Windows o ¡Aplicaciones de Linux/tools/shells!
+> Porque los procesos elevados pueden acceso o modificar (y, por tanto, dañar)-wide y proteger el sistema de datos y la configuración de todo el sistema **Evite** iniciar procesos con privilegios elevados a menos que sea absolutamente necesario - ya sean Windows o Linux ¡aplicaciones/tools/shells!
 
 Los permisos de Windows anteriores son independientes de los permisos dentro de una instancia de Linux: "Privilegios de raíz" de Linux afecten solo a los derechos del usuario dentro del entorno de Linux & del sistema de archivos; no tienen ningún impacto en los privilegios de Windows concedidos. Por lo tanto, que se ejecuta un proceso de Linux como raíz (por ejemplo, mediante `sudo`) solo concede que procesan los derechos de administrador en el entorno de Linux.
 
-**Ejemplo:**    
+**Ejemplo:**     
 Puede tener acceso una sesión de Bash con privilegios de administrador de Windows `cd /mnt/c/Users/Administrator` mientras una sesión de Bash sin privilegios de Administrador vería un error "Permiso denegado".
 
 En Linux, escriba `sudo cd /mnt/c/Users/Administrator` no concederá acceso al directorio del administrador porque los permisos dentro de Windows administrados por Windows.
