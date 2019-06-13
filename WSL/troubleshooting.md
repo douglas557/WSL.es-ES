@@ -8,12 +8,12 @@ ms.date: 11/15/2017
 ms.topic: article
 ms.assetid: 6753f1b2-200e-49cc-93a5-4323e1117246
 ms.custom: seodec18
-ms.openlocfilehash: 055bdc02dcf8f078caa014abd6dd755a47c99cfe
-ms.sourcegitcommit: ae0956bc0543b1c45765f3620ce9a55c9afe55da
+ms.openlocfilehash: feb9e25da73eeb0d7f0cef4014221a42e2ca179b
+ms.sourcegitcommit: db69625e26bc141ea379a830790b329e51ed466b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59063303"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67040845"
 ---
 # <a name="troubleshooting-windows-subsystem-for-linux"></a>Solución de problemas de subsistema de Windows para Linux
 
@@ -86,7 +86,7 @@ Para desactivar consola heredado:
 1. Haga clic en Aceptar
 
 ### <a name="error-0x80040154-after-windows-update"></a>"Error: 0 x 80040154 "después de actualización de Windows
-El subsistema de Windows para Linux característica puede deshabilitarse durante una actualización de Windows. Si esto ocurre se debe volver a habilitar la característica de Windows. Instrucciones para habilitar el subsistema Windows para Linux se puede encontrar en el [Guía de instalación](https://msdn.microsoft.com/en-us/commandline/wsl/install_guide#enable-the-windows-subsystem-for-linux-feature-guihttps://msdn.microsoft.com/en-us/commandline/wsl/install_guide#enable-the-windows-subsystem-for-linux-feature-gui).
+El subsistema de Windows para Linux característica puede deshabilitarse durante una actualización de Windows. Si esto ocurre se debe volver a habilitar la característica de Windows. Instrucciones para habilitar el subsistema Windows para Linux se puede encontrar en el [Guía de instalación](https://msdn.microsoft.com/en-us/commandline/wsl/install_guide#enable-the-windows-subsystem-for-linux-feature-gui https://msdn.microsoft.com/en-us/commandline/wsl/install_guide#enable-the-windows-subsystem-for-linux-feature-gui).
 
 ### <a name="changing-the-display-language"></a>Cambiar el idioma para mostrar
 Instalación WSL intentará cambiar automáticamente la configuración regional de Ubuntu para que coincida con la configuración regional de la instalación de Windows.  Si no desea este comportamiento se puede ejecutar este comando para cambiar la configuración regional de Ubuntu después de que se complete la instalación.  Tendrá que reiniciar bash.exe para que este cambio surta efecto.
@@ -149,7 +149,6 @@ systeminfo | Select-String "^OS Name","^OS Version"
 ### <a name="confirm-wsl-is-enabled"></a>Confirme que está habilitado WSL
 Puede confirmar que está habilitado el subsistema Windows para Linux ejecutando lo siguiente en PowerShell:  
 ``` PowerShell
-PowerShell
 Get-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
 ```
 
@@ -165,7 +164,22 @@ Intentando conectar el servidor SSH se produjo el error siguiente: "Conexión ce
    sudo service ssh stop
    sudo /usr/sbin/sshd -d
    ```
-3. Compruebe los registros de inicio y asegúrese de que existen las claves y no ve los mensajes de registro, como: debug1: versión sshd OpenSSH_7.2, OpenSSL 1.0.2g 1 de marzo de 2016 debug1: key_load_private: frase de contraseña incorrecta suministrado para descifrar debug1 clave privada: key_load_public : No existe tal archivo o directorio no se pudo cargar la clave de host: /etc/ssh/ssh_host_rsa_key debug1: key_load_private: Sin este tipo debug1 de archivo o directorio: key_load_public: No existe tal archivo o directorio no se pudo cargar la clave de host: /etc/ssh/ssh_host_dsa_key debug1: key_load_private: Sin este tipo debug1 de archivo o directorio: key_load_public: No existe tal archivo o directorio no se pudo cargar la clave de host: /etc/ssh/ssh_host_ecdsa_key debug1: key_load_private: Sin este tipo debug1 de archivo o directorio: key_load_public: No existe tal archivo o directorio no se pudo cargar la clave de host: /etc/ssh/ssh_host_ed25519_key
+3. Compruebe los registros de inicio y asegúrese de que existen las claves y no ve los mensajes de registro, como:
+   ```
+   debug1: sshd version OpenSSH_7.2, OpenSSL 1.0.2g  1 Mar 2016
+   debug1: key_load_private: incorrect passphrase supplied to decrypt private key
+   debug1: key_load_public: No such file or directory
+   Could not load host key: /etc/ssh/ssh_host_rsa_key
+   debug1: key_load_private: No such file or directory
+   debug1: key_load_public: No such file or directory
+   Could not load host key: /etc/ssh/ssh_host_dsa_key
+   debug1: key_load_private: No such file or directory
+   debug1: key_load_public: No such file or directory
+   Could not load host key: /etc/ssh/ssh_host_ecdsa_key
+   debug1: key_load_private: No such file or directory
+   debug1: key_load_public: No such file or directory
+   Could not load host key: /etc/ssh/ssh_host_ed25519_key
+   ```
 
 Si ve estos mensajes y faltan las claves bajo `/etc/ssh/`, tendrá que volver a generar las claves o simplemente purgar & instalar openssh-server:
 ```BASH

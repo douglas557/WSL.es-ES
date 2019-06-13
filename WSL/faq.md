@@ -7,12 +7,12 @@ ms.author: taraj
 ms.date: 9/4/2018
 ms.topic: article
 ms.assetid: 129101ed-b88a-43c2-b6a2-cd2c4ff6fee1
-ms.openlocfilehash: 80675d8452b626ebe1d235774167c5ff27e4b44d
-ms.sourcegitcommit: ae0956bc0543b1c45765f3620ce9a55c9afe55da
+ms.openlocfilehash: 07461f7db4a351f5b79ab0c5179d3d917ef1bdf7
+ms.sourcegitcommit: bb88269eb37405192625fa81ff91162393fb491f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59063273"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67035059"
 ---
 # <a name="frequently-asked-questions-about-windows-subsystem-for-linux"></a>Preguntas más frecuentes sobre el subsistema de Windows para Linux
 
@@ -82,7 +82,7 @@ Una de las ventajas de WSL es poder acceder a los archivos a través de herramie
 
 WSL monta las unidades fijas de su equipo bajo el `/mnt/<drive>` carpeta en sus distribuciones de Linux. Por ejemplo, su `C:` unidad se monta en `/mnt/c/` 
 
-Con las unidades montadas, puede editar código, por ejemplo, `C:\dev\myproj\` mediante [Visual Studio](https://visualstudio.microsoft.com/vs/) / o [VS Code](https://code.visualstudio.com/)y compilar/probar ese código en Linux mediante el acceso a los mismos archivos a través de `\mnt\c\dev\myproj`.
+Con las unidades montadas, puede editar código, por ejemplo, `C:\dev\myproj\` mediante [Visual Studio](https://visualstudio.microsoft.com/vs/) / o [VS Code](https://code.visualstudio.com/)y compilar/probar ese código en Linux mediante el acceso a los mismos archivos a través de `/mnt/c/dev/myproj`.
 
 > **NOTA IMPORTANTE**: Una de las limitaciones más importantes del uso de WSL es que no es posible obtener acceso a/cambiar directamente los archivos del sistema de archivos de sus distribuciones de Linux con las aplicaciones de Windows o herramientas. Vea: [No cambie los archivos de Linux con las herramientas y aplicaciones de Windows](https://blogs.msdn.microsoft.com/commandline/2016/11/17/do-not-change-linux-files-using-windows-apps-and-tools/)
 
@@ -146,7 +146,7 @@ WSL no admite que se ejecuta en una consola heredada. Para desactivar consola he
 1. Haga clic en Aceptar
 
 ## <a name="why-do-i-get-error-0x80040154-when-i-run-bashexe-after-upgrading-windows"></a>¿Por qué obtiene "Error: ¿0 x 80040154 "cuando ejecuto bash.exe después de actualizar a Windows?
-Se puede deshabilitar la característica "Subsistema de Windows para Linux" durante una actualización de Windows. Si esto ocurre se debe volver a habilitar la característica de Windows. Puede encontrar instrucciones para habilitar la característica "Subsistema de Windows para Linux" en el [Guía de instalación](https://msdn.microsoft.com/en-us/commandline/wsl/install_guide#enable-the-windows-subsystem-for-linux-feature-guihttps://msdn.microsoft.com/en-us/commandline/wsl/install_guide#enable-the-windows-subsystem-for-linux-feature-gui).
+Se puede deshabilitar la característica "Subsistema de Windows para Linux" durante una actualización de Windows. Si esto ocurre se debe volver a habilitar la característica de Windows. Puede encontrar instrucciones para habilitar la característica "Subsistema de Windows para Linux" en el [Guía de instalación](https://msdn.microsoft.com/en-us/commandline/wsl/install_guide#enable-the-windows-subsystem-for-linux-feature-gui https://msdn.microsoft.com/en-us/commandline/wsl/install_guide#enable-the-windows-subsystem-for-linux-feature-gui).
 
 ## <a name="how-do-i-change-the-display-language-of-wsl"></a>¿Cómo se puede cambiar el idioma para mostrar de WSL?
 Instalación WSL intentará cambiar automáticamente la configuración regional de Ubuntu para que coincida con la configuración regional de la instalación de Windows. Si no desea este comportamiento se puede ejecutar este comando para cambiar la configuración regional de Ubuntu después de que se complete la instalación. Tendrá que reiniciar bash.exe para que este cambio surta efecto.
