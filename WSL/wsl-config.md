@@ -134,7 +134,7 @@ Cada distribución de Linux administra independientemente sus propias configurac
 Enumera todas las distribuciones de Linux disponibles en WSL.  Si se muestra una distribución, es porque está instalada y lista para usarse.
 
 `wsl --list --all`   
-Enumera todas las distribuciones, las que no están actualmente utilizable incluidas.  Se puede estar en el proceso de instalar, desinstalar, o se encuentran en un estado interrumpido.  
+Enumera todas las distribuciones, incluidas las que no se pueden usar actualmente porque es posible que se encuentren en proceso de instalación, desinstalación o en un estado interrumpido.
 
 `wsl --list --running`   
 Enumera todas las distribuciones que se están ejecutando actualmente.
@@ -203,7 +203,7 @@ Usage:
 Enumera todas las distribuciones de Linux disponibles en WSL.  Si se muestra una distribución, es porque está instalada y lista para usarse.
 
 `wslconfig /list /all`  
-Enumera todas las distribuciones, las que no están actualmente utilizable incluidas.  Se puede estar en el proceso de instalar, desinstalar, o se encuentran en un estado interrumpido.  
+Enumera todas las distribuciones, incluidas las que no se pueden usar actualmente porque es posible que se encuentren en proceso de instalación, desinstalación o en un estado interrumpido. 
 
 #### <a name="set-a-default-distribution"></a>Configurar una distribución predeterminada
 
@@ -217,6 +217,7 @@ Establece la distribución predeterminada en `<DistributionName>`.
 `wslconfig /setdefault Ubuntu` establece la distribución predeterminada en Ubuntu.  Ahora cuando se ejecute`wsl npm init` , se ejecutará en Ubuntu.  Si ejecuto `wsl` , se abrirá una sesión de Ubuntu.
 
 #### <a name="unregister-and-reinstall-a-distribution"></a>Anular el registro y volver a instalar una distribución
+Aunque las distribuciones de Linux se pueden instalar a través de Microsoft Store, no se pueden desinstalar a través del mismo. WSL Config permite anular el registro de las distribuciones o desinstalarlas.
 
 Aunque las distribuciones de Linux se pueden instalar a través de Microsoft Store, no se pueden desinstalar a través del mismo.  WSL Config permite anular el registro o desinstalar distribuciones.
 
