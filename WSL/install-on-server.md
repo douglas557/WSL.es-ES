@@ -1,66 +1,66 @@
 ---
-title: Instale el subsistema de Linux en Windows Server
-description: Instrucciones de instalación para el subsistema de Linux en Windows Server.
-keywords: BashOnWindows, bash, wsl, windows, el subsistema de windows para linux, windowssubsystem, ubuntu, windows server
+title: Instalación del subsistema Linux en Windows Server
+description: Instrucciones de instalación para el subsistema Linux en Windows Server.
+keywords: BashOnWindows, bash, WSL, Windows, subsistema de Windows para Linux, windowssubsystem, Ubuntu, Windows Server
 author: scooley
 ms.author: scooley
 ms.date: 05/22/2018
 ms.topic: article
 ms.assetid: 9281ffa2-4fa9-4078-bf6f-b51c967617e3
 ms.custom: seodec18
-ms.openlocfilehash: 25723395212575f8fe2dcbfbd30b59de9431816a
-ms.sourcegitcommit: bb88269eb37405192625fa81ff91162393fb491f
+ms.openlocfilehash: d295cf3db99fb45b943369f532f7e807a603061c
+ms.sourcegitcommit: 8b5a8d49b63441478dd540887f534dcc6dd0ba41
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67035076"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67308790"
 ---
 # <a name="windows-server-installation-guide"></a>Guía de instalación de Windows Server
 
 > Se aplica a Windows Server 2019 y versiones posteriores
 
-En / / Build2017, Microsoft anunció que el subsistema de Windows para Linux será [disponible en Windows Server](https://blogs.technet.microsoft.com/hybridcloud/2017/05/10/windows-server-for-developers-news-from-microsoft-build-2017/).  Estas instrucciones se recorra ejecuta el subsistema de Windows para Linux en Windows Server 1709 y versiones posteriores.
+En//Build2017, Microsoft anunció que el subsistema de Windows para Linux estará [disponible en Windows Server](https://blogs.technet.microsoft.com/hybridcloud/2017/05/10/windows-server-for-developers-news-from-microsoft-build-2017/).  Estas instrucciones le guían en la ejecución del subsistema de Windows para Linux en Windows Server 1709 y versiones posteriores.
 
-## <a name="enable-the-windows-subsystem-for-linux-wsl"></a>Habilitar el subsistema Windows para Linux (WSL)
+## <a name="enable-the-windows-subsystem-for-linux-wsl"></a>Habilitación del subsistema de Windows para Linux (WSL)
 
-Antes de poder ejecutar las distribuciones de Linux en Windows, debe habilitar la característica opcional "Subsistema de Windows para Linux" y reinicie.
+Antes de poder ejecutar Linux distribuciones en Windows, debe habilitar la característica opcional "subsistema de Windows para Linux" y reiniciar.
 
 1. Abra PowerShell como administrador y ejecute:
     ```powershell
     Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
     ```
 
-2. Reinicie el equipo cuando se le solicite. **Este reinicio es necesario** con el fin de asegurarse de que WSL puede iniciar un entorno de ejecución de confianza.
+2. Reinicie el equipo cuando se le solicite. **Este reinicio es necesario** para asegurarse de que WSL pueda iniciar un entorno de ejecución de confianza.
 
-## <a name="download-a-linux-distro"></a>Descargue una distribución de Linux
+## <a name="download-a-linux-distro"></a>Descarga de un distribución de Linux
 
-Siga [estas instrucciones](install-manual.md) para descargar la distribución de Linux favorita.
+Siga [estas instrucciones](install-manual.md) para descargar su distribución de Linux favorita.
 
-## <a name="extract-and-install-a-linux-distro"></a>Extraer e instalar una distribución de Linux
-Ahora que ha descargado una distribución, extraiga el contenido e instalar manualmente la distribución:
+## <a name="extract-and-install-a-linux-distro"></a>Extracción e instalación de un distribución de Linux
+Ahora que ha descargado un distribución, extraiga su contenido e instale manualmente el distribución:
 
-1. Extraer el `<distro>.appx` contenido del paquete, por ejemplo, mediante PowerShell:
+1. Extraiga el `<distro>.appx` contenido del paquete, por ejemplo, mediante PowerShell:
 
     ```powershell
-    Rename-Item ~/Ubuntu.appx ~/Ubuntu.zip
-    Expand-Archive ~/Ubuntu.zip ~/Ubuntu
+    Rename-Item ./Ubuntu.appx ./Ubuntu.zip
+    Expand-Archive ./Ubuntu.zip ./Ubuntu
     ```
 
-2. Ejecute el iniciador de distribución para completar la instalación, ejecute la aplicación de selector de distribución en la carpeta de destino, denominado `<distro>.exe`. Por ejemplo: `ubuntu.exe`, etcetera.
+2. Ejecute el iniciador de distribución para completar la instalación, ejecute la aplicación del iniciador de distribución `<distro>.exe`en la carpeta de destino, denominada. Por ejemplo: `ubuntu.exe`, etc.
 
-    ![Distribución de Ubuntu expandida en Windows Server](media/server-appx-expand.png)
+    ![Se amplió Ubuntu distribución en Windows Server](media/server-appx-expand.png)
 
     > **Solución de problemas**
-    > * **Error de instalación 0x8007007e**: Este error se produce cuando el sistema no admite WSL. Asegúrese de que:
-    >   * Ya está ejecutando Windows compilación 16215 o posterior. [Comprobar la compilación](troubleshooting.md#check-your-build-number).
-    >   * El subsistema de Windows para el componente opcional de Linux está habilitado y ha reiniciado el equipo.  [Asegúrese de que está habilitado WSL](troubleshooting.md#confirm-wsl-is-enabled).
+    > * **No se pudo realizar la instalación. error 0x8007007e**: Este error se produce cuando el sistema no es compatible con WSL. Asegúrese de que:
+    >   * Está ejecutando Windows Build 16215 o posterior. [Compruebe la compilación](troubleshooting.md#check-your-build-number).
+    >   * El componente opcional de subsistema de Windows para Linux está habilitado y el equipo se ha reiniciado.  [Asegúrese de que WSL está habilitado](troubleshooting.md#confirm-wsl-is-enabled).
     
-3. Agregar la ruta de acceso de distribución a la ruta de acceso de entorno de Windows (`C:\Users\Administrator\Ubuntu` en este ejemplo), por ejemplo, mediante Powershell:
+3. Agregue la ruta de acceso de distribución a la ruta`C:\Users\Administrator\Ubuntu` de acceso del entorno de Windows (en este ejemplo), por ejemplo, con PowerShell:
         
     ```powershell
     $userenv = [System.Environment]::GetEnvironmentVariable("Path", "User")
     [System.Environment]::SetEnvironmentVariable("PATH", $userenv + ";C:\Users\Administrator\Ubuntu", "User")
     ```
-    Ahora puede iniciar la distribución de cualquier ruta de acceso escribiendo `<distro>.exe`. Por ejemplo: `ubuntu.exe`
+    Ahora puede iniciar el distribución desde cualquier ruta de acceso escribiendo `<distro>.exe`. Por ejemplo: `ubuntu.exe`
 
-Ahora que está instalada la distribución de Linux, debe [inicializar la nueva instancia de la distribución](initialize-distro.md) antes de usar la distribución.
+Ahora que está instalado el distribución de Linux, debe [inicializar la nueva instancia de distribución](initialize-distro.md) antes de usar su distribución.

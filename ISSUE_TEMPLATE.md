@@ -1,6 +1,6 @@
-Tenga en cuenta que el Rastreador de problemas de este repositorio es sólo para notificar problemas con los documentos WSL.
+Tenga en cuenta que el seguimiento de problemas de este repositorio es solo para informar de problemas con los documentos de WSL.
 
-Del otro problema relacionado repositorio:
+Otros repositorios de problemas relacionados:
 
-* WSL: https://github.com/Microsoft/BashOnWindows/
+* WSL https://github.com/Microsoft/BashOnWindows/
 * Consola de Windows: https://github.com/Microsoft/Console/

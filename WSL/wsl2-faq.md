@@ -1,55 +1,59 @@
 ---
-title: Preguntas más frecuentes de WSL 2
-description: Preguntas más frecuentes sobre el subsistema Windows para Linux 2
-keywords: BashOnWindows, bash, wsl, wsl2, windows, el subsistema de windows para linux, windowssubsystem, ubuntu, debian, suse, windows 10, instalar
+title: Preguntas más frecuentes sobre WSL 2
+description: Preguntas más frecuentes sobre el subsistema de Windows para Linux 2
+keywords: BashOnWindows, bash, wsl, wsl2, windows, subsistema de windows para linux, subsistemawindows, ubuntu, debian, suse, windows 10, instalación
 author: mscraigloewen
 ms.author: mscraigloewen
 ms.date: 05/30/2019
 ms.topic: article
 ms.assetid: 7afaeacf-435a-4e58-bff0-a9f0d75b8a51
 ms.custom: seodec18
-ms.openlocfilehash: 84805278abaeb6334c662e1dfab1bced3e0ddb0b
-ms.sourcegitcommit: bb88269eb37405192625fa81ff91162393fb491f
+ms.openlocfilehash: a74f5e3f5879d0af274d2e2b10aaf05e95a97a6f
+ms.sourcegitcommit: e16097a3d863bbda8c4655054f154415cdd7f2f5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67038095"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67587140"
 ---
-# <a name="wsl-2-faq"></a>PREGUNTAS MÁS FRECUENTES DE WSL 2
+# <a name="wsl-2-faq"></a>PREGUNTAS MÁS FRECUENTES SOBRE WSL 2
 
-A continuación es una lista de las preguntas más frecuentes (P+F) sobre el subsistema Windows para Linux 2.
+A continuación se muestra una lista de preguntas más frecuentes (p + f) sobre el subsistema de Windows para Linux 2.
 
-## <a name="does-wsl-2-use-hyper-v-will-it-be-available-on-windows-10-home"></a>¿2 WSL usa Hyper-V? ¿Estará disponible en Windows 10 Home?
+## <a name="does-wsl-2-use-hyper-v-will-it-be-available-on-windows-10-home"></a>¿Usa Hyper-V WSL 2? ¿Estará disponible en Windows 10 Home?
 
-WSL 2 estará disponible en todas las SKU que está disponible actualmente, incluido Windows 10 Home WSL.
+WSL 2 estará disponible en todas las SKU donde WSL está disponible actualmente, incluido Windows 10 Home.
 
-La versión más reciente de WSL usa la arquitectura Hyper-V para habilitar la virtualización. Esta arquitectura estará disponible en un componente opcional que es un subconjunto de la característica de Hyper-V. Este componente opcional estará disponible en todas las SKU. Puede esperar ver más detalles sobre esta experiencia pronto conforme nos acercamos a la versión 2 de WSL.
+La versión más reciente de WSL usa la arquitectura de Hyper-V para habilitar su virtualización. Esta arquitectura estará disponible en el componente opcional "plataforma de máquina virtual". Este componente opcional estará disponible en todas las SKU. Pronto podrá ver más detalles sobre esta experiencia cuando se acerque a la versión WSL 2.
 
-## <a name="what-will-happen-to-wsl-1-will-it-be-abandoned"></a>¿Qué sucederá en WSL 1? ¿Se lo abandonará?
+## <a name="what-will-happen-to-wsl-1-will-it-be-abandoned"></a>¿Qué pasará con WSL 1? ¿Se abandonará?
 
-Actualmente no tenemos pensado para dejar de utilizar WSL 1. Puede ejecutar WSL 1 y 2 de WSL distribuciones en paralelo y puede actualizar y degradar cualquier distribución en cualquier momento. Adición de WSL 2 como una nueva arquitectura presenta una mejor plataforma para el equipo WSL proporcionar características que hacen que WSL una forma increíble para ejecutar un entorno de Linux en Windows.
+Actualmente no tenemos planes para dejar de usar WSL 1. Puede ejecutar WSL 1 y WSL 2 distribuciones en paralelo, y puede actualizar y degradar cualquier distribución en cualquier momento. Agregar WSL 2 como una nueva arquitectura presenta una plataforma mejor para que el equipo de WSL entregue características que hacen WSL una forma sorprendente de ejecutar un entorno de Linux en Windows.
 
-## <a name="will-i-be-able-to-run-wsl-2-and-other-3rd-party-virtualization-tools-such-as-vmware-or-virtualbox"></a>¿Podré ejecutar WSL 2 y otras herramientas de virtualización de terceros 3rd como VMware, VirtualBox?
+## <a name="will-i-be-able-to-run-wsl-2-and-other-3rd-party-virtualization-tools-such-as-vmware-or-virtualbox"></a>¿Podré ejecutar WSL 2 y otras herramientas de virtualización de terceros como VMware o VirtualBox?
 
-Algunas aplicaciones de terceros 3rd no pueden funcionar cuando Hyper-V está en uso, lo que significa que no podrá ejecutar cuando se habilita WSL 2. Lamentablemente, esto incluye VMware y las versiones de VirtualBox antes del 6 de VirtualBox (VirtualBox 6.0.0 publicada en diciembre de 2018 [ahora es compatible con Hyper-V como un núcleo de ejecución reserva en un host de Windows] [ 1]!)
+Algunas aplicaciones de terceros no pueden funcionar cuando se usa Hyper-V, lo que significa que no podrán ejecutarse cuando se habilita WSL 2. Desafortunadamente, esto incluye VMware, y las versiones de VirtualBox anteriores a VirtualBox 6 (VirtualBox 6.0.0 publicadas en diciembre 2018 [ahora admite Hyper-V como núcleo de ejecución de reserva en un host de Windows][1]).
 
-Estamos investigando maneras de ayudar a resolver este problema. Por ejemplo, se exponen un conjunto de API denominado [plataforma del hipervisor] [ 2] que pueden usar los proveedores de virtualización de terceros para que su software sea compatible con Hyper-V Esto permite a las aplicaciones usar, como la arquitectura de Hyper-V para la emulación de su [Google Android Emulator][3], VirtualBox, 6 y por encima del cual se ahora es compatible con Hyper-V y.
+Estamos investigando maneras de ayudar a resolver este problema. Por ejemplo, se expone un conjunto de API llamada [plataforma][2] that third-party virtualization providers can use to make their software compatible with Hyper-V’s. This lets applications use the Hyper-V architecture for their emulation such as [the Google Android Emulator][3]de hipervisor y VirtualBox 6 y versiones posteriores que ahora son compatibles con Hyper-V.
 
-## <a name="can-i-access-the-gpu-in-wsl-2-are-there-plans-to-increase-hardware-support"></a>¿Puedo tener acceso a la GPU en WSL 2? ¿Existen planes para aumentar la compatibilidad de hardware?
+## <a name="can-i-access-the-gpu-in-wsl-2-are-there-plans-to-increase-hardware-support"></a>¿Puedo acceder a la GPU en WSL 2? ¿Hay planes para aumentar la compatibilidad de hardware?
 
-En las versiones iniciales de acceso al hardware de WSL 2 soporte se limitará, p. ej.: no será posible acceder a la GPU, serie o USB. Sin embargo, agregar una mejor compatibilidad de dispositivo es alta en el trabajo pendiente, tal como se abrirá muchos más casos de uso para los desarrolladores que deseen interactuar con estos dispositivos. Mientras tanto, siempre puede usar 1 WSL que tiene acceso USB de puerto serie. Por favor, esté atento a este blog y los miembros del equipo en Twitter para mantenerse informado sobre las características más recientes a insider WSL compilaciones y llegar al proporcionarnos sus comentarios sobre los dispositivos que le gustaría interactuar con!
+En las versiones iniciales de, la compatibilidad con el acceso al hardware de WSL 2 será limitada; por ejemplo, no podrá acceder a la GPU, en serie o en USBs. Sin embargo, agregar mejor compatibilidad con dispositivos es alto en nuestro trabajo pendiente, ya que se abren muchos más casos de uso para los desarrolladores que quieren interactuar con estos dispositivos. Mientras tanto, siempre puede usar WSL 1, que tiene el puerto serie y el acceso USB. Manténgase atento a este blog y WSL a los miembros del equipo en Twitter para mantenerse informado sobre las características más recientes que llegan a las compilaciones de Insider y ponerse en contacto con nosotros para enviarnos sus comentarios sobre los dispositivos con los que le gustaría interactuar.
 
-## <a name="will-wsl-2-be-able-to-use-networking-applications"></a>¿2 WSL podrá usar las aplicaciones de red?
+## <a name="will-wsl-2-be-able-to-use-networking-applications"></a>¿WSL 2 podrá usar aplicaciones de red?
 
-Sí, aplicaciones de redes en general se más rápido y funcionan mejor, puesto que tenemos todo el sistema llame a la compatibilidad. Sin embargo, la nueva arquitectura utiliza los componentes de red virtualizados. Esto significa que, en versión preliminar inicial se basa WSL 2 se comportará de forma más parecida a una máquina virtual, p. ej.: WSL 2 tendrán una dirección IP diferente que el equipo host. Estamos comprometidos con la que hace WSL 2 siente igual a 1 WSL y que incluye mejorar nuestra historia de la red. Esperamos poder agregar mejoras tan pronto como podemos, como el acceso a todas las aplicaciones de red de Linux o Windows con localhost. Publicaremos más detalles sobre nuestra historia y mejoras de redes tal como nos acercamos al lanzamiento de WSL 2.
+Sí, en las aplicaciones de red generales serán más rápidas y funcionarán mejor, ya que tenemos compatibilidad total con llamadas del sistema. Sin embargo, la nueva arquitectura utiliza componentes de red virtualizados. Esto significa que en la versión preliminar inicial, WSL 2 se comportará de forma más similar a una máquina virtual, por ejemplo: WSL 2 tendrá una dirección IP distinta de la del equipo host. Nos comprometemos a que WSL 2 tenga el mismo aspecto que WSL 1 y eso incluye mejorar nuestro caso de red. Esperamos agregar mejoras tan rápidamente como sea posible, como tener acceso a todas las aplicaciones de red desde Linux o Windows con localhost. Publicaremos más detalles sobre nuestra historia de redes y mejoras a medida que se aproxima al lanzamiento de WSL 2.
 
 ## <a name="can-i-run-wsl-2-in-a-virtual-machine"></a>¿Puedo ejecutar WSL 2 en una máquina virtual?
 
-¡Sí! Deberá asegurarse de que la máquina virtual tiene anidados virtualización habilitada. Esto se puede habilitar en Hyper-V ejecutando el siguiente comando en una ventana de PowerShell con privilegios de administrador:
+Sí. Debe asegurarse de que la máquina virtual tiene habilitada la virtualización anidada. Para habilitarlo en Hyper-V, ejecute el siguiente comando en una ventana de PowerShell con privilegios de administrador:
 
 `Set-VMProcessor -VMName <VMName> -ExposeVirtualizationExtensions $true`
 
-No olvide reemplazar '&lt;VMName&gt;' con el nombre de la máquina virtual.
+Asegúrese de reemplazar "&lt;VMName&gt;" por el nombre de la máquina virtual.
+
+## <a name="can-i-use-wslconf-in-wsl-2"></a>¿Puedo usar WSL. conf en WSL 2?
+
+WSL 2 admite el mismo archivo WSL. conf que usa WSL 1. Esto significa que todas las opciones de configuración que haya establecido en un distribución de WSL 1, como el montaje automático de unidades de Windows, la habilitación o deshabilitación de la interoperabilidad, el cambio del directorio donde se montarán las unidades de Windows, etc. funcionarán en WSL 2. Puede obtener más información sobre las opciones de configuración en WSL en la página de [Administración de distribución](./wsl-config.md) . 
 
  [1]: https://www.virtualbox.org/wiki/Changelog-6.0
  [2]: https://docs.microsoft.com/en-us/virtualization/api/

@@ -1,3 +1,3 @@
-# <a name="af-unix-sample"></a>AF-Unix-Sample
+# <a name="af-unix-sample"></a>AF-UNIX-Sample
 
-La demostración que muestra la interoperabilidad AF_UNIX entre un proceso de WSL y Windows. Consulte el blog de la línea de comandos de WSL para obtener más información sobre la característica.
+Demostración que muestra la interoperabilidad de AF_UNIX entre un WSL y un proceso de Windows. Consulte el blog de WSL CommandLine para obtener más información sobre la característica.

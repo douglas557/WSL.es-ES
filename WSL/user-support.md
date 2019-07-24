@@ -1,7 +1,7 @@
 ---
-title: Permisos y la cuenta de usuario de Linux
+title: Cuenta de usuario de Linux y permisos
 description: Referencia de las cuentas de usuario y la administración de permisos con el subsistema de Windows para Linux.
-keywords: BashOnWindows, bash, wsl, windows, subsistema de windows para linux, windowssubsystem, ubuntu, cuentas de usuario
+keywords: BashOnWindows, bash, WSL, Windows, subsistema de Windows para Linux, windowssubsystem, Ubuntu, cuentas de usuario
 author: scooley
 ms.author: scooley
 ms.date: 09/11/2017
@@ -9,59 +9,59 @@ ms.topic: article
 ms.assetid: f70e685f-24c6-4908-9546-bf4f0291d8fd
 ms.custom: seodec18
 ms.openlocfilehash: 0d00b43d059e72edd4e2a5b9591c29441f461fca
-ms.sourcegitcommit: db69625e26bc141ea379a830790b329e51ed466b
+ms.sourcegitcommit: cd239efc5c7c25ffbe5de25b2438d44181a838a9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/13/2019
+ms.lasthandoff: 06/14/2019
 ms.locfileid: "67040826"
 ---
-# <a name="user-accounts-and-permissions-for-windows-subsystem-for-linux"></a>Las cuentas de usuario y los permisos para el subsistema de Windows para Linux
+# <a name="user-accounts-and-permissions-for-windows-subsystem-for-linux"></a>Cuentas de usuario y permisos para el subsistema de Windows para Linux
 
-Creación de su usuario de Linux es el primer paso para configurar una nueva distribución de Linux en WSL.  La primera cuenta de usuario que cree se configura automáticamente con unos cuantos atributos especiales:
+La creación de un usuario de Linux es el primer paso para configurar una nueva distribución de Linux en WSL.  La primera cuenta de usuario que cree se configura automáticamente con unos cuantos atributos especiales:
 
-1. Es el usuario de forma predeterminada, inicia sesión automáticamente en el inicio.
-1. Es el Administrador de Linux (un miembro del grupo de sudo) de forma predeterminada.
+1. Es el usuario predeterminado: inicia sesión automáticamente en el inicio.
+1. De forma predeterminada, es administrador de Linux (un miembro del grupo sudo).
 
-Cada distribución de Linux que se ejecuta en el subsistema de Windows para Linux tiene sus propias cuentas de usuario de Linux y las contraseñas.  Tendrá que configurar cada vez que agregue una distribución, vuelva a instalar o restablecimiento de una cuenta de usuario de Linux.  Cuentas de usuario de Linux no sólo son independientes por cada distribución, también son independientes de la cuenta de usuario de Windows.
+Cada distribución de Linux que se ejecuta en el subsistema de Windows para Linux tiene sus propias cuentas de usuario y contraseñas de Linux.  Tendrá que configurar una cuenta de usuario de Linux cada vez que agregue una distribución, reinstale o restablezca.  Las cuentas de usuario de Linux no solo son independientes por distribución, sino que también son independientes de la cuenta de usuario de Windows.
 
-## <a name="resetting-your-linux-password"></a>Al restablecer la contraseña de Linux
+## <a name="resetting-your-linux-password"></a>Restablecimiento de la contraseña de Linux
 
-Si conoce la contraseña actual, cambiarla y tener acceso a su cuenta de usuario de Linux con Linux de restablecimiento de contraseña herramientas de distribución--probablemente `passwd`.
+Si tiene acceso a su cuenta de usuario de Linux y conoce la contraseña actual, cámbiela con las herramientas de restablecimiento de contraseñas de Linux de esa `passwd`distribución, lo que es más probable.
 
-Si es no es una opción, dependiendo de la distribución, puede restablecer la contraseña, restablecer el usuario predeterminado.
+Si no es una opción, dependiendo de la distribución, es posible que pueda restablecer la contraseña restableciendo el usuario predeterminado.
 
-WSL proporciona una etiqueta de usuario predeterminada para identificar automáticamente la cuenta de usuario que inicia sesión cuando se inicia un WSL.  Puesto que muchas distribuciones incluyen los comandos para establecer el usuario predeterminado en la raíz y también un usuario raíz con ninguna contraseña establecida, cambiar el usuario predeterminado para la raíz es una herramienta útil para tareas como el restablecimiento de contraseña.
+WSL ofrece una etiqueta de usuario predeterminada para identificar la cuenta de usuario que inicia sesión automáticamente al iniciar un WSL.  Dado que muchas distribuciones incluyen comandos para establecer el usuario predeterminado en raíz y también un usuario raíz sin contraseña establecida, cambiar el usuario predeterminado a raíz es una herramienta útil para cosas como el restablecimiento de contraseñas.
 
-### <a name="for-creators-update-and-earlier"></a>Creators Update y versiones anteriores
-Si está ejecutando Windows 10 Creators update o versiones anteriores, puede cambiar el usuario de Bash predeterminado mediante la ejecución de los siguientes comandos:
+### <a name="for-creators-update-and-earlier"></a>Para Creators Update y versiones anteriores
+Si está ejecutando Windows 10 Creators Update o una versión anterior, puede cambiar el usuario de Bash predeterminado mediante la ejecución de los siguientes comandos:
 
-1. Cambiar el usuario predeterminado para `root`:
+1. Cambie el usuario predeterminado a `root`:
 
     ```console
     C:\> lxrun /setdefaultuser root
     ```
 
-1. Ejecute `bash.exe` para iniciar sesión ahora como `root`:
+1. Ejecute `bash.exe` para iniciar sesión ahora `root`como:
 
     ```console
     C:\> bash.exe
     ```
 
-1. Restablecer su contraseña mediante el comando de contraseña de la distribución y cierre la consola de Linux:
+1. Restablezca la contraseña con el comando de contraseña de la distribución y cierre la consola de Linux:
 
     ```BASH
     $ passwd username
     $ exit
     ```
 
-1. Desde CMD de Windows, restablecer el usuario predeterminado en su cuenta de usuario de Linux normal:
+1. En Windows CMD, restablezca el usuario predeterminado de nuevo a su cuenta de usuario de Linux normal:
 
     ```console
     C:\> lxrun.exe /setdefaultuser username
     ```
 
-### <a name="for-fall-creators-update-and-later"></a>Para la actualización Fall Creators Update y versiones posteriores
-Para ver qué comandos están disponibles para una distribución particular, ejecute `[distro.exe] /?`.
+### <a name="for-fall-creators-update-and-later"></a>Para Fall Creators Update y versiones posteriores
+Para ver qué comandos están disponibles para una distribución determinada, ejecute `[distro.exe] /?`.
     
 Por ejemplo, con Ubuntu instalado:
 
@@ -95,22 +95,22 @@ Usage:
 
 Instrucciones paso a paso con Ubuntu:
 
-1. Abra CMD
-1. Establece el usuario de Linux de forma predeterminada en `root`:
+1. Abrir CMD
+1. Establezca el usuario de Linux predeterminado `root`en:
 
     ```console
     C:\> ubuntu config --default-user root
     ```    
 
-1. Inicie la distribución de Linux (`ubuntu`).  Configurará automáticamente como el inicio de sesión `root`:
+1. Inicie la distribución de Linux`ubuntu`().  Iniciará sesión automáticamente como `root`:
 
-1. Restablecer su contraseña mediante el `passwd` comando:
+1. Restablezca la contraseña con el `passwd` comando:
 
     ```BASH
     $ passwd username
     ```
 
-1. Desde CMD de Windows, restablecer el usuario predeterminado a su cuenta de usuario de Linux normal.
+1. En Windows CMD, restablezca el usuario predeterminado de nuevo a su cuenta de usuario de Linux normal.
 
     ```console
     C:\> ubuntu config --default-user username
@@ -118,26 +118,26 @@ Instrucciones paso a paso con Ubuntu:
 
 ## <a name="permissions"></a>Permisos
 
-Hay dos conceptos importantes a tener en cuenta cuando se trata de permisos en WSL:
+Hay dos conceptos importantes que se deben tener en cuenta cuando se trata de permisos en WSL:
 
-1. El modelo de permisos de Windows controla los derechos de un proceso a los recursos de Windows
-2. El modelo de permisos de Linux controla los derechos de un proceso a los recursos de Linux
+1. El modelo de permisos de Windows rige los derechos de un proceso en los recursos de Windows
+2. El modelo de permisos de Linux controla los derechos de un proceso para los recursos de Linux
 
-Cuando se ejecuta Linux en WSL, Linux tendrán los mismos permisos de Windows que el proceso que lo inicia. Linux se puede iniciar en uno de dos niveles de permisos:
+Al ejecutar Linux en WSL, Linux tendrá los mismos permisos de Windows que el proceso que lo inicia. Linux puede iniciarse en uno de los dos niveles de permiso:
 
-* Normal (sin privilegios elevados): Linux se ejecuta con los permisos del usuario que inició sesión
-* Administración/con privilegios elevados: Linux se ejecuta con permisos de administrador con permisos elevados/Windows
+* Normal (no elevado): Linux se ejecuta con los permisos del usuario que ha iniciado sesión
+* Elevado/administrador: Linux se ejecuta con permisos elevados o de administrador de Windows
 
-> Porque los procesos elevados pueden acceso o modificar (y, por tanto, dañar)-wide y proteger el sistema de datos y la configuración de todo el sistema **Evite** iniciar procesos con privilegios elevados a menos que sea absolutamente necesario - ya sean Windows o Linux ¡aplicaciones/tools/shells!
+> Dado que los procesos elevados pueden tener acceso a la configuración de todo el sistema y los datos protegidos o modificarlos (y, por consiguiente, dañarlos), **Evite** el inicio de procesos elevados a menos que sea absolutamente necesario-si son aplicaciones o herramientas de Windows o Linux/ visto!
 
-Los permisos de Windows anteriores son independientes de los permisos dentro de una instancia de Linux: "Privilegios de raíz" de Linux afecten solo a los derechos del usuario dentro del entorno de Linux & del sistema de archivos; no tienen ningún impacto en los privilegios de Windows concedidos. Por lo tanto, que se ejecuta un proceso de Linux como raíz (por ejemplo, mediante `sudo`) solo concede que procesan los derechos de administrador en el entorno de Linux.
+Los permisos de Windows anteriores son independientes de los permisos de una instancia de Linux: Los "privilegios raíz" de Linux solo afectan a los derechos del usuario en el entorno de Linux & sistema de archivos; no tienen ningún impacto en los privilegios de Windows concedidos. Por lo tanto, la ejecución de un proceso de Linux como `sudo`raíz (por ejemplo, Via) solo concede derechos de administrador de procesos en el entorno de Linux.
 
 **Ejemplo:**     
-Puede tener acceso una sesión de Bash con privilegios de administrador de Windows `cd /mnt/c/Users/Administrator` mientras una sesión de Bash sin privilegios de Administrador vería un error "Permiso denegado".
+Una sesión de bash con privilegios de administrador de `cd /mnt/c/Users/Administrator` Windows puede tener acceso mientras que una sesión de Bash sin privilegios de administrador verá el error "Permiso denegado".
 
-En Linux, escriba `sudo cd /mnt/c/Users/Administrator` no concederá acceso al directorio del administrador porque los permisos dentro de Windows administrados por Windows.
+En Linux, al `sudo cd /mnt/c/Users/Administrator` escribir no se concederá acceso al directorio del administrador, ya que Windows administra los permisos dentro de Windows.
 
-El modelo de permisos de Linux es importante cuando se encuentra dentro del entorno de Linux donde el usuario tenga permisos en función del usuario actual de Linux.
+El modelo de permisos de Linux es importante en el entorno de Linux, donde el usuario tiene permisos basados en el usuario actual de Linux.
 
 **Ejemplo:**  
-Puede ejecutar un usuario en el grupo de sudo `sudo apt update`.
+Se puede ejecutar `sudo apt update`un usuario del grupo sudo.

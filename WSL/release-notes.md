@@ -1,63 +1,74 @@
 ---
 title: Notas de la versión para el subsistema de Windows para Linux
-description: Notas de la versión para el subsistema de Windows para Linux.  Se actualiza semanalmente.
-keywords: BashOnWindows, bash, wsl, windows, subsistema de windows para linux, windowssubsystem, ubuntu
+description: Notas de la versión para el subsistema de Windows para Linux.  Actualizado semanalmente.
+keywords: BashOnWindows, bash, WSL, Windows, subsistema de Windows para Linux, windowssubsystem, Ubuntu
 author: benhillis
 ms.date: 07/31/2017
 ms.topic: article
 ms.assetid: 36ea641e-4d49-4881-84eb-a9ca85b1cdf4
 ms.custom: seodec18
-ms.openlocfilehash: 2567e68ca0e9897a7b7bc7315760b81ff4923c1a
-ms.sourcegitcommit: 8c74868b8d8ff0106e15e4bce5e8337642883ec1
+ms.openlocfilehash: e2d9d5fc70c173e9b516ab7af01599b623b40b39
+ms.sourcegitcommit: cd239efc5c7c25ffbe5de25b2438d44181a838a9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/01/2019
-ms.locfileid: "64988264"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67042424"
 ---
 # <a name="release-notes-for-windows-subsystem-for-linux"></a>Notas de la versión para el subsistema de Windows para Linux
 
-## <a name="build-18890"></a>Compilación 18890
-Para Windows general, visite información sobre las compilación 18890 el [blog Windows](https://blogs.windows.com/windowsexperience/2019/05/01/announcing-windows-10-insider-preview-build-18890/).
+
+## <a name="build-18917"></a>Compilación 18917
+Para obtener información general sobre Windows sobre la compilación 18917, visite el [blog de Windows](https://blogs.windows.com/windowsexperience/2019/06/12/announcing-windows-10-insider-preview-build-18917/).
 
 ### <a name="wsl"></a>WSL
-* Pérdida de socket de no bloqueo [GH 2913]
-* Entrada EOF al terminal puede bloquear las lecturas subsiguientes [GH 3421]
-* Actualizar resolv.conf encabezado para hacer referencia a wsl.conf [descritos en GH 3928]
-* Interbloqueo en epoll eliminar código [GH 3922]
-* Controlar los espacios en los argumentos--importar y – exportar [GH 3932]
-* Archivos de extensión mmap no funciona correctamente [GH 3939]
-* Solución de problemas con ARM64 \\acceso de $ wsl no funciona correctamente
-* Agregar una mejor icono predeterminado para wsl.exe
+* WSL 2 ya está disponible. Consulte el [blog](https://devblogs.microsoft.com/commandline/wsl-2-is-now-available-in-windows-insiders/) para obtener más detalles.
+* Corregir una regresión en la que el inicio de procesos de Windows a través de vínculos simbólicos no funcionaba correctamente [alvent 3999]
+* Agregue WSL. exe--List--verbose, WSL. exe--List--Quiet y WSL. exe--Import--version Options to WSL. exe
+* Agregar WSL. exe: opción Shutdown
+* Plan 9: Permitir abrir un directorio para escribir en él correctamente
+
+## <a name="build-18890"></a>Compilación 18890
+Para obtener información general sobre Windows sobre la compilación 18890, visite el [blog de Windows](https://blogs.windows.com/windowsexperience/2019/05/01/announcing-windows-10-insider-preview-build-18890/).
+
+### <a name="wsl"></a>WSL
+* Pérdida de socket sin bloqueo [alvent 2913]
+* La entrada de EOF en el terminal puede bloquear lecturas posteriores [alvent 3421]
+* Actualice el encabezado resolv. conf para hacer referencia a WSL. conf [descrito en alvent 3928]
+* Interbloqueo en epoll eliminar código [alvent 3922]
+* Controlar los espacios de los argumentos en--Import y – Export [alvent 3932]
+* La extensión de los archivos de mmap no funciona correctamente [alvent 3939]
+* Corrección del problema con \\ARM64 WSL $ Access no funciona correctamente
+* Agregar el mejor icono predeterminado para WSL. exe
 
 ## <a name="build-18342"></a>Compilación 18342
-Para Windows general, visite información sobre las compilación 18342 el [blog Windows](https://blogs.windows.com/windowsexperience/2019/02/20/announcing-windows-10-insider-preview-build-18342/).
+Para obtener información general sobre Windows sobre la compilación 18342, visite el [blog de Windows](https://blogs.windows.com/windowsexperience/2019/02/20/announcing-windows-10-insider-preview-build-18342/).
 
 ### <a name="wsl"></a>WSL
-* Hemos agregado la capacidad de los usuarios tener acceso a los archivos de Linux en una distribución de WSL desde Windows. Estos archivos pueden obtenerse a través de la línea de comandos, además de aplicaciones de Windows, como el Explorador de archivos, VSCode, etc. puede interactuar con estos archivos. Acceder a los archivos, vaya a \\ \\wsl$\\< distro_name >, o ver una lista de distribuciones en ejecución, vaya a \\ \\wsl$
-* Agregar etiquetas de información adicionales de CPU y corregir los valores de Cpus_allowed [_lista] [GH 2234]
-* Admite la ejecución del subproceso que no sean líder [GH 3800]
-* Tratar errores de actualización de configuración como recuperable [GH 3785]
-* Actualizar binfmt para controlar correctamente los desplazamientos [GH 3768]
-* Habilitar asignación las unidades de red para planear 9 [GH 3854]
-* Linux -> el soporte técnico de Windows y Linux -> traducción de la ruta de acceso de Windows para montajes de enlace
-* Crear secciones de solo lectura para las asignaciones en los archivos abiertos de solo lectura
+* Hemos agregado la posibilidad de que los usuarios accedan a los archivos de Linux en un WSL distribución desde Windows. Se puede tener acceso a estos archivos a través de la línea de comandos y también las aplicaciones de Windows, como el explorador de archivos, VSCode, etc. pueden interactuar con estos archivos. Para acceder a los archivos, vaya \\a \\WSL\\$ < distro_name >, o consulte la lista de las distribuciones en ejecución \\navegando a \\WSL $
+* Agregar etiquetas de información de CPU adicionales y corregir valores de Cpus_allowed [_list] [alvent 2234]
+* Compatibilidad con Exec desde un subproceso no líder [alvent 3800]
+* Tratar errores de actualización de la configuración como no graves [al3785]
+* Actualización de binfmt para administrar correctamente los desplazamientos [alvent 3768]
+* Habilitar la asignación de unidades de red para el Plan 9 [alvent 3854]
+* Compatibilidad con Windows-> Linux y Linux-> la traducción de rutas de acceso de Windows para montajes de BIND
+* Crear secciones de solo lectura para asignaciones en archivos abiertos de solo lectura
 
 ## <a name="build-18334"></a>Compilación 18334
-Para Windows general, visite información sobre las compilación 18334 el [blog Windows](https://blogs.windows.com/windowsexperience/2019/02/08/announcing-windows-10-insider-preview-build-18334/).
+Para obtener información general sobre Windows sobre la compilación 18334, visite el [blog de Windows](https://blogs.windows.com/windowsexperience/2019/02/08/announcing-windows-10-insider-preview-build-18334/).
 
 ### <a name="wsl"></a>WSL
-* Diseñar la forma en que la zona horaria de Windows se asigna a una zona horaria de Linux [GH 3747]
-* Corregir las pérdidas de memoria y agregar nuevas funciones de conversión de cadena [GH 3746]
-* SIGCONT en un threadgroup sin subprocesos es una operación inefectiva [GH 3741] 
-* Mostrar correctamente los descriptores de archivo de socket y epoll en /proc/self/fd
+* Rediseño del modo en que se asigna la zona horaria de Windows a una zona horaria de Linux [alvent 3747]
+* Corregir pérdidas de memoria y agregar nuevas funciones de traducción de cadenas [alvent 3746]
+* SIGCONT en un elemento threadgroup sin subprocesos es una operación no operativa [alvent 3741] 
+* Mostrar correctamente los descriptores de archivo de socket y epoll en/proc/Self/FD
 
 ## <a name="build-18305"></a>Compilación 18305
-Para Windows general, visite información sobre las compilación 18305 el [blog Windows](https://blogs.windows.com/windowsexperience/2018/12/19/announcing-windows-10-insider-preview-build-18305/).
+Para obtener información general sobre Windows sobre la compilación 18305, visite el [blog de Windows](https://blogs.windows.com/windowsexperience/2018/12/19/announcing-windows-10-insider-preview-build-18305/).
 
 ### <a name="wsl"></a>WSL
-* pthreads perder el acceso a los archivos cuando el subproceso principal finaliza [GH 3589]
-* TIOCSCTTY debe omitir el parámetro "force" a menos que sea necesario [GH 3652]
-* mejoras de la línea de comandos de wsl.exe y adición de importación / exportación de funcionalidad.
+* pthreads perder el acceso a los archivos cuando el subproceso principal sale [alvent 3589]
+* TIOCSCTTY debe omitir el parámetro "Force" a menos que sea necesario [alvent 3652]
+* mejoras en la línea de comandos de WSL. exe y la adición de la funcionalidad de importación y exportación.
 ```
 Usage: wsl.exe [Argument] [Options...] [CommandLine]
 
@@ -116,53 +127,53 @@ Arguments to manage Windows Subsystem for Linux:
 ```
 
 ## <a name="build-18277"></a>Compilación 18277
-Para Windows general, visite información sobre las compilación 18277 el [blog Windows](https://blogs.windows.com/windowsexperience/2018/11/07/announcing-windows-10-insider-preview-build-18277/).
+Para obtener información general sobre Windows sobre la compilación 18277, visite el [blog de Windows](https://blogs.windows.com/windowsexperience/2018/11/07/announcing-windows-10-insider-preview-build-18277/).
 
 ### <a name="wsl"></a>WSL
-* Corregir el error "no se admite dicha interfaz" introducido en la compilación 18272 [GH 3645]
-* Omitir el indicador MNT_FORCE para umount syscall [GH 3605]
-* Cambie la interoperabilidad WSL para usar la API CreatePseudoConsole oficial
-* No mantener ningún valor de tiempo de espera cuando se reinicia FUTEX_WAIT
+* Corrección del error "no se admite esta interfaz" que se presentó en la compilación 18272 [alvent 3645]
+* Omitir la marca MNT_FORCE para umount syscall [alvent 3605]
+* Cambiar la interoperabilidad de WSL para usar la API de CreatePseudoConsole oficial
+* No mantener ningún valor de tiempo de espera cuando se reinicie FUTEX_WAIT
 
 ## <a name="build-18272"></a>Compilación 18272
-Para Windows general, visite información sobre las compilación 18272 el [blog Windows](https://blogs.windows.com/windowsexperience/2018/10/31/announcing-windows-10-insider-preview-build-18272/).
+Para obtener información general sobre Windows sobre la compilación 18272, visite el [blog de Windows](https://blogs.windows.com/windowsexperience/2018/10/31/announcing-windows-10-insider-preview-build-18272/).
 
 ### <a name="wsl"></a>WSL
-* **ADVERTENCIA:** Hay un problema en esta compilación que hace WSL no funciona. Al intentar iniciar la distribución verá un error "No se admite dicha interfaz". El problema se ha corregido y estará en la compilación de Insider rápida de la próxima semana. Si ha instalado esta compilación puede revertir a la compilación anterior de Windows mediante "Ir a la versión anterior de Windows 10" en Configuración -> actualización de & seguridad -> recuperación.
+* **ATENCIÓN** Hay un problema en esta compilación que hace que WSL sea inoperable. Al intentar iniciar la distribución, verá el error "no se admite dicha interfaz". El problema se ha solucionado y estará en la compilación rápida de Insider de la semana siguiente. Si ha instalado esta compilación, puede revertir a la compilación anterior de Windows mediante "volver a la versión anterior de Windows 10" en Configuración-> actualización & la recuperación de > de seguridad.
 
 ## <a name="build-18267"></a>Compilación 18267
-Para Windows general información en la compilación 18267, visite la [blog Windows](https://blogs.windows.com/windowsexperience/2018/10/24/announcing-windows-10-insider-preview-build-18267/).
+Para obtener información general sobre Windows sobre la compilación 18267, visite el [blog de Windows](https://blogs.windows.com/windowsexperience/2018/10/24/announcing-windows-10-insider-preview-build-18267/).
 
 ### <a name="wsl"></a>WSL
-* Corregir el problema donde el proceso inerte no puede ser reaped y permanecer indefinidamente.
-* WslRegisterDistribution se bloquea si el mensaje de error supera la longitud máxima [GH 3592]
-* Permitir fsync para archivos de solo lectura en DrvFs [GH 3556]
-* Asegúrese de que existen los directorios /bin y/sbin antes de crear vínculos simbólicos dentro de [GH 3584]
-* Agregar un mecanismo de tiempo de espera de finalización de instancia para las instancias WSL. Actualmente, el tiempo de espera se establece en 15 segundos, lo que significa que la instancia cerrará en 15 segundos después de que salga el último proceso WSL. Para finalizar una distribución de inmediato, use:
+* Corrija el problema en el que el proceso inerte no se puede obtener y permanecer indefinidamente.
+* WslRegisterDistribution se bloquea si el mensaje de error supera la longitud máxima [alvent 3592]
+* Permitir que fsync se realice correctamente para los archivos de solo lectura en DrvFs [alvent 3556]
+* Asegúrese de que los directorios/Bin y/sbin existen antes de crear los vínculos simbólicos dentro de [alvent 3584]
+* Se agregó un mecanismo de tiempo de espera de finalización de instancia para las instancias de WSL. El tiempo de espera está establecido actualmente en 15 segundos, lo que significa que la instancia finalizará 15 segundos después de que termine el último proceso WSL. Para finalizar una distribución inmediatamente, use:
 ```
 wslconfig.exe /terminate <DistributionName>
 ```
 
-## <a name="build-17763-1809"></a>Compilar 17763 (1809)
-Para Windows general, visite información sobre las compilación 17763 el [blog Windows](https://blogs.windows.com/windowsexperience/2018/10/02/how-to-get-the-windows-10-october-2018-update/).
+## <a name="build-17763-1809"></a>Compilación 17763 (1809)
+Para obtener información general sobre Windows sobre la compilación 17763, visite el [blog de Windows](https://blogs.windows.com/windowsexperience/2018/10/02/how-to-get-the-windows-10-october-2018-update/).
 
 ### <a name="wsl"></a>WSL
-* Comprobación de permisos de syscall SetPriority demasiado estricto para cambiar la misma prioridad de subproceso [GH 1838]
-* Garantizar que el tiempo de interrupción no sesgada se usa durante el tiempo de arranque para evitar la devolución de los valores negativos para clock_gettime(CLOCK_BOOTTIME) [GH 3434]
-* Controlar los vínculos simbólicos en el intérprete WSL binfmt [GH 3424]
-* Un mejor control de limpieza del descriptor de archivo de threadgroup líder.
-* Cambiar WSL usar KeQueryInterruptTimePrecise en lugar de KeQueryPerformanceCounter del núcleo para evitar el desbordamiento [GH 3252]
-* Ptrace adjuntar se puede hacer que el valor devuelto incorrecto de llamadas del sistema [GH 1731]
-* Revisión relacionada con varios AF_UNIX emite [GH 3371]
-* Corregir el problema que podría provocar la interoperabilidad WSL para producir un error si el directorio de trabajo actual es menor que 5 caracteres de longitud [GH 3379]
-* Evitar un retraso segundo errores en las conexiones de bucle invertido para puertos inexistente [GH 3286]
-* Add /proc/sys/fs/file-max stub file [GH 2893]
-* Información más precisa del ámbito de IPV6.
-* Soporte técnico PR_SET_PTRACER [GH 3053]
-* Sistema de archivos de canalización borrado accidentalmente epoll edge desencadenadas por eventos [GH 3276]
-* Ejecutable de Win32 iniciada a través de vínculos simbólicos NTFS no respeta el nombre de vínculo simbólico [GH 2909]
-* Mejorado soporte inerte [GH 1353]
-* Agregar entradas wsl.conf para controlar el comportamiento de interoperabilidad de Windows [GH 1493]
+* SetPriority syscall Permission check Too STRICT para cambiar la misma prioridad de subprocesos [alvent 1838]
+* Asegúrese de que el tiempo de interrupción no sesgado se usa para el tiempo de arranque para evitar que se devuelvan valores negativos para clock_gettime (CLOCK_BOOTTIME) [alvent 3434]
+* Controlar los vínculos simbólicos en el intérprete WSL binfmt [alvent 3424]
+* Mejor control de la limpieza de descriptores de archivo de elemento threadgroup Leader.
+* Cambiar WSL para usar KeQueryInterruptTimePrecise en lugar de KeQueryPerformanceCounter para evitar el desbordamiento [alvent 3252]
+* Ptrace Attach puede producir un valor de devolución incorrecto de las llamadas del sistema [alvent 1731]
+* Corrección de varios problemas relacionados con AF_UNIX [alvent 3371]
+* Corregir el problema que podría provocar un error de interoperabilidad de WSL si el directorio de trabajo actual tiene menos de 5 caracteres de longitud [alvent 3379]
+* Evitar el retraso de un segundo error en las conexiones de bucle invertido a puertos no existentes [alvent 3286]
+* Agregar archivo de código auxiliar de/proc/sys/FS/File-Max [alvent 2893]
+* Información más precisa sobre el ámbito IPV6.
+* Compatibilidad con PR_SET_PTRACER [alvent 3053]
+* El sistema de archivos de canalización borra accidentalmente el evento epoll desencadenado por el borde [alvent 3276]
+* El ejecutable de Win32 iniciado mediante el symlink de NTFS no respeta el nombre de symlink [alvent 2909]
+* Compatibilidad mejorada con Zombie [alvent 1353]
+* Agregar entradas WSL. conf para controlar el comportamiento de interoperabilidad de Windows [alvent 1493]
   ```
     [interop]
 
@@ -170,98 +181,98 @@ Para Windows general, visite información sobre las compilación 17763 el [blog 
 
     appendWindowsPath=false # append Windows path to $PATH variable; default is true
   ```
-* Corrección de getsockname no siempre devuelve el tipo de familia de socket de UNIX [GH 1774]
-* Agregar compatibilidad para TIOCSTI [GH 1863]
-* Sockets de no bloqueo en el proceso de conexión deben devolver EAGAIN para intentos de escritura [GH 2846]
-* Admitir la interoperabilidad en los discos duros virtuales montados [GH 3246, 3291]
-* Corregir el problema en la carpeta raíz [GH 3304] la comprobación de permiso
-* Compatibilidad limitada para TTY teclado IOCTL KDGKBTYPE, KDGKBMODE y KDSKBMODE.
-* Incluso cuando se inicia en segundo plano, deben ejecutar las aplicaciones de interfaz de usuario de Windows.
-* Agregue la opción -u o--usuario wsl [GH 1203]
-* Solucionar problemas de inicio WSL cuando se habilita el inicio rápido [GH 2576]
-* Sockets de UNIX necesitan conservar las credenciales de desconectada del mismo nivel [GH 3183]
-* Sockets de Unix sin bloqueo presentan indefinidamente EAGAIN [GH 3191]
-* caso = off es el nuevo drvfs predeterminada montar tipo [GH 2937, 3212, 3328]
-    * Consulte [blog](https://blogs.msdn.microsoft.com/commandline/2018/06/14/improved-per-directory-case-sensitivity-support-in-wsl/) para obtener más información.
-* Agregar wslconfig / terminate para detener la ejecución de las distribuciones.
-* Corregir el problema con el contexto del shell WSL entradas de menú que no administren correctamente las rutas de acceso con espacios.
-* Exponer entre mayúsculas y minúsculas por directorio como un atributo extendido
-* ARM64: Emular las operaciones de mantenimiento de caché. Resolver [dotnet problema](https://github.com/dotnet/core/issues/1561).
-* DrvFs: unescape solo caracteres del intervalo privado que corresponden a un carácter de escape.
-* Corregir el error de off a uno en la validación de longitud de intérprete de ELF analizador [GH 3154]
-* Los temporizadores en absoluto con un tiempo en el pasado WSL no activan [GH 3091]
-* Asegúrese de recién puntos de reanálisis creado se muestran como tal en el directorio primario.
-* Crear atómicamente directorios distingue mayúsculas de minúsculas en DrvFs.
-* Se corrigió un problema adicional que podrían devolver operaciones multiproceso ENOENT aunque exista el archivo. [GH 2712]
-* WSL fijo iniciar un error cuando se habilita UMCI. [GH 3020]
-* Agregar el menú contextual del explorador para iniciar WSL [GH 437, 603, 1836]. Para usar, mantenga presionada la tecla MAYÚS y haga doble clic en una ventana del explorador.
-* Corregir el comportamiento de no bloqueo del socket de Unix [GH 2822, 3100]
-* Corrección de francesa comando NETLINK notificados en 2026 GH.
-* Agregar compatibilidad con marcadores de propagación de montaje [GH 2911].
-* Corregir el problema con truncate que no producen inotify eventos [GH 2978].
-* Agregue--opción exec para wsl.exe invocar un solo archivo binario sin un shell.
-* Agregar: opción de distribución para wsl.exe seleccionar una distribución específica.
-* Compatibilidad limitada con dmesg. Las aplicaciones ahora pueden iniciar en dmesg. Controlador WSL registra información limitada a dmesg. En el futuro, esto puede ampliarse para llevar a cabo otros información/diagnósticos desde el controlador.
-    * Nota: dmesg actualmente se admite a través de la `/dev/kmsg` la interfaz de dispositivo. `syslog` interfaz syscall aún no se admite. Y, por lo tanto, algunos de los `dmesg` opciones de línea de comandos tales como `-S`, `-C` no funcionan.
-* Cambiar el gid de forma predeterminada y el modo de dispositivos serie para que coincida con nativo [GH 3042]
-* DrvFs ahora es compatible con atributos extendidos.
-    * Nota: DrvFs tiene algunas limitaciones en el nombre de los atributos extendidos. Algunos caracteres (como '/', ':' y '\*') no están permitidos y extendido los nombres de atributo no distinguen mayúsculas de minúsculas en DrvFs
+* Corrección para getsockname no Always devolviendo siempre el tipo de familia de sockets UNIX [alvent 1774]
+* Agregar compatibilidad para TIOCSTI [alvent 1863]
+* Los sockets sin bloqueo en el proceso de conexión deben devolver EAGAIN para los intentos de escritura [alvent 2846]
+* Compatibilidad con la interoperabilidad en VHD montados [alvent 3246, 3291]
+* Corregir el problema de comprobación de permisos en la carpeta raíz [alvent 3304]
+* Compatibilidad limitada para los ioctl de teclado TTY KDGKBTYPE, KDGKBMODE y KDSKBMODE.
+* Las aplicaciones de interfaz de usuario de Windows deben ejecutarse incluso cuando se inician en segundo plano.
+* Agregar WSL-u o--User Option [alvent 1203]
+* Corregir problemas de inicio de WSL cuando se habilita el inicio rápido [alvent 2576]
+* Los sockets de UNIX deben conservar las credenciales del mismo nivel desconectadas [alvent 3183]
+* Sockets de UNIX sin bloqueo con error indefinidamente con EAGAIN [alvent 3191]
+* Case = OFF es el nuevo tipo de montaje drvfs predeterminado [alvent 2937, 3212, 3328]
+    * Consulte el [blog](https://blogs.msdn.microsoft.com/commandline/2018/06/14/improved-per-directory-case-sensitivity-support-in-wsl/) para obtener más información.
+* Agregue wslconfig/Terminate. para detener las distribuciones en ejecución.
+* Corrija el problema con las entradas del menú contextual del shell de WSL que no controlan correctamente las rutas de acceso con espacios.
+* Exponer la distinción de mayúsculas y minúsculas por directorio como atributo extendido
+* ARM64 Emular las operaciones de mantenimiento de la memoria caché. Resolver el [problema dotnet](https://github.com/dotnet/core/issues/1561).
+* DrvFs: solo caracteres de escape en el intervalo privado que corresponden a un carácter de escape.
+* Error de corrección de errores en la validación de longitud del intérprete del analizador ELF [alvent 3154]
+* WSL los temporizadores absolutos con una hora en el pasado no se activan [alvent 3091]
+* Asegúrese de que los puntos de reanálisis recién creados se muestran como tales en el directorio principal.
+* Cree de forma atómica directorios con distinción entre mayúsculas y minúsculas en DrvFs.
+* Se ha corregido un problema adicional en el que las operaciones multiproceso podían devolver ENOENT, aunque el archivo exista. [ALVENT 2712]
+* Se corrigió un error de inicio de WSL cuando UMCI está habilitado. [ALVENT 3020]
+* Agregue el menú contextual del explorador para iniciar WSL [alvent 437, 603, 1836]. Para usar, mantenga presionada la tecla Mayús y haga clic con el botón derecho en una ventana del explorador.
+* Corregir el comportamiento de no bloqueo de sockets de UNIX [alvent 2822, 3100]
+* Corrija el comando de NETLINK de bloqueo, tal como se muestra en alvent 2026.
+* Agregue compatibilidad para los marcadores de propagación de montaje [alvent 2911].
+* Corrección del problema con TRUNCATE no provocando eventos de inotify [alvent 2978].
+* Agregue la opción--exec de WSL. exe para invocar un solo binario sin un shell.
+* Add--Distribution Option para WSL. exe para seleccionar un distribución específico.
+* Compatibilidad limitada para dmesg. Ahora, las aplicaciones pueden iniciar sesión en dmesg. El controlador WSL registra información limitada en dmesg. En el futuro, esto puede extenderse para llevar a cabo otros diagnósticos e información del controlador.
+    * Nota: dmesg se admite actualmente a través `/dev/kmsg` de la interfaz de dispositivo. `syslog`la interfaz syscall todavía no se admite. Y, por lo tanto, algunas `dmesg` de las opciones de la `-S`línea `-C` de comandos, como, no funcionan.
+* Cambiar el GID y el modo de dispositivos serie predeterminados para que coincidan con el nativo [alvent 3042]
+* DrvFs ahora admite atributos extendidos.
+    * Nota: DrvFs tiene algunas limitaciones en cuanto al nombre de los atributos extendidos. Algunos caracteres (como '/', ': ' y '\*') no están permitidos, y los nombres de atributos extendidos no distinguen mayúsculas de minúsculas en DrvFs
 
-## <a name="build-18252-skip-ahead"></a>Compilación 18252 (Saltar adelante)
-Para Windows general, visite información sobre las compilación 18252 el [Blog Windows](https://blogs.windows.com/windowsexperience/2018/10/03/announcing-windows-10-insider-preview-build-18252/).
-
-### <a name="wsl"></a>WSL
-* Mover los archivos binarios de init y bsdtar lxssmanager dll y a una carpeta de herramientas independientes
-* Corregir la carrera en torno a cerrar el descriptor de archivo cuando se usa CLONE_FILES
-* Administrar campos opcionales en /proc/pid/mountinfo al traducir las rutas de acceso DrvFs
-* Permitir DrvFs mknod se realice correctamente sin compatibilidad con metadatos para S_IFREG
-* Archivos de solo lectura creados en DrvFs deben tener el atributo de solo lectura establezca [GH 3411]
-* Agregar aplicación auxiliar /sbin/mount.drvfs para controlar el montaje DrvFs
-* Use el cambio de nombre POSIX de DrvFs.
-* Permitir traducción de la ruta de acceso en los volúmenes sin un GUID de volumen.
-
-## <a name="build-17738-fast"></a>Compilar 17738 (Fast)
-Para Windows general, visite información sobre las compilación 17738 el [Blog Windows](https://blogs.windows.com/windowsexperience/2018/08/14/announcing-windows-10-insider-preview-build-17738/).
+## <a name="build-18252-skip-ahead"></a>Compilación 18252 (omitir)
+Para obtener información general sobre Windows sobre la compilación 18252, visite el [blog de Windows](https://blogs.windows.com/windowsexperience/2018/10/03/announcing-windows-10-insider-preview-build-18252/).
 
 ### <a name="wsl"></a>WSL
-* Comprobación de permisos de syscall SetPriority demasiado estricto para cambiar la misma prioridad de subproceso [GH 1838]
-* Garantizar que el tiempo de interrupción no sesgada se usa durante el tiempo de arranque para evitar la devolución de los valores negativos para clock_gettime(CLOCK_BOOTTIME) [GH 3434]
-* Controlar los vínculos simbólicos en el intérprete WSL binfmt [GH 3424]
-* Un mejor control de limpieza del descriptor de archivo de threadgroup líder.
+* Traslado de los binarios init y bsdtar fuera del archivo dll de lxssmanager y a una carpeta de herramientas independiente
+* Corregir la carrera en torno al cierre del descriptor de archivo cuando se usa CLONE_FILES
+* Controlar campos opcionales en/proc/PID/mountinfo al traducir rutas de DrvFs
+* Permita que DrvFs mknod se realice correctamente sin compatibilidad con metadatos para S_IFREG
+* Los archivos ReadOnly creados en DrvFs deben tener el conjunto de atributos ReadOnly [alvent 3411]
+* Incorporación de la aplicación auxiliar de/sbin/Mount.drvfs para controlar el montaje de DrvFs
+* Use el cambio de nombre de POSIX en DrvFs.
+* Permitir traducción de rutas de acceso en volúmenes sin un GUID de volumen.
 
-## <a name="build-17728-fast"></a>Compilar 17728 (Fast)
-Para Windows general, visite información sobre las compilación 17728 el [Blog Windows](https://blogs.windows.com/windowsexperience/2018/07/31/announcing-windows-10-insider-preview-build-17728/).
-
-### <a name="wsl"></a>WSL
-* Cambiar WSL usar KeQueryInterruptTimePrecise en lugar de KeQueryPerformanceCounter del núcleo para evitar el desbordamiento [GH 3252]
-* Ptrace adjuntar se puede hacer que el valor devuelto incorrecto de llamadas del sistema [GH 1731]
-* Revisión relacionada con un número de AF_UNIX emite [GH 3371]
-* Corregir el problema que podría provocar la interoperabilidad WSL para producir un error si el directorio de trabajo actual es menor que 5 caracteres de longitud [GH 3379]
-
-## <a name="build-18204-skip-ahead"></a>Compilación 18204 (Saltar adelante)
-Para Windows general, visite información sobre las compilación 18204 el [Blog Windows](https://blogs.windows.com/windowsexperience/2018/07/25/announcing-windows-10-insider-preview-build-17723-and-build-18204/).
+## <a name="build-17738-fast"></a>Compilación 17738 (rápida)
+Para obtener información general sobre Windows sobre la compilación 17738, visite el [blog de Windows](https://blogs.windows.com/windowsexperience/2018/08/14/announcing-windows-10-insider-preview-build-17738/).
 
 ### <a name="wsl"></a>WSL
-* Canalizar inadvertenly filesystem borrar epoll edge desencadenadas por eventos [GH 3276]
-* Ejecutable de Win32 iniciada a través de vínculos simbólicos NTFS no respeta el nombre de vínculo simbólico [GH 2909]
+* SetPriority syscall Permission check Too STRICT para cambiar la misma prioridad de subprocesos [alvent 1838]
+* Asegúrese de que el tiempo de interrupción no sesgado se usa para el tiempo de arranque para evitar que se devuelvan valores negativos para clock_gettime (CLOCK_BOOTTIME) [alvent 3434]
+* Controlar los vínculos simbólicos en el intérprete WSL binfmt [alvent 3424]
+* Mejor control de la limpieza de descriptores de archivo de elemento threadgroup Leader.
 
-## <a name="build-17723-fast"></a>Compilar 17723 (Fast)
-Para Windows general, visite información sobre las compilación 17723 el [Blog Windows](https://blogs.windows.com/windowsexperience/2018/07/25/announcing-windows-10-insider-preview-build-17723-and-build-18204/).
+## <a name="build-17728-fast"></a>Compilación 17728 (rápida)
+Para obtener información general sobre Windows sobre la compilación 17728, visite el [blog de Windows](https://blogs.windows.com/windowsexperience/2018/07/31/announcing-windows-10-insider-preview-build-17728/).
 
 ### <a name="wsl"></a>WSL
-* Evitar un retraso segundo errores en las conexiones de bucle invertido para puertos inexistente [GH 3286]
-* Add /proc/sys/fs/file-max stub file [GH 2893]
-* Información más precisa del ámbito de IPV6.
-* Soporte técnico PR_SET_PTRACER [GH 3053]
-* Canalizar inadvertenly filesystem borrar epoll edge desencadenadas por eventos [GH 3276]
-* Ejecutable de Win32 iniciada a través de vínculos simbólicos NTFS no respeta el nombre de vínculo simbólico [GH 2909]
+* Cambiar WSL para usar KeQueryInterruptTimePrecise en lugar de KeQueryPerformanceCounter para evitar el desbordamiento [alvent 3252]
+* Ptrace Attach puede producir un valor de devolución incorrecto de las llamadas del sistema [alvent 1731]
+* Corrección de varios problemas relacionados con AF_UNIX [alvent 3371]
+* Corregir el problema que podría provocar un error de interoperabilidad de WSL si el directorio de trabajo actual tiene menos de 5 caracteres de longitud [alvent 3379]
+
+## <a name="build-18204-skip-ahead"></a>Compilación 18204 (omitir)
+Para obtener información general sobre Windows sobre la compilación 18204, visite el [blog de Windows](https://blogs.windows.com/windowsexperience/2018/07/25/announcing-windows-10-insider-preview-build-17723-and-build-18204/).
+
+### <a name="wsl"></a>WSL
+* Canalización del sistema de archivos de canalización inadvertenly borrar el borde desencadenador de epoll [alvent 3276]
+* El ejecutable de Win32 iniciado mediante el symlink de NTFS no respeta el nombre de symlink [alvent 2909]
+
+## <a name="build-17723-fast"></a>Compilación 17723 (rápida)
+Para obtener información general sobre Windows sobre la compilación 17723, visite el [blog de Windows](https://blogs.windows.com/windowsexperience/2018/07/25/announcing-windows-10-insider-preview-build-17723-and-build-18204/).
+
+### <a name="wsl"></a>WSL
+* Evitar el retraso de un segundo error en las conexiones de bucle invertido a puertos no existentes [alvent 3286]
+* Agregar archivo de código auxiliar de/proc/sys/FS/File-Max [alvent 2893]
+* Información más precisa sobre el ámbito IPV6.
+* Compatibilidad con PR_SET_PTRACER [alvent 3053]
+* Canalización del sistema de archivos de canalización inadvertenly borrar el borde desencadenador de epoll [alvent 3276]
+* El ejecutable de Win32 iniciado mediante el symlink de NTFS no respeta el nombre de symlink [alvent 2909]
 
 ## <a name="build-17713"></a>Compilación 17713
-Para Windows general, visite información sobre las compilación 17713 el [Blog Windows](https://blogs.windows.com/windowsexperience/2018/07/11/announcing-windows-10-insider-preview-build-17713/).
+Para obtener información general sobre Windows sobre la compilación 17713, visite el [blog de Windows](https://blogs.windows.com/windowsexperience/2018/07/11/announcing-windows-10-insider-preview-build-17713/).
 
 ### <a name="wsl"></a>WSL
-* Mejorado soporte inerte [GH 1353]
-* Agregar entradas wsl.conf para controlar el comportamiento de interoperabilidad de Windows [GH 1493]
+* Compatibilidad mejorada con Zombie [alvent 1353]
+* Agregar entradas WSL. conf para controlar el comportamiento de interoperabilidad de Windows [alvent 1493]
   ```
     [interop]
 
@@ -269,274 +280,274 @@ Para Windows general, visite información sobre las compilación 17713 el [Blog 
 
     appendWindowsPath=false # append Windows path to $PATH variable; default is true
   ```
-* Corrección de getsockname no siempre devuelve el tipo de familia de socket de UNIX [GH 1774]
-* Agregar compatibilidad para TIOCSTI [GH 1863]
-* Sockets de no bloqueo en el proceso de conexión deben devolver EAGAIN para intentos de escritura [GH 2846]
-* Admitir la interoperabilidad en los discos duros virtuales montados [GH 3246, 3291]
-* Corregir el problema en la carpeta raíz [GH 3304] la comprobación de permiso
-* Compatibilidad limitada para TTY teclado IOCTL KDGKBTYPE, KDGKBMODE y KDSKBMODE.
-* Incluso cuando se inicia en segundo plano, deben ejecutar las aplicaciones de interfaz de usuario de Windows.
+* Corrección para getsockname no Always devolviendo siempre el tipo de familia de sockets UNIX [alvent 1774]
+* Agregar compatibilidad para TIOCSTI [alvent 1863]
+* Los sockets sin bloqueo en el proceso de conexión deben devolver EAGAIN para los intentos de escritura [alvent 2846]
+* Compatibilidad con la interoperabilidad en VHD montados [alvent 3246, 3291]
+* Corregir el problema de comprobación de permisos en la carpeta raíz [alvent 3304]
+* Compatibilidad limitada para los ioctl de teclado TTY KDGKBTYPE, KDGKBMODE y KDSKBMODE.
+* Las aplicaciones de interfaz de usuario de Windows deben ejecutarse incluso cuando se inician en segundo plano.
 
 ## <a name="build-17704"></a>Compilación 17704
-Para Windows general, visite información sobre las compilación 17704 el [Blog Windows](https://blogs.windows.com/windowsexperience/2018/06/27/announcing-windows-10-insider-preview-build-17704/).
+Para obtener información general sobre Windows sobre la compilación 17704, visite el [blog de Windows](https://blogs.windows.com/windowsexperience/2018/06/27/announcing-windows-10-insider-preview-build-17704/).
 
 ### <a name="wsl"></a>WSL
-* Agregue la opción -u o--usuario wsl [GH 1203]
-* Solucionar problemas de inicio WSL cuando se habilita el inicio rápido [GH 2576]
-* Sockets de UNIX necesitan conservar las credenciales de desconectada del mismo nivel [GH 3183]
-* Sockets de Unix sin bloqueo presentan indefinidamente EAGAIN [GH 3191]
-* caso = off es el nuevo drvfs predeterminada montar tipo [GH 2937, 3212, 3328]
-    * Consulte [blog](https://blogs.msdn.microsoft.com/commandline/2018/06/14/improved-per-directory-case-sensitivity-support-in-wsl/) para obtener más información.
-* Agregar wslconfig / terminate para detener la ejecución de las distribuciones.
+* Agregar WSL-u o--User Option [alvent 1203]
+* Corregir problemas de inicio de WSL cuando se habilita el inicio rápido [alvent 2576]
+* Los sockets de UNIX deben conservar las credenciales del mismo nivel desconectadas [alvent 3183]
+* Sockets de UNIX sin bloqueo con error indefinidamente con EAGAIN [alvent 3191]
+* Case = OFF es el nuevo tipo de montaje drvfs predeterminado [alvent 2937, 3212, 3328]
+    * Consulte el [blog](https://blogs.msdn.microsoft.com/commandline/2018/06/14/improved-per-directory-case-sensitivity-support-in-wsl/) para obtener más información.
+* Agregue wslconfig/Terminate. para detener las distribuciones en ejecución.
 
 ## <a name="build-17692"></a>Compilación 17692
-Para Windows general, visite información sobre las compilación 17692 el [Blog Windows](https://blogs.windows.com/windowsexperience/2018/06/14/announcing-windows-10-insider-preview-build-17692).
+Para obtener información general sobre Windows sobre la compilación 17692, visite el [blog de Windows](https://blogs.windows.com/windowsexperience/2018/06/14/announcing-windows-10-insider-preview-build-17692).
 
 ### <a name="wsl"></a>WSL
-* Corregir el problema con el contexto del shell WSL entradas de menú que no administren correctamente las rutas de acceso con espacios.
-* Exponer entre mayúsculas y minúsculas por directorio como un atributo extendido
-* ARM64: Emular las operaciones de mantenimiento de caché. Resolver [dotnet problema](https://github.com/dotnet/core/issues/1561).
-* DrvFs: unescape solo caracteres del intervalo privado que corresponden a un carácter de escape.
+* Corrija el problema con las entradas del menú contextual del shell de WSL que no controlan correctamente las rutas de acceso con espacios.
+* Exponer la distinción de mayúsculas y minúsculas por directorio como atributo extendido
+* ARM64 Emular las operaciones de mantenimiento de la memoria caché. Resolver el [problema dotnet](https://github.com/dotnet/core/issues/1561).
+* DrvFs: solo caracteres de escape en el intervalo privado que corresponden a un carácter de escape.
 
 ## <a name="build-17686"></a>Compilación 17686
-Para Windows general, visite información sobre las compilación 17686 el [Blog Windows](https://blogs.windows.com/windowsexperience/2018/06/06/announcing-windows-10-insider-preview-build-17686).
+Para obtener información general sobre Windows sobre la compilación 17686, visite el [blog de Windows](https://blogs.windows.com/windowsexperience/2018/06/06/announcing-windows-10-insider-preview-build-17686).
 
 ### <a name="wsl"></a>WSL
-* Corregir el error de off a uno en la validación de longitud de intérprete de ELF analizador [GH 3154]
-* Los temporizadores en absoluto con un tiempo en el pasado WSL no activan [GH 3091]
-* Asegúrese de recién puntos de reanálisis creado se muestran como tal en el directorio primario.
-* Crear atómicamente directorios distingue mayúsculas de minúsculas en DrvFs.
+* Error de corrección de errores en la validación de longitud del intérprete del analizador ELF [alvent 3154]
+* WSL los temporizadores absolutos con una hora en el pasado no se activan [alvent 3091]
+* Asegúrese de que los puntos de reanálisis recién creados se muestran como tales en el directorio principal.
+* Cree de forma atómica directorios con distinción entre mayúsculas y minúsculas en DrvFs.
 
 ## <a name="build-17677"></a>Compilación 17677
-Para Windows general, visite información sobre las compilación 17677 el [Blog Windows](https://blogs.windows.com/windowsexperience/2018/05/24/announcing-windows-10-insider-preview-build-17677/).
+Para obtener información general sobre Windows sobre la compilación 17677, visite el [blog de Windows](https://blogs.windows.com/windowsexperience/2018/05/24/announcing-windows-10-insider-preview-build-17677/).
 
 ### <a name="wsl"></a>WSL
-* Se corrigió un problema adicional que podrían devolver operaciones multiproceso ENOENT aunque exista el archivo. [GH 2712]
-* WSL fijo iniciar un error cuando se habilita UMCI. [GH 3020]
+* Se ha corregido un problema adicional en el que las operaciones multiproceso podían devolver ENOENT, aunque el archivo exista. [ALVENT 2712]
+* Se corrigió un error de inicio de WSL cuando UMCI está habilitado. [ALVENT 3020]
 
 ## <a name="build-17666"></a>Compilación 17666
-Para Windows general, visite información sobre las compilación 17666 el [Blog Windows](https://blogs.windows.com/windowsexperience/2018/05/09/announcing-windows-10-insider-preview-build-17666/).
+Para obtener información general sobre Windows sobre la compilación 17666, visite el [blog de Windows](https://blogs.windows.com/windowsexperience/2018/05/09/announcing-windows-10-insider-preview-build-17666/).
 
 ### <a name="wsl"></a>WSL
-#### <a name="warning-there-is-an-issue-preventing-wsl-from-running-on-some-amd-chipsets-gh-3134-a-fix-is-ready-and-making-its-way-to-the-insider-build-branch"></a>ADVERTENCIA: Hay un problema que impedía WSL desde que se ejecutan en algunos conjuntos de chips AMD [GH 3134]. Una corrección está listo y realizando su camino hacia la rama de compilación de Insider.
-* Agregar el menú contextual del explorador para iniciar WSL [GH 437, 603, 1836]. Para usar con el botón secundario en una ventana del explorador y a la espera.
-* Corregir el comportamiento de no bloqueo del socket de unix [GH 2822, 3100]
-* Corrección de francesa comando NETLINK notificados en 2026 GH.
-* Agregar compatibilidad con marcadores de propagación de montaje [GH 2911].
-* Corregir el problema con truncate que no producen inotify eventos [GH 2978].
-* Agregue--opción exec para wsl.exe invocar un solo archivo binario sin un shell.
-* Agregar: opción de distribución para wsl.exe seleccionar una distribución específica.
+#### <a name="warning-there-is-an-issue-preventing-wsl-from-running-on-some-amd-chipsets-gh-3134-a-fix-is-ready-and-making-its-way-to-the-insider-build-branch"></a>ADVERTENCIA: Hay un problema que impide que WSL se ejecute en algunos chipsets AMD [alvent 3134]. Una corrección está lista y se convierte en la rama de compilación Insider.
+* Agregue el menú contextual del explorador para iniciar WSL [alvent 437, 603, 1836]. Para usar Mayús y hacer clic con el botón derecho en una ventana del explorador.
+* Corregir el comportamiento de no bloqueo de sockets de UNIX [alvent 2822, 3100]
+* Corrija el comando de NETLINK de bloqueo, tal como se muestra en alvent 2026.
+* Agregue compatibilidad para los marcadores de propagación de montaje [alvent 2911].
+* Corrección del problema con TRUNCATE no provocando eventos de inotify [alvent 2978].
+* Agregue la opción--exec de WSL. exe para invocar un solo binario sin un shell.
+* Add--Distribution Option para WSL. exe para seleccionar un distribución específico.
 
-## <a name="build-17655-skip-ahead"></a>Compilación 17655 (Saltar adelante)
-Para Windows general, visite información sobre las compilación 17655 el [Blog Windows](https://blogs.windows.com/windowsexperience/2018/04/25/announcing-windows-10-insider-preview-build-17655-for-skip-ahead/).
-
-### <a name="wsl"></a>WSL
-* Compatibilidad limitada con dmesg. Las aplicaciones ahora pueden iniciar en dmesg. Controlador WSL registra información limitada a dmesg. En el futuro, esto puede ampliarse para llevar a cabo otros información/diagnósticos desde el controlador.
-    * Nota: dmesg actualmente se admite a través de la `/dev/kmsg` la interfaz de dispositivo. `syslog` aún no se admite la interfaz sycall. Y, por lo tanto, algunos de los `dmesg` opciones de línea de comandos tales como `-S`, `-C` no funcionan.
-* Se ha corregido un problema donde podrían devolver operaciones multiproceso ENOENT aunque exista el archivo. [GH 2712]
-
-## <a name="build-17639-skip-ahead"></a>Compilación 17639 (Saltar adelante)
-Para Windows general, visite información sobre las compilación 17639 el [Blog Windows](https://blogs.windows.com/windowsexperience/2018/04/04/announcing-windows-10-insider-preview-build-17639-for-skip-ahead/).
+## <a name="build-17655-skip-ahead"></a>Compilación 17655 (omitir)
+Para obtener información general sobre Windows sobre la compilación 17655, visite el [blog de Windows](https://blogs.windows.com/windowsexperience/2018/04/25/announcing-windows-10-insider-preview-build-17655-for-skip-ahead/).
 
 ### <a name="wsl"></a>WSL
-* Cambiar el gid de forma predeterminada y el modo de dispositivos serie para que coincida con nativo [GH 3042]
-* DrvFs ahora es compatible con atributos extendidos.
-    * Nota: DrvFs tiene algunas limitaciones en el nombre de los atributos extendidos. En concreto, algunos caracteres (como '/', ':' y '\*') no están permitidos y extendido los nombres de atributo no distinguen mayúsculas de minúsculas en DrvFs
+* Compatibilidad limitada para dmesg. Ahora, las aplicaciones pueden iniciar sesión en dmesg. El controlador WSL registra información limitada en dmesg. En el futuro, esto puede extenderse para llevar a cabo otros diagnósticos e información del controlador.
+    * Nota: dmesg se admite actualmente a través `/dev/kmsg` de la interfaz de dispositivo. `syslog`la interfaz sycall todavía no se admite. Y, por lo tanto, algunas `dmesg` de las opciones de la `-S`línea `-C` de comandos, como, no funcionan.
+* Se corrigió un problema en el que las operaciones multiproceso podían devolver ENOENT aunque el archivo exista. [ALVENT 2712]
 
-## <a name="build-17133-fast"></a>Compilar 17133 (Fast)
-Para Windows general, visite información sobre las compilación 17133 el [Blog Windows](https://blogs.windows.com/windowsexperience/2018/03/27/announcing-windows-10-insider-preview-build-17133-for-fast/).
-
-### <a name="wsl"></a>WSL
-* Corrección de bloqueo en WSL. [GH 3039, 3034]
-
-## <a name="build-17128-fast"></a>Compilar 17128 (Fast)
-Para Windows general, visite información sobre las compilación 17128 el [Blog Windows](https://blogs.windows.com/windowsexperience/2018/03/23/announcing-windows-10-insider-preview-build-17128-for-fast/).
+## <a name="build-17639-skip-ahead"></a>Compilación 17639 (omitir)
+Para obtener información general sobre Windows sobre la compilación 17639, visite el [blog de Windows](https://blogs.windows.com/windowsexperience/2018/04/04/announcing-windows-10-insider-preview-build-17639-for-skip-ahead/).
 
 ### <a name="wsl"></a>WSL
-* Ninguno
+* Cambiar el GID y el modo de dispositivos serie predeterminados para que coincidan con el nativo [alvent 3042]
+* DrvFs ahora admite atributos extendidos.
+    * Nota: DrvFs tiene algunas limitaciones en cuanto al nombre de los atributos extendidos. En concreto, algunos caracteres (como '/', ': ' y '\*') no están permitidos, y los nombres de atributos extendidos no distinguen mayúsculas de minúsculas en DrvFs
 
-## <a name="build-17627-skip-ahead"></a>Compilación 17627 (Saltar adelante)
-Para Windows general, visite información sobre las compilación 17627 el [Blog Windows](https://blogs.windows.com/windowsexperience/2018/03/21/announcing-windows-10-insider-preview-build-17627-for-skip-ahead/).
+## <a name="build-17133-fast"></a>Compilación 17133 (rápida)
+Para obtener información general sobre Windows sobre la compilación 17133, visite el [blog de Windows](https://blogs.windows.com/windowsexperience/2018/03/27/announcing-windows-10-insider-preview-build-17133-for-fast/).
 
 ### <a name="wsl"></a>WSL
-* Agregar compatibilidad para las operaciones basadas en la pi futex. [GH 1006]
-    * Tenga en cuenta que las prioridades no son actualmente una característica WSL admitida por lo que existen limitaciones, pero debe desbloquearse uso estándar.
-* Compatibilidad con el firewall de Windows para los procesos WSL. [GH 1852]
-    * Por ejemplo, para permitir el WSL python procesa para que escuche en cualquier puerto, utilice el cmd de Windows con privilegios elevados: ```netsh.exe advfirewall firewall add rule name=wsl_python dir=in action=allow program="C:\users\<username>\appdata\local\packages\canonicalgrouplimited.ubuntuonwindows_79rhkp1fndgsc\localstate\rootfs\usr\bin\python2.7" enable=yes```
-    * Para obtener más información sobre cómo agregar reglas de firewall, consulte [vínculo](https://support.microsoft.com/en-us/help/947709/how-to-use-the-netsh-advfirewall-firewall-context-instead-of-the-netsh)
-* Respetar el shell predeterminado del usuario cuando se usa wsl.exe. [GH 2372]
-* Informe todas las interfaces de red como ethernet. [GH 2996]
-* Un mejor control del archivo/etc/passwd dañado. [GH 3001]
+* Corrección de bloqueo en WSL. [ALVENT 3039, 3034]
+
+## <a name="build-17128-fast"></a>Compilación 17128 (rápida)
+Para obtener información general sobre Windows sobre la compilación 17128, visite el [blog de Windows](https://blogs.windows.com/windowsexperience/2018/03/23/announcing-windows-10-insider-preview-build-17128-for-fast/).
+
+### <a name="wsl"></a>WSL
+* None
+
+## <a name="build-17627-skip-ahead"></a>Compilación 17627 (omitir)
+Para obtener información general sobre Windows sobre la compilación 17627, visite el [blog de Windows](https://blogs.windows.com/windowsexperience/2018/03/21/announcing-windows-10-insider-preview-build-17627-for-skip-ahead/).
+
+### <a name="wsl"></a>WSL
+* Agregue compatibilidad para las operaciones compatibles con PI de Futex. [ALVENT 1006]
+    * Tenga en cuenta que las prioridades no son actualmente una característica WSL admitida, por lo que hay limitaciones, pero el uso estándar debe estar desbloqueado.
+* Compatibilidad con el Firewall de Windows para los procesos de WSL. [ALVENT 1852]
+    * Por ejemplo, para permitir que el proceso de Python de WSL escuche en cualquier puerto, use el cmd de Windows con privilegios elevados:```netsh.exe advfirewall firewall add rule name=wsl_python dir=in action=allow program="C:\users\<username>\appdata\local\packages\canonicalgrouplimited.ubuntuonwindows_79rhkp1fndgsc\localstate\rootfs\usr\bin\python2.7" enable=yes```
+    * Para obtener más información sobre cómo agregar reglas de firewall, consulte [Link](https://support.microsoft.com/en-us/help/947709/how-to-use-the-netsh-advfirewall-firewall-context-instead-of-the-netsh)
+* Respetar el shell predeterminado del usuario cuando se usa WSL. exe. [ALVENT 2372]
+* Informe de todas las interfaces de red como Ethernet. [ALVENT 2996]
+* Mejor control del archivo/etc/passwd dañado. [ALVENT 3001]
 
 ### <a name="console"></a>Console
 * No hay correcciones.
 
-### <a name="ltp-results"></a>LTP resultados:
-Las pruebas en curso.
+### <a name="ltp-results"></a>Resultados de LTP:
+Pruebas en curso.
 
-## <a name="build-17618-skip-ahead"></a>Compilación 17618 (Saltar adelante)
-Para Windows general, visite información sobre las compilación 17618 el [Blog Windows](https://blogs.windows.com/windowsexperience/2018/03/07/announcing-windows-10-insider-preview-build-17618-skip-ahead/).
+## <a name="build-17618-skip-ahead"></a>Compilación 17618 (omitir)
+Para obtener información general sobre Windows sobre la compilación 17618, visite el [blog de Windows](https://blogs.windows.com/windowsexperience/2018/03/07/announcing-windows-10-insider-preview-build-17618-skip-ahead/).
 
 ### <a name="wsl"></a>WSL
-* Introducir pseudoconsole funcionalidad para la interoperabilidad de NT [GH 988, 1366, 1433, 1542, 2370, 2406].
-* El mecanismo de instalación heredada (lxrun.exe) ha quedado obsoleto. El mecanismo compatible para la instalación de las distribuciones es a través de la Microsoft Store.
+* Introduzca la funcionalidad de pseudoconsole para la interoperabilidad de NT [alvent 988, 1366, 1433, 1542, 2370, 2406].
+* El mecanismo de instalación heredado (lxrun. exe) está en desuso. El mecanismo compatible para la instalación de distribuciones se realiza a través de la Microsoft Store.
 
 ### <a name="console"></a>Console
 * No hay correcciones.
 
-### <a name="ltp-results"></a>LTP resultados:
-Las pruebas en curso.
+### <a name="ltp-results"></a>Resultados de LTP:
+Pruebas en curso.
 
 ## <a name="build-17110"></a>Compilación 17110
-Para Windows general, visite información sobre las compilación 17110 el [Blog Windows](https://blogs.windows.com/windowsexperience/2018/02/27/announcing-windows-10-insider-preview-build-17110-fast/).
+Para obtener información general sobre Windows sobre la compilación 17110, visite el [blog de Windows](https://blogs.windows.com/windowsexperience/2018/02/27/announcing-windows-10-insider-preview-build-17110-fast/).
 
 ### <a name="wsl"></a>WSL
-* Permitir /init terminar de Windows [GH 2928].
-* DrvFs utiliza mayúsculas y minúsculas por directorio de forma predeterminada (equivalente a la "caso = dir" opción de montaje).
-    * Uso de "caso = force" (el comportamiento anterior) requiere establecer una clave del registro. Ejecute el siguiente comando para habilitar "caso = force" Si necesita usarlo: reg agregar HKLM\SYSTEM\CurrentControlSet\Services\lxss /v DrvFsAllowForceCaseSensitivity /t REG_DWORD /d 1
-    * Si tiene directorios existentes creados con WSL en una versión anterior de Windows que deben estar entre mayúsculas y minúsculas, usar fsutil.exe para marcarlos como con diferenciación entre mayúsculas y minúsculas: fsutil.exe archivo setcasesensitiveinfo <path> habilitar
-* Finalizar cadenas devueltos desde la syscall uname con NULL.
+* Permitir que/init termine de Windows [alvent 2928].
+* DrvFs Now usa la distinción de mayúsculas y minúsculas por directorio de forma predeterminada (equivalente a la opción de montaje "Case = dir").
+    * El uso de "Case = Force" (el comportamiento anterior) requiere el establecimiento de una clave del registro. Ejecute el siguiente comando para habilitar "Case = Force" Si necesita usarlo: REG Add HKLM\SYSTEM\CurrentControlSet\Services\lxss/v DrvFsAllowForceCaseSensitivity/t REG_DWORD/d 1
+    * Si tiene directorios existentes creados con WSL en una versión anterior de Windows que deben distinguir entre mayúsculas y minúsculas, use fsutil. exe para marcarlos con distinción de mayúsculas y <path> minúsculas: fsutil. exe File setcasesensitiveinfo enable
+* Cadenas de finalización NULAs devueltas por el syscall de uname.
 
 ### <a name="console"></a>Console
 * No hay correcciones.
 
-### <a name="ltp-results"></a>LTP resultados:
-Las pruebas en curso.
+### <a name="ltp-results"></a>Resultados de LTP:
+Pruebas en curso.
 
 ## <a name="build-17107"></a>Compilación 17107
-Para Windows general, visite información sobre las compilación 17107 el [Blog Windows](https://blogs.windows.com/windowsexperience/2018/02/23/announcing-windows-10-insider-preview-build-17107-fast-ring/).
+Para obtener información general sobre Windows sobre la compilación 17107, visite el [blog de Windows](https://blogs.windows.com/windowsexperience/2018/02/23/announcing-windows-10-insider-preview-build-17107-fast-ring/).
 
 ### <a name="wsl"></a>WSL
-* Admite TCSETSF y TCSETSW en los puntos de conexión maestro pty [GH 2552].
-* A partir de procesos simultáneos de interoperabilidad puede dar lugar a EINVAL [GH 2813].
-* Corregir PTRACE_ATTACH para mostrar el estado de seguimiento adecuado en /proc/pid/status.
-* Anticipación de corrección donde los procesos de corta duración clonados con marcas de la CLEARTID y SETTID pudo salir sin borrar la dirección TID.
-* Mostrar un mensaje al actualizar los directorios de sistema de archivos de Linux al pasar de una compilación anterior a 17093. Para obtener más detalles sobre los cambios del sistema de 17093 archivo, vea las notas de [17093](https://github.com/MicrosoftDocs/WSL/blob/live/WSL/release-notes.md#build-17093).
+* Compatibilidad con TCSETSF y TCSETSW en los puntos de conexión de Master PTY [alvent 2552].
+* Iniciar procesos de interoperabilidad simultáneos puede dar lugar a EINVAL [alvent 2813].
+* Corrección de PTRACE_ATTACH para mostrar el estado de seguimiento adecuado en/proc/PID/status.
+* Corregir la carrera en la que los procesos de corta duración clonados con las marcas CLEARTID y SETTID podrían salir sin borrar la dirección de TID.
+* Mostrar un mensaje al actualizar los directorios del sistema de archivos de Linux al pasar de una compilación anterior a la 17093. Para obtener más detalles sobre los cambios del sistema de archivos 17093, consulte las notas de la versión de [17093](https://github.com/MicrosoftDocs/WSL/blob/live/WSL/release-notes.md#build-17093).
 
 ### <a name="console"></a>Console
 * No hay correcciones.
 
-### <a name="ltp-results"></a>LTP resultados:
-Las pruebas en curso.
+### <a name="ltp-results"></a>Resultados de LTP:
+Pruebas en curso.
 
 ## <a name="build-17101"></a>Compilación 17101
-Para Windows general, visite información sobre las compilación 17101 el [Blog Windows](https://blogs.windows.com/windowsexperience/2018/02/14/announcing-windows-10-insider-preview-build-17101-fast-build-17604-skip-ahead/).
+Para obtener información general sobre Windows sobre la compilación 17101, visite el [blog de Windows](https://blogs.windows.com/windowsexperience/2018/02/14/announcing-windows-10-insider-preview-build-17101-fast-build-17604-skip-ahead/).
 
 ### <a name="wsl"></a>WSL
-* Compatibilidad con signalfd. [GH 129]
-* Admite nombres de archivo que contiene caracteres no válidos de NTFS mediante su codificación como privados caracteres Unicode. [GH 1514]
-* Montaje automático retrocederá a solo lectura cuando no se admite la escritura. [GH 2603]
-* Permitir el pegado de los pares suplentes de Unicode (como emoji caracteres). [GH 2765]
-* Archivos pseudo /proc y PF deben devolver leer y escribir listo desde select, sondeo, epoll, et al [GH 2838]
-* Se corrige el problema que podría provocar que el servicio entrar en bucle infinito cuando el registro ha sido alterado o está dañado.
-* Corregir mensajes netlink para trabajar con la versión más reciente de (dirección ascendente 4.14) de iproute2.
+* Compatibilidad con signalfd. [ALVENT 129]
+* Admita nombres de archivo que contengan caracteres NTFS no válidos mediante su codificación como caracteres Unicode privados. [ALVENT 1514]
+* El montaje automático se reservará en modo de solo lectura cuando no se admita la escritura. [ALVENT 2603]
+* Permite pegar los pares suplentes Unicode (como los caracteres emoji). [ALVENT 2765]
+* Los pseudo archivos de/proc y/sys deben devolver lectura y escritura listas para seleccionar, sondeo, epoll, et al. [alvent 2838]
+* Corrija el problema que podría hacer que el servicio pudiera entrar en un bucle infinito cuando el registro se haya alterado o esté dañado.
+* Corrija los mensajes de NetLink para trabajar con la versión más reciente (de nivel superior 4,14) de iproute2.
 
 ### <a name="console"></a>Console
 * No hay correcciones.
 
-### <a name="ltp-results"></a>LTP resultados:
-Las pruebas en curso.
+### <a name="ltp-results"></a>Resultados de LTP:
+Pruebas en curso.
 
 ## <a name="build-17093"></a>Compilación 17093
-Para Windows general, visite información sobre las compilación 17093 el [Blog Windows](https://blogs.windows.com/windowsexperience/2018/02/07/announcing-windows-10-insider-preview-build-17093-pc/).
+Para obtener información general sobre Windows sobre la compilación 17093, visite el [blog de Windows](https://blogs.windows.com/windowsexperience/2018/02/07/announcing-windows-10-insider-preview-build-17093-pc/).
 
 #### <a name="important"></a>Importante:
-Al iniciar WSL por primera vez después de actualizar a esta compilación, debe realizar algún trabajo de actualización de los directorios de sistema de archivos de Linux. Esto puede tardar varios minutos, por lo que puede parecer WSL que iniciarse lentamente. Esto solo debería ocurrir una vez para cada distribución haya instalado desde la tienda.
-* Soporte mejorado para mayúsculas y minúsculas en DrvFs.
-    * DrvFs ahora es compatible con mayúsculas y minúsculas por directorio. Se trata de una nueva marca que se puede establecer en los directorios para indicar que todas las operaciones en estos directorios deben tratarse como distingue mayúsculas de minúsculas, lo que permite que incluso las aplicaciones de Windows abrir correctamente los archivos que difieran solo por caso.
-    * DrvFs tiene nuevas opciones de montaje, control de mayúsculas y minúsculas en una base por directorio
-        * caso = force: todos los directorios se distinguen mayúsculas de minúsculas (excepto la raíz de la unidad). Nuevos directorios creados con WSL se marcan como distingue mayúsculas de minúsculas. Este es el comportamiento heredado excepto para marcar los nuevos directorios distingue mayúsculas de minúsculas.
-        * caso = dir: solo los directorios con el indicador de mayúsculas y minúsculas por directorio se distinguen mayúsculas de minúsculas; otros directorios distinguen mayúsculas de minúsculas. Nuevos directorios creados con WSL se marcan como distingue mayúsculas de minúsculas.
-        * caso = desactivada: solo los directorios con el indicador de mayúsculas y minúsculas por directorio se distinguen mayúsculas de minúsculas; otros directorios distinguen mayúsculas de minúsculas. Nuevos directorios creados con WSL se marcan como no distingue mayúsculas de minúsculas.
-    * Nota: los directorios creados por WSL en versiones anteriores no tienen esta marca establecida, por lo que no se tratará como distingue mayúsculas de minúsculas si usa el "caso = dir" opción. Una manera de establecer esta marca en los directorios existentes estará disponible próximamente.
-    * Ejemplo de montaje con estas opciones (las unidades de existente, debe primero desmonte antes de que se puede montar con diferentes opciones): sudo mount -t drvfs C:/mnt/c -o caso = dir
-    * Por ahora, caso = forzar sigue siendo la opción predeterminada. Esto se cambiará al caso = dir en el futuro.
-* Ahora puede usar barras diagonales en las rutas de acceso de Windows al montar DrvFs, p. ej.: -t drvfs //server/share /mnt/share de montaje de sudo
-* WSL ahora procesa el archivo/etc/fstab durante el inicio de instancia [GH 2636].
-    * Esto se realiza automáticamente montar unidades de DrvFs; las unidades que ya se han montado por fstab no se volverá a montar automáticamente, lo que le permite cambiar el punto de montaje para unidades específicas.
-    * Este comportamiento se puede desactivar mediante wsl.conf.
-* Los archivos de montaje, mountinfo y mountstats en /proc correctamente caracteres especiales como espacios [GH 2799] y barras diagonales inversas de escape
-* Archivos especiales que se crean con DrvFs como vínculos simbólicos de WSL, o fifos y sockets cuando están habilitados los metadatos, ahora pueden copiarse y mover de Windows.
+Al iniciar WSL por primera vez después de actualizar a esta compilación, debe realizar algún trabajo al actualizar los directorios del sistema de archivos de Linux. Esto puede tardar varios minutos, por lo que es posible que WSL se inicie lentamente. Esto solo debería ocurrir una vez por cada distribución que haya instalado desde la tienda.
+* Compatibilidad mejorada de distinción de mayúsculas y minúsculas en DrvFs.
+    * DrvFs admite ahora la distinción de mayúsculas y minúsculas por directorio. Se trata de una nueva marca que se puede establecer en directorios para indicar que todas las operaciones de esos directorios deben tratarse como con distinción de mayúsculas y minúsculas, lo que permite que las aplicaciones de Windows abran archivos que solo difieren en mayúsculas y minúsculas.
+    * DrvFs tiene nuevas opciones de montaje que controlan la distinción de mayúsculas y minúsculas por directorio.
+        * Case = Force: todos los directorios se tratan con distinción de mayúsculas y minúsculas (excepto la raíz de la unidad). Los nuevos directorios creados con WSL se marcan con distinción de mayúsculas y minúsculas. Este es el comportamiento heredado excepto para marcar los nuevos directorios que distinguen mayúsculas de minúsculas.
+        * Case = dir: solo los directorios con la marca de distinción de mayúsculas y minúsculas por directorio se tratan como distinguir mayúsculas de minúsculas; otros directorios no distinguen mayúsculas de minúsculas. Los nuevos directorios creados con WSL se marcan con distinción de mayúsculas y minúsculas.
+        * Case = OFF: solo los directorios con la marca de distinción de mayúsculas y minúsculas por directorio se tratan como distinguir mayúsculas de minúsculas; otros directorios no distinguen mayúsculas de minúsculas. Los nuevos directorios creados con WSL se marcan como no distinguir mayúsculas de minúsculas.
+    * Nota: los directorios creados por WSL en versiones anteriores no tienen esta marca establecida, por lo que no se tratará como distinción entre mayúsculas y minúsculas si usa la opción "Case = dir". Próximamente se establecerá una manera de establecer esta marca en los directorios existentes.
+    * Ejemplo de montaje con estas opciones (en el caso de las unidades existentes, primero debe desmontar antes de poder montar con distintas opciones): sudo mount-t drvfs C:/mnt/c-o Case = dir
+    * Por ahora, Case = Force sigue siendo la opción predeterminada. Se cambiará a case = dir en el futuro.
+* Ahora puede usar barras diagonales en las rutas de acceso de Windows al montar DrvFs, por ejemplo: sudo mount-t DrvFs//Server/SHARE/mnt/share
+* WSL ahora procesa el archivo/etc/fstab durante el inicio de la instancia [alvent 2636].
+    * Esto se hace antes de montar automáticamente las unidades de DrvFs; las unidades que ya se hayan montado mediante fstab no se volverán a montar automáticamente, lo que le permitirá cambiar el punto de montaje para unidades específicas.
+    * Este comportamiento se puede desactivar mediante WSL. conf.
+* Los archivos Mount, mountinfo y mountstats de/proc convierten correctamente en caracteres especiales, como barras diagonales inversas y espacios [alvent 2799]
+* Los archivos especiales creados con DrvFs, como los vínculos simbólicos de WSL, o FIFO y Sockets cuando se habilitan los metadatos, ahora se pueden copiar y pasar de Windows.
 
-#### <a name="wsl-is-more-configurable-with-wslconf"></a>Es más configurable con wsl.conf WSL
-Se ha agregado un método para que configure automáticamente cierta funcionalidad en WSL que se aplicarán cada vez que inicie el subsistema. Esto incluye las opciones de montaje automático y la configuración de red. Obtenga más información en nuestro blog en: https://aka.ms/wslconf
+#### <a name="wsl-is-more-configurable-with-wslconf"></a>WSL es más configurable con WSL. conf
+Hemos agregado un método para que configure automáticamente ciertas funciones en WSL que se aplicarán cada vez que inicie el subsistema. Esto incluye opciones de montaje automático y configuración de red. Obtenga más información en la entrada de blog en: https://aka.ms/wslconf
 
-#### <a name="afunix-allows-socket-connections-between-linux-processes-on-wsl-and-windows-native-processes"></a>AF_UNIX permite las conexiones de socket entre los procesos de Linux en WSL y procesos nativos de Windows
-Las aplicaciones de Windows y de WSL ahora pueden comunicarse entre sí a través de sockets de Unix. Imagine que desea ejecutar un servicio en Windows y que esté disponible para las aplicaciones de Windows y WSL. Ahora, que es posible con sockets de Unix. Leer más información en nuestro blog post en https://aka.ms/afunixinterop
+#### <a name="afunix-allows-socket-connections-between-linux-processes-on-wsl-and-windows-native-processes"></a>AF_UNIX permite conexiones de socket entre procesos de Linux en WSL y procesos nativos de Windows
+Las aplicaciones de WSL y Windows ahora pueden comunicarse entre sí a través de sockets de Unix. Imagine que quiere ejecutar un servicio en Windows y hacer que esté disponible para las aplicaciones de Windows y WSL. Ahora, eso es posible con los sockets de Unix. Lea más en nuestra entrada de blog en https://aka.ms/afunixinterop
 
 ### <a name="wsl"></a>WSL
-* Compatibilidad con mmap() con MAP_NORESERVE [GH 121, 2784 error]
-* Admitir CLONE_PTRACE y CLONE_UNTRACED [GH 121, 2781]
-* Controlar la señal de finalización no SIGCHLD en clon [GH 121, 2781]
-* Stub /proc/sys/fs/inotify/max_user_instances and /proc/sys/fs/inotify/max_user_watches [GH 1705]
-* Error al cargar los archivos binarios de ELF que contienen encabezados de carga con desplazamientos distinto de cero [GH 1884]
-* Cero out finales bytes de la página al cargar imágenes.
-* Reducir los casos donde execve finaliza en modo silencioso el proceso
+* Compatibilidad con mmap () con MAP_NORESERVE [alvent 121, 2784]
+* Compatibilidad con CLONE_PTRACE y CLONE_UNTRACED [alvent 121, 2781]
+* Controlar la señal de terminación no SIGCHLD en el clon [alvent 121, 2781]
+* Stub/proc/sys/FS/inotify/max_user_instances y/proc/sys/FS/inotify/max_user_watches [alvent 1705]
+* Error al cargar binarios de ELF que contienen encabezados de carga con desplazamientos distintos de cero [alvent 1884]
+* Cero bytes de página finales al cargar imágenes.
+* Reducir los casos en los que execve finaliza el proceso de forma silenciosa
 
 ### <a name="console"></a>Console
 * No hay correcciones.
 
-### <a name="ltp-results"></a>LTP resultados:
-Las pruebas en curso.
+### <a name="ltp-results"></a>Resultados de LTP:
+Pruebas en curso.
 
 ## <a name="build-17083"></a>Compilación 17083
-Para Windows general, visite información sobre las compilación 17083 el [Blog Windows](https://blogs.windows.com/windowsexperience/2018/01/24/announcing-windows-10-insider-preview-build-17083-for-pc/).
+Para obtener información general sobre Windows sobre la compilación 17083, visite el [blog de Windows](https://blogs.windows.com/windowsexperience/2018/01/24/announcing-windows-10-insider-preview-build-17083-for-pc/).
 
 ### <a name="wsl"></a>WSL
-* Fijo comprobación de errores relacionados con epoll [GH 2798, 2801, 2857]
-* Fijo se bloquea cuando la desactivación de ASLR [GH 1185, 2870]
-* Asegúrese de operaciones mmap aparecen atómicas [GH 2732]
+* Se corrigió la BugCheck relacionada con epoll [alvent 2798, 2801, 2857]
+* Se han corregido bloqueos al desactivar ASLR [alvent 1185, 2870]
+* Asegurarse de que las operaciones de mmap aparecen atómicas [alvent 2732]
 
 ### <a name="console"></a>Console
 * No hay correcciones.
 
-### <a name="ltp-results"></a>LTP resultados:
-Las pruebas en curso.
+### <a name="ltp-results"></a>Resultados de LTP:
+Pruebas en curso.
 
 ## <a name="build-17074"></a>Compilación 17074
-Para Windows general, visite información sobre las compilación 17074 el [Blog Windows](https://blogs.windows.com/windowsexperience/2018/01/11/announcing-windows-10-insider-preview-build-17074-pc/).
+Para obtener información general sobre Windows sobre la compilación 17074, visite el [blog de Windows](https://blogs.windows.com/windowsexperience/2018/01/11/announcing-windows-10-insider-preview-build-17074-pc/).
 
 ### <a name="wsl"></a>WSL
-* Formato de almacenamiento fijo de metadatos DrvFs [GH 2777] </br>
-**Importante:** Metadatos de DrvFs creados antes de que esta compilación se mostrará incorrectamente o no admitirlo. Para corregir los archivos afectados, use chmod y chown para volver a aplicar los metadatos.
-* Se corrigió un problema con varias señales y syscalls reiniciables.
+* Formato de almacenamiento fijo de los metadatos de DrvFs [alvent 2777] </br>
+**Importante:** Los metadatos de DrvFs creados antes de esta compilación no se mostrarán correctamente o no se mostrarán en absoluto. Para corregir los archivos afectados, use chmod y chown para volver a aplicar los metadatos.
+* Se corrigió un problema con varias señales y llamadas syscall reiniciables.
 
 ### <a name="console"></a>Console
 * No hay correcciones.
 
-### <a name="ltp-results"></a>LTP resultados:
-Las pruebas en curso.
+### <a name="ltp-results"></a>Resultados de LTP:
+Pruebas en curso.
 
 ## <a name="build-17063"></a>Compilación 17063
-Para Windows general, visite información sobre las compilación 17063 el [Blog Windows](https://blogs.windows.com/windowsexperience/2017/12/19/announcing-windows-10-insider-preview-build-17063-pc/).
+Para obtener información general sobre Windows sobre la compilación 17063, visite el [blog de Windows](https://blogs.windows.com/windowsexperience/2017/12/19/announcing-windows-10-insider-preview-build-17063-pc/).
 
 ### <a name="wsl"></a>WSL
-* DrvFs admite metadatos adicionales de Linux. Esto permite establecer el propietario y el modo de archivos mediante chmod/chown y también la creación de archivos especiales como fifos, sockets de unix y los archivos del dispositivo. Esto está deshabilitada de forma predeterminada por ahora, ya que es todavía experimental.
-**Nota:**  Se ha corregido un error en el formato de metadatos utilizado por DrvFs. Aunque los metadatos funciona en esta compilación para la experimentación, compilaciones futuras no leerá correctamente metadatos creados por esta compilación.  Es posible que deba actualizar manualmente el propietario de los archivos modificados y los dispositivos con un identificador de dispositivo personalizada tendrán que volver a crear.
+* DrvFs admite metadatos de Linux adicionales. Esto permite establecer el propietario y el modo de los archivos con chmod/chown y también la creación de archivos especiales como FIFO, sockets de UNIX y archivos de dispositivo. Esta opción está deshabilitada de forma predeterminada ya que sigue siendo experimental.
+**Nota:**  Se corrigió un error en el formato de metadatos usado por DrvFs. Aunque los metadatos funcionan en esta compilación para experimentación, las compilaciones futuras no leerán correctamente los metadatos creados por esta compilación.  Es posible que tenga que actualizar manualmente el propietario de los archivos modificados y se tendrán que volver a crear los dispositivos con un identificador de dispositivo personalizado.
 
-  Para habilitar DrvFs de montaje con la opción de metadatos (para habilitarla en un montaje existente, debe primero desmontarla):
+  Para habilitar, Monte DrvFs con la opción de metadatos (para habilitarlo en un montaje existente, primero debe desmontarlo):
 
   ```bash
   mount -t drvfs C: /mnt/c -o metadata
   ```
 
-  Permisos de Linux se agregan como metadatos adicionales en el archivo; no afectan a los permisos de Windows.  Recuerde, edición de un archivo con un editor de Windows puede quitar los metadatos. En este caso, el archivo volverá a sus permisos predeterminados.
+  Los permisos de Linux se agregan como metadatos adicionales al archivo; no afectan a los permisos de Windows.  Recuerde que la edición de un archivo mediante un editor de Windows puede quitar los metadatos. En este caso, el archivo volverá a sus permisos predeterminados.
 
-* Opciones de montaje se ha agregado a DrvFs para controlar los archivos sin metadatos.
-  * UID: el identificador de usuario usado para el propietario de todos los archivos.
-  * GID: el identificador de grupo usado para el propietario de todos los archivos.
-  * umask: una máscara de permisos que se van a excluir para todos los archivos y directorios octal.
-  * fMask: una máscara de permisos para excluir todos los archivos normales octal.
-  * dmask: una máscara de permisos para excluir todos los directorios octal.
+* Se han agregado opciones de montaje a DrvFs para controlar archivos sin metadatos.
+  * UID: el identificador de usuario que se usa para el propietario de todos los archivos.
+  * GID: el identificador de grupo que se usa para el propietario de todos los archivos.
+  * umask: máscara octal de permisos que se van a excluir para todos los archivos y directorios.
+  * fMask: máscara octal de permisos que se van a excluir para todos los archivos normales.
+  * dmask: máscara octal de permisos que se van a excluir para todos los directorios.
 
   Por ejemplo:
   ```
   mount -t drvfs C: /mnt/c -o uid=1000,gid=1000,umask=22,fmask=111
   ```
 
-  Combinar con la opción de metadatos para especificar los permisos predeterminados para los archivos sin metadatos.
+  Combine con la opción de metadatos para especificar los permisos predeterminados para los archivos sin metadatos.
 
-* Introdujo una nueva variable de entorno, `WSLENV`, para configurar cómo fluyen las variables de entorno entre WSL y Win32.
+* Presentó una nueva variable de entorno `WSLENV`,, para configurar cómo fluyen las variables de entorno entre WSL y Win32.
 
   Por ejemplo:
 
@@ -544,60 +555,60 @@ Para Windows general, visite información sobre las compilación 17063 el [Blog 
   WSLENV=GOPATH/l:USERPROFILE/pu:DISPLAY
   ```
 
-  `WSLENV` es una lista delimitada por signos de variables de entorno que se pueden incluir, al iniciar los procesos WSL de Win32 o Win32 de WSL.  Cada variable puede tener el sufijo con una barra diagonal seguida de marcadores que especifican cómo se traduce.
-  * p: El valor es una ruta de acceso que se debe traducir entre las rutas de acceso WSL y rutas de acceso de Win32.
-  * l: El valor es una lista de rutas de acceso. En WSL, es una lista delimitada por dos puntos. En Win32, es una lista delimitada por punto y coma.
-  * u: El valor sólo debe incluir al invocar WSL de Win32
-  * w: El valor sólo debe incluir al invocar Win32 de WSL
+  `WSLENV`es una lista delimitada por signos de dos puntos de variables de entorno que se puede incluir al iniciar procesos de WSL desde los procesos Win32 o Win32 desde WSL.  Cada variable puede tener como sufijo una barra diagonal seguida de marcas para especificar cómo se va a traducir.
+  * m El valor es una ruta de acceso que se debe traducir entre las rutas de acceso de WSL y las rutas de acceso de Win32.
+  * CG El valor es una lista de rutas de acceso. En WSL, se trata de una lista delimitada por signos de dos puntos. En Win32, se trata de una lista delimitada por punto y coma.
+  * 5\.50 Solo se debe incluir el valor al invocar WSL desde Win32
+  * con Solo se debe incluir el valor al invocar a Win32 desde WSL
 
-  Puede establecer `WSLENV` en .bashrc o en el entorno de Windows personalizadas para el usuario.
+  Puede establecer `WSLENV` en. bashrc o en el entorno de Windows personalizado para el usuario.
 
-* montajes drvfs conserva correctamente las marcas de tiempo desde el archivo tar, cp -p (GH 1939)
-* vínculos simbólicos drvfs informa del tamaño correcto (GH 2641)
-* lectura/escritura funciona para los tamaños de E/S muy grandes (GH 2653)
-* waitpid funciona con identificadores (GH 2534) del grupo de proceso
-* significativamente mmap mejor rendimiento para las regiones de gran tamaño de reserva; mejora el rendimiento ghc (GH 1671)
-* admite la personalidad de READ_IMPLIES_EXEC; máximos de correcciones y clisp (GH 1185)
-* mprotect admite PROT_GROWSDOWN; correcciones clisp (GH 1128)
-* sobrecarga de correcciones de errores de página en modo; correcciones sbcl (GH 1128)
-* clon es compatible con varias combinaciones de marcas
-* Compatibilidad con select/epoll de archivos epoll (previamente una operación inefectiva).
-* Notificar ptrace de syscall no implementada.
-* Omitir las interfaces que no están activos cuando se generan los servidores de nombres resolv.conf [GH 2694]
-* Enumerar las interfaces de red con ninguna dirección física. [GH 2685]
-* Mejoras y correcciones de errores adicionales.
+* los montajes de drvfs conservan correctamente las marcas de tiempo de tar, CP-p (alvent 1939)
+* los vínculos simbólicos de drvfs informan del tamaño correcto (alvent 2641)
+* lectura/escritura funciona para tamaños de e/s muy grandes (alvent 2653)
+* waitpid funciona con identificadores de grupo de procesos (alvent 2534)
+* rendimiento mmap significativamente mejorado para regiones de reserva grande; mejora el rendimiento de GHC (alvent 1671)
+* la personalidad es compatible con READ_IMPLIES_EXEC; correcciones y CLISP (alvent 1185)
+* mprotect admite PROT_GROWSDOWN; corrige CLISP (alvent 1128)
+* correcciones de errores de página en modo de sobreconfirmación; corrige SBCL (alvent 1128)
+* Clone admite más combinaciones de marcas
+* Compatibilidad con Select/epoll de archivos de epoll (antes de una operación no operativa).
+* Notificar a ptrace de llamadas syscall no implementado.
+* Omitir las interfaces que no están al generar los servidores de nombres resolv. conf [alvent 2694]
+* Enumerar las interfaces de red sin dirección física. [ALVENT 2685]
+* Correcciones de errores adicionales y mejoras.
 
-### <a name="linux-tools-available-to-developers-on-windows"></a>Herramientas de Linux disponibles para los desarrolladores en Windows
+### <a name="linux-tools-available-to-developers-on-windows"></a>Herramientas de Linux disponibles para desarrolladores en Windows
 
-* Cadena de herramientas de línea de comandos de Windows incluye bsdtar (tar) y curl.
-  Lectura [este blog](https://aka.ms/tarcurlwindows) para obtener más información sobre la adición de estas dos nuevas herramientas y ver cómo está dando forma a la experiencia del desarrollador de Windows.
+* La cadena de herramientas de la línea de comandos de Windows incluye bsdtar (tar) y rizo.
+  Lea [este blog](https://aka.ms/tarcurlwindows) para obtener más información acerca de cómo agregar estas dos nuevas herramientas y ver cómo están dando forma a la experiencia del Desarrollador en Windows.
 
-*   `AF_UNIX` está disponible en el SDK de Windows Insider (17061 +).
-  Lectura [este blog](https://blogs.msdn.microsoft.com/commandline/2017/12/19/af_unix-comes-to-windows/) para obtener más información acerca de `AF_UNIX` y cómo pueden usar los desarrolladores en Windows.
+*   `AF_UNIX`está disponible en el SDK de Windows Insider (17061 +).
+  Lea [este blog](https://blogs.msdn.microsoft.com/commandline/2017/12/19/af_unix-comes-to-windows/) para obtener más información `AF_UNIX` sobre y cómo los desarrolladores de Windows pueden usarlo.
 
 ### <a name="console"></a>Console
 * No hay correcciones.
 
-### <a name="ltp-results"></a>LTP resultados:
-Las pruebas en curso.
+### <a name="ltp-results"></a>Resultados de LTP:
+Pruebas en curso.
 
 
 ## <a name="build-17046"></a>Compilación 17046
 
-Para Windows general, visite información sobre las compilación 17046 el [Blog Windows](https://blogs.windows.com/windowsexperience/2017/11/22/announcing-windows-10-insider-preview-build-17046-pc).
+Para obtener información general sobre Windows sobre la compilación 17046, visite el [blog de Windows](https://blogs.windows.com/windowsexperience/2017/11/22/announcing-windows-10-insider-preview-build-17046-pc).
 
-### <a name="fixed"></a>Fijo
+### <a name="fixed"></a>Corregido
 #### <a name="wsl"></a>WSL
-- Permitir que los procesos se ejecuten sin un terminal activo. [GH 709, 1007, 1511, 2252, 2391, et al.]
-- Una mejor compatibilidad con CLONE_VFORK y CLONE_VM. [GH 1878, 2615]
-- Omitir los controladores del filtro TDI de WSL las operaciones de red. [GH 1554]
-- DrvFs crea vínculos simbólicos de NT cuando se cumplen ciertas condiciones. [GH 353, 1475, 2602]
-    - El destino de vínculo debe ser relativo, no debe ocupar los puntos de montaje o vínculos simbólicos y debe existir.
-    - El usuario debe tener SE_CREATE_SYMBOLIC_LINK_PRIVILEGE (Esto normalmente requiere que se inicie con privilegios elevados wsl.exe), a menos que el modo de programador está activado.
-    - En el resto de situaciones, DrvFs sigue creando vínculos simbólicos WSL.
-- Permitir que se ejecuten con privilegios elevados y sin privilegios elevados instancias WSL simultáneamente.
-- Support /proc/sys/kernel/yama/ptrace_scope
-- Agregar wslpath para hacer WSL <> – conversiones de ruta de acceso de Windows. [GH 522, 1243, 1834, 2327, et al.]
+- Permite que los procesos se ejecuten sin un terminal activo. [Alvent 709, 1007, 1511, 2252, 2391, et al.]
+- Mejor compatibilidad con CLONE_VFORK y CLONE_VM. [ALVENT 1878, 2615]
+- Omita los controladores de filtro TDI para las operaciones de red de WSL. [ALVENT 1554]
+- DrvFs crea vínculos simbólicos NT cuando se cumplen determinadas condiciones. [ALVENT 353, 1475, 2602]
+    - El destino del vínculo debe ser relativo, no debe cruzar ningún punto de montaje o vínculos simbólicos, y debe existir.
+    - El usuario debe tener SE_CREATE_SYMBOLIC_LINK_PRIVILEGE (esto normalmente requiere que inicie WSL. exe con privilegios elevados), a menos que esté activado el modo de desarrollador.
+    - En todas las demás situaciones, DrvFs todavía crea vínculos simbólicos de WSL.
+- Permite ejecutar instancias de WSL con privilegios elevados y no elevados simultáneamente.
+- Compatibilidad con/proc/sys/kernel/Yama/ptrace_scope
+- Agregue wslpath para realizar conversiones de rutas de acceso de Windows de WSL <->. [Alvent 522, 1243, 1834, 2327, et al.]
   ```
     wslpath usage:
       -a    force result to absolute path format
@@ -610,626 +621,626 @@ Para Windows general, visite información sobre las compilación 17046 el [Blog 
   #### <a name="console"></a>Console
 - No hay correcciones.
 
-### <a name="ltp-results"></a>LTP resultados:
-Las pruebas en curso.
+### <a name="ltp-results"></a>Resultados de LTP:
+Pruebas en curso.
 
 
 ## <a name="build-17040"></a>Compilación 17040
 
-Para Windows general, visite información sobre las compilación 17040 el [Blog Windows](https://blogs.windows.com/windowsexperience/2017/11/16/announcing-windows-10-insider-preview-build-17040-pc).<br/>
+Para obtener información general sobre Windows sobre la compilación 17040, visite el [blog de Windows](https://blogs.windows.com/windowsexperience/2017/11/16/announcing-windows-10-insider-preview-build-17040-pc).<br/>
 
 
-### <a name="fixed"></a>Fijo
+### <a name="fixed"></a>Corregido
 #### <a name="wsl"></a>WSL
 - No hay correcciones desde 17035.
 
 #### <a name="console"></a>Console
 - No hay correcciones desde 17035.
 
-### <a name="ltp-results"></a>LTP resultados:
-Las pruebas en curso.
+### <a name="ltp-results"></a>Resultados de LTP:
+Pruebas en curso.
 
 ## <a name="build-17035"></a>Compilación 17035
 
-Para Windows general, visite información sobre las compilación 17035 el [Blog Windows](https://blogs.windows.com/windowsexperience/2017/11/08/announcing-windows-10-insider-preview-build-17035-pc).<br/>
+Para obtener información general sobre Windows sobre la compilación 17035, visite el [blog de Windows](https://blogs.windows.com/windowsexperience/2017/11/08/announcing-windows-10-insider-preview-build-17035-pc).<br/>
 
 
-### <a name="fixed"></a>Fijo
+### <a name="fixed"></a>Corregido
 #### <a name="wsl"></a>WSL
-- Acceso a archivos en DrvFs podría no funcionar ocasionalmente con EINVAL. [GH 2448]
+- En ocasiones, el acceso a los archivos de DrvFs podría producir errores con EINVAL. [ALVENT 2448]
 
 #### <a name="console"></a>Console
-- Alguna pérdida de color al insertar o eliminar líneas en el modo de VT.
+- Pérdida de color al insertar o eliminar líneas en modo VT.
 
-### <a name="ltp-results"></a>LTP resultados:
-Las pruebas en curso.
+### <a name="ltp-results"></a>Resultados de LTP:
+Pruebas en curso.
 
 ## <a name="build-17025"></a>Compilación 17025
 
-Para Windows general, visite información sobre las compilación 17025 el [Blog Windows](https://blogs.windows.com/windowsexperience/2017/10/25/announcing-windows-10-insider-preview-build-17025-pc).<br/>
+Para obtener información general sobre Windows sobre la compilación 17025, visite el [blog de Windows](https://blogs.windows.com/windowsexperience/2017/10/25/announcing-windows-10-insider-preview-build-17025-pc).<br/>
 
 
-### <a name="fixed"></a>Fijo
+### <a name="fixed"></a>Corregido
 #### <a name="wsl"></a>WSL
-- Iniciar procesos iniciales en un nuevo grupo de proceso [GH 1653, 2510] de primer plano.
-- Entrega SIGHUP corrige [GH 2496].
-- Generar nombre de puente virtual predeterminado si proporciona ninguno [GH 2497].
-- Implement /proc/sys/kernel/random/boot_id [GH 2518].
-- Corrige la canalización de stdout y stderr más interoperabilidad.
-- Código auxiliar syncfs llamada del sistema.
+- Iniciar procesos iniciales en un nuevo grupo de procesos en primer plano [alvent 1653, 2510].
+- Correcciones de entrega de SIGHUP [alvent 2496].
+- Generar nombre de puente virtual predeterminado si no se proporciona ninguno [alvent 2497].
+- Implementar/proc/sys/kernel/Random/boot_id [al2518].
+- Más correcciones de la canalización stdout/stderr de interoperabilidad.
+- Llamada del sistema syncfs de stub.
 
 #### <a name="console"></a>Console
-- Corregir traducción de VT entrada para las consolas de terceros [GH 111]
+- Corrección de la traducción de VT de entrada para consolas de terceros [alvent 111]
 
-### <a name="ltp-results"></a>LTP resultados:
-Las pruebas en curso.
+### <a name="ltp-results"></a>Resultados de LTP:
+Pruebas en curso.
 
 ## <a name="build-17017"></a>Compilación 17017
 
-Para Windows general, visite información sobre las compilación 17017 el [Blog Windows](https://blogs.windows.com/windowsexperience/2017/10/13/announcing-windows-10-insider-preview-build-17017-pc).<br/>
+Para obtener información general sobre Windows sobre la compilación 17017, visite el [blog de Windows](https://blogs.windows.com/windowsexperience/2017/10/13/announcing-windows-10-insider-preview-build-17017-pc).<br/>
 
 
-### <a name="fixed"></a>Fijo
+### <a name="fixed"></a>Corregido
 #### <a name="wsl"></a>WSL
-- Omitir los encabezados ELF programa [GH 330] estén vacíos.
-- Permitir LxssManager crear instancias WSL para los usuarios no interactivos (ssh y programado la compatibilidad con la tarea) [GH 777, 1602].
-- Compatibilidad con WSL -> Win32 -> [GH 1228] de escenarios de WSL ("origen").
-- Compatibilidad limitada para la terminación de las aplicaciones de consola que se invoca a través de interoperabilidad [GH 1614].
-- Compatibilidad con las opciones de montaje para devpts [GH 1948].
-- Ptrace bloqueo inicio secundarios [GH 2333].
-- EPOLLET faltan algunos eventos [GH 2462].
+- Omitir los encabezados de programa ELF vacíos [alvent 330].
+- Permita que LxssManager Cree instancias de WSL para usuarios no interactivos (SSH y soporte de tareas programadas) [alvent 777, 1602].
+- Compatibilidad con escenarios de WSL-> Win32-> WSL ("Inicio") [alvent 1228].
+- Compatibilidad limitada para la terminación de las aplicaciones de consola que se invocan a través de la interoperabilidad [alvent 1614].
+- Compatibilidad con las opciones de montaje para devpts [alvent 1948].
+- Inicio de bloqueo secundario de ptrace [alvent 2333].
+- EPOLLET faltan algunos eventos [alvent 2462].
 - Devolver más datos para PTRACE_GETSIGINFO.
-- Getdents con lseek ofrece resultados incorrectos.
-- Corregir algunos bloqueos de aplicación de interoperabilidad de Win32, esperando una entrada en una canalización que no tiene ningún dato más.
-- Compatibilidad con archivos tty/pty O_ASYNC.
-- Otras mejoras y correcciones de errores
+- Getdents con lseek proporciona resultados incorrectos.
+- Corrección de bloqueo de la aplicación de interoperabilidad Win32, esperando la entrada en una canalización que no tiene más datos.
+- Compatibilidad de O_ASYNC con archivos TTY/PTY.
+- Mejoras y correcciones de errores adicionales
 
 #### <a name="console"></a>Console
-- Ninguna consola otros cambios relacionados en esta versión.
+- No hay cambios relacionados con la consola en esta versión.
 
-### <a name="ltp-results"></a>LTP resultados:
-Las pruebas en curso.
+### <a name="ltp-results"></a>Resultados de LTP:
+Pruebas en curso.
 
 ## <a name="fall-creators-update"></a>Fall Creators Update
 
 ## <a name="build-16288"></a>Compilación 16288
 
-Para Windows general, visite información sobre las compilación 16288 el [Blog Windows](https://blogs.windows.com/windowsexperience/2017/09/12/announcing-windows-10-insider-preview-build-16288-pc-build-15250-mobile/#7pLWQbj23JisfzV5.97/).<br/>
+Para obtener información general sobre Windows sobre la compilación 16288, visite el [blog de Windows](https://blogs.windows.com/windowsexperience/2017/09/12/announcing-windows-10-insider-preview-build-16288-pc-build-15250-mobile/#7pLWQbj23JisfzV5.97/).<br/>
 
 
-### <a name="fixed"></a>Fijo
+### <a name="fixed"></a>Corregido
 #### <a name="wsl"></a>WSL
-- Inicializar correctamente y notificar uid, gid y el modo de descriptores de archivo socket [GH 2490]
-- Otras mejoras y correcciones de errores
+- Inicializar y notificar correctamente UID, GID y el modo para los descriptores de archivo de socket [alvent 2490]
+- Mejoras y correcciones de errores adicionales
 
 #### <a name="console"></a>Console
-- Ninguna consola otros cambios relacionados en esta versión.
+- No hay cambios relacionados con la consola en esta versión.
 
-### <a name="ltp-results"></a>LTP resultados:
-Ningún cambio desde 16273
+### <a name="ltp-results"></a>Resultados de LTP:
+Sin cambios desde 16273
 
 ## <a name="build-16278"></a>Compilación 16278
 
-Para Windows general, visite información sobre las compilación 162738 el [Blog Windows](https://blogs.windows.com/windowsexperience/2017/08/29/announcing-windows-10-insider-preview-build-16278-pc/#HMz6Xq7Su68WKi0t.97/).<br/>
+Para obtener información general sobre Windows sobre la compilación 162738, visite el [blog de Windows](https://blogs.windows.com/windowsexperience/2017/08/29/announcing-windows-10-insider-preview-build-16278-pc/#HMz6Xq7Su68WKi0t.97/).<br/>
 
 
-### <a name="fixed"></a>Fijo
+### <a name="fixed"></a>Corregido
 #### <a name="wsl"></a>WSL
-- Anular la asignación de vistas asignadas de secciones del archivo de seguridad explícitamente al destruir el estado LX MM [GH 2415]
-- Otras mejoras y correcciones de errores
+- Anular explícitamente las vistas asignadas de las secciones respaldadas por archivos al desplazar hacia abajo el estado LX MM [alvent 2415]
+- Mejoras y correcciones de errores adicionales
 
 #### <a name="console"></a>Console
-- Ninguna consola otros cambios relacionados en esta versión.
+- No hay cambios relacionados con la consola en esta versión.
 
-### <a name="ltp-results"></a>LTP resultados:
-Ningún cambio desde 16273
+### <a name="ltp-results"></a>Resultados de LTP:
+Sin cambios desde 16273
 
 ## <a name="build-16275"></a>Compilación 16275
 
-Para Windows general, visite información sobre las compilación 162735 el [Blog Windows](https://blogs.windows.com/windowsexperience/2017/08/25/announcing-windows-10-insider-preview-build-16275-pc-build-15245-mobile/#8QkxWqQbY37yZslV.97/).<br/>
+Para obtener información general sobre Windows sobre la compilación 162735, visite el [blog de Windows](https://blogs.windows.com/windowsexperience/2017/08/25/announcing-windows-10-insider-preview-build-16275-pc-build-15245-mobile/#8QkxWqQbY37yZslV.97/).<br/>
 
 
-### <a name="fixed"></a>Fijo
+### <a name="fixed"></a>Corregido
 #### <a name="wsl"></a>WSL
-- No hay WSL otros cambios relacionados en esta versión.
+- No hay ningún cambio relacionado con WSL en esta versión.
 
 #### <a name="console"></a>Console
-- Ninguna consola otros cambios relacionados en esta versión.
+- No hay cambios relacionados con la consola en esta versión.
 
-### <a name="ltp-results"></a>LTP resultados:
-Ningún cambio desde 16273
+### <a name="ltp-results"></a>Resultados de LTP:
+Sin cambios desde 16273
 
 ## <a name="build-16273"></a>Compilación 16273
 
-Para Windows general, visite información sobre las compilación 16273 el [Blog Windows](https://blogs.windows.com/windowsexperience/2017/08/23/announcing-windows-10-insider-preview-build-16273-pc/).<br/>
+Para obtener información general sobre Windows sobre la compilación 16273, visite el [blog de Windows](https://blogs.windows.com/windowsexperience/2017/08/23/announcing-windows-10-insider-preview-build-16273-pc/).<br/>
 
 
-### <a name="fixed"></a>Fijo
+### <a name="fixed"></a>Corregido
 #### <a name="wsl"></a>WSL
-- Se ha corregido un problema donde DrvFs notifican a veces, el tipo de archivo incorrecto para los directorios [GH 2392]
-- Permitir la creación de sockets NETLINK_KOBJECT_UEVENT para desbloquear los programas que uevent uso [GH 1121, 2293, 2242, 2295, 2235, 648, 637]
-- Agregar compatibilidad para la conexión de no bloqueo [GH 903, 1391, 1584, 1585, 1829, 2290, 2314]
-- Implemente CLONE_FS clonar el indicador de llamada del sistema [GH 2242]
-- Solucionar problemas con respecto al control de no tabulaciones o comillas correctamente en la interoperabilidad de NT [GH 1625, 2164]
-- Resolver errores cuando se intenta volver a iniciar WSL instancias [GH 651, 2095] ha denegado el acceso
-- Implementar futex FUTEX_REQUEUE y FUTEX_CMP_REQUEUE operaciones [GH 2242]
-- Corrija los permisos para los distintos archivos SysFs [GH 2214]
-- Corregir el bloqueo de la pila de Haskell durante la instalación [GH 2290]
-- Implement binfmt_misc 'C' 'O' and 'P' flags [GH 2103]
-- Add /proc/sys/kernel /shmmax /shmmni & /threads-max [GH 1753]
-- Agregar compatibilidad parcial con la llamada del sistema ioprio_set [GH 498]
-- Código auxiliar SO_REUSEPORT & Agregar compatibilidad con SO_PASSCRED de netlink sockets [69 GH]
-- Devolver códigos de error diferentes de RegisterDistribuiton si una distribución actualmente se está instalado o desinstalado.
-- Permitir anulación del registro de las distribuciones de WSL parcialmente instaladas a través de wslconfig.exe
-- Corregir la falta de respuesta de python socket ensayo desde udp::msg_peek
-- Otras mejoras y correcciones de errores
+- Se ha corregido un problema por el que DrvFs a veces indicó un tipo de archivo incorrecto para los directorios [alvent 2392]
+- Permitir la creación de NETLINK_KOBJECT_UEVENT Sockets para desbloquear programas que usan UEVENT [al1121, 2293, 2242, 2295, 2235, 648, 637]
+- Agregar compatibilidad para conexión sin bloqueo [alvent 903, 1391, 1584, 1585, 1829, 2290, 2314]
+- Implementación de la marca de llamada del sistema Clone CLONE_FS [alvent 2242]
+- Corregir los problemas que no controlan las tabulaciones o comillas correctamente en la interoperabilidad de NT [alvent 1625, 2164]
+- Resolver el error de acceso denegado al intentar volver a iniciar instancias de WSL [alvent 651, 2095]
+- Implementación de las operaciones de Futex FUTEX_REQUEUE y FUTEX_CMP_REQUEUE [alvent 2242]
+- Corrección de permisos para varios archivos de SysFs [alvent 2214]
+- Corregir bloqueo de pila de Haskell durante la instalación [alvent 2290]
+- Implementar marcas binfmt_misc ' C ' ' O ' y ' P ' [alvent 2103]
+- Add/proc/sys/kernel/SHMMAX/shmmni &/threads-Max [alvent 1753]
+- Agregar compatibilidad parcial para llamada del sistema ioprio_set [alvent 498]
+- Stub SO_REUSEPORT & agregar compatibilidad para SO_PASSCRED para Sockets de NetLink [alvent 69]
+- Devolver distintos códigos de error de RegisterDistribuiton si se está instalando o desinstalando actualmente una distribución.
+- Permitir la anulación del registro de distribuciones de WSL parcialmente instaladas a través de wslconfig. exe
+- Corrección de bloqueo de prueba de socket de Python de UDP:: msg_peek
+- Mejoras y correcciones de errores adicionales
 
 #### <a name="console"></a>Console
-- Ninguna consola otros cambios relacionados en esta versión.
+- No hay cambios relacionados con la consola en esta versión.
 
-### <a name="ltp-results"></a>LTP resultados:
+### <a name="ltp-results"></a>Resultados de LTP:
 Total de pruebas: 1904<br/>
-Pruebas de omitidos totales: 209<br/>
-Número total de errores: 229<br/>
-[Los registros de ejecución de pruebas LTP](https://github.com/Microsoft/CommandLine-Documentation/tree/live/LTP_Results/16273)<br/>
+Total de pruebas omitidas: 209<br/>
+Total de errores: 229<br/>
+[Registros de ejecución de pruebas de LTP](https://github.com/Microsoft/CommandLine-Documentation/tree/live/LTP_Results/16273)<br/>
 
 ## <a name="build-16257"></a>Compilación 16257
 
-Para Windows general, visite información sobre las compilación 16257 el [Blog Windows](https://blogs.windows.com/windowsexperience/2017/08/02/announcing-windows-10-insider-preview-build-16257-pc-build-15237-mobile/).<br/>
+Para obtener información general sobre Windows sobre la compilación 16257, visite el [blog de Windows](https://blogs.windows.com/windowsexperience/2017/08/02/announcing-windows-10-insider-preview-build-16257-pc-build-15237-mobile/).<br/>
 
 
-### <a name="fixed"></a>Fijo
+### <a name="fixed"></a>Corregido
 #### <a name="wsl"></a>WSL
-- Implementar prlimit64 llamada del sistema
-- Agregar compatibilidad para ulimit -n (setrlimit RLIMIT_NOFILE) [GH 1688]
-- Código auxiliar MSG_MORE para los sockets TCP [GH 2351]
-- Corregir comportamiento no válido de vector auxiliar AT_EXECFN [GH 2133]
-- Corregir el comportamiento de copiar y pegar para consola/tty y agregar mejor búfer lleno de control [GH 2204, 2131]
-- Establecer AT_SECURE en vector auxiliar para programas de Id. de usuario de conjunto y set-group-ID [GH 2031]
-- Psuedo terminal punto de conexión principal no se controla TIOCPGRP [GH 1063]
-- Corrección lseek hace para rebobinar directorios en LxFs [GH 2310]
-- /dev/ptmx locks up after heavy usage [GH 1882]
-- Otras mejoras y correcciones de errores
+- Implementar llamada del sistema prlimit64
+- Incorporación de compatibilidad con ulimit-n (setrlimit RLIMIT_NOFILE) [alvent 1688]
+- MSG_MORE de código auxiliar para Sockets TCP [alvent 2351]
+- Corregir el comportamiento del vector auxiliar de AT_EXECFN no válido [alvent 2133]
+- Corregir el comportamiento de copiar y pegar para consola/TTY y agregar un mejor control de búfer completo [alvent 2204, 2131]
+- Establecer AT_SECURE en Vector auxiliar para los programas set-User-ID y set-Group-ID [alvent 2031]
+- Psuedo: el extremo maestro de terminal no controla TIOCPGRP [alvent 1063]
+- Corrección de lseek hace para rebobinar directorios en LxFs [alvent 2310]
+- /dev/ptmx se bloquea después del uso intensivo [alvent 1882]
+- Mejoras y correcciones de errores adicionales
 
 #### <a name="console"></a>Console
-- Corrección para horizontal líneas o caracteres de subrayado en todas partes [GH 2168]
-- Corrección del error por orden de proceso cambiado NPM hacen más difícil cerrar [GH 2170]
-- Agrega la nueva combinación de colores: https://blogs.msdn.microsoft.com/commandline/2017/08/02/updating-the-windows-console-colors/
+- Corrección para líneas horizontales o guiones bajos en todas partes [alvent 2168]
+- Corrección para el orden de procesamiento cambiado haciendo que NPM sea más difícil de cerrar [alvent 2170]
+- Se ha agregado la nueva combinación de colores: https://blogs.msdn.microsoft.com/commandline/2017/08/02/updating-the-windows-console-colors/
 
-### <a name="ltp-results"></a>LTP resultados:
-Ningún cambio desde 16251
+### <a name="ltp-results"></a>Resultados de LTP:
+Sin cambios desde 16251
 
-### <a name="syscall-support"></a>Soporte técnico de syscall
-A continuación se muestran una lista de nuevas o mejoradas syscalls que tienen alguna implementación en WSL. Las llamadas en esta lista se admiten en al menos un escenario, pero es posible que no dispone de todos los parámetros compatibles en este momento.
+### <a name="syscall-support"></a>Compatibilidad con syscall
+A continuación se muestra una lista de llamadas syscall nuevos o mejorados que tienen alguna implementación en WSL. Los llamadas syscall de esta lista se admiten en al menos un escenario, pero puede que no se admitan todos los parámetros en este momento.
 
 `prlimit64`<br/>
 
 ### <a name="known-issues"></a>Problemas conocidos
-#### <a name="github-issue-2392-windows-folders-not-recognized-by-wsl-httpsgithubcommicrosoftbashonwindowsissues2392"></a>[GitHub Issue 2392: Carpetas de Windows no reconoce WSL...](https://github.com/Microsoft/BashOnWindows/issues/2392)
-En la compilación 16257, WSL tiene problemas al enumerar los archivos o carpetas de Windows a través de `/mnt/c/...`.
-Este problema se ha corregido y deberían liberarse en Insider durante la semana del 14/8/2017.
+#### <a name="github-issue-2392-windows-folders-not-recognized-by-wsl-httpsgithubcommicrosoftbashonwindowsissues2392"></a>[Problema de GitHub 2392: Carpetas de Windows no reconocidas por WSL...](https://github.com/Microsoft/BashOnWindows/issues/2392)
+En la compilación 16257, WSL tiene problemas al enumerar archivos o carpetas de `/mnt/c/...`Windows a través de.
+Este problema se ha corregido y debe publicarse en la compilación Insider durante la semana que comienza a las 8/14/2017.
 
 <br/>
 
 ## <a name="build-16251"></a>Compilación 16251
 
-Para Windows general, visite información sobre las compilación 16251 el [Blog Windows](https://blogs.windows.com/windowsexperience/2017/07/26/announcing-windows-10-insider-preview-build-16251-pc-build-15235-mobile/).<br/>
+Para obtener información general sobre Windows sobre la compilación 16251, visite el [blog de Windows](https://blogs.windows.com/windowsexperience/2017/07/26/announcing-windows-10-insider-preview-build-16251-pc-build-15235-mobile/).<br/>
 
 
-### <a name="fixed"></a>Fijo
+### <a name="fixed"></a>Corregido
 #### <a name="wsl"></a>WSL
-- Quitar la etiqueta a la versión beta de componente opcional de WSL, consulte [entrada de blog](https://blogs.msdn.microsoft.com/commandline/2017/07/28/windows-subsystem-for-linux-out-of-beta/) para obtener más información.
-- Inicializar correctamente el conjunto guardado uid y gid de Id. de usuario de conjunto y el Id. de grupo de conjunto de archivos binarios en exec [GH 962, 1415, 2072]
-- Se agregó compatibilidad para ptrace PTRACE_O_TRACEEXIT [GH 555]
-- Ha agregado compatibilidad con ptrace PTRACE_GETFPREGS y PTRACE_GETREGSET con NT_FPREGSET [GH 555]
-- Se ha corregido ptrace detener en omite las señales
-- Otras mejoras y correcciones de errores
+- Quitar la etiqueta beta del componente opcional WSL, consulte la [entrada de blog](https://blogs.msdn.microsoft.com/commandline/2017/07/28/windows-subsystem-for-linux-out-of-beta/) para obtener más información.
+- Inicialice correctamente el UID y el GID del conjunto guardado para los archivos Set-User-ID y set-Group-ID en exec [alvent 962, 1415, 2072]
+- Se agregó compatibilidad con ptrace PTRACE_O_TRACEEXIT [alvent 555]
+- Se ha agregado compatibilidad con ptrace PTRACE_GETFPREGS y PTRACE_GETREGSET con NT_FPREGSET [alvent 555]
+- Se corrigió ptrace para que se detenga en las señales omitidas
+- Mejoras y correcciones de errores adicionales
 
 #### <a name="console"></a>Console
-- Ninguna consola otros cambios relacionados en esta versión.
+- No hay cambios relacionados con la consola en esta versión.
 
-### <a name="ltp-results"></a>LTP resultados:
+### <a name="ltp-results"></a>Resultados de LTP:
 Número de pruebas superadas: 768</br>
-Número de pruebas no superadas: 244</br>
+Número de pruebas con errores: 244</br>
 Número de pruebas omitidas: 96</br>
-[Los registros de ejecución de pruebas LTP](https://github.com/Microsoft/CommandLine-Documentation/tree/live/LTP_Results/16251)<br/>
+[Registros de ejecución de pruebas de LTP](https://github.com/Microsoft/CommandLine-Documentation/tree/live/LTP_Results/16251)<br/>
 
 </br>
 
 ## <a name="build-16241"></a>Compilación 16241
 
-Para Windows general, visite información sobre las compilación 16241 el [Blog Windows](https://blogs.windows.com/windowsexperience/2017/07/13/announcing-windows-10-insider-preview-build-16241-pc-build-15230-mobile/).<br/>
+Para obtener información general sobre Windows sobre la compilación 16241, visite el [blog de Windows](https://blogs.windows.com/windowsexperience/2017/07/13/announcing-windows-10-insider-preview-build-16241-pc-build-15230-mobile/).<br/>
 
 
-### <a name="fixed"></a>Fijo
+### <a name="fixed"></a>Corregido
 #### <a name="wsl"></a>WSL
-- No hay WSL otros cambios relacionados en esta versión.
+- No hay ningún cambio relacionado con WSL en esta versión.
 
 #### <a name="console"></a>Console
-- Corrección para generar el carácter incorrecto para las líneas de cruce DEC, notifican originalmente [aquí](https://www.reddit.com/r/Windows10/comments/6in82t/i_believe_ive_found_the_most_obscure_bug_ever/)
-- Corrección para ningún texto de salida que se muestra en la página de códigos 65001 (utf8)
-- No se transfieren los cambios realizados en los valores RGB de un color a otras partes de la paleta de cambio de selección. Esto hará que la hoja de propiedades de la consola mucho más fáciles de usar.
-- CTRL + S parece no funcionar correctamente
-- Sin negrita /-Dim completamente está ausente de códigos de escape ANSI [GH 2174]
-- Consola correctamente no es compatible con temas de color Vim [GH 1706]
-- No se puede pegar el juego de caracteres determinado [GH 2149]
-- Cambio de tamaño de reflujo forma extraña interactúa con el tamaño de una ventana de bash al material está en la línea de comando/Editar [GH ConEmu 1123]
-- CTRL-L deja la pantalla desfasada [GH 1978]
-- Errores de representación de consola al mostrar VT en HDPI [GH 1907]
-- Caracteres Japansese parezca extraños con el carácter Unicode U + 30FB [GH 2146]
-- Otras mejoras y correcciones de errores
+- Corrección para la generación de un carácter equivocado para las líneas de paso DEC, que se inscribió originalmente [aquí](https://www.reddit.com/r/Windows10/comments/6in82t/i_believe_ive_found_the_most_obscure_bug_ever/)
+- Corrección para que no se muestre texto de salida en la página de códigos 65001 (UTF8)
+- No transfiera los cambios realizados en los valores RGB de un color a otras partes de la paleta en el cambio de selección. Esto hará que la hoja de propiedades de la consola sea mucho más fácil de usar.
+- No parece que Ctrl + S funcione correctamente
+- No mostrar en negrita/-atenuar completamente desde códigos de escape ANSI [alvent 2174]
+- La consola no admite correctamente los temas de color VIM [alvent 1706]
+- No se pueden pegar caracteres determinados [alvent 2149]
+- El cambio de tamaño de reflujo interactúa de forma extraña con el cambio de tamaño de una ventana de Bash cuando el contenido está en la línea de comandos/edición [alConEmu 1123]
+- Ctrl-L deja la pantalla desfasada [alvent 1978]
+- Error de representación de consola al mostrar VT en HDPI [alvent 1907]
+- Los caracteres Japansese parecen extraños con el carácter Unicode U + 30FB [alvent 2146]
+- Mejoras y correcciones de errores adicionales
 
 </br>
 
 ## <a name="build-16237"></a>Compilación 16237
 
-Para Windows general, visite información sobre las compilación 16237 el [Blog Windows](https://blogs.windows.com/windowsexperience/2017/07/07/announcing-windows-10-insider-preview-build-16237-pc/).<br/>
+Para obtener información general sobre Windows sobre la compilación 16237, visite el [blog de Windows](https://blogs.windows.com/windowsexperience/2017/07/07/announcing-windows-10-insider-preview-build-16237-pc/).<br/>
 
 
-### <a name="fixed"></a>Fijo
-- Utilice los atributos predeterminados para los archivos sin EAs de lxfs (raíz, raíz, 0000)
-- Se agregó compatibilidad para las distribuciones que usan los atributos extendidos
-- Relleno de corrección para las entradas devueltas por getdents y getdents64
-- Corregir la comprobación de permisos para la llamada del sistema SHM_STAT shmctl [GH 2068]
-- Estado fijo epoll inicial incorrecto para los TTY [GH 2231]
-- Corregir readdir DrvFs no devuelve todas las entradas [GH 2077]
-- Corregir LxFs readdir cuando hay archivos desvincula [GH 2077]
-- Permitir que los archivos no vinculados drvfs abrirse de nuevo a través de procfs
-- Agrega el reemplazo de la clave del registro global para deshabilitar las características WSL (interoperabilidad / montaje de unidad)
-- Corregir el recuento de bloque incorrecta en "DO" DrvFs (y LxFs) [GH 1894]
-- Otras mejoras y correcciones de errores
+### <a name="fixed"></a>Corregido
+- Usar atributos predeterminados para archivos sin EAs en lxfs (raíz, raíz, 0000)
+- Compatibilidad agregada para distribuciones que usan atributos extendidos
+- Corregir el relleno de las entradas devueltas por getdents y getdents64
+- Corrección de los permisos comprobación de la llamada del sistema shmctl SHM_STAT [alvent 2068]
+- Se corrigió el estado inicial incorrecto de epoll para ttys [alvent 2231]
+- Fix DrvFs readdir no devuelve todas las entradas [alvent 2077]
+- Corregir LxFs readdir cuando los archivos están desvinculados [alvent 2077]
+- Permitir que los archivos drvfs no vinculados se vuelvan a abrir a través de procfs
+- Se ha agregado la invalidación de la clave del registro global para deshabilitar las características de WSL
+- Corrección del recuento incorrecto de bloques en "stat" para DrvFs (y LxFs) [alvent 1894]
+- Mejoras y correcciones de errores adicionales
 
 </br>
 
 ## <a name="build-16232"></a>Compilación 16232
 
-Para Windows general, visite información sobre las compilación 16232 el [Blog Windows](https://blogs.windows.com/windowsexperience/2017/06/28/announcing-windows-10-insider-preview-build-16232-pc-build-15228-mobile/).<br/>
+Para obtener información general sobre Windows sobre la compilación 16232, visite el [blog de Windows](https://blogs.windows.com/windowsexperience/2017/06/28/announcing-windows-10-insider-preview-build-16232-pc-build-15228-mobile/).<br/>
 
 
-### <a name="fixed"></a>Fijo
-- No hay WSL otros cambios relacionados en esta versión.
+### <a name="fixed"></a>Corregido
+- No hay ningún cambio relacionado con WSL en esta versión.
 
 </br>
 
 ## <a name="build-16226"></a>Compilación 16226
 
-Para Windows general, visite información sobre las compilación 16226 el [Blog Windows](https://blogs.windows.com/windowsexperience/2017/06/21/announcing-windows-10-insider-preview-build-16226-pc/).<br/>
+Para obtener información general sobre Windows sobre la compilación 16226, visite el [blog de Windows](https://blogs.windows.com/windowsexperience/2017/06/21/announcing-windows-10-insider-preview-build-16226-pc/).<br/>
 
 
-### <a name="fixed"></a>Fijo
-- xattr relacionados con la compatibilidad de syscall (getxattr, setxattr, listxattr, removexattr).
-- soporte técnico de xattr Security.capablity.
-- Compatibilidad mejorada con ciertos sistemas de archivos y filtros, incluidos los servidores SMB que no son MS. [GH #1952]
-- Compatibilidad mejorada para los marcadores de posición de OneDrive, los marcadores de posición GVFS y OS Compact archivos comprimidos.
-- Otras mejoras y correcciones de errores
+### <a name="fixed"></a>Corregido
+- xattr relacionado con llamadas syscall (getxattr, setxattr, listxattr, removexattr).
+- compatibilidad con Security. capablity xattr.
+- Compatibilidad mejorada con determinados sistemas de archivos y filtros, incluidos los servidores SMB que no son de MS. [ALVENT #1952]
+- Compatibilidad mejorada para los marcadores de posición de OneDrive, los marcadores de posición de GVFS y los archivos comprimidos del sistema operativo.
+- Mejoras y correcciones de errores adicionales
 
 </br>
 
 ## <a name="build-16215"></a>Compilación 16215
 
-Para Windows general, visite información sobre las compilación 16215 el [Blog Windows](https://blogs.windows.com/windowsexperience/2017/06/08/announcing-windows-10-insider-preview-build-16215-pc-build-15222-mobile/).<br/>
+Para obtener información general sobre Windows sobre la compilación 16215, visite el [blog de Windows](https://blogs.windows.com/windowsexperience/2017/06/08/announcing-windows-10-insider-preview-build-16215-pc-build-15222-mobile/).<br/>
 
 
-### <a name="fixed"></a>Fijo
-- WSL ya no requiere el modo de programador.
-- Admite a las uniones de directorio en drvfs.
-- Controlar la desinstalación de paquetes appx de distribución de WSL.
-- Actualización procfs mostrar privada y compartir asignaciones.
-- Agregue capacidad para wslconfig.exe limpiar las distribuciones que se instalan o desinstalan de parcialmente.
-- Se agregó compatibilidad para IP_MTU_DISCOVER para los sockets TCP. [GH 1639, 2115, 2205]
-- Inferir la familia de protocolos para que las rutas AF_INADDR.
-- Mejoras de dispositivo en serie [GH 1929].
+### <a name="fixed"></a>Corregido
+- WSL ya no requiere el modo de desarrollador.
+- Compatibilidad con uniones de directorios en drvfs.
+- Controla la desinstalación de paquetes appx de distribución de WSL.
+- Actualice procfs para mostrar las asignaciones privadas y compartidas.
+- Agregar la capacidad de wslconfig. exe para limpiar las distribuciones que se instalan o desinstalan parcialmente.
+- Compatibilidad agregada para IP_MTU_DISCOVER para Sockets TCP. [ALVENT 1639, 2115, 2205]
+- Inferencia de la familia de protocolos para rutas a AF_INADDR.
+- Mejoras en los dispositivos serie [alvent 1929].
 
 </br>
 
 ## <a name="build-16199"></a>Compilación 16199
 
-Para Windows general, visite información sobre las compilación 16199 el [Blog Windows](https://blogs.windows.com/windowsexperience/2017/05/17/announcing-windows-10-insider-preview-build-16199-pc-build-15215-mobile/).<br/>
+Para obtener información general sobre Windows sobre la compilación 16199, visite el [blog de Windows](https://blogs.windows.com/windowsexperience/2017/05/17/announcing-windows-10-insider-preview-build-16199-pc-build-15215-mobile/).<br/>
 
 
-### <a name="fixed"></a>Fijo
-- No hay WSL otros cambios relacionados en estas versiones.
+### <a name="fixed"></a>Corregido
+- No hay ningún cambio relacionado con WSL en estas versiones.
 
 </br>
 
 ## <a name="build-16193"></a>Compilación 16193
 
-Para Windows general, visite información sobre las compilación 16193 el [Blog Windows](https://blogs.windows.com/windowsexperience/2017/05/11/announcing-windows-10-insider-preview-build-16193-pc-build-15213-mobile/).<br/>
+Para obtener información general sobre Windows sobre la compilación 16193, visite el [blog de Windows](https://blogs.windows.com/windowsexperience/2017/05/11/announcing-windows-10-insider-preview-build-16193-pc-build-15213-mobile/).<br/>
 
 
-### <a name="fixed"></a>Fijo
-- Condición de carrera entre el envío SIGCONT y un threadgroup terminación [GH 1973]
-- cambiar dispositivos tty y pty al informe FILE_DEVICE_NAMED_PIPE en lugar de FILE_DEVICE_CONSOLE [GH 1840]
-- Corrección SSH para IP_OPTIONS
-- Mover DrvFs montaje a init daemon [GH 1862, 1968, 1767, 1933]
-- Se agregó compatibilidad en DrvFs para seguir los vínculos simbólicos de NT.
+### <a name="fixed"></a>Corregido
+- Condición de carrera entre el envío de SIGCONT y un elemento threadgroup de terminación [alvent 1973]
+- cambiar los dispositivos TTY y PTY a Report FILE_DEVICE_NAMED_PIPE en lugar de FILE_DEVICE_CONSOLE [alvent 1840]
+- Corrección de SSH para IP_OPTIONS
+- Se ha cambiado el montaje de DrvFs al demonio de inicialización [alvent 1862, 1968, 1767, 1933]
+- Se agregó compatibilidad en DrvFs para los siguientes vínculos simbólicos de NT.
 
 </br>
 
 ## <a name="build-16184"></a>Compilación 16184
 
-Para Windows general, visite información sobre las compilación 16184 el [Blog Windows](https://blogs.windows.com/windowsexperience/2017/04/28/announcing-windows-10-insider-preview-build-16184-pc-build-15208-mobile/).<br/>
+Para obtener información general sobre Windows sobre la compilación 16184, visite el [blog de Windows](https://blogs.windows.com/windowsexperience/2017/04/28/announcing-windows-10-insider-preview-build-16184-pc-build-15208-mobile/).<br/>
 
 
-### <a name="fixed"></a>Fijo
-- Quita la tarea de mantenimiento de paquetes apt (lxrun.exe /update)
-- Salida con formato fijo no aparece en de los procesos de Windows en node.js [GH 1840]
-- Relaje los requisitos de alineación en lxcore [GH 1794]
-- Se corrigió el control de la marca AT_EMPTY_PATH en un número de llamadas del sistema.
-- Se corrigió un problema donde eliminando archivos DrvFs con identificadores abiertos hará que el archivo de un comportamiento indefinido [GH 544,966,1357,1535,1615]
-- / etcetera/hosts heredarán las entradas del archivo de hosts de Windows (% windir%\system32\drivers\etc\hosts) [GH 1495]
+### <a name="fixed"></a>Corregido
+- Tarea de mantenimiento de paquetes APT quitada (lxrun. exe/Update)
+- Salida corregida que no se muestra en los procesos de Windows en node. js [alvent 1840]
+- Relajar los requisitos de alineación en lxcore [alvent 1794]
+- Control corregido de la marca AT_EMPTY_PATH en un número de llamadas del sistema.
+- Problema corregido en el que la eliminación de archivos DrvFs con identificadores abiertos hará que el archivo muestre un comportamiento indefinido [alvent 544, 966, 1357, 1535, 1615]
+- /etc/hosts heredará ahora entradas del archivo de hosts de Windows (%windir%\system32\drivers\etc\hosts) [alvent 1495]
 
 </br>
 
 ## <a name="build-16179"></a>Compilación 16179
 
-Para Windows general, visite información sobre las compilación 16179 el [Blog Windows](https://blogs.windows.com/windowsexperience/2017/04/19/announcing-windows-10-insider-preview-build-16179-pc-build-15205-mobile/).<br/>
+Para obtener información general sobre Windows sobre la compilación 16179, visite el [blog de Windows](https://blogs.windows.com/windowsexperience/2017/04/19/announcing-windows-10-insider-preview-build-16179-pc-build-15205-mobile/).<br/>
 
 
-### <a name="fixed"></a>Fijo
-- No hay cambios WSL esta semana.
+### <a name="fixed"></a>Corregido
+- No WSL cambia esta semana.
 
 </br>
 
 ## <a name="build-16176"></a>Compilación 16176
 
-Para Windows general, visite información sobre las compilación 16176 el [Blog Windows](https://blogs.windows.com/windowsexperience/2017/04/14/announcing-windows-10-insider-preview-build-16176-pc-build-15204-mobile/).<br/>
+Para obtener información general sobre Windows sobre la compilación 16176, visite el [blog de Windows](https://blogs.windows.com/windowsexperience/2017/04/14/announcing-windows-10-insider-preview-build-16176-pc-build-15204-mobile/).<br/>
 
 
-### <a name="fixed"></a>Fijo
+### <a name="fixed"></a>Corregido
 
-- [Habilita la compatibilidad con puerto serie](https://blogs.msdn.microsoft.com/wsl/2017/04/14/serial-support-on-the-windows-subsystem-for-linux/)
-- Opción de socket IP se ha agregado IP_OPTIONS [GH 1116]
-- Implementa la función pwritev (al cargar el archivo a nginx/PHP-FPM) [GH 1506]
-- Se han agregado opciones de socket IP IP_MULTICAST_IF & IPV6_MULTICAST_IF [GH 990]
-- Soporte técnico para la opción de socket IP_MULTICAST_LOOP & IPV6_MULTICAST_LOOP [GH 1678]
-- Se ha agregado la opción de socket _MTU IP (V6) para el nodo aplicaciones, traceroute, investigue, nslookup, host
-- Opción de socket IP se ha agregado IPV6_UNICAST_HOPS
+- [Compatibilidad con serialización habilitada](https://blogs.msdn.microsoft.com/wsl/2017/04/14/serial-support-on-the-windows-subsystem-for-linux/)
+- Opción de socket de IP agregada IP_OPTIONS [alvent 1116]
+- Función pwritev implementada (al cargar el archivo en nginx/PHP-FPM) [alvent 1506]
+- Se han agregado opciones de socket IP IP_MULTICAST_IF & IPV6_MULTICAST_IF [alvent 990]
+- Compatibilidad con la opción de socket IP_MULTICAST_LOOP & IPV6_MULTICAST_LOOP [alvent 1678]
+- Se ha agregado la opción de socket _MTU de IP (V6) para el nodo de aplicaciones, traceroute, Dig, nslookup, host
+- Opción de socket de IP agregada IPV6_UNICAST_HOPS
 - [Mejoras del sistema de archivos](https://blogs.msdn.microsoft.com/wsl/2017/04/18/file-system-improvements-to-the-windows-subsystem-for-linux/)
-    * Permite el montaje de las rutas de acceso UNC
+    * Permitir el montaje de rutas UNC
     * Habilitar la compatibilidad con CDFS en drvfs
-    * Controlar correctamente los permisos para los sistemas de archivos de red en drvfs
+    * Administrar correctamente los permisos para los sistemas de archivos de red en drvfs
     * Agregar compatibilidad para unidades remotas a drvfs
-    * Habilitar FAT admitir en drvfs
-- Mejoras y correcciones adicionales
+    * Habilitar la compatibilidad con FAT en drvfs
+- Correcciones y mejoras adicionales
 
-### <a name="ltp-results"></a>LTP resultados
-Ningún cambio desde 15042
+### <a name="ltp-results"></a>Resultados de LTP
+No hay cambios desde 15042
 
 </br>
 
 ## <a name="build-16170"></a>Compilación 16170
 
-Para Windows general, visite información sobre las compilación 16170 el [Blog Windows](https://blogs.windows.com/windowsexperience/2017/04/07/announcing-windows-10-insider-preview-build-16170-pc/).<br/>
+Para obtener información general sobre Windows sobre la compilación 16170, visite el [blog de Windows](https://blogs.windows.com/windowsexperience/2017/04/07/announcing-windows-10-insider-preview-build-16170-pc/).<br/>
 
-Hemos lanzado una nueva [entrada de blog](https://blogs.msdn.microsoft.com/wsl/2017/04/11/testing-the-windows-subsystem-for-linux/) discutir nuestros esfuerzos para probar WSL.
+Hemos publicado una nueva [entrada de blog](https://blogs.msdn.microsoft.com/wsl/2017/04/11/testing-the-windows-subsystem-for-linux/) en la que se describen nuestros esfuerzos para probar WSL.
 
-### <a name="fixed"></a>Fijo
+### <a name="fixed"></a>Corregido
 
-- Socket de compatibilidad con la opción IP_ADD_MEMBERSHIP & IPV6_ADD_MEMBERSHIP [GH 1678]
-- Agregar compatibilidad con PTRACE_OLDSETOPTIONS. [GH 1692]
-- Las mejoras y correcciones adicionales
+- Support socket Option IP_ADD_MEMBERSHIP & IPV6_ADD_MEMBERSHIP [alvent 1678]
+- Agregar compatibilidad para PTRACE_OLDSETOPTIONS. [ALVENT 1692]
+- Correcciones y mejoras adicionales
 
-### <a name="ltp-results"></a>LTP resultados
-Ningún cambio desde 15042
+### <a name="ltp-results"></a>Resultados de LTP
+No hay cambios desde 15042
 
 </br>
 
-## <a name="build-15046-to-windows-10-creators-update"></a>Compilar 15046 a Windows 10 Creators Update
-Hay más no WSL correcciones o las características planeadas para su inclusión en Windows 10 Creators Update. Notas de WSL se reanudación en las próximas semanas para adiciones destinadas a la siguiente actualización principal de Windows. Para Windows general información sobre la compilación 15046 y especialista en futuras versiones visita la [Blog Windows](https://blogs.windows.com/windowsexperience/2017/02/28/announcing-windows-10-insider-preview-build-15046-pc/). <br/><br/>
+## <a name="build-15046-to-windows-10-creators-update"></a>Compilación 15046 a Windows 10 Creators Update
+No hay más correcciones de WSL o características planeadas para su inclusión en la actualización de Creators en Windows 10. Las notas de la versión de WSL se reanudarán en las próximas semanas para las adiciones destinadas al siguiente Windows Update principal. Para obtener información general sobre Windows sobre la compilación 15046 y futuras versiones de Insider, visite el [blog de Windows](https://blogs.windows.com/windowsexperience/2017/02/28/announcing-windows-10-insider-preview-build-15046-pc/). <br/><br/>
  <br/>
 
 ## <a name="build-15042"></a>Compilación 15042
 
-Para Windows general, visite información sobre las compilación 15042 el [Blog Windows](https://blogs.windows.com/windowsexperience/2017/02/24/announcing-windows-10-insider-preview-build-15042-pc-build-15043-mobile/).<br/>
+Para obtener información general sobre Windows sobre la compilación 15042, visite el [blog de Windows](https://blogs.windows.com/windowsexperience/2017/02/24/announcing-windows-10-insider-preview-build-15042-pc-build-15043-mobile/).<br/>
 
 
-### <a name="fixed"></a>Fijo
+### <a name="fixed"></a>Corregido
 
-- Corrección de un interbloqueo cuando se quita una ruta de acceso que terminen en ".."
-- Se ha corregido un problema donde FIONBIO no devuelve 0 si se ejecuta correctamente [GH 1683]
-- Se corrigió un problema con lecturas de longitud cero de sockets de datagrama inet
-- Corregir posibles interbloqueos debido a la condición de carrera en la búsqueda de inode drvfs [GH 1675]
-- Compatibilidad ampliada para datos auxiliares de socket de unix; SCM_CREDENTIALS y SCM_RIGHTS [GH 514, 613, 1326]
-- Las mejoras y correcciones adicionales
+- Corrección para un interbloqueo al quitar una ruta de acceso que termina en ".."
+- Se corrigió un problema por el que FIONBIO no devuelve 0 en caso de éxito [alvent 1683]
+- Problema corregido con lecturas de longitud cero de sockets de datagramas de inet
+- Corrección del posible interbloqueo debido a la condición de carrera en la búsqueda de inode de drvfs [alvent 1675]
+- Compatibilidad ampliada con los datos suplementarios de los sockets de UNIX; SCM_CREDENTIALS y SCM_RIGHTS [alvent 514, 613, 1326]
+- Correcciones y mejoras adicionales
 
-### <a name="ltp-results"></a>LTP resultados:
-Número de paso de prueba: 737</br>
-Número de paso de no (por error, omitido, etcetera...): 255
+### <a name="ltp-results"></a>Resultados de LTP:
+Número de pruebas superadas: 737</br>
+Número de pasos no superados (error, omitido, etc.): 255
 
 </br>
 
 ## <a name="build-15031"></a>Compilación 15031
 
-Para Windows general, visite información sobre las compilación 15031 el [Blog Windows](https://blogs.windows.com/windowsexperience/2017/02/08/announcing-windows-10-insider-preview-build-15031-pc/).<br/>
+Para obtener información general sobre Windows sobre la compilación 15031, visite el [blog de Windows](https://blogs.windows.com/windowsexperience/2017/02/08/announcing-windows-10-insider-preview-build-15031-pc/).<br/>
 
 
-### <a name="fixed"></a>Fijo
+### <a name="fixed"></a>Corregido
 
-- Se ha corregido un error donde se comportará incorrectamente esporádicamente time(2).
-- Se ha corregido y emitir where * SIGPROCMASK syscalls podría dañar la máscara de señal.
-- Longitud de línea de comandos completa se devuelven ahora en la notificación de la creación del proceso WSL. [GH 1632]
-- WSL ahora informa salir del subproceso a través de ptrace GDB bloqueos. [GH 1196]
-- Se corrigió el error donde ptys dejaba de responder después tmux mucha E/S. [GH 1358]
-- Validación de tiempo de espera fijo muchas llamadas del sistema (futex, semtimedop, ppoll, sigtimedwait, itimer, timer_create)
-- Se ha agregado eventfd EFD_SEMAPHORE soporte [GH 452]
-- Las mejoras y correcciones adicionales
+- Se corrigió un error en el que el tiempo (2) se comportó de manera esporádica.
+- Problema corregido, donde * SIGPROCMASK llamadas syscall podría dañar la máscara de señal.
+- Ahora, devuelva la longitud completa de la línea de comandos en la notificación de creación del proceso WSL. [ALVENT 1632]
+- WSL Now informa de la salida del subproceso a través de ptrace para que GDB se bloquee. [ALVENT 1196]
+- Se corrigió un error en el que ptys se bloquease después de una gran tmux de e/s [ALVENT 1358]
+- Se ha corregido la validación del tiempo de espera en muchas llamadas del sistema (Futex, SEMTIMEDOP, ppoll, sigtimedwait, itimer, timer_create)
+- Compatibilidad con eventfd EFD_SEMAPHORE agregada [alvent 452]
+- Correcciones y mejoras adicionales
 
-### <a name="ltp-results"></a>LTP resultados:
-Número de paso de prueba: 737</br>
-Número de paso de no (por error, omitido, etcetera...): 255 </br>
-[Los registros de ejecución de pruebas LTP](https://github.com/Microsoft/CommandLine-Documentation/tree/live/LTP_Results/15031)<br/>
+### <a name="ltp-results"></a>Resultados de LTP:
+Número de pruebas superadas: 737</br>
+Número de pasos no superados (error, omitido, etc.): 255 </br>
+[Registros de ejecución de pruebas de LTP](https://github.com/Microsoft/CommandLine-Documentation/tree/live/LTP_Results/15031)<br/>
 
 <br/>
 
 ## <a name="build-15025"></a>Compilación 15025
 
-Para Windows general, visite información sobre las compilación 15025 el [Blog Windows](https://blogs.windows.com/windowsexperience/2017/02/01/announcing-windows-10-insider-preview-build-15025-pc/).<br/>
+Para obtener información general sobre Windows sobre la compilación 15025, visite el [blog de Windows](https://blogs.windows.com/windowsexperience/2017/02/01/announcing-windows-10-insider-preview-build-15025-pc/).<br/>
 
 
-### <a name="fixed"></a>Fijo
+### <a name="fixed"></a>Corregido
 
-- Corrección de errores que grep roto 2,27 [GH 1578]
-- Marca EFD_SEMAPHORE implementada para eventfd2 syscall [GH 452]
-- Implemented /proc/[pid]/net/ipv6_route [GH 1608]
-- Señal controlado por compatibilidad con E/S sockets de secuencias de unix [GH 393, 68]
-- Admitir F_GETPIPE_SZ y F_SETPIPE_SZ [GH 1012]
-- Implement recvmmsg() syscall [GH 1531]
-- Se corrigió el error donde epoll_wait() no estaba esperando [GH 1609]
-- Implement /proc/version_signature
-- Tee syscall ahora devuelve un error si ambos descriptores de archivo hace referencia a la misma canalización
-- Implementa el comportamiento correcto para SO_PEERCRED para sockets de Unix
-- Control de parámetros no válidos de syscall tkill fijo
-- Cambios para aumentar la preformace de drvfs
-- Revisión secundaria para el bloqueo de E/S de Ruby
-- Fijo recvmsg() devolver EINVAL para el indicador MSG_DONTWAIT para sockets inet [GH 1296]
-- Las mejoras y correcciones adicionales
+- Corrección del error que dañó grep 2,27 [alvent 1578]
+- Marca EFD_SEMAPHORE implementada para eventfd2 syscall [alvent 452]
+- Implementado/proc/[PID]/net/ipv6_route [alvent 1608]
+- Compatibilidad de e/s controlada por señal para Sockets de secuencia de UNIX [alvent 393, 68]
+- Compatibilidad con F_GETPIPE_SZ y F_SETPIPE_SZ [alvent 1012]
+- Implementar recvmmsg () syscall [alvent 1531]
+- Se corrigió un error en el que epoll_wait () no esperaba [alvent 1609]
+- Implementación de/proc/version_signature
+- Tee syscall ahora devuelve un error si ambos descriptores de archivo hacen referencia a la misma canalización
+- Se implementó el comportamiento correcto de SO_PEERCRED para Sockets de UNIX
+- Control de parámetros no válidos de tkill de syscall corregidos
+- Cambios para aumentar el Preformace de drvfs
+- Corrección secundaria para el bloqueo de e/s de Ruby
+- Fixed recvmsg () que devuelve EINVAL para la marca MSG_DONTWAIT para Sockets inet [alvent 1296]
+- Correcciones y mejoras adicionales
 
-### <a name="ltp-results"></a>LTP resultados:
-Número de paso de prueba: 732</br>
-Número de paso de no (por error, omitido, etcetera...): 255 </br>
-[Los registros de ejecución de pruebas LTP](https://github.com/Microsoft/CommandLine-Documentation/tree/live/LTP_Results/15025)<br/>
+### <a name="ltp-results"></a>Resultados de LTP:
+Número de pruebas superadas: 732</br>
+Número de pasos no superados (error, omitido, etc.): 255 </br>
+[Registros de ejecución de pruebas de LTP](https://github.com/Microsoft/CommandLine-Documentation/tree/live/LTP_Results/15025)<br/>
 
 <br/>
 
 ## <a name="build-15019"></a>Compilación 15019
 
-Para Windows general, visite información sobre las compilación 15019 el [Blog Windows](https://blogs.windows.com/windowsexperience/2017/01/27/announcing-windows-10-insider-preview-build-15019-pc/).<br/>
+Para obtener información general sobre Windows sobre la compilación 15019, visite el [blog de Windows](https://blogs.windows.com/windowsexperience/2017/01/27/announcing-windows-10-insider-preview-build-15019-pc/).<br/>
 
 
-### <a name="fixed"></a>Fijo
+### <a name="fixed"></a>Corregido
 
-- Se corrigió el error que se informaba incorrectamente de uso de CPU en procfs para herramientas como htop (GH 823, 945, 971)
-- Al llamar a open() con O_TRUNC en un archivo inotify genera ahora IN_MODIFY antes IN_OPEN
-- Correcciones de socket de unix getsockopt SO_ERROR para habilitar postgress [GH 61, 1354]
-- Implementar /proc/sys/net/core/somaxconn para el lenguaje GO
-- Tarea en segundo plano de actualización de paquetes APT-get ahora se ejecuta oculto de la vista
-- Ámbito clara para el host local de ipv6 (error Spring-Framework(Java)).
-- Las mejoras y correcciones adicionales
+- Se corrigió un error que informaba incorrectamente del uso de CPU en procfs para herramientas como htop (alvent 823, 945, 971)
+- Al llamar a Open () con O_TRUNC en un archivo existente inotify ahora genera IN_MODIFY antes de IN_OPEN
+- Correcciones para el SO_ERROR de sockets de UNIX getsockopt para habilitar Postgress [alvent 61, 1354]
+- Implementación de/proc/sys/net/Core/somaxconn para el lenguaje GO
+- Apt: la tarea en segundo plano actualizar paquete se ejecuta ahora oculta desde la vista
+- Borrar el ámbito de IPv6 localhost (error de la plataforma de Spring Framework (Java)).
+- Correcciones y mejoras adicionales
 
-### <a name="ltp-results"></a>LTP resultados:
-Número de paso de prueba: 714 </br>
-Número de paso de no (por error, omitido, etcetera...): 249 </br>
-[Los registros de ejecución de pruebas LTP](https://github.com/Microsoft/CommandLine-Documentation/tree/live/LTP_Results/15019)<br/>
+### <a name="ltp-results"></a>Resultados de LTP:
+Número de pruebas superadas: 714 </br>
+Número de pasos no superados (error, omitido, etc.): 249 </br>
+[Registros de ejecución de pruebas de LTP](https://github.com/Microsoft/CommandLine-Documentation/tree/live/LTP_Results/15019)<br/>
 
 <br/>
 
 ## <a name="build-15014"></a>Compilación 15014
 
-Para Windows general, visite información sobre las compilación 15014 el [Blog Windows](https://blogs.windows.com/windowsexperience/2017/01/19/announcing-windows-10-insider-preview-build-15014-for-pc-and-mobile-hello-windows-insiders-today-we-are-excited-to-be-releasing-windows-10-insider-preview-build-15014-for-pc-and-mobile).<br/>
+Para obtener información general sobre Windows sobre la compilación 15014, visite el [blog de Windows](https://blogs.windows.com/windowsexperience/2017/01/19/announcing-windows-10-insider-preview-build-15014-for-pc-and-mobile-hello-windows-insiders-today-we-are-excited-to-be-releasing-windows-10-insider-preview-build-15014-for-pc-and-mobile).<br/>
 
 
-### <a name="fixed"></a>Fijo
+### <a name="fixed"></a>Corregido
 
-- CTRL + C ahora funciona según lo previsto
-- htop y ps auxw ahora mostrar correcto uso de recursos (GH #516)
-- Traducción básica de excepciones de NT a las señales. (GH 513 #)
-- fallocate ahora produce ENOSPC cuando se está quedando sin espacio en lugar de EINVAL (GH #1571)
-- Se ha agregado /proc/sys/kernel/sem.
-- Llamadas al sistema semop y semtimedop implementadas
-- Errores de nslookup fijo con la opción de socket IP_RECVTOS & IPV6_RECVTCLASS (GH 69)
+- Ctrl + C ahora funciona según lo previsto
+- htop y PS auxw ahora muestran el uso de recursos correcto (alvent #516)
+- Traducción básica de las excepciones de NT a las señales. (ALVENT #513)
+- fallocate Now genera ENOSPC cuando se está quedando sin espacio en lugar de EINVAL (alvent #1571)
+- Agregado/proc/sys/kernel/SEM.
+- Llamadas del sistema semop y semtimedop implementadas
+- Se corrigieron errores de nslookup con la opción de socket IP_RECVTOS & IPV6_RECVTCLASS (alvent 69)
 - Compatibilidad con las opciones de socket IP_RECVTTL y IPV6_RECVHOPLIMIT
-- Las mejoras y correcciones adicionales
+- Correcciones y mejoras adicionales
 
-### <a name="ltp-results"></a>LTP resultados:
-Número de paso de prueba: 709 </br>
-Número de paso de no (por error, omitido, etcetera...): 255 </br>
-[Los registros de ejecución de pruebas LTP](https://github.com/Microsoft/CommandLine-Documentation/tree/live/LTP_Results/15014)<br/>
+### <a name="ltp-results"></a>Resultados de LTP:
+Número de pruebas superadas: 709 </br>
+Número de pasos no superados (error, omitido, etc.): 255 </br>
+[Registros de ejecución de pruebas de LTP](https://github.com/Microsoft/CommandLine-Documentation/tree/live/LTP_Results/15014)<br/>
 
 ### <a name="syscall-summary"></a>Resumen de syscall
-Syscall total: 384 </br>
+Llamadas syscall total: 384 </br>
 Total implementado: 235 </br>
-Total que se procesó con stub: 22 </br>
-Total sin implementar: 127 </br>
+Total de stubs: 22 </br>
+Total no implementado: 127 </br>
 [Desglose detallado](https://github.com/Microsoft/CommandLine-Documentation/tree/live/LTP_Results/15014/Syscalls.txt)<br/>
 
 <br/>
 
 ## <a name="build-15007"></a>Compilación 15007
 
-Para Windows general, visite información sobre las compilación 15007 el [Blog Windows]( https://blogs.windows.com/windowsexperience/2017/01/12/announcing-windows-10-insider-preview-build-15007-pc-mobile).<br/>
+Para obtener información general sobre Windows sobre la compilación 15007, visite el [blog de Windows]( https://blogs.windows.com/windowsexperience/2017/01/12/announcing-windows-10-insider-preview-build-15007-pc-mobile).<br/>
 
 
 ### <a name="known-issue"></a>Problema conocido
 
-- Hay un problema conocido en la consola no reconoce algunos Ctrl + <key> entrada.  Esto incluye el comando ctrl-c que actuará como una pulsación de tecla 'c' normal.
+- Hay un error conocido en el que la consola no reconoce algunas teclas Ctrl <key> + Input.  Esto incluye el comando Ctrl-c, que actuará como una KeyPress normal "c".
 
-  - Solución: Asignar una clave alternativa a Ctrl + C. Por ejemplo, para asignar Ctrl + K para Ctrl + C lo: `stty intr \^k`.  Esta asignación es por terminal y tendrá que realizarse *cada* bash de tiempo se inicia. Los usuarios pueden explorar la opción para incluir esto en su `.bashrc`
+  - Solución: Asigne una tecla alternativa a Ctrl + C. Por ejemplo, para asignar CTRL + K a Ctrl + C, haga `stty intr \^k`lo siguiente:.  Esta asignación es por terminal y tendrá que realizarse *cada* vez que se inicie bash. Los usuarios pueden explorar la opción para incluirlo en su`.bashrc`
 
-### <a name="fixed"></a>Fijo
+### <a name="fixed"></a>Corregido
 
-- Se ha corregido el problema donde ejecutando WSL consumiría 100% de un núcleo de CPU
-- Opción IP_PKTINFO, IPV6_RECVPKTINFO ahora admitidos de socket. (GH #851, 987)
-- Truncar la dirección física de interfaz de red a lxcore de 16 bytes (# GH 1452, 1414, 1343, 468, 308)
-- Las mejoras y correcciones adicionales
+- Se corrigió el problema que hacía que la ejecución de WSL consumiera 100% de un núcleo de CPU.
+- Ahora se admite la opción de socket IP_PKTINFO, IPV6_RECVPKTINFO. (ALVENT #851, 987)
+- Truncar dirección física de la interfaz de red a 16 bytes en lxcore (alvent #1452, 1414, 1343, 468, 308)
+- Correcciones y mejoras adicionales
 
-### <a name="ltp-results"></a>LTP resultados:
-Número de paso de prueba: 709 </br>
-Número de paso de no (por error, omitido, etcetera...): 255 </br>
-[Los registros de ejecución de pruebas LTP](https://github.com/Microsoft/CommandLine-Documentation/tree/live/LTP_Results/15007)<br/>
+### <a name="ltp-results"></a>Resultados de LTP:
+Número de pruebas superadas: 709 </br>
+Número de pasos no superados (error, omitido, etc.): 255 </br>
+[Registros de ejecución de pruebas de LTP](https://github.com/Microsoft/CommandLine-Documentation/tree/live/LTP_Results/15007)<br/>
 
 <br/>
 
 ## <a name="build-15002"></a>Compilación 15002
 
-Para Windows general, visite información sobre las compilación 15002 el [Blog Windows](https://blogs.windows.com/windowsexperience/2017/01/09/announcing-windows-10-insider-preview-build-15002-pc/).<br/>
+Para obtener información general sobre Windows sobre la compilación 15002, visite el [blog de Windows](https://blogs.windows.com/windowsexperience/2017/01/09/announcing-windows-10-insider-preview-build-15002-pc/).<br/>
 
 
 ### <a name="known-issue"></a>Problema conocido
 
 Dos problemas conocidos:
-- Hay un problema conocido en la consola no reconoce algunos Ctrl + <key> entrada.  Esto incluye el comando ctrl-c que actuará como una pulsación de tecla 'c' normal.
+- Hay un error conocido en el que la consola no reconoce algunas teclas Ctrl <key> + Input.  Esto incluye el comando Ctrl-c, que actuará como una KeyPress normal "c".
 
-  - Solución: Asignar una clave alternativa a Ctrl + C. Por ejemplo, para asignar Ctrl + K para Ctrl + C lo: `stty intr \^k`.  Esta asignación es por terminal y tendrá que realizarse *cada* bash de tiempo se inicia. Los usuarios pueden explorar la opción para incluir esto en su `.bashrc`
+  - Solución: Asigne una tecla alternativa a Ctrl + C. Por ejemplo, para asignar CTRL + K a Ctrl + C, haga `stty intr \^k`lo siguiente:.  Esta asignación es por terminal y tendrá que realizarse *cada* vez que se inicie bash. Los usuarios pueden explorar la opción para incluirlo en su`.bashrc`
 
-- Mientras se está ejecutando WSL un subproceso del sistema consume el 100% de un núcleo de CPU.  Abordar la causa raíz y se ha corregido internamente.
+- Mientras se ejecuta WSL, un subproceso del sistema consumirá el 100% de un núcleo de CPU.  La causa raíz se ha solucionado y corregido internamente.
 
-### <a name="fixed"></a>Fijo
+### <a name="fixed"></a>Corregido
 
-- Todas las sesiones de bash ahora deben crearse en el mismo nivel de permiso.  Se bloqueará al intentar iniciar una sesión en un nivel diferente.  Esto significa que las consolas de administrador y que no es administrador no se pueden ejecutar al mismo tiempo. (GH 626 #)
+- Todas las sesiones de Bash deben crearse ahora en el mismo nivel de permiso.  Se bloqueará el intento de iniciar una sesión en un nivel diferente.  Esto significa que las consolas de administrador y que no son de administración no se pueden ejecutar al mismo tiempo. (ALVENT #626)
 <br/>
-- Implementa los siguientes mensajes NETLINK_ROUTE (requiere un administrador de Windows)
+- Se implementaron los siguientes mensajes NETLINK_ROUTE (requiere el administrador de Windows)
      - RTM_NEWADDR (admite `ip addr add`)
      - RTM_NEWROUTE (admite `ip route add`)
      - RTM_DELADDR (admite `ip addr del`)
      - RTM_DELROUTE (admite `ip route del`)
-- Comprobación de paquetes para actualizar de tarea programada ya no se ejecutará en una conexión de uso medido (GH #1371)
-- Se ha corregido error donde canalización obtiene; es decir, bloqueada bash - c "ls - alR /" | Bash -c "cat" (GH #1214)
-- Opción de socket TCP_KEEPCNT implementada (GH #843)
-- Opción de socket IP_MTU_DISCOVER INET implementada (720 de # GH, 717, 170, 69)
-- Quita la funcionalidad heredada para ejecutar los archivos binarios de NT de init con búsqueda de ruta de acceso de NT. (GH 1325 #)
-- Corregir el modo de/dev/kmsg para permitir el acceso de lectura de grupo / otro (0644) (GH #1321)
-- /Proc/sys/kernel/random/uuid implementada (GH #1092)
-- Se ha corregido el error que mostraba el tiempo de inicio de proceso como año 2432 (GH #974)
-- Variable de entorno de término predeterminado se ha cambiado a xterm-256color (GH #1446)
-- Modificado la forma en que el proceso de confirmación se calcula durante la bifurcación de proceso. (GH 1286 #)
-- Implemented /proc/sys/vm/overcommit_memory. (GH 1286 #)
-- Archivo implementado /proc/net/route (GH #69)
-- Error corregido donde estaba incorrectamente el nombre de método abreviado localizado (GH #696)
-- Elf fijo lógica que se está validando incorrectamente los encabezados del programa de análisis debe ser menor que (o igual que) PATH_MAX. (GH 1048 #)
-- Devolución de llamada implementada statfs procfs, sysfs, cgroupfs y binfmtfs (GH #1378)
-- Windows AptPackageIndexUpdate fija que no se cierran (1184 de # de GH, también se describen en GH #1193)
-- Personalidad ASLR se ha agregado compatibilidad con ADDR_NO_RANDOMIZE. (GH #1148, 1128)
-- PTRACE_GETSIGINFO mejorada, SIGSEGV para seguimientos de pila gdb adecuado durante AV (GH #875)
-- ELF análisis ya no se produce un error para los binarios de patchelf. (GH 471 #)
-- VPN DNS se propaguen a /etc/resolv.conf (GH #416, 1350)
-- Cierre las mejoras de TCP para la transferencia de datos más confiable. (GH #610, 616, 1025, 1335)
-- Ahora un resultado correcto de código de error cuando hay demasiados archivos abierto (EMFILE). (GH #1126, 2090)
-- Auditoría de Windows ahora informes de registro de nombre de la imagen en el proceso de creación la auditoría.
-- Ahora se producirá un error al iniciar bash.exe desde dentro de una ventana de bash
-- Mensaje de error se ha agregado al interoperabilidad no puede tener acceso a un directorio de trabajo en LxFs (es decir, notepad.exe .bashrc)
-- Se corrigió un problema donde se ha truncado la ruta de acceso de Windows en WSL
-- Las mejoras y correcciones adicionales
+- La comprobación de tareas programadas para actualizar los paquetes ya no se ejecutará en una conexión de uso medido (alvent #1371)
+- Se corrigió un error en el que la canalización se bloquea, es decir, bash-c "LS-alR/" | Bash-c "gato" (alvent #1214)
+- Opción de socket TCP_KEEPCNT implementada (alvent #843)
+- Opción de socket INET de IP_MTU_DISCOVER implementada (alvent #720, 717, 170, 69)
+- Se ha quitado la funcionalidad heredada para ejecutar archivos binarios de NT desde init con búsqueda de rutas NT. (ALVENT #1325)
+- Modo de corrección de/dev/KMSG para permitir el acceso de lectura de grupo/otro (0644) (alvent #1321)
+- /Proc/sys/kernel/Random/UUID implementado (alvent #1092)
+- Error corregido en el que la hora de inicio del proceso se mostraba como año 2432 (alvent #974)
+- Variable de entorno de término predeterminado conmutada a xterm-256color (alvent #1446)
+- Se modificó la forma en que se calcula la confirmación del proceso durante la bifurcación del proceso. (ALVENT #1286)
+- /Proc/sys/VM/overcommit_memory. implementado (ALVENT #1286)
+- Archivo/proc/net/Route implementado (alvent #69)
+- Error corregido en el que el nombre de acceso directo se ha localizado incorrectamente (alvent #696)
+- La lógica de análisis de Elf corregida que valida incorrectamente los encabezados de programa debe ser menor que (o igual a) PATH_MAX. (ALVENT #1048)
+- Devolución de llamada de statfs implementada para procfs, sysfs, cgroupfs y binfmtfs (alvent #1378)
+- Se han corregido ventanas de AptPackageIndexUpdate que no se cierran (alvent #1184, también se describe en alvent #1193).
+- Se ha agregado compatibilidad con la ADDR_NO_RANDOMIZE de ASLR. (ALVENT #1148, 1128)
+- Se ha mejorado PTRACE_GETSIGINFO, SIGSEGV, para los seguimientos de la pila gdb adecuados durante el AV (alvent #875)
+- Ya no se produce un error en el análisis de ELF para los archivos binarios de patchelf. (ALVENT #471)
+- DNS de VPN propagado a/etc/resolv.conf (alvent #416, 1350)
+- Mejoras en el cierre de TCP para la transferencia de datos más confiable. (ALVENT #610, 616, 1025, 1335)
+- Ahora, devuelva el código de error correcto cuando se abran demasiados archivos (EMFILE). (ALVENT #1126, 2090)
+- El registro de auditoría de Windows ahora informa del nombre de la imagen en el proceso de creación de auditoría.
+- Ahora se produce un error correctamente al iniciar bash. exe desde una ventana de Bash.
+- Mensaje de error agregado cuando Interop no puede obtener acceso a un directorio de trabajo en LxFs (es decir, Notepad. exe. bashrc)
+- Se corrigió un problema en el que la ruta de acceso de Windows se truncó en WSL
+- Correcciones y mejoras adicionales
 
-### <a name="ltp-results"></a>LTP resultados:
-Número de paso de prueba: 690 </br>
-Número de paso de no (por error, omitido, etcetera...): 274 </br>
-[Los registros de ejecución de pruebas LTP](https://github.com/Microsoft/CommandLine-Documentation/tree/live/LTP_Results/15002)<br/>
+### <a name="ltp-results"></a>Resultados de LTP:
+Número de pruebas superadas: 690 </br>
+Número de pasos no superados (error, omitido, etc.): 274 </br>
+[Registros de ejecución de pruebas de LTP](https://github.com/Microsoft/CommandLine-Documentation/tree/live/LTP_Results/15002)<br/>
 
 <br/>
 
-### <a name="syscall-support"></a>Soporte técnico de syscall
-A continuación se muestran una lista de nuevas o mejoradas syscalls que tienen alguna implementación en WSL. Las llamadas en esta lista se admiten en al menos un escenario, pero es posible que no dispone de todos los parámetros compatibles en este momento.
+### <a name="syscall-support"></a>Compatibilidad con syscall
+A continuación se muestra una lista de llamadas syscall nuevos o mejorados que tienen alguna implementación en WSL. Los llamadas syscall de esta lista se admiten en al menos un escenario, pero puede que no se admitan todos los parámetros en este momento.
 
 `shmctl`<br/>
 `shmget`<br/>
@@ -1239,32 +1250,32 @@ A continuación se muestran una lista de nuevas o mejoradas syscalls que tienen 
 
 ## <a name="build-14986"></a>Compilación 14986
 
-Para Windows general, visite información sobre las compilación 14986 el [Blog Windows](https://blogs.windows.com/windowsexperience/2016/12/07/announcing-windows-10-insider-preview-build-14986-pc/).<br/>
+Para obtener información general sobre Windows sobre la compilación 14986, visite el [blog de Windows](https://blogs.windows.com/windowsexperience/2016/12/07/announcing-windows-10-insider-preview-build-14986-pc/).<br/>
 
 
-### <a name="fixed"></a>Fijo
+### <a name="fixed"></a>Corregido
 
-- Fijo verificaciones de error con Netlink y Pty IOCTL
-- Versión del kernel ahora informa 4.4.0-43 para mantener la coherencia con Xenial
-- Bash.exe ahora se inicia cuando la entrada se dirige a ' nul:' (GH #1259)
-- Id. de subproceso notifica ahora correctamente en procfs (GH #967)
-- IN_UNMOUNT | IN_Q_OVERFLOW | IN_IGNORED | Marcas IN_ISDIR ahora se admiten en inotify_add_watch() (GH #1280)
-- Implemente timer_create y las llamadas del sistema relacionadas.  Esto permite el uso GHC (GH #307)
-- Se corrigió un problema donde ping devolvió una hora de 0.000ms (GH #1296)
-- Devuelve el código de error correcto cuando hay demasiados archivos abiertos.
-- Se corrigió un problema en WSL donde Netlink solicitud de datos de la interfaz de red produciría un error con EINVAL si la dirección de hardware de la interfaz es 32 bytes (por ejemplo, la interfaz Teredo)
-   - Tenga en cuenta que la utilidad de Linux "ip" contiene un error que bloqueará si WSL informa de una dirección de hardware de 32 bytes. Se trata de un error en la "ip", no WSL. La "ip" utilidad codifica la longitud del búfer de cadena se usa para imprimir la dirección de hardware, y ese búfer es demasiado pequeño para imprimir una dirección de hardware de 32 bytes.
-- Las mejoras y correcciones adicionales
+- Se corrigió bugchecks con NetLink y el ioctl de PTY
+- La versión del kernel ahora informa a 4.4.0-43 por coherencia con Xenial
+- Bash. exe ahora se inicia cuando la entrada se dirige a ' NUL: ' (alvent #1259)
+- Los identificadores de subproceso ahora se han declarado correctamente en procfs (alvent #967)
+- IN_UNMOUNT | IN_Q_OVERFLOW | IN_IGNORED | Las marcas de IN_ISDIR ahora se admiten en inotify_add_watch () (alvent #1280)
+- Implemente timer_create y las llamadas del sistema relacionadas.  Esto habilita la compatibilidad con GHC (alvent #307)
+- Se corrigió un problema en el que ping devolvió una hora de 0,000 MS (alvent #1296)
+- Devuelve el código de error correcto cuando se abren demasiados archivos.
+- Se corrigió un problema en WSL donde la solicitud de NetLink de datos de la interfaz de red generaba un error con EINVAL si la dirección de hardware de la interfaz es de 32 bytes (por ejemplo, la interfaz Teredo)
+   - Tenga en cuenta que la utilidad "IP" de Linux contiene un error en el que se bloqueará si WSL informa de una dirección de hardware de 32 bytes. Se trata de un error en "IP", no en WSL. La utilidad "IP" codifica de forma rígida la longitud del búfer de cadena usado para imprimir la dirección de hardware y el búfer es demasiado pequeño para imprimir una dirección de hardware de 32 bytes.
+- Correcciones y mejoras adicionales
 
-### <a name="ltp-results"></a>LTP resultados:
-Número de paso de prueba: 669 </br>
-Número de paso de no (por error, omitido, etcetera...): 258 </br>
-[Los registros de ejecución de pruebas LTP](https://github.com/Microsoft/CommandLine-Documentation/tree/live/LTP_Results/14986)<br/>
+### <a name="ltp-results"></a>Resultados de LTP:
+Número de pruebas superadas: 669 </br>
+Número de pasos no superados (error, omitido, etc.): 258 </br>
+[Registros de ejecución de pruebas de LTP](https://github.com/Microsoft/CommandLine-Documentation/tree/live/LTP_Results/14986)<br/>
 
 <br/>
 
-### <a name="syscall-support"></a>Soporte técnico de syscall
-A continuación se muestran una lista de nuevas o mejoradas syscalls que tienen alguna implementación en WSL. Las llamadas en esta lista se admiten en al menos un escenario, pero es posible que no dispone de todos los parámetros compatibles en este momento.
+### <a name="syscall-support"></a>Compatibilidad con syscall
+A continuación se muestra una lista de llamadas syscall nuevos o mejorados que tienen alguna implementación en WSL. Los llamadas syscall de esta lista se admiten en al menos un escenario, pero puede que no se admitan todos los parámetros en este momento.
 
 `timer_create`<br/>
 `timer_delete`<br/>
@@ -1274,101 +1285,101 @@ A continuación se muestran una lista de nuevas o mejoradas syscalls que tienen 
 
 ## <a name="build-14971"></a>Compilación 14971
 
-Para Windows general, visite información sobre las compilación 14971 el [Blog Windows](https://blogs.windows.com/windowsexperience/2016/11/17/announcing-windows-10-insider-preview-build-14971-for-pc/).<br/>
+Para obtener información general sobre Windows sobre la compilación 14971, visite el [blog de Windows](https://blogs.windows.com/windowsexperience/2016/11/17/announcing-windows-10-insider-preview-build-14971-for-pc/).<br/>
 
 
-### <a name="fixed"></a>Fijo
+### <a name="fixed"></a>Corregido
 
- - Debido a circunstancias fuera de nuestro control no hay ninguna actualización en esta compilación para el subsistema de Windows para Linux.  Las actualizaciones programadas regularmente se reanudarán en la próxima versión.
+ - Debido a circunstancias más allá de nuestro control, no hay ninguna actualización en esta compilación para el subsistema de Windows para Linux.  Las actualizaciones programadas regularmente se reanudarán en la próxima versión.
 
-### <a name="ltp-results"></a>LTP resultados:
-No ha cambiado desde 14965 </br>
-Número de paso de prueba: 664 </br>
-Número de paso de no (por error, omitido, etcetera...): 263 </br>
-[Los registros de ejecución de pruebas LTP](https://github.com/Microsoft/CommandLine-Documentation/tree/live/LTP_Results/14965)<br/>
+### <a name="ltp-results"></a>Resultados de LTP:
+Sin cambios desde 14965 </br>
+Número de pruebas superadas: 664 </br>
+Número de pasos no superados (error, omitido, etc.): 263 </br>
+[Registros de ejecución de pruebas de LTP](https://github.com/Microsoft/CommandLine-Documentation/tree/live/LTP_Results/14965)<br/>
 
 <br/>
 
 ## <a name="build-14965"></a>Compilación 14965
 
-Para Windows general, visite información sobre las compilación 14965 el [Blog Windows](https://blogs.windows.com/windowsexperience/2016/11/09/announcing-windows-10-insider-preview-build-14965-for-mobile-and-pc/).<br/>
+Para obtener información general sobre Windows sobre la compilación 14965, visite el [blog de Windows](https://blogs.windows.com/windowsexperience/2016/11/09/announcing-windows-10-insider-preview-build-14965-for-mobile-and-pc/).<br/>
 
 
-### <a name="fixed"></a>Fijo
+### <a name="fixed"></a>Corregido
 
-- Compatibilidad con Netlink sockets del protocolo NETLINK_ROUTE RTM_GETLINK y RTM_GETADDR (GH #468)
-  - Permite que los comandos ifconfig y la dirección ip para la enumeración de red
-  - Puede encontrar más información en nuestra [entrada de blog de redes de WSL](https://blogs.msdn.microsoft.com/wsl/2016/11/08/225/).
+- Compatibilidad con RTM_GETLINK y RTM_GETADDR del protocolo NetLink Sockets NETLINK_ROUTE (alvent #468)
+  - Habilita los comandos ifconfig y IP para la enumeración de red
+  - Puede encontrar más información en nuestra [entrada de blog sobre redes de WSL](https://blogs.msdn.microsoft.com/wsl/2016/11/08/225/).
 
-- / sbin ahora está en la ruta de acceso de forma predeterminada
-- Ruta de acceso de usuario de NT anexada a la ruta de acceso WSL ahora de forma predeterminada (es decir, ahora puede escribir notepad.exe sin agregar System32 a la ruta de acceso de Linux)
-- Se agregó compatibilidad para /proc/sys/kernel/cap_last_cap
-- Los archivos binarios de NT ahora se puede iniciar desde WSL cuando el directorio de trabajo actual contiene caracteres que no sean ansi (GH #1254)
-- Permitir apagado en el socket de secuencia de unix sin conexión.
-- Se agregó compatibilidad para PR_GET_PDEATHSIG.
-- Se agregó compatibilidad para CLONE_PARENT
-- Se ha corregido error donde canalización obtiene; es decir, bloqueada bash - c "ls - alR /" | Bash -c "cat" (GH #1214)
-- Controlar las solicitudes para conectarse al terminal actual.
-- Marcar/proc /<pid>/oom_score_adj como de escritura.
-- Agregar carpeta /sys/fs/cgroup.
+- /sbin está ahora en la ruta de acceso del usuario de forma predeterminada
+- La ruta de acceso de usuario de NT ahora se anexa a la ruta de acceso de WSL de forma predeterminada (es decir, ahora puede escribir Notepad. exe sin agregar system32 a la ruta de acceso de Linux)
+- Compatibilidad agregada para/proc/sys/kernel/cap_last_cap
+- Los archivos binarios de NT ahora se pueden iniciar desde WSL cuando el directorio de trabajo actual contiene caracteres que no son ANSI (alvent #1254)
+- Permita el apagado en el socket de flujo UNIX desconectado.
+- Compatibilidad agregada para PR_GET_PDEATHSIG.
+- Compatibilidad agregada para CLONE_PARENT
+- Se corrigió un error en el que la canalización se bloquea, es decir, bash-c "LS-alR/" | Bash-c "gato" (alvent #1214)
+- Controle las solicitudes para conectarse al terminal actual.
+- Marque/proc/<pid>/oom_score_adj como grabable.
+- Agregue la carpeta/sys/FS/cgroup.
 - sched_setaffinity debe devolver el número de máscara de bits de afinidad
-- Corregir la lógica de validación de ELF que incorrectamente se supone que las rutas de acceso del intérprete deben ser inferior a 64 caracteres. (GH 743 #)
-- Descriptores de archivo abiertos pueden mantener abierta la ventana Consola (GH #1187)
-- Error de Fixeed donde no se pudo rename() con barra diagonal en el nombre de destino (GH #1008) final
-- Implementar archivo /proc/net/dev
-- Hace ping 0.000ms fijo debido a la resolución del temporizador.
-- /Proc/self/environ implementada (GH #730)
-- Las mejoras y correcciones de errores adicionales
+- Corregir la lógica de validación de ELF que presupone incorrectamente que las rutas de intérprete deben tener menos de 64 caracteres de longitud. (ALVENT #743)
+- Los descriptores de archivo abiertos pueden mantener abierta la ventana de consola (alvent #1187)
+- Error de Fixeed en el que se produjo un error al cambiar el nombre () con la barra diagonal final en el nombre de destino (alvent #1008)
+- Implementar el archivo/proc/net/dev
+- Se ha corregido 0,000 MS ping debido a la resolución del temporizador.
+- /Proc/Self/ENVIRON implementado (alvent #730)
+- Correcciones y mejoras adicionales
 
-### <a name="ltp-results"></a>LTP resultados:
-Número de paso de prueba: 664 </br>
-Número de paso de no (por error, omitido, etcetera...): 263 </br>
-[Los registros de ejecución de pruebas LTP](https://github.com/Microsoft/CommandLine-Documentation/tree/live/LTP_Results/14965)<br/>
+### <a name="ltp-results"></a>Resultados de LTP:
+Número de pruebas superadas: 664 </br>
+Número de pasos no superados (error, omitido, etc.): 263 </br>
+[Registros de ejecución de pruebas de LTP](https://github.com/Microsoft/CommandLine-Documentation/tree/live/LTP_Results/14965)<br/>
 
 <br/>
 
 ## <a name="build-14959"></a>Compilación 14959
 
-Para Windows general, visite información sobre las compilación 14959 el [Blog Windows](https://blogs.windows.com/windowsexperience/2016/11/03/announcing-windows-10-insider-preview-build-14959-for-mobile-and-pc/#iI82GufJxMF3POU1.97).<br/>
+Para obtener información general sobre Windows sobre la compilación 14959, visite el [blog de Windows](https://blogs.windows.com/windowsexperience/2016/11/03/announcing-windows-10-insider-preview-build-14959-for-mobile-and-pc/#iI82GufJxMF3POU1.97).<br/>
 
 
-### <a name="fixed"></a>Fijo
+### <a name="fixed"></a>Corregido
 
-- Notificación de proceso de Pico mejorada para Windows.  Encontrar información adicional en el [WSL Blog](https://blogs.msdn.microsoft.com/wsl/2016/11/01/wsl-antivirus-and-firewall-compatibility/).
+- Notificación de proceso pico mejorada para Windows.  Encontrará información adicional en el [blog de WSL](https://blogs.msdn.microsoft.com/wsl/2016/11/01/wsl-antivirus-and-firewall-compatibility/).
 - Estabilidad mejorada con la interoperabilidad de Windows
-- Se ha corregido errores 0 x 80070057 al iniciar bash.exe cuando está habilitada la protección de datos de empresa (EDP)
-- Las mejoras y correcciones de errores adicionales
+- Se corrigió el error 0x80070057 al iniciar bash. exe cuando está habilitada la protección de datos empresariales (este)
+- Correcciones y mejoras adicionales
 
-### <a name="ltp-results"></a>LTP resultados:
-Número de paso de prueba: 665 </br>
-Número de paso de no (por error, omitido, etcetera...): 263 </br>
-[Los registros de ejecución de pruebas LTP](https://github.com/Microsoft/CommandLine-Documentation/tree/live/LTP_Results/14959)<br/>
+### <a name="ltp-results"></a>Resultados de LTP:
+Número de pruebas superadas: 665 </br>
+Número de pasos no superados (error, omitido, etc.): 263 </br>
+[Registros de ejecución de pruebas de LTP](https://github.com/Microsoft/CommandLine-Documentation/tree/live/LTP_Results/14959)<br/>
 
 <br/>
 
 ## <a name="build-14955"></a>Compilación 14955
 
-Para Windows general, visite información sobre las compilación 14955 el [Blog Windows](https://blogs.windows.com/windowsexperience/2016/10/25/announcing-windows-10-insider-preview-build-14955-for-mobile-and-pc/#guGXQzKVFrZIDUYR.97).<br/>
+Para obtener información general sobre Windows sobre la compilación 14955, visite el [blog de Windows](https://blogs.windows.com/windowsexperience/2016/10/25/announcing-windows-10-insider-preview-build-14955-for-mobile-and-pc/#guGXQzKVFrZIDUYR.97).<br/>
 
 
-### <a name="fixed"></a>Fijo
+### <a name="fixed"></a>Corregido
 
- - Debido a circunstancias fuera de nuestro control no hay ninguna actualización en esta compilación para el subsistema de Windows para Linux.  Las actualizaciones programadas regularmente se reanudarán en la próxima versión.
+ - Debido a circunstancias más allá de nuestro control, no hay ninguna actualización en esta compilación para el subsistema de Windows para Linux.  Las actualizaciones programadas regularmente se reanudarán en la próxima versión.
 
-### <a name="ltp-results"></a>LTP resultados:
-Número de paso de prueba: 665 </br>
-Número de paso de no (por error, omitido, etcetera...): 263 </br>
-[Los registros de ejecución de pruebas LTP](https://github.com/Microsoft/CommandLine-Documentation/tree/live/LTP_Results/14955)<br/>
+### <a name="ltp-results"></a>Resultados de LTP:
+Número de pruebas superadas: 665 </br>
+Número de pasos no superados (error, omitido, etc.): 263 </br>
+[Registros de ejecución de pruebas de LTP](https://github.com/Microsoft/CommandLine-Documentation/tree/live/LTP_Results/14955)<br/>
 
 <br/>
 
 ## <a name="build-14951"></a>Compilación 14951
 
-Para Windows general, visite información sobre las compilación 14951 el [Blog Windows](https://blogs.windows.com/windowsexperience/2016/10/19/announcing-windows-10-insider-preview-build-14951-for-mobile-and-pc/).<br/>
+Para obtener información general sobre Windows sobre la compilación 14951, visite el [blog de Windows](https://blogs.windows.com/windowsexperience/2016/10/19/announcing-windows-10-insider-preview-build-14951-for-mobile-and-pc/).<br/>
 
 
-### <a name="new-feature-windows--ubuntu-interoperability"></a>Nueva característica: Windows o Ubuntu interoperabilidad
-Los archivos binarios de Windows ahora se pueden invocar directamente desde la línea de comandos WSL.  Esto ofrece a los usuarios la capacidad de interactuar con su entorno de Windows y del sistema de forma que no ha sido posible.  Un ejemplo rápido, es posible que los usuarios ejecutar los comandos siguientes:
+### <a name="new-feature-windows--ubuntu-interoperability"></a>Nueva característica: Interoperabilidad con Windows/Ubuntu
+Los archivos binarios de Windows ahora se pueden invocar directamente desde la línea de comandos de WSL.  Esto proporciona a los usuarios la capacidad de interactuar con el entorno y el sistema Windows de una manera que no se haya podido realizar.  Como ejemplo rápido, ahora es posible que los usuarios ejecuten los siguientes comandos:
 
     ```
     $ export PATH=$PATH:/mnt/c/Windows/System32
@@ -1380,307 +1391,307 @@ Los archivos binarios de Windows ahora se pueden invocar directamente desde la l
 
 Puede encontrar más información en:
 
-- [Blog del equipo de WSL para la interoperabilidad](https://blogs.msdn.microsoft.com/wsl/2016/10/19/windows-and-ubuntu-interoperability/)<br/>
-- [Documentación de MSDN sobre interoperabilidad](https://msdn.microsoft.com/en-us/commandline/wsl/interop)<br/>
+- [Blog del equipo de WSL para Interop](https://blogs.msdn.microsoft.com/wsl/2016/10/19/windows-and-ubuntu-interoperability/)<br/>
+- [Documentación de interoperabilidad de MSDN](https://msdn.microsoft.com/en-us/commandline/wsl/interop)<br/>
 
-### <a name="fixed"></a>Fijo
+### <a name="fixed"></a>Corregido
 
-- Ubuntu 16.04 (Xenial) ahora se instala para todas las instancias nuevas de WSL.  Los usuarios con las instancias existentes 14.04 (Trusty) no se actualizará automáticamente.
-- Ahora se muestra la configuración regional establecida durante la instalación
-- Las mejoras de Terminal incluidos errores donde redirige un proceso WSL a un archivo no siempre funcionan
-- Duración de la consola debería se vincula a bash.exe
-- Tamaño de la ventana de consola debe usar tamaño visible, no el tamaño de búfer
-- Las mejoras y correcciones de errores adicionales
+- Ubuntu 16,04 (Xenial) ya está instalado para todas las instancias nuevas de WSL.  Los usuarios con instancias existentes de 14,04 (Trusty) no se actualizarán automáticamente.
+- La configuración regional establecida durante la instalación se muestra ahora
+- Mejoras de terminal que incluyen un error en el que la redirección de un proceso WSL a un archivo no siempre funciona
+- La duración de la consola debe estar asociada a la duración de Bash. exe
+- El tamaño de la ventana de la consola debe usar un tamaño visible, no el tamaño del búfer
+- Correcciones y mejoras adicionales
 
-### <a name="ltp-results"></a>LTP resultados:
-Número de paso de prueba: 665 </br>
-Número de paso de no (por error, omitido, etcetera...): 263 </br>
-[Los registros de ejecución de pruebas LTP](https://github.com/Microsoft/CommandLine-Documentation/tree/live/LTP_Results/14951)<br/>
+### <a name="ltp-results"></a>Resultados de LTP:
+Número de pruebas superadas: 665 </br>
+Número de pasos no superados (error, omitido, etc.): 263 </br>
+[Registros de ejecución de pruebas de LTP](https://github.com/Microsoft/CommandLine-Documentation/tree/live/LTP_Results/14951)<br/>
 
 <br/>
 
 ## <a name="build-14946"></a>Compilación 14946
 
-Para Windows general, visite información sobre las compilación 14946 el [Blog Windows](https://blogs.windows.com/windowsexperience/2016/10/13/announcing-windows-10-insider-preview-build-14946-for-pc-and-mobile/#xj8GdVooEqo4H7H7.97).<br/>
+Para obtener información general sobre Windows sobre la compilación 14946, visite el [blog de Windows](https://blogs.windows.com/windowsexperience/2016/10/13/announcing-windows-10-insider-preview-build-14946-for-pc-and-mobile/#xj8GdVooEqo4H7H7.97).<br/>
 
 
-### <a name="fixed"></a>Fijo
+### <a name="fixed"></a>Corregido
 
-- Se corrigió un problema que impedía la creación de cuentas de usuario WSL para los usuarios con los nombres de usuario de NT que contienen espacios o comillas. 
-- Cambiar VolFs y DrvFs para devolver 0 para el recuento de vínculos del directorio de stat
-- Admite la opción de socket IPV6_MULTICAST_HOPS.
-- Limitar el bucle de E/S por tty a una única consola. Ejemplo: el siguiente comando es posible:
-  - bash -c "echo data" | bash -c "ssh user@example.com 'cat > foo.txt'"
+- Se corrigió un problema que impedía la creación de cuentas de usuario de WSL para los usuarios con nombres de usuario NT que contienen espacios o comillas. 
+- Cambie VolFs y DrvFs para que devuelva 0 para el recuento de vínculos de directorio en STAT
+- Compatibilidad con la opción de socket IPV6_MULTICAST_HOPS.
+- Limite a un bucle de e/s de consola única por TTY. Ejemplo: el siguiente comando es posible:
+  - Bash-c "datos de Eco" | Bash-c "ssh user@example.com " cat > foo. txt ' "
 
-- Reemplace los espacios por fichas en /proc/cpuinfo (GH #1115)
-- DrvFs aparece ahora en mountinfo con un nombre que coincida con el volumen montado de Windows
-- / Home/root aparecerán y en mountinfo con nombres correctos
-- Las mejoras y correcciones de errores adicionales
+- reemplazar espacios con pestañas en/proc/cpuinfo (alvent #1115)
+- DrvFs aparece ahora en mountinfo con un nombre que coincide con el volumen de Windows montado
+- /Home y/root ahora aparecen en mountinfo con los nombres correctos
+- Correcciones y mejoras adicionales
 
-### <a name="ltp-results"></a>LTP resultados:
-Número de paso de prueba: 665 </br>
-Número de paso de no (por error, omitido, etcetera...): 263 </br>
-[Los registros de ejecución de pruebas LTP](https://github.com/Microsoft/CommandLine-Documentation/tree/live/LTP_Results/14946)<br/>
+### <a name="ltp-results"></a>Resultados de LTP:
+Número de pruebas superadas: 665 </br>
+Número de pasos no superados (error, omitido, etc.): 263 </br>
+[Registros de ejecución de pruebas de LTP](https://github.com/Microsoft/CommandLine-Documentation/tree/live/LTP_Results/14946)<br/>
 
 <br/>
 
 ## <a name="build-14942"></a>Compilación 14942
 
-Para Windows general, visite información sobre las compilación 14942 el [Blog Windows](https://aka.ms/onefourninefourtwoooooo).<br/>
+Para obtener información general sobre Windows sobre la compilación 14942, visite el [blog de Windows](https://aka.ms/onefourninefourtwoooooo).<br/>
 
 
-### <a name="fixed"></a>Fijo
+### <a name="fixed"></a>Corregido
 
-- Un número de verificaciones de error dirigido, incluida la "ha INTENTADO ejecutar de NOEXECUTE memoria" redes de bloqueo que bloqueaba SSH
-- compatibilidad con inotifiy notificaciones generadas a partir de las aplicaciones de Windows en DrvFs ahora está en
-- Implementar TCP_KEEPIDLE y TCP_KEEPINTVL para mongod. (GH #695)
-- Implementar la llamada de sistema pivot_root
-- Implementar la opción de socket para SO_DONTROUTE
-- Las mejoras y correcciones de errores adicionales
+- Un número de bugchecks direccionado, incluido el bloqueo de red "intento de ejecución de memoria noexecute" que bloqueaba SSH
+- la compatibilidad de inotifiy con las notificaciones generadas desde aplicaciones Windows en DrvFs ahora está en
+- Implemente TCP_KEEPIDLE y TCP_KEEPINTVL para mongod. (ALVENT #695)
+- Implementar la llamada del sistema pivot_root
+- Opción de implementación de socket para SO_DONTROUTE
+- Correcciones y mejoras adicionales
 
 
-### <a name="ltp-results"></a>LTP resultados:
-Número de paso de prueba: 665 </br>
-Número de paso de no (por error, omitido, etcetera...): 263 </br>
-[Los registros de ejecución de pruebas LTP](https://github.com/Microsoft/CommandLine-Documentation/tree/live/LTP_Results/14942)<br/>
+### <a name="ltp-results"></a>Resultados de LTP:
+Número de pruebas superadas: 665 </br>
+Número de pasos no superados (error, omitido, etc.): 263 </br>
+[Registros de ejecución de pruebas de LTP](https://github.com/Microsoft/CommandLine-Documentation/tree/live/LTP_Results/14942)<br/>
 
-### <a name="syscall-support"></a>Soporte técnico de syscall
-A continuación se muestran una lista de nuevas o mejoradas syscalls que tienen alguna implementación en WSL. Las llamadas en esta lista se admiten en al menos un escenario, pero es posible que no dispone de todos los parámetros compatibles en este momento.
+### <a name="syscall-support"></a>Compatibilidad con syscall
+A continuación se muestra una lista de llamadas syscall nuevos o mejorados que tienen alguna implementación en WSL. Los llamadas syscall de esta lista se admiten en al menos un escenario, pero puede que no se admitan todos los parámetros en este momento.
 
 `pivot_root`<br/>
 <br/>
 
 ## <a name="build-14936"></a>Compilación 14936
 
-Para Windows general, visite información sobre las compilación 14936 el [Blog Windows](https://blogs.windows.com/windowsexperience/2016/09/28/announcing-windows-10-insider-preview-build-14936-for-pc/).<br/>
+Para obtener información general sobre Windows sobre la compilación 14936, visite el [blog de Windows](https://blogs.windows.com/windowsexperience/2016/09/28/announcing-windows-10-insider-preview-build-14936-for-pc/).<br/>
 
 
-Nota: WSL instalará Ubuntu versión 16.04 (Xenial) en lugar de Ubuntu 14.04 (furgoneta) en una próxima versión.  Este cambio se aplicará a Insider instalar instancias nuevas (lxrun.exe /install o la primera ejecución de bash.exe).  Las instancias existentes con furgoneta no se actualizará automáticamente. Los usuarios pueden actualizar su imagen leal a Xenial mediante el comando de actualización de versión de hacer.
+Nota: WSL instalará Ubuntu versión 16,04 (Xenial) en lugar de Ubuntu 14,04 (Trusty) en una próxima versión.  Este cambio se aplicará a la instalación de instancias nuevas (lxrun. exe/Install o a la primera ejecución de Bash. exe).  Las instancias existentes con confianza no se actualizarán automáticamente. Los usuarios pueden actualizar su imagen de confianza a Xenial mediante el comando do-Release-upgrade.
 
 ### <a name="known-issue"></a>Problema conocido
-WSL está experimentando un problema con algunas implementaciones de socket.  La comprobación de errores se manifiesta como un bloqueo con el error "Ha INTENTADO ejecutar NOEXECUTE memoria insuficiente".  La manifestación más común de este problema es un bloqueo al usar ssh.  La causa raíz se ha corregido en las compilaciones internas y se insertará en Insider lo antes posible.
+WSL está experimentando un problema con algunas implementaciones de Sockets.  La comprobación de errores se manifiesta como un bloqueo con el error "intento de ejecución de la memoria noexecute".  La manifestación más común de este problema es un bloqueo cuando se usa SSH.  La causa principal se ha corregido en las compilaciones internas y se insertará en la parte más temprana de la oportunidad.
 
-### <a name="fixed"></a>Fijo
+### <a name="fixed"></a>Corregido
 
-- Implementa la llamada del sistema chroot
-- Mejoras en inotify ~~incluida la compatibilidad con las notificaciones generadas desde aplicaciones de Windows en DrvFs~~
-  - Corrección: Inotify compatibilidad con los cambios que se originan desde las aplicaciones de Windows no está disponibles en este momento.
-- Enlace a IPV6 de socket::<port n> ahora admite IPV6_V6ONLY (68 de # GH, #157, 393 #, #460, 674 #, #740, 982 #, #996)
-- Comportamiento WNOWAIT para waitid systemcall implementa (GH #638)
-- Compatibilidad con las opciones de socket IP IP_HDRINCL y IP_TTL
-- Se debe devolver inmediatamente read() de longitud cero (GH #975)
-- Controlar correctamente los prefijos de nombres de archivo y nombre de archivo que no incluyen un terminador NULL en un archivo .tar.
-- compatibilidad con epoll/dev/null
-- Corregir el origen de hora /dev/alarm
-- Bash -c ahora se puede redirigir a un archivo
-- Las mejoras y correcciones de errores adicionales
+- Implementación de la llamada del sistema chroot
+- Mejoras en inotify ~~, incluida la compatibilidad con notificaciones generadas desde aplicaciones Windows en DrvFs~~
+  - Corregir La compatibilidad de inotify con los cambios que se originan en aplicaciones Windows no están disponibles en este momento.
+- Enlace de socket a IPv6:<port n> : ahora admite IPV6_V6ONLY (alvent #68, #157, #393, #460, #674, #740, #982, #996)
+- Comportamiento de WNOWAIT para waitid systemcall implementado (alvent #638)
+- Compatibilidad con las opciones de socket de IP IP_HDRINCL y IP_TTL
+- La lectura de longitud cero () debe volver inmediatamente (alvent #975)
+- Administrar correctamente los nombres de archivo y los prefijos de nombre de archivo que no incluyen un terminador NULL en un archivo. tar.
+- compatibilidad con epoll para/dev/null
+- Corregir origen de hora de/dev/Alarm
+- Bash-c ahora puede redirigir a un archivo
+- Correcciones y mejoras adicionales
 
-### <a name="ltp-results"></a>LTP resultados:
-Número de paso de prueba: 664 </br>
-Número de paso de no (por error, omitido, etcetera...): 264 </br>
-[Los registros de ejecución de pruebas LTP](https://github.com/Microsoft/CommandLine-Documentation/tree/live/LTP_Results/14936)<br/>
+### <a name="ltp-results"></a>Resultados de LTP:
+Número de pruebas superadas: 664 </br>
+Número de pasos no superados (error, omitido, etc.): 264 </br>
+[Registros de ejecución de pruebas de LTP](https://github.com/Microsoft/CommandLine-Documentation/tree/live/LTP_Results/14936)<br/>
 
-### <a name="syscall-support"></a>Soporte técnico de syscall
-A continuación se muestran una lista de nuevas o mejoradas syscalls que tienen alguna implementación en WSL. Las llamadas en esta lista se admiten en al menos un escenario, pero es posible que no dispone de todos los parámetros compatibles en este momento.
+### <a name="syscall-support"></a>Compatibilidad con syscall
+A continuación se muestra una lista de llamadas syscall nuevos o mejorados que tienen alguna implementación en WSL. Los llamadas syscall de esta lista se admiten en al menos un escenario, pero puede que no se admitan todos los parámetros en este momento.
 
 `chroot`<br/>
 <br/>
 
 ## <a name="build-14931"></a>Compilación 14931
 
-Para Windows general, visite información sobre las compilación 14931 el [Blog Windows](https://blogs.windows.com/windowsexperience/2016/09/21/announcing-windows-10-insider-preview-build-14931-for-pc/).<br/>
+Para obtener información general sobre Windows sobre la compilación 14931, visite el [blog de Windows](https://blogs.windows.com/windowsexperience/2016/09/21/announcing-windows-10-insider-preview-build-14931-for-pc/).<br/>
 
 
-### <a name="fixed"></a>Fijo
+### <a name="fixed"></a>Corregido
 
- - Debido a circunstancias fuera de nuestro control no hay ninguna actualización en esta compilación para el subsistema de Windows para Linux.  Las actualizaciones programadas regularmente se reanudación en la próxima versión.
+ - Debido a circunstancias más allá de nuestro control, no hay ninguna actualización en esta compilación para el subsistema de Windows para Linux.  Las actualizaciones programadas regularmente se reanudarán en la próxima versión.
 
 <br/>
 
 ## <a name="build-14926"></a>Compilación 14926
 
-Para Windows general, visite información sobre las compilación 14926 el [Blog Windows](https://blogs.windows.com/windowsexperience/2016/09/14/announcing-windows-10-insider-preview-build-14926-for-pc-and-mobile/).<br/>
+Para obtener información general sobre Windows sobre la compilación 14926, visite el [blog de Windows](https://blogs.windows.com/windowsexperience/2016/09/14/announcing-windows-10-insider-preview-build-14926-for-pc-and-mobile/).<br/>
 
 
-### <a name="fixed"></a>Fijo
+### <a name="fixed"></a>Corregido
 
-- Ping funciona ahora en las consolas que no tienen privilegios de administrador
-- Ping6 ahora admitidos, también sin privilegios de administrador
-- Inotify compatibilidad con los archivos modificados a través de WSL. (GH #216)
-  - Marcas compatibles:
+- Ping Now funciona en consolas que no tienen privilegios de administrador
+- También se admite Ping6, sin privilegios de administrador.
+- Compatibilidad de inotify con archivos modificados a través de WSL. (ALVENT #216)
+  - Marcas admitidas:
     - inotify_init1: LX_O_CLOEXEC, LX_O_NONBLOCK
-    - inotify_add_watch eventos: LX_IN_ACCESS, LX_IN_MODIFY, LX_IN_ATTRIB, LX_IN_CLOSE_WRITE, LX_IN_CLOSE_NOWRITE, LX_IN_OPEN, LX_IN_MOVED_FROM, LX_IN_MOVED_TO, LX_IN_CREATE, LX_IN_DELETE, LX_IN_DELETE_SELF, LX_IN_MOVE_SELF
-    - inotify_add_watch atributos: LX_IN_DONT_FOLLOW, LX_IN_EXCL_UNLINK, LX_IN_MASK_ADD, LX_IN_ONESHOT, LX_IN_ONLYDIR
-    - leer la salida: LX_IN_ISDIR, LX_IN_IGNORED
-  - Problema conocido: Modificar archivos de aplicaciones de Windows no genera ningún evento
-- Socket de UNIX es compatible ahora con SCM_CREDENTIALS
+    - eventos de inotify_add_watch: LX_IN_ACCESS, LX_IN_MODIFY, LX_IN_ATTRIB, LX_IN_CLOSE_WRITE, LX_IN_CLOSE_NOWRITE, LX_IN_OPEN, LX_IN_MOVED_FROM, LX_IN_MOVED_TO, LX_IN_CREATE, LX_IN_DELETE, LX_IN_DELETE_SELF, LX_IN_MOVE_SELF
+    - atributos inotify_add_watch: LX_IN_DONT_FOLLOW, LX_IN_EXCL_UNLINK, LX_IN_MASK_ADD, LX_IN_ONESHOT, LX_IN_ONLYDIR
+    - salida de lectura: LX_IN_ISDIR, LX_IN_IGNORED
+  - Problema conocido: La modificación de archivos desde aplicaciones Windows no genera ningún evento
+- El socket de UNIX ahora es compatible con SCM_CREDENTIALS
 
-### <a name="ltp-results"></a>LTP resultados:
-Número de paso de prueba: 651 </br>
-Número de paso de no (por error, omitido, etcetera...): 258 </br>
-[Los registros de ejecución de pruebas LTP](https://github.com/Microsoft/CommandLine-Documentation/tree/live/LTP_Results/14926)<br/>
+### <a name="ltp-results"></a>Resultados de LTP:
+Número de pruebas superadas: 651 </br>
+Número de pasos no superados (error, omitido, etc.): 258 </br>
+[Registros de ejecución de pruebas de LTP](https://github.com/Microsoft/CommandLine-Documentation/tree/live/LTP_Results/14926)<br/>
 
 <br/>
 
 ## <a name="build-14915"></a>Compilación 14915
 
-Para Windows general, visite información sobre las compilación 14915 el [Blog Windows](https://blogs.windows.com/windowsexperience/2016/08/31/announcing-windows-10-insider-preview-build-14915-for-pc-and-mobile).<br/>
+Para obtener información general sobre Windows sobre la compilación 14915, visite el [blog de Windows](https://blogs.windows.com/windowsexperience/2016/08/31/announcing-windows-10-insider-preview-build-14915-for-pc-and-mobile).<br/>
 
 
-### <a name="fixed"></a>Fijo
--  Socketpair para sockets de datagramas de unix (GH #262)
-- Soporte técnico de socket de UNIX para SO_REUSEADDR
-- Soporte técnico de socket de UNIX para SO_BROADCAST (GH #568)
-- Soporte técnico de socket de UNIX para SOCK_SEQPACKET (GH 758 #, #546)
-- Agregar compatibilidad para el envío de socket de datagrama de unix, recepción y de cierre
-- Corregir la comprobación de errores debido a la validación de parámetros mmap no válido para las direcciones no fija. (GH #847)
-- Soporte técnico para suspender y reanudar de Estados de terminales
-- Compatibilidad con TIOCPKT ioctl desbloquear la utilidad de la pantalla (GH #774)
-    - Problema conocido: Teclas de función no operativos
-- Se ha corregido una carrera en TimerFd que podría provocar que un miembro liberado 'ReaderReady' LxpTimerFdWorkerRoutine (GH #814) tengan acceso a
-- Habilitar la compatibilidad del sistema reiniciable llamada futex, sondeos y clock_nanosleep
-- Un enlace se ha agregado compatibilidad de montaje
-- dejar de compartir compatibilidad con el espacio de nombres de montaje
-    - Problema conocido: Al crear un nuevo espacio de nombres de montaje con `unshare(CLONE_NEWNS)` seguirá el directorio de trabajo actual para que apunte al espacio de nombres anterior
-- Otras mejoras y correcciones de errores
+### <a name="fixed"></a>Corregido
+-  Socketpair para Sockets de datagramas UNIX (alvent #262)
+- Compatibilidad con el socket de UNIX para SO_REUSEADDR
+- Compatibilidad con el socket de UNIX para SO_BROADCAST (alvent #568)
+- Compatibilidad con el socket de UNIX para SOCK_SEQPACKET (alvent #758, #546)
+- Adición de compatibilidad para el envío, recepción y cierre de sockets de datagramas de UNIX
+- Corrección de BugCheck debido a la validación de parámetros mmap no válidos para direcciones no fijas. (ALVENT #847)
+- Compatibilidad para suspender o reanudar los Estados de terminal
+- Compatibilidad con TIOCPKT ioctl para desbloquear la utilidad de pantalla (alvent #774)
+    - Problema conocido: Teclas de función no operativas
+- Se corrigió una carrera en TimerFd que podía hacer que un miembro liberado ' ReaderReady ' estuviera accesible para LxpTimerFdWorkerRoutine (alvent #814)
+- Habilitar la compatibilidad con llamadas del sistema reiniciables para Futex, Poll y clock_nanosleep
+- Compatibilidad con montaje de enlace agregado
+- dejar de compartir la compatibilidad con el espacio de nombres Mount
+    - Problema conocido: Al crear un nuevo espacio de nombres `unshare(CLONE_NEWNS)` de montaje con el directorio de trabajo actual, continuará señalando al espacio de nombres anterior
+- Mejoras y correcciones de errores adicionales
 
 <br/>
 
 ## <a name="build-14905"></a>Compilación 14905
 
-Para Windows general, visite información sobre las compilación 14905 el [Blog Windows](https://blogs.windows.com/windowsexperience/2016/08/17/announcing-windows-10-insider-preview-build-14905-for-pc-mobile/).<br/>
+Para obtener información general sobre Windows sobre la compilación 14905, visite el [blog de Windows](https://blogs.windows.com/windowsexperience/2016/08/17/announcing-windows-10-insider-preview-build-14905-for-pc-mobile/).<br/>
 
 
-### <a name="fixed"></a>Fijo
-- Admite el sistema reiniciable llamadas ahora están (GH #349, GH #520)
-- Vínculos simbólicos a directorios termina en / ahora operativa (GH #650)
-- Implementado ioctl RNDGETENTCNT para/dev/Random
-- Implementa el archivo/proc / [pid] / monta/proc / [pid] / mountinfo y/proc / [pid] / mountstats archivos
-- Las mejoras y correcciones de errores adicionales
+### <a name="fixed"></a>Corregido
+- Ahora se admiten llamadas del sistema reiniciables (alvent #349, alvent #520)
+- Vínculos simbólicos a directorios que terminan en/ahora operativo (alvent #650)
+- RNDGETENTCNT ioctl implementado para/dev/random
+- Se implementaron los archivos/proc/[PID]/mounts,/proc/[PID]/mountinfo y/proc/[PID]/mountstats
+- Correcciones y mejoras adicionales
 
 </br>
 
 ## <a name="build-14901"></a>Compilación 14901
-Primera Insider de compilación para la entrada de la versión de Windows 10 Anniversary Update.
+Primera compilación Insider para la versión posterior de la actualización de aniversario de Windows 10.
 
-Para Windows general, visite información sobre las compilación 14901 el [Blog Windows](https://blogs.windows.com/windowsexperience/2016/08/11/announcing-windows-10-insider-preview-build-14901-for-pc/).<br/>
+Para obtener información general sobre Windows sobre la compilación 14901, visite el [blog de Windows](https://blogs.windows.com/windowsexperience/2016/08/11/announcing-windows-10-insider-preview-build-14901-for-pc/).<br/>
 
 
-### <a name="fixed"></a>Fijo
-- Se corrigió un problema barra diagonal final
-    - Los comandos como `$ mv a/c/ a/b/` trabajar ahora
-- Instalación pide ahora si se debe establecer la configuración regional de Ubuntu para la configuración regional de Windows
-- Compatibilidad con procfs carpeta ns
-- Agrega montaje y desmontaje para tmpfs, procfs y sistemas de archivos sysfs
-- Corregir mknod [arroba] firma ABI de 32 bits
-- Sockets de UNIX se mueven en el modelo de envío
-- Tamaño del búfer INET socket recv establecer mediante setsockopt debe admitirse.
-- Socket de unix MSG_CMSG_CLOEXEC implemente recibir mensaje la marca
-- Redirección de stdin y stdout canalización de proceso de Linux (GH #2)
-    - Permite que la canalización de comandos - c de bash de CMD.  Ejemplo: > dir | Bash -c "foo grep"
-- Bash ahora se puede instalar en sistemas con varios archivos de paginación (538 GH #, #358)
-- Tamaño de búfer predeterminado INET Socket debe coincidir con la del programa de instalación de Ubuntu predeterminado
-- Alinear xattr syscalls a listxattr
-- Devolver solo las interfaces con una dirección IPv4 válida de SIOCGIFCONF
-- Corregir la acción predeterminada de señal cuando ptrace insertado
-- implement /proc/sys/vm/min_free_kbytes
-- Use los valores de registro de contexto de equipo cuando se restaura el contexto en sigreturn
-    - Esto resuelve el problema donde estaban francesa java y javac para algunos usuarios
-- Implement /proc/sys/kernel/hostname
+### <a name="fixed"></a>Corregido
+- Problema de barra diagonal final corregida
+    - Comandos como `$ mv a/c/ a/b/` Now Work
+- Al instalar ahora se le pregunta si la configuración regional de Ubuntu debe establecerse en configuración regional de Windows.
+- Compatibilidad con procfs para la carpeta NS
+- Se ha agregado el montaje y el desmontaje de los sistemas de archivos tmpfs, procfs y sysfs
+- Fix mknod [at] firma ABI de 32 bits
+- Los sockets Unix se movieron al modelo Dispatch
+- Se debe respetar el tamaño del búfer de recepción del socket de INET mediante el valor de la memoria
+- Implementar la marca de mensaje de recepción de socket Unix MSG_CMSG_CLOEXEC
+- Redirección de canalización stdin/stdout de proceso de Linux (alvent #2)
+    - Permite la canalización de comandos Bash-c en CMD.  Ejemplo: > dir | Bash-c "grep foo"
+- Bash ahora se puede instalar en sistemas con varios webfilesystems (alvent #538, #358)
+- El tamaño predeterminado del búfer del socket de INET debe coincidir con el de la configuración predeterminada de Ubuntu
+- Alinee xattr llamadas syscall con listxattr
+- Solo se devuelven interfaces con una dirección IPv4 válida de SIOCGIFCONF
+- Corregir la acción predeterminada de la señal cuando se inserta por ptrace
+- implementación de/proc/sys/VM/min_free_kbytes
+- Usar valores de registro de contexto de equipo al restaurar el contexto en sigreturn
+    - Esto resuelve el problema por el que Java y javac estaban bloqueados para algunos usuarios
+- Implementación de/proc/sys/kernel/hostname
 
-### <a name="syscall-support"></a>Soporte técnico de syscall
-A continuación se muestran una lista de nuevas o mejoradas syscalls que tienen alguna implementación en WSL. Las llamadas en esta lista se admiten en al menos un escenario, pero es posible que no dispone de todos los parámetros compatibles en este momento.
+### <a name="syscall-support"></a>Compatibilidad con syscall
+A continuación se muestra una lista de llamadas syscall nuevos o mejorados que tienen alguna implementación en WSL. Los llamadas syscall de esta lista se admiten en al menos un escenario, pero puede que no se admitan todos los parámetros en este momento.
 
 `waitid`<br/>
 `epoll_pwait`<br/>
 
 <br/>
 
-## <a name="build-14388-to-windows-10-anniversary-update"></a>Compilar 14388 a Windows 10 Anniversary Update
-Para Windows general, visite información sobre las compilación 14388 el [Blog Windows](https://aka.ms/14388wip). <br/>
+## <a name="build-14388-to-windows-10-anniversary-update"></a>Compilación 14388 a actualización de aniversario de Windows 10
+Para obtener información general sobre Windows sobre la compilación 14388, visite el [blog de Windows](https://aka.ms/14388wip). <br/>
 
-### <a name="fixed"></a>Fijo
-- Correcciones para prepararse para la actualización de aniversario de Windows 10 en 8/2
-  - Puede encontrar más información acerca de WSL en la actualización de aniversario en nuestra [blog](https://blogs.msdn.microsoft.com/wsl/)
+### <a name="fixed"></a>Corregido
+- Correcciones para preparar la actualización de aniversario de Windows 10 en 8/2
+  - Puede encontrar más información sobre WSL en la actualización de aniversario en nuestro [blog](https://blogs.msdn.microsoft.com/wsl/) .
 
 <br/>
 
 ## <a name="build-14376"></a>Compilación 14376
-Para Windows general, visite información sobre las compilación 14376 el [Blog Windows](https://blogs.windows.com/windowsexperience/2016/06/28/announcing-windows-10-insider-preview-build-14376-for-pc-and-mobile/). <br/>
+Para obtener información general sobre Windows sobre la compilación 14376, visite el [blog de Windows](https://blogs.windows.com/windowsexperience/2016/06/28/announcing-windows-10-insider-preview-build-14376-for-pc-and-mobile/). <br/>
 
-### <a name="fixed"></a>Fijo
-- Quitar algunas instancias que apt-get bloquea (GH #493)
-- Se ha corregido un problema donde montajes vacíos no se controlan correctamente
-- Se ha corregido un problema donde ramdisks no se han montado correctamente
-- La aceptación del socket de unix de cambio para que admita indicadores (parcial GH #451)
-- Fijo red comunes relacionados con la pantalla azul
-- Se ha corregido la pantalla azul al obtener acceso a [pid] / proc / / (GH #523) de tareas
-- Uso de CPU elevado fija para algunos escenarios de pty (488 GH #, #504)
-- Las mejoras y correcciones de errores adicionales
+### <a name="fixed"></a>Corregido
+- Se quitaron algunas instancias en las que apt-get se bloquea (alvent #493)
+- Se corrigió un problema por el que los montajes vacíos no se controlaban correctamente
+- Se corrigió un problema por el que los ramdisk no se montaron correctamente
+- Cambiar aceptación de socket de UNIX a marcas de compatibilidad (alvent parciales #451)
+- Pantalla desazul relacionada con la red común fija
+- Se corrigió la pantalla azul al obtener acceso a/proc/[PID]/secuencias (alvent #523)
+- Se corrigió un uso elevado de la CPU en algunos escenarios de PTY (alvent #488, #504)
+- Correcciones y mejoras adicionales
 
 <br/>
 
 ## <a name="build-14371"></a>Compilación 14371
-Para Windows general, visite información sobre las compilación 14371 el [Blog Windows](https://blogs.windows.com/windowsexperience/2016/06/22/announcing-windows-10-insider-preview-build-14371-for-pc/). <br/>
+Para obtener información general sobre Windows sobre la compilación 14371, visite el [blog de Windows](https://blogs.windows.com/windowsexperience/2016/06/22/announcing-windows-10-insider-preview-build-14371-for-pc/). <br/>
 
-### <a name="fixed"></a>Fijo
-- Se ha corregido la carrera de temporización con SIGCHLD y wait() al usar ptrace
-- Se ha corregido un comportamiento determinado cuando las rutas de acceso tienen un carácter final / (GH #432)
-- Se corrigió un problema con el cambio de nombre o desvincular errores debido a los identificadores abiertos en los elementos secundarios
-- Las mejoras y correcciones de errores adicionales
+### <a name="fixed"></a>Corregido
+- Se corrigió la carrera de tiempo con SIGCHLD y wait () al usar ptrace
+- Corrección de un comportamiento cuando las rutas de acceso tienen una o varias #432
+- Se corrigió un problema con el error de cambio de nombre o desvinculación debido a identificadores abiertos a elementos secundarios
+- Correcciones y mejoras adicionales
 
 <br/>
 
 ## <a name="build-14366"></a>Compilación 14366
-Para Windows general, visite información sobre las compilación 14366 el [Blog Windows](https://blogs.windows.com/windowsexperience/2016/06/14/announcing-windows-10-insider-preview-build-14366-mobile-build-14364/). <br/>
+Para obtener información general sobre Windows sobre la compilación 14366, visite el [blog de Windows](https://blogs.windows.com/windowsexperience/2016/06/14/announcing-windows-10-insider-preview-build-14366-mobile-build-14364/). <br/>
 
-### <a name="fixed"></a>Fijo
-- Corregir en la creación de archivos a través de vínculos simbólicos
--   Se ha agregado listxattr para Python (GH 385)
--   Las mejoras y correcciones de errores adicionales
+### <a name="fixed"></a>Corregido
+- Corrección en la creación de archivos mediante vínculos simbólicos
+-   Se ha agregado listxattr para Python (alvent 385)
+-   Correcciones y mejoras adicionales
 
-### <a name="syscall-support"></a>Soporte técnico de syscall
--   A continuación se muestran una lista de nuevas o mejoradas syscalls que tienen alguna implementación en WSL. Las llamadas en esta lista se admiten en al menos un escenario, pero es posible que no dispone de todos los parámetros compatibles en este momento.
+### <a name="syscall-support"></a>Compatibilidad con syscall
+-   A continuación se muestra una lista de llamadas syscall nuevos o mejorados que tienen alguna implementación en WSL. Los llamadas syscall de esta lista se admiten en al menos un escenario, pero puede que no se admitan todos los parámetros en este momento.
 
 `listxattr`<br/>
 <br/>
 
 ## <a name="build-14361"></a>Compilación 14361
-Para Windows general información en la compilación 14361, visite la [Blog Windows](https://aka.ms/wip14361). <br/>
+Para obtener información general sobre Windows sobre la compilación 14361, visite el [blog de Windows](https://aka.ms/wip14361). <br/>
 
-### <a name="fixed"></a>Fijo
-- DrvFs ahora distingue mayúsculas de minúsculas cuando se ejecuta en Bash en Ubuntu en Windows.
-  - Los usuarios mayo case.txt y CASE. Las unidades de TXT en su/mnt/c
-  - Mayúsculas y minúsculas sólo se admiten en Bash en Ubuntu en Windows. Cuando fuera de Bash NTFS notificará los archivos correctamente, pero puede producirse un comportamiento inesperado, interactuar con los archivos de Windows.
-  - La raíz de cada volumen (es decir, /mnt/c) no distingue mayúsculas de minúsculas
-  - Puede encontrar más información sobre cómo administrar estos archivos en Windows [aquí](https://support.microsoft.com/en-us/kb/100625).
-- Mejorado en gran medida pty / tty soporte.  Aplicaciones como TMUX ahora admiten (GH 40 de #)
-- Problema de instalación fijo donde no siempre crean cuentas de usuario
-- Lo que permite una lista de argumentos demasiado largas de línea de comandos arg estructura optimizada. (GH #153)
-- Ahora se puede eliminar y chmod archivos read_only desde DrvFs
-- Se ha corregido algunas instancias donde los bloqueos en terminal desconexión (GH #43)
-- chmod y chown ahora funcionan en dispositivos de tty
-- Permitir la conexión a 0.0.0.0 y:: como localhost (GH 388)
-- Sendmsg/recvmsg controlan ahora una longitud del vector de E/S de > 1 (parcial GH #376)
-- Los usuarios pueden ahora participar del archivo de hosts generada automáticamente (GH 398 de #)
-- Configuración regional de Linux con la configuración regional de NT hace coincidir automáticamente durante la instalación (GH #11)
-- Agrega el archivo /proc/sys/vm/swappiness (GH #306)
+### <a name="fixed"></a>Corregido
+- DrvFs ahora distingue entre mayúsculas y minúsculas cuando se ejecuta en bash en Ubuntu en Windows.
+  - Los usuarios pueden Case. txt y CASE. TXT en sus unidades de/mnt/c
+  - La distinción de mayúsculas y minúsculas solo se admite en bash en Ubuntu en Windows. Cuando esté fuera de Bash, NTFS notificará los archivos correctamente, pero puede producirse un comportamiento inesperado que interactúe con los archivos de Windows.
+  - La raíz de cada volumen (es decir,/mnt/c) no distingue entre mayúsculas y minúsculas
+  - Puede encontrar más información sobre el control de estos archivos en Windows [aquí](https://support.microsoft.com/en-us/kb/100625).
+- Compatibilidad con PTY/TTY considerablemente mejorada.  Ahora se admiten aplicaciones como TMUX (alvent #40)
+- Se corrigió el problema de instalación de las cuentas de usuario que no siempre se han creado
+- Estructura de argumentos de línea de comandos optimizada que permite una lista de argumentos extremadamente larga. (ALVENT #153)
+- Ahora puede eliminar y chmod archivos READ_ONLY de DrvFs
+- Se corrigieron algunos casos en los que el terminal se bloquea en la desconexión (alvent #43)
+- chmod y chown ahora funcionan en dispositivos TTY
+- Permitir la conexión a 0.0.0.0 y:: como localhost (alvent #388)
+- Sendmsg/recvmsg ahora administra una longitud de vector de e/s de > 1 (#376 parciales)
+- Los usuarios ahora pueden dejar de participar en el archivo de hosts generados automáticamente (alvent #398)
+- Coincidencia automática de la configuración regional de Linux con la configuración regional de NT durante la instalación (alvent #11)
+- Se ha agregado el archivo/proc/sys/vm/swappiness (alvent #306)
 - strace ahora se cierra correctamente
-- Permitir que las canalizaciones volver a abrirse mediante /proc/self/fd (GH #222)
-- Ocultar directorios bajo %LOCALAPPDATA%\lxss desde DrvFs (GH #270)
-- Mejor control de bash.exe ~.  Comandos como "bash ~ ls - c" ahora admite (GH #467)
-- Sockets notifican epoll lectura disponible durante el cierre (GH #271)
-- lxrun / uninstall hace un mejor trabajo eliminando los archivos y carpetas
-- Corregido ps -f (GH #246)
-- Compatibilidad mejorada para x11 aplicaciones como xEmacs (GH #481)
-- Actualiza el tamaño de pila del subproceso inicial para que coincida con la configuración predeterminada de Ubuntu e informar el tamaño correctamente a la syscall get_rlimit (172 GH #, #258)
-- Informe mejorado de los nombres de imagen de proceso de pico (por ejemplo, para la auditoría)
-- /Proc/mountinfo implementada para el comando df
-- Se ha corregido el código de error de vínculo simbólico para el nombre del elemento secundario. y...
-- Las mejoras y correcciones de errores de mejoras adicionales
+- Permitir que las canalizaciones se vuelvan a abrir a través de/proc/Self/FD (alvent #222)
+- Ocultar directorios en%LOCALAPPDATA%\lxss de DrvFs (alvent #270)
+- Mejor control de Bash. exe ~.  Ahora se admiten comandos como "Bash ~-c LS" (alvent #467)
+- Ahora, los sockets notifican a epoll Read disponibles durante el cierre (alvent #271)
+- lxrun/Uninstall mejora el trabajo de eliminación de archivos y carpetas
+- Se corrigió PS-f (alvent #246)
+- Compatibilidad mejorada con aplicaciones X11 como xEmacs (alvent #481)
+- Se ha actualizado el tamaño inicial de la pila de subprocesos para que coincida con la configuración predeterminada de Ubuntu y se notifica el tamaño correctamente a get_rlimit syscall (alvent #172, #258)
+- Informes mejorados de nombres de imagen de proceso pico (por ejemplo, para auditoría)
+- Comando implementado/proc/mountinfo para DF
+- Código de error de symlink fijo para el nombre secundario. y.
+- Mejoras correcciones y mejoras adicionales
 
-### <a name="syscall-support"></a>Soporte técnico de syscall
-A continuación se muestran una lista de nuevas o mejoradas syscalls que tienen alguna implementación en WSL. Las llamadas en esta lista se admiten en al menos un escenario, pero es posible que no dispone de todos los parámetros compatibles en este momento.
+### <a name="syscall-support"></a>Compatibilidad con syscall
+A continuación se muestra una lista de llamadas syscall nuevos o mejorados que tienen alguna implementación en WSL. Los llamadas syscall de esta lista se admiten en al menos un escenario, pero puede que no se admitan todos los parámetros en este momento.
 
 `GETTIMER`<br/>
 `MKNODAT`<br/>
@@ -1691,25 +1702,25 @@ A continuación se muestran una lista de nuevas o mejoradas syscalls que tienen 
 <br/>
 
 ## <a name="build-14352"></a>Compilación 14352
-Para Windows general, visite información sobre las compilación 14352 el [Blog Windows](https://aka.ms/wip14352).<br/>
+Para obtener información general sobre Windows sobre la compilación 14352, visite el [blog de Windows](https://aka.ms/wip14352).<br/>
 
 
-### <a name="fixed"></a>Fijo
-- Se corrigió un problema donde los archivos grandes no se han descargado / creado correctamente.  Esto debe desbloquear npm y otros escenarios (3 GH, GH #313)
-- Quitar algunas instancias donde sockets de bloqueo
-- Corregir algunos errores ptrace
-- Se corrigió un problema con WSL que permite a los nombres de archivo más de 255 caracteres
-- Compatibilidad mejorada para los caracteres no válidos
-- Agregar datos de zona horaria de Windows actuales y establecer como predeterminado
-- Identificador de dispositivo único para cada punto de montaje (corrección de jre – GH #49)
-- Corregir el problema con las rutas que contengan "." y ".."
-- Se ha agregado compatibilidad de Fifo (GH #71)
-- Formato actualizado de resolv.conf para que coincida con el formato nativo de Ubuntu
-- Alguna limpieza procfs
-- Ping habilitado para las consolas de administrador (GH #18)
+### <a name="fixed"></a>Corregido
+- Se corrigió un problema en el que los archivos grandes no se descargaron o se crearon correctamente.  Esto debe desbloquear NPM y otros escenarios (alvent #3, alvent #313)
+- Se quitaron algunas instancias en las que los sockets no responden
+- Se corrigieron algunos errores de ptrace
+- Problema corregido con WSL que permite nombres de archivo de más de 255 caracteres
+- Compatibilidad mejorada para caracteres que no están en inglés
+- Agregar datos de zona horaria de Windows actuales y establecer como valores predeterminados
+- ID. de dispositivo único para cada punto de montaje (corrección de JRE – alvent #49)
+- Corregir el problema con las rutas de acceso que contienen "." y ".."
+- Compatibilidad con FIFO agregada (alvent #71)
+- Formato actualizado de resolv. conf para que coincida con el formato Ubuntu nativo
+- Algunas limpiezas de procfs
+- Habilitación del ping para consolas de administrador (alvent #18)
 
-### <a name="syscall-support"></a>Soporte técnico de syscall
-A continuación se muestran una lista de nuevas o mejoradas syscalls que tienen alguna implementación en WSL. Las llamadas en esta lista se admiten en al menos un escenario, pero es posible que no dispone de todos los parámetros compatibles en este momento.
+### <a name="syscall-support"></a>Compatibilidad con syscall
+A continuación se muestra una lista de llamadas syscall nuevos o mejorados que tienen alguna implementación en WSL. Los llamadas syscall de esta lista se admiten en al menos un escenario, pero puede que no se admitan todos los parámetros en este momento.
 
 `FALLOCATE`<br/>
 `EXECVE`<br/>
@@ -1718,38 +1729,38 @@ A continuación se muestran una lista de nuevas o mejoradas syscalls que tienen 
 <br/>
 
 ## <a name="build-14342"></a>Compilación 14342
-Para Windows general de información sobre compilación 14342 el [Blog Windows](https://aka.ms/wip14342). <br/>
+Para obtener información general sobre Windows sobre la compilación 14342 el [blog de Windows](https://aka.ms/wip14342). <br/>
 
-Puede encontrar información sobre VolFs y DriveFs en el [WSL Blog](https://blogs.msdn.microsoft.com/wsl). <br/>
+Puede encontrar información sobre VolFs y DriveFs en el [blog de WSL](https://blogs.msdn.microsoft.com/wsl). <br/>
 
-### <a name="fixed"></a>Fijo
-- Se ha corregido el problema de instalación cuando el usuario de Windows tuvo caracteres Unicode en el nombre de usuario
-- Ahora se proporciona la solución de udev de actualización de apt-get en las preguntas más frecuentes de forma predeterminada en la primera ejecución
-- Habilita los vínculos simbólicos en DriveFs (/ mnt /<drive>) directorios
-- Los vínculos simbólicos ahora funcionan entre DriveFs y VolFs
-- Ruta direccionada de nivel superior al analizar el problema: ls. / / ahora funcionará según lo esperado
-- instalar NPM en DriveFs y ahora trabaja las opciones -g
-- Se corrigió un problema impide que el servidor PHP iniciar
-- Valores de entorno actualizado de forma predeterminada, como $PATH para más cercano que coincida con Ubuntu nativo
-- Agrega una tarea de mantenimiento semanal en Windows para actualizar la caché de paquetes apt
-- Se ha corregido el problema con la validación del encabezado de ELF, WSL ahora es compatible con todas las opciones de Melkor
-- Shell Zsh es funcional
-- Ahora se admiten los binarios precompilados de Go
-- Preguntar en Bash.exe primero ejecute ahora se traduce correctamente
-- /proc/meminfo ahora devuelve la información correcta
-- Sockets, que ahora se admiten en VFS
-- / dev ahora está montado como tempfs
-- FIFO admitidos ahora
-- Sistemas de varios núcleos ahora muestran correctamente en/proc/cpuinfo
-- Mejoras adicionales y mensajes de error de descarga durante la primera ejecución
-- Syscall mejoras y correcciones de errores. Syscall compatible la lista siguiente.
-- Las mejoras y correcciones de errores adicionales
+### <a name="fixed"></a>Corregido
+- Se corrigió el problema de instalación cuando el usuario de Windows tenía caracteres Unicode en el nombre de usuario
+- La solución de udev de actualización apt-get en las preguntas más frecuentes se proporciona ahora de forma predeterminada en la primera ejecución.
+- Vínculos simbólicos habilitados en<drive>directorios DriveFs (/mnt/)
+- Los vínculos simbólicos funcionan ahora entre DriveFs y VolFs
+- Problema de análisis de ruta de acceso de nivel superior solucionado: LS.//funcionará ahora como se esperaba
+- la instalación de NPM en DriveFs y las opciones-g ahora funcionan
+- Se corrigió un problema que impide que se inicie el servidor PHP
+- Valores de entorno predeterminados actualizados, como $PATH para que coincidan con Ubuntu nativo
+- Se ha agregado una tarea de mantenimiento semanal en Windows para actualizar la caché de paquetes apt
+- Problema corregido con la validación de encabezado de ELF, WSL ahora es compatible con todas las opciones de Melkor
+- El shell de zsh es funcional
+- Ahora se admiten los binarios de go precompilados
+- Preguntar en bash. exe la primera ejecución ahora está localizada correctamente
+- /proc/meminfo Now devuelve la información correcta
+- Sockets admitidos ahora en VFS
+- /dev ahora montado como tempfs
+- Ahora se admite FIFO
+- Los sistemas de varios núcleos ahora se muestran correctamente en/proc/cpuinfo
+- Mejoras adicionales y mensajes de error que se descargan durante la primera ejecución
+- Mejoras de syscall y correcciones. Lista de syscall admitida a continuación.
+- Correcciones y mejoras adicionales
 
 ### <a name="known-issues"></a>Problemas conocidos
-- No resolver '..' correctamente en DriveFs en algunos casos
+- No se resuelve '.. ' correctamente en DriveFs en algunos casos
 
-### <a name="syscall-support"></a>Soporte técnico de syscall
-A continuación se muestran una lista de nuevas o mejoradas syscalls que tienen alguna implementación en WSL. Las llamadas en esta lista se admiten en al menos un escenario, pero es posible que no dispone de todos los parámetros compatibles en este momento.
+### <a name="syscall-support"></a>Compatibilidad con syscall
+A continuación se muestra una lista de llamadas syscall nuevos o mejorados que tienen alguna implementación en WSL. Los llamadas syscall de esta lista se admiten en al menos un escenario, pero puede que no se admitan todos los parámetros en este momento.
 
 `FCHOWNAT`<br/>
 `GETEUID`<br/>
@@ -1765,47 +1776,47 @@ A continuación se muestran una lista de nuevas o mejoradas syscalls que tienen 
 
 ## <a name="build-14332"></a>Compilación 14332
 
-Para Windows general, visite información sobre las compilación 14332 el [Blog Windows](https://aka.ms/wip14332). <br/>
+Para obtener información general sobre Windows sobre la compilación 14332, visite el [blog de Windows](https://aka.ms/wip14332). <br/>
 
 
-### <a name="fixed"></a>Fijo
-- Mejor generación de resolv.conf incluidos dando prioridad a las entradas de DNS
-- Problema con el traslado de archivos y directorios entre/mnt y no- / mnt unidades
-- Ahora se pueden crear los archivos tar con vínculos simbólicos
-- Directorio de /run/lock predeterminada se ha agregado en la creación de instancias
-- Actualizar/dev/null para devolver la información de estadísticas correcta
-- Errores adicionales cuando se descargan durante la primera ejecución
-- Syscall mejoras y correcciones de errores. Syscall compatible la lista siguiente.
-- Las mejoras y correcciones de errores de mejoras adicionales
+### <a name="fixed"></a>Corregido
+- Mejor generación de resolv. conf, incluida la priorización de entradas DNS
+- Problema con el traslado de archivos y directorios entre las unidades de/mnt y no/mnt
+- Los archivos tar ahora se pueden crear con vínculos simbólicos
+- Se agregó el directorio/Run/Lock predeterminado en la creación de la instancia
+- Actualice/dev/null para que devuelva la información de estadísticas correcta
+- Errores adicionales al descargar durante la primera ejecución
+- Mejoras de syscall y correcciones. Lista de syscall admitida a continuación.
+- Mejoras correcciones y mejoras adicionales
 
-### <a name="syscall-support"></a>Soporte técnico de syscall
-A continuación es el nuevo syscall que tiene alguna implementación en WSL. La syscall en esta lista es compatible con al menos un escenario, pero es posible que no dispone de todos los parámetros compatibles en este momento.
+### <a name="syscall-support"></a>Compatibilidad con syscall
+A continuación se muestra el nuevo syscall que tiene alguna implementación en WSL. El syscall de esta lista se admite en al menos un escenario, pero es posible que no tenga todos los parámetros admitidos en este momento.
 
 `READLINKAT`<br/>
 <br/>
 
 ## <a name="build-14328"></a>Compilación 14328
 
-Para Windows general, visite información sobre las compilación 14332 el [Blog Windows](https://aka.ms/wip14328). <br/>
+Para obtener información general sobre Windows sobre la compilación 14332, visite el [blog de Windows](https://aka.ms/wip14328). <br/>
 
 
 ### <a name="new-features"></a>Nuevas características
-* Admite ahora los usuarios de Linux.  Instalación de Bash en Ubuntu en Windows solicitará para la creación de un usuario de Linux.  Para obtener más información, visite https://aka.ms/wslusers
-* Nombre de host se establece ahora en el nombre del equipo Windows, no hay más @localhost
-* Para obtener más información sobre compilación 14328, visite: https://aka.ms/wip14328
+* Ahora admite usuarios de Linux.  Al instalar bash en Ubuntu en Windows, se solicitará la creación de un usuario de Linux.  Para obtener más información, visite https://aka.ms/wslusers
+* El nombre de host ahora está establecido en el nombre del equipo de Windows, no más@localhost
+* Para obtener más información sobre la compilación 14328, visite: https://aka.ms/wip14328
 
-### <a name="fixed"></a>Fijo
-* Mejoras de vínculo simbólico para que no es/mnt /<drive> archivos
-    * NPM install ahora funciona
-    * JDK / jre ahora instalable con instrucciones que encontrará [aquí](https://xubuntugeek.blogspot.com/2012/09/how-to-install-oracle-jdk-7-manually-in.html).
-    * problema conocido: los vínculos simbólicos no funcionan para Windows monta.  Funcionalidad estará disponible en una compilación posterior
-* parte superior y htop se muestran ahora
-* Mensajes de error adicionales para algunos errores de la instalación
-* Syscall mejoras y correcciones de errores.  Syscall compatible la lista siguiente.
-* Las mejoras y correcciones de errores de mejoras adicionales
+### <a name="fixed"></a>Corregido
+* Mejoras de symlink para archivos<drive> no/mnt/
+    * la instalación de NPM funciona ahora
+    * JDK/JRE ahora se instala mediante las instrucciones que se encuentran [aquí](https://xubuntugeek.blogspot.com/2012/09/how-to-install-oracle-jdk-7-manually-in.html).
+    * problema conocido: los vínculos simbólicos no funcionan para los montajes de Windows.  La funcionalidad estará disponible en una compilación posterior
+* Top y htop ahora se muestran
+* Mensajes de error adicionales para algunos errores de instalación
+* Mejoras de syscall y correcciones.  Lista de syscall admitida a continuación.
+* Mejoras correcciones y mejoras adicionales
 
-### <a name="syscall-support"></a>Soporte técnico de syscall
-A continuación es una lista de llamadas que tienen alguna implementación en WSL.  Syscall en esta lista se admite en al menos un escenario, pero es posible que no dispone de todos los parámetros compatibles en este momento.
+### <a name="syscall-support"></a>Compatibilidad con syscall
+A continuación se muestra una lista de llamadas syscall que tienen alguna implementación en WSL.  Llamadas syscall en esta lista se admiten en al menos un escenario, pero puede que no se admitan todos los parámetros en este momento.
 
 `ACCEPT`<br/>
 `ACCEPT4`<br/>

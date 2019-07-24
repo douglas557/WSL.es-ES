@@ -1,65 +1,72 @@
 ---
-title: Descargar manualmente el subsistema de Windows para las distribuciones de Linux (WSL)
-description: Instrucciones sobre cómo descargar manualmente el subsistema de Windows para las distribuciones de Linux.
-keywords: BashOnWindows, bash, wsl, windows, el subsistema de windows para linux, WSL, subsistema de windows, distribución, ubuntu, openSUSE, SLES, debian, kali
+title: Descargar manualmente el subsistema de Windows para Linux (WSL) distribuciones
+description: Instrucciones sobre cómo descargar manualmente el subsistema de Windows para distribuciones de Linux.
+keywords: BashOnWindows, bash, WSL, Windows, subsistema de Windows para Linux, WSL, subsistema de Windows, distribución, Ubuntu, openSUSE, SLES, Debian, Kali
 author: taraj
 ms.author: taraj
 ms.date: 07/24/2018
 ms.topic: article
 ms.assetid: 9281ffa2-4fa9-4078-bf6f-b51c967617e3
 ms.custom: seodec18
-ms.openlocfilehash: 669c017c97aba70c107484b32acd99296265d84a
-ms.sourcegitcommit: bb88269eb37405192625fa81ff91162393fb491f
+ms.openlocfilehash: 55cea2c4b7087f3dd8a29986aaddc8c313763448
+ms.sourcegitcommit: b07769a3140db9ac63e42c7d7d1290c0bad8c40d
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67035036"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67467549"
 ---
-# <a name="manually-download-windows-subsystem-for-linux-distro-packages"></a>Descargar manualmente el subsistema de Windows para los paquetes de distribución de Linux
+# <a name="manually-download-windows-subsystem-for-linux-distro-packages"></a>Descargar manualmente el subsistema de Windows para paquetes distribución de Linux
 
-Hay varios escenarios en los que puede no ser capaz de (o desee) para instalar las distribuciones de Linux de WSL a través de la Microsoft Store. En concreto, puede que esté ejecutando un servidor de Windows o la SKU del sistema operativo que no es compatible con Microsoft Store, o sus directivas de red corporativa y/o los administradores para no permitir el uso de Microsoft Store en su entorno de escritorio de mantenimiento a largo plazo (LTSB/LTSC).
+Hay varios escenarios en los que es posible que no pueda (o desee) instalar WSL Linux distribuciones a través de la Microsoft Store. En concreto, es posible que esté ejecutando una SKU de sistema operativo de escritorio de Windows Server o de mantenimiento a largo plazo (LTSB/LTSC) que no admita Microsoft Store, o que sus administradores o directivas de red corporativa no permitan el uso de Microsoft Store en su entorno.
 
-En estos casos, mientras que WSL sí está disponible, ¿cómo descargar e instalar distribuciones de Linux en WSL si no se puede obtener acceso al almacén?
+En estos casos, aunque WSL está disponible, ¿cómo se descarga e instala Linux distribuciones en WSL si no se puede acceder a la tienda?
 
-> Nota: **Entornos de shell de línea de comandos, incluidos las distribuciones de Linux/WSL, Cmd y PowerShell no se pueden ejecutar en modo de Windows 10 S**. Esta restricción existe con el fin de garantizar los objetivos de integridad y seguridad que ofrece el modo S: Lectura [esta publicación](https://blogs.msdn.microsoft.com/commandline/2017/05/18/will-linux-distros-run-on-windows-10-s/) para obtener más información.
+> Nota: Los **entornos de Shell de línea de comandos, incluidos cmd, PowerShell y Linux/WSL distribuciones, no se pueden ejecutar en el modo Windows 10 S**. Esta restricción existe con el fin de garantizar la integridad y los objetivos de seguridad que ofrece el modo S: Lea [esta entrada](https://blogs.msdn.microsoft.com/commandline/2017/05/18/will-linux-distros-run-on-windows-10-s/) para obtener más información.
 
 ## <a name="downloading-distros"></a>Descarga de distribuciones
 
-Si la aplicación de Microsoft Store no está disponible, puede descargar e instalar manualmente las distribuciones de Linux, haga clic en estos vínculos:
+Si la aplicación Microsoft Store no está disponible, puede descargar e instalar manualmente Linux distribuciones haciendo clic en estos vínculos:
 * [Ubuntu 18.04](https://aka.ms/wsl-ubuntu-1804)
-* [Ubuntu 18.04 ARM](https://aka.ms/wsl-ubuntu-1804-arm)
+* [ARM de Ubuntu 18,04](https://aka.ms/wsl-ubuntu-1804-arm)
 * [Ubuntu 16.04](https://aka.ms/wsl-ubuntu-1604)
 * [Debian GNU/Linux](https://aka.ms/wsl-debian-gnulinux)
 * [Kali Linux](https://aka.ms/wsl-kali-linux)
 * [OpenSUSE Leap 42](https://aka.ms/wsl-opensuse-42)
 * [SUSE Linux Enterprise Server 12](https://aka.ms/wsl-sles-12)
-* [Remix Fedora de WSL](https://github.com/WhitewaterFoundry/WSLFedoraRemix/releases/)
+* [Fedora Remix WSL](https://github.com/WhitewaterFoundry/WSLFedoraRemix/releases/)
 
-Esto hará que el `<distro>.appx` paquetes para descargar en una carpeta de su elección. Siga el [las instrucciones de instalación](#installing-your-distro) para instalar su distro(s) descargado.
+Esto hará que los `<distro>.appx` paquetes se descarguen en una carpeta de su elección. Siga las [instrucciones de instalación](#Installing-your-distro) para instalar los distribución descargados.
 
-## <a name="downloading-distros-via-the-command-line"></a>Distribuciones de descarga a través de la línea de comandos
-Si lo prefiere, también puede descargar el distro(s) preferida a través de la línea de comandos:
+## <a name="downloading-distros-via-the-command-line"></a>Descarga de distribuciones a través de la línea de comandos
+Si lo prefiere, también puede descargar los distribución preferidos a través de la línea de comandos:
 
- ### <a name="download-using-powershell"></a>Descargar mediante PowerShell
- Para descargar las distribuciones con PowerShell, use el [Invoke-WebRequest](https://msdn.microsoft.com/powershell/reference/5.1/microsoft.powershell.utility/invoke-webrequest) cmdlet. Aquí es una instrucción de ejemplo para descargar Ubuntu 16.04.
+ ### <a name="download-using-powershell"></a>Descargar con PowerShell
+ Para descargar distribuciones con PowerShell, use el cmdlet [Invoke-WebRequest](https://msdn.microsoft.com/powershell/reference/5.1/microsoft.powershell.utility/invoke-webrequest) . A continuación se muestra una instrucción de ejemplo para descargar ubuntu 16,04.
 
 ```powershell
 Invoke-WebRequest -Uri https://aka.ms/wsl-ubuntu-1604 -OutFile Ubuntu.appx -UseBasicParsing
 ```
 
 > [!TIP]
-> Si la descarga tarda mucho tiempo, desactive la barra de progreso estableciendo `$ProgressPreference = 'SilentlyContinue'`
+> Si la descarga tarda mucho tiempo, desactive la barra de progreso estableciendo`$ProgressPreference = 'SilentlyContinue'`
 
-### <a name="download-using-curl"></a>Descargar mediante curl
-Actualización de Windows 10 Spring 2018 (o posterior) incluye el popular [curl utilidad de línea de comandos](https://curl.haxx.se/) con el que puede invocar las solicitudes de web (es decir, HTTP GET, POST, PUT, comandos etc.) desde la línea de comandos. Puede usar `curl.exe` para descargar las distribuciones anteriores:
+### <a name="download-using-curl"></a>Descargar mediante rizo
+La actualización de Spring 2018 de Windows 10 (o posterior) incluye la popular [utilidad de línea de comandos de rizo](https://curl.haxx.se/) con la que puede invocar solicitudes web (es decir, HTTP GET, post, Put, etc.) desde la línea de comandos. Puede usar `curl.exe` para descargar el distribuciones anterior:
 
 ```console
 curl.exe -L -o ubuntu-1604.appx https://aka.ms/wsl-ubuntu-1604
 ```
 
-En el ejemplo anterior, `curl.exe` se ejecuta (no solo `curl`) garantizar que, en PowerShell, el archivo ejecutable de curl real se invoca, no la curl de PowerShell alias de [Invoke-WebRequest](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/invoke-webrequest?view=powershell-6)
+En el ejemplo anterior, `curl.exe` se ejecuta (no solo `curl`) para asegurarse de que, en PowerShell, se invoca el ejecutable de rizo real, no el alias de rizo de PowerShell para [Invoke-WebRequest](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/invoke-webrequest?view=powershell-6) .
 
-> Nota: Uso de `curl` podría ser preferible si tiene que invocar comandos o mediante el shell de Cmd de pasos de descarga o `.bat`  /  `.cmd` secuencias de comandos.
+> Nota: El `curl` uso de podría ser preferible si tiene que invocar o crear scripts de pasos de descarga `.bat` mediante scripts de CMD y/o  / . `.cmd`
 
-## <a name="installing-your-distro"></a>Instalación de la distribución
-Para obtener instrucciones sobre cómo instalar su distro(s) descargado, consulte el [Windows Desktop](install-win10.md) o [Windows Server](install-on-server.md) instrucciones de instalación.
+## <a name="installing-your-distro"></a>Instalación de distribución
+Si usa Windows 10, puede instalar el distribución con PowerShell. Simplemente vaya a la carpeta que contiene el distribución descargado de arriba y, en ese directorio, `app_name` ejecute el siguiente comando, donde es el nombre del archivo distribución. appx.  
+```Powershell
+Add-AppxPackage .\app_name.appx
+```
+
+Si usa Windows Server, puede encontrar las instrucciones de instalación en la página de documentación de [Windows Server](install-on-server.md) .
+
+Una vez instalado el distribución, consulte la página de [pasos de Intilization](initialize-distro.md) para inicializar la nueva distribución.
