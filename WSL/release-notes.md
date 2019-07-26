@@ -7,15 +7,49 @@ ms.date: 07/31/2017
 ms.topic: article
 ms.assetid: 36ea641e-4d49-4881-84eb-a9ca85b1cdf4
 ms.custom: seodec18
-ms.openlocfilehash: e2d9d5fc70c173e9b516ab7af01599b623b40b39
-ms.sourcegitcommit: cd239efc5c7c25ffbe5de25b2438d44181a838a9
+ms.openlocfilehash: d2d91db24c12fc674d695ccffc79eb5781a0721d
+ms.sourcegitcommit: be00abbb170aa569e008b804f15949344b378999
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/14/2019
-ms.locfileid: "67042424"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68501582"
 ---
 # <a name="release-notes-for-windows-subsystem-for-linux"></a>Notas de la versión para el subsistema de Windows para Linux
 
+
+## <a name="build-18947"></a>Compilación 18947
+Para obtener información general sobre Windows sobre la compilación 18947, visite el [blog de Windows](https://blogs.windows.com/windowsexperience/2019/07/26/announcing-windows-10-insider-preview-build-18947/).
+
+### <a name="wsl"></a>WSL
+* [WSL2] Permitir que los Sockets TCP de escucha en WSL2 sean accesibles desde el host mediante localhost: Puerto
+* [WSL2] Correcciones de errores de instalación/conversión y diagnósticos adicionales para realizar un seguimiento de los problemas futuros [alvent 4105] 
+* [WSL2] Mejorar la capacidad de diagnóstico de los problemas de red de WSL2
+* [WSL2] Actualización de la versión de kernel a 4.19.55
+* [WSL2] Actualización del kernel con las opciones de configuración necesarias para Docker [alvent 4165]
+* [WSL2] Aumente el número de CPU asignadas a la máquina virtual de utilidad ligera para que sea la misma que el host (se ha limitado previamente a 8 por CONFIG_NR_CPUS en la configuración del kernel) [alvent 4137]
+* [WSL2] Creación de un archivo de intercambio para la máquina virtual ligera WSL2
+* [WSL2] Permitir que los montajes de usuarios sean \\visibles a\\través \\de WSL $ distribución (por ejemplo, sshfs) [alvent 4172]
+* [WSL2] Mejorar el rendimiento del sistema de archivos 9P
+* [WSL2] Asegúrese de que la ACL de VHD no crezca sin límite [alvent 4126]
+* [WSL2] Actualizar configuración de kernel para admitir squashfs y xt_conntrack [alvent 4107, 4123]
+* [WSL2] Corrección para Interop. Enabled/etc/WSL.conf (opción) [alvent 4140]
+* [WSL2] Devuelve ENOTSUP si el sistema de archivos no es compatible con EAs
+* [WSL2] Corregir CopyFile Hang with \\ \\WSL $
+* Cambie el valor predeterminado de umask a 0022 y agregue la configuración de filesystem. umask a/etc/WSL.conf
+* Corrección de wslpath para resolver correctamente los vínculos simbólicos, esto se retomó en 19h1 [alvent 4078]
+* Introduzca el archivo%\.userprofile% wslconfig para ajustar la configuración de WSL2
+```
+[wsl2]
+kernel=<path>              # An absolute Windows path to a custom Linux kernel.
+memory=<size>              # How much memory to assign to the WSL2 VM.
+processors=<number>        # How many processors to assign to the WSL2 VM.
+swap=<size>                # How much swap space to add to the WSL2 VM. 0 for no swap file.
+swapFile=<path>            # An absolute Windows path to the swap vhd.
+localhostForwarding=<bool> # Boolean specifying if ports bound to wildcard or localhost in the WSL2 VM should be connectable from the host via localhost:port (default true).
+
+# <path> entries must be absolute Windows paths with escaped backslashes, for example C:\\Users\\Ben\\kernel
+# <size> entries must be size followed by unit, for example 8GB or 512MB
+```
 
 ## <a name="build-18917"></a>Compilación 18917
 Para obtener información general sobre Windows sobre la compilación 18917, visite el [blog de Windows](https://blogs.windows.com/windowsexperience/2019/06/12/announcing-windows-10-insider-preview-build-18917/).
