@@ -9,10 +9,10 @@ ms.topic: article
 ms.assetid: 7afaeacf-435a-4e58-bff0-a9f0d75b8a51
 ms.custom: seodec18
 ms.openlocfilehash: a74f5e3f5879d0af274d2e2b10aaf05e95a97a6f
-ms.sourcegitcommit: e16097a3d863bbda8c4655054f154415cdd7f2f5
+ms.sourcegitcommit: 44da0f435986598e6067e36ddca9369d27064793
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/05/2019
+ms.lasthandoff: 07/26/2019
 ms.locfileid: "67587140"
 ---
 # <a name="wsl-2-faq"></a>PREGUNTAS MÁS FRECUENTES SOBRE WSL 2
@@ -33,7 +33,7 @@ Actualmente no tenemos planes para dejar de usar WSL 1. Puede ejecutar WSL 1 y W
 
 Algunas aplicaciones de terceros no pueden funcionar cuando se usa Hyper-V, lo que significa que no podrán ejecutarse cuando se habilita WSL 2. Desafortunadamente, esto incluye VMware, y las versiones de VirtualBox anteriores a VirtualBox 6 (VirtualBox 6.0.0 publicadas en diciembre 2018 [ahora admite Hyper-V como núcleo de ejecución de reserva en un host de Windows][1]).
 
-Estamos investigando maneras de ayudar a resolver este problema. Por ejemplo, se expone un conjunto de API llamada [plataforma][2] that third-party virtualization providers can use to make their software compatible with Hyper-V’s. This lets applications use the Hyper-V architecture for their emulation such as [the Google Android Emulator][3]de hipervisor y VirtualBox 6 y versiones posteriores que ahora son compatibles con Hyper-V.
+Estamos investigando maneras de ayudar a resolver este problema. Por ejemplo, se expone un conjunto de API llamada [plataforma de hipervisor][2] que los proveedores de virtualización de terceros pueden usar para que el software sea compatible con Hyper-V. Esto permite que las aplicaciones usen la arquitectura de Hyper-V para su emulación, como [Google Android Emulator][3]y VirtualBox 6 y versiones posteriores, que ahora son compatibles con Hyper-V.
 
 ## <a name="can-i-access-the-gpu-in-wsl-2-are-there-plans-to-increase-hardware-support"></a>¿Puedo acceder a la GPU en WSL 2? ¿Hay planes para aumentar la compatibilidad de hardware?
 
