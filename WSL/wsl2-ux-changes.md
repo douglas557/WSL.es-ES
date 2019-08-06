@@ -51,7 +51,7 @@ Para tener acceso a una aplicación de red de Windows, deberá usar la direcció
 - Obtenga la dirección IP de la máquina host ejecutando el comando `cat /etc/resolv.conf` y copiando la dirección IP que sigue al término. `nameserver` 
 - Conéctese a cualquier servidor de Windows mediante la dirección IP copiada.
 
-En la imagen siguiente se muestra un ejemplo de esto mediante la conexión a un servidor node. js que se ejecuta en Windows a través de rizo. 
+En la imagen siguiente se muestra un ejemplo de esto mediante la conexión a un servidor node. js que se ejecuta en Windows a través de cURL. 
 
 ![Acceso a aplicaciones de red Linux desde Windows](media/wsl2-network-l2w.png)
 
