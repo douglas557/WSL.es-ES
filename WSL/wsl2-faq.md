@@ -8,12 +8,12 @@ ms.date: 05/30/2019
 ms.topic: article
 ms.assetid: 7afaeacf-435a-4e58-bff0-a9f0d75b8a51
 ms.custom: seodec18
-ms.openlocfilehash: a74f5e3f5879d0af274d2e2b10aaf05e95a97a6f
-ms.sourcegitcommit: 44da0f435986598e6067e36ddca9369d27064793
+ms.openlocfilehash: 760ca61f77f12509224458f1b44a1329d7225600
+ms.sourcegitcommit: 00e4d12bfcd0dcd53c7445ddb2f8f0d0739d20af
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/26/2019
-ms.locfileid: "67587140"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68915560"
 ---
 # <a name="wsl-2-faq"></a>PREGUNTAS MÁS FRECUENTES SOBRE WSL 2
 
@@ -45,7 +45,7 @@ Sí, en las aplicaciones de red generales serán más rápidas y funcionarán me
 
 ## <a name="can-i-run-wsl-2-in-a-virtual-machine"></a>¿Puedo ejecutar WSL 2 en una máquina virtual?
 
-Sí. Debe asegurarse de que la máquina virtual tiene habilitada la virtualización anidada. Para habilitarlo en Hyper-V, ejecute el siguiente comando en una ventana de PowerShell con privilegios de administrador:
+Sí. Debe asegurarse de que la máquina virtual tiene habilitada la virtualización anidada. Para habilitarlo en el host de Hyper-V primario, ejecute el siguiente comando en una ventana de PowerShell con privilegios de administrador:
 
 `Set-VMProcessor -VMName <VMName> -ExposeVirtualizationExtensions $true`
 
