@@ -8,78 +8,84 @@ ms.date: 07/31/2017
 ms.topic: article
 ms.assetid: 82908295-a6bd-483c-a995-613674c2677e
 ms.custom: seodec18
-ms.openlocfilehash: 465f55f8ba210cd366adc66d433f1873e295136f
-ms.sourcegitcommit: ead64b13501d6cb7170adafbb5624f4984a0af16
+ms.openlocfilehash: 018b02b43e859476f7ee38f54df8efa0ca0e652b
+ms.sourcegitcommit: 62c49d435a91f2e390c3c495f3e09e62b5ada13c
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67307656"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69578840"
 ---
 # <a name="command-reference-for-windows-subsystem-for-linux"></a>Referencia de comandos para el subsistema de Windows para Linux
 
 La mejor manera de interactuar con el subsistema de Windows para Linux es usar el `wsl.exe` comando. 
 
-## `wsl.exe` 
+
+## `wsl.exe`
 
 A continuación se muestra una lista con todas las `wsl.exe` opciones cuando se usa a partir de la versión 1903 de Windows.
 
-* Argumentos para la ejecución de archivos binarios de Linux:
+Utilizan`wsl [Argument] [Options...] [CommandLine]`
 
-    * Si no se proporciona ninguna línea de comandos, WSL. exe inicia el shell predeterminado.
+### <a name="arguments-for-running-linux-binaries"></a>Argumentos para la ejecución de archivos binarios de Linux
 
-    * --exec,-e<CommandLine>
-        * Ejecute el comando especificado sin usar el shell de Linux predeterminado.
+* **Sin argumentos**
 
-    * --
-        * Pase el resto de la línea de comandos tal y como está.
+  Si no se proporciona ninguna línea de comandos, WSL. exe inicia el shell predeterminado.
 
-* Opciones:
-    * --distribución,-d<Distro>
-        * Ejecutar la distribución especificada.
+* **--exec,-e \<línea de comandos >**
+  
+  Ejecute el comando especificado sin usar el shell de Linux predeterminado.
 
-    * --usuario,-u<UserName>
-        * Ejecutar como el usuario especificado.
+* **--**
+  
+  Pase el resto de la línea de comandos tal y como está.
 
-* Argumentos para administrar el subsistema de Windows para Linux:
+Los comandos anteriores también aceptan las siguientes opciones:
 
-    * --exportar <Distro><FileName>
-        * Exporta la distribución a un archivo tar.
-        El nombre de archivo puede ser-para la salida estándar.
+* **--Distribution, \<-d distribución >**
 
-    * --Import <Distro> <InstallLocation>[opciones <FileName> ]
-        * Importa el archivo tar especificado como una nueva distribución.
-        El nombre de archivo puede ser-para la entrada estándar.
+  Ejecutar la distribución especificada.
 
-        * Opciones:
-            * --version <Version> especifica la versión que se va a usar para la nueva distribución.
+* **--usuario,-u \<nombre de usuario >**
 
-    * --List,-l [opciones]
-        * Muestra las distribuciones.
+  Ejecutar como el usuario especificado.
 
-        * Opciones:
-            * --todos
-                * Enumerar todas las distribuciones, incluidas las distribuciones que se están instalando o desinstalando actualmente.
+### <a name="arguments-for-managing-windows-subsystem-for-linux"></a>Argumentos para administrar el subsistema de Windows para Linux
 
-            * --en ejecución
-                * Muestra solo las distribuciones que se están ejecutando actualmente.
+* **--export \<distribución > \<nombre de archivo >**
+  
+  Exporta la distribución a un archivo tar. El nombre de archivo puede ser-para la salida estándar.
 
-    * --set-default,-s<Distro>
-        * Establece la distribución como valor predeterminado.
+* **--Import \<distribución > \<installLocation > \<nombreDeArchivo >**
+  
+  Importa el archivo tar especificado como una nueva distribución. El nombre de archivo puede ser-para la entrada estándar.
 
-    * --set-default-version<Version>
-        * Cambia la versión de instalación predeterminada para las nuevas distribuciones.
+* **--List,-l [opciones]**
+  
+  Muestra las distribuciones.
 
-    * --Set-version <Distro><Version>
-        * Cambia la versión de la distribución especificada.
+  Opciones:
+  * **--todos**
+      
+    Enumerar todas las distribuciones, incluidas las distribuciones que se están instalando o desinstalando actualmente.
 
-    * --finalizar,-t<Distro>
-        * Finaliza la distribución especificada.
+  * **--en ejecución**
+      
+    Muestra solo las distribuciones que se están ejecutando actualmente.
 
-    * --anular registro<Distro>
-        * Anula el registro de la distribución.
+* **--set-default,-s \<distribución >**
+  
+  Establece la distribución como valor predeterminado.
 
-    * --help
-        * Mostrar información de uso.
+* **--Terminate,- \<t distribución >**
+  
+  Finaliza la distribución especificada.
+
+* **--anular \<el registro de distribución >**
+  
+  Anula el registro de la distribución.
+   
+* **--Help** Mostrar información de uso.
 
 ## <a name="additional-commands"></a>Comandos adicionales
 
@@ -89,33 +95,57 @@ También hay comandos históricos para interactuar con el subsistema de Windows 
 
 Este comando le permite configurar la distribución de WSL. A continuación se muestra una lista de sus opciones.
 
-* /l,/list [opción]
-    * Muestra las distribuciones registradas.
-        * /All: puede enumerar opcionalmente todas las distribuciones, incluidas las distribuciones que se instalan o desinstalan actualmente.
+Utilizan`wslconfig [Argument] [Options...]`
 
-        * /Running: solo muestra las distribuciones que se están ejecutando actualmente.
+#### <a name="arguments"></a>Argumentos
+* **/l,/list [opciones]**
+  
+  Muestra las distribuciones registradas.
+  
+  Opciones:
+    * **/All**
+    
+      Opcionalmente, puede enumerar todas las distribuciones, incluidas las distribuciones que se están instalando o desinstalando.
 
-* /s,/setDefault<DistributionName>
-    * Establece la distribución como valor predeterminado.
+    * **/running**
+      
+      Muestra solo las distribuciones que se están ejecutando actualmente.
 
-* /t,/Terminate.<DistributionName>
-    * Finaliza la distribución.
+* **/s,/setDefault \<distribución >**
+  
+  Establece la distribución como valor predeterminado.
 
-* /u,/unregister<DistributionName>
-    * Anula el registro de la distribución.
+* **/t,/Terminate. \<distribución >**
+  
+  Finaliza la distribución.
+
+* **/u,/unregister \<distribución >**
+  
+  Anula el registro de la distribución.
+   
+* **/Upgrade \<distribución >**
+  
+  Actualiza la distribución al formato del sistema de archivos WslFs.
 
 ### `bash.exe`
 
 Este comando se usa para iniciar un shell de Bash. A continuación se muestran las opciones que puede usar con este comando.
 
-* No se ha especificado ninguna opción
-    * Inicia el shell de bash en el directorio actual. Si el shell de Bash no se instala automáticamente, se ejecuta`lxrun /install`
+Utilizan`bash [Options...]`
 
-* Bash ~
-    * Inicia el shell de bash en el directorio principal del usuario.  Similar a Running `cd ~`.
+* **No se ha especificado ninguna opción**
+  
+  Inicia el shell de bash en el directorio actual. Si el shell de Bash no se instala automáticamente, se ejecuta`lxrun /install`
 
-* Bash-c "&lt;comando&gt;"
-    * Ejecuta el comando, imprime la salida y vuelve a salir del símbolo del sistema de Windows. <br/> <br/> Ejemplo`bash -c "ls"`
+* **~**
+  
+  `bash ~`inicia el shell de bash en el directorio principal del usuario.  Similar a Running `cd ~`.
+
+* **-c "\<> de comandos"**
+  
+  Ejecuta el comando, imprime la salida y vuelve a salir del símbolo del sistema de Windows.
+    
+  Ejemplo: `bash -c "ls"`.
 
 ## <a name="deprecated-commands"></a>Comandos desusados
 
