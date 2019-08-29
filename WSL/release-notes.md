@@ -7,12 +7,13 @@ ms.date: 07/31/2017
 ms.topic: article
 ms.assetid: 36ea641e-4d49-4881-84eb-a9ca85b1cdf4
 ms.custom: seodec18
-ms.openlocfilehash: b03d837e0ab3a371fd676e37b5c65a173824f84c
-ms.sourcegitcommit: 9175a28f04573f25338358faf61d73b1a5d1ade6
+ms.localizationpriority: high
+ms.openlocfilehash: 56a596c39b0d07e75d0beb381b80af5a14612e00
+ms.sourcegitcommit: 7af6b7a3f8cfa66cb25115bc26f44aa64ef22811
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68832115"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70122752"
 ---
 # <a name="release-notes-for-windows-subsystem-for-linux"></a>Notas de la versión para el subsistema de Windows para Linux
 
@@ -1834,7 +1835,7 @@ A continuación se muestra el nuevo syscall que tiene alguna implementación en 
 Para obtener información general sobre Windows sobre la compilación 14332, visite el [blog de Windows](https://aka.ms/wip14328). <br/>
 
 
-### <a name="new-features"></a>Nuevas características
+### <a name="new-features"></a>Características nuevas
 * Ahora admite usuarios de Linux.  Al instalar bash en Ubuntu en Windows, se solicitará la creación de un usuario de Linux.  Para obtener más información, visite https://aka.ms/wslusers
 * El nombre de host ahora está establecido en el nombre del equipo de Windows, no más@localhost
 * Para obtener más información sobre la compilación 14328, visite: https://aka.ms/wip14328

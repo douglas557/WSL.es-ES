@@ -8,12 +8,13 @@ ms.date: 07/23/2018
 ms.topic: article
 ms.assetid: 7afaeacf-435a-4e58-bff0-a9f0d75b8a51
 ms.custom: seodec18
-ms.openlocfilehash: 82b5c0ccba7a444f13f186a2e33f210ac2cf48da
-ms.sourcegitcommit: 5844c6dbf692780b86b30bd65e11820fff43b3bd
+ms.localizationpriority: high
+ms.openlocfilehash: 218e3e652d0849f944e8aaceef3fb954294222be
+ms.sourcegitcommit: 7af6b7a3f8cfa66cb25115bc26f44aa64ef22811
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67499285"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70122777"
 ---
 # <a name="windows-subsystem-for-linux-installation-guide-for-windows-10"></a>Guía de instalación del subsistema de Windows para Linux para Windows 10
 
@@ -70,10 +71,10 @@ A continuación se muestran los errores relacionados y las correcciones sugerida
 
 * **Error de instalación con el error 0x80070003**
     * El subsistema de Windows para Linux solo se ejecuta en la unidad del sistema (normalmente `C:` se trata de la unidad). Asegúrese de que distribuciones se almacenan en la unidad del sistema:  
-    * Abra **configuración** ->  almacenamiento -> más opciones de almacenamiento: ** Cambiar dónde se guarda**
+    * Abra **configuración** -> almacenamiento -> más opciones de almacenamiento: ** Cambiar dónde se guarda**
     ![el nuevo contenido imagen de la configuración del sistema para instalar aplicaciones en la unidad C:](media/AppStorage.png)
     
     
  * **Error de WslRegisterDistribution con 0x8007019e**   
   * El componente opcional de subsistema de Windows para Linux no está habilitado: 
-   * Abra **Panel** -> de control**programas y características** -> * * activar o desactivar las características de Windows * *-> comprobar el subsistema **de Windows para Linux** o usar el cmdlet de PowerShell que se menciona al principio de este artículo.
+   * Abra **Panel** -> de control**programas y características** -> **activar o desactivar** las características de Windows > el subsistema **de Windows para Linux** o con el cmdlet de PowerShell que se menciona al principio de este artículo.
