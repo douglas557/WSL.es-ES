@@ -16,3 +16,4 @@
 
 # [Solución de problemas](./troubleshooting.md)
 # [Notas de la versión](./release-notes.md)
+# [Referencia de la línea de comandos](./reference.md)
