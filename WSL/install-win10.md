@@ -11,7 +11,7 @@ ms.custom: seodec18
 ms.localizationpriority: high
 ms.openlocfilehash: 218e3e652d0849f944e8aaceef3fb954294222be
 ms.sourcegitcommit: 7af6b7a3f8cfa66cb25115bc26f44aa64ef22811
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 08/28/2019
 ms.locfileid: "70122777"
@@ -71,7 +71,7 @@ A continuación se muestran los errores relacionados y las correcciones sugerida
 
 * **Error de instalación con el error 0x80070003**
     * El subsistema de Windows para Linux solo se ejecuta en la unidad del sistema (normalmente `C:` se trata de la unidad). Asegúrese de que distribuciones se almacenan en la unidad del sistema:  
-    * Abra **configuración** -> almacenamiento -> más opciones de almacenamiento: ** Cambiar dónde se guarda**
+    * Abra **configuración** -> ** almacenamiento** -> **más opciones de almacenamiento: Cambiar dónde se guarda**
     ![el nuevo contenido imagen de la configuración del sistema para instalar aplicaciones en la unidad C:](media/AppStorage.png)
     
     
