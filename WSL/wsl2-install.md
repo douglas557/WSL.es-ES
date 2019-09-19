@@ -8,12 +8,12 @@ ms.date: 05/30/2019
 ms.topic: article
 ms.assetid: 7afaeacf-435a-4e58-bff0-a9f0d75b8a51
 ms.custom: seodec18
-ms.openlocfilehash: 4ae5b8452ae2aec679c2f0450dc48644b77fc1c9
-ms.sourcegitcommit: ed5cf72d5ceb92edd50cf9260ac31fd4d95a02c8
+ms.openlocfilehash: bced0fd0bf948842b8c465f645aa5c368c2f4335
+ms.sourcegitcommit: ebc6ae7e7546a6d33644e68788fa0215028859b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "71020957"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71070310"
 ---
 # <a name="installation-instructions-for-wsl-2"></a>Instrucciones de instalación de WSL 2
 
@@ -26,13 +26,16 @@ Para instalar y empezar a usar WSL 2, sigue estos pasos:
 - Establecimiento de una distribución que respaldará WSL 2 mediante la línea de comandos
 - Comprobación de qué versiones de WSL están usando las distribuciones
 
-## <a name="enable-the-virtual-machine-platform-optional-component"></a>Habilitación del componente opcional "Plataforma de máquina virtual"
+## <a name="enable-the-virtual-machine-platform-optional-component-and-make-sure-wsl-is-enabled"></a>Habilite el componente opcional "plataforma de máquina virtual" y asegúrese de que WSL está habilitado.
 
 Abre PowerShell como administrador y ejecuta:
 
-`Enable-WindowsOptionalFeature -Online -FeatureName VirtualMachinePlatform`
+```powershell
+Enable-WindowsOptionalFeature -Online -FeatureName VirtualMachinePlatform
+Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
+```
 
-Una vez habilitados estos cambios, deberás reiniciar el equipo.
+Así se asegurará de que se instalan los componentes opcionales de la plataforma de máquina virtual y el subsistema de Windows para Linux. Después de ejecutar estos comandos, deberá reiniciar el equipo. 
 
 ## <a name="set-a-distro-to-be-backed-by-wsl-2-using-the-command-line"></a>Establecimiento de una distribución que respaldará WSL 2 mediante la línea de comandos
 
