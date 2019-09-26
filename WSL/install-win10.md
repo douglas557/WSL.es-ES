@@ -1,7 +1,7 @@
 ---
-title: Instalar el subsistema de Windows para Linux (WSL) en Windows 10
-description: Instrucciones de instalación para el subsistema de Windows para Linux en Windows 10.
-keywords: BashOnWindows, bash, WSL, Windows, subsistema de Windows para Linux, windowssubsystem, Ubuntu, Debian, SuSE, Windows 10, instalación
+title: Instalar el Subsistema de Windows para Linux (WSL) en Windows 10
+description: Instrucciones de instalación para el Subsistema de Windows para Linux en Windows 10.
+keywords: BashOnWindows, bash, wsl, wsl2, windows, subsistema de windows para linux, windowssubsystem, ubuntu, debian, suse, windows 10, instalación
 author: taraj
 ms.author: taraj
 ms.date: 07/23/2018
@@ -16,66 +16,66 @@ ms.contentlocale: es-ES
 ms.lasthandoff: 08/28/2019
 ms.locfileid: "70122777"
 ---
-# <a name="windows-subsystem-for-linux-installation-guide-for-windows-10"></a><span data-ttu-id="9dbde-104">Guía de instalación del subsistema de Windows para Linux para Windows 10</span><span class="sxs-lookup"><span data-stu-id="9dbde-104">Windows Subsystem for Linux Installation Guide for Windows 10</span></span>
+# <a name="windows-subsystem-for-linux-installation-guide-for-windows-10"></a><span data-ttu-id="21548-104">Guía de instalación del Subsistema de Windows para Linux para Windows 10</span><span class="sxs-lookup"><span data-stu-id="21548-104">Windows Subsystem for Linux Installation Guide for Windows 10</span></span>
 
-## <a name="install-the-windows-subsystem-for-linux"></a><span data-ttu-id="9dbde-105">Instalar el subsistema de Windows para Linux</span><span class="sxs-lookup"><span data-stu-id="9dbde-105">Install the Windows Subsystem for Linux</span></span>
+## <a name="install-the-windows-subsystem-for-linux"></a><span data-ttu-id="21548-105">Instalar el Subsistema de Windows para Linux</span><span class="sxs-lookup"><span data-stu-id="21548-105">Install the Windows Subsystem for Linux</span></span>
 
-<span data-ttu-id="9dbde-106">Antes de instalar cualquier distribuciones de Linux para WSL, debe asegurarse de que la característica opcional "subsistema de Windows para Linux" esté habilitada:</span><span class="sxs-lookup"><span data-stu-id="9dbde-106">Before installing any Linux distros for WSL, you must ensure that the "Windows Subsystem for Linux" optional feature is enabled:</span></span>
+<span data-ttu-id="21548-106">Antes de instalar cualquier distribución de Linux para WSL, debes asegurarte de que la característica opcional "Subsistema de Windows para Linux" esté habilitada:</span><span class="sxs-lookup"><span data-stu-id="21548-106">Before installing any Linux distros for WSL, you must ensure that the "Windows Subsystem for Linux" optional feature is enabled:</span></span>
 
-1. <span data-ttu-id="9dbde-107">Abra PowerShell como administrador y ejecute:</span><span class="sxs-lookup"><span data-stu-id="9dbde-107">Open PowerShell as Administrator and run:</span></span>
+1. <span data-ttu-id="21548-107">Abre PowerShell como administrador y ejecuta:</span><span class="sxs-lookup"><span data-stu-id="21548-107">Open PowerShell as Administrator and run:</span></span>
     ```powershell
     Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
     ```
 
-2. <span data-ttu-id="9dbde-108">Reinicie el equipo cuando se le solicite.</span><span class="sxs-lookup"><span data-stu-id="9dbde-108">Restart your computer when prompted.</span></span>
+2. <span data-ttu-id="21548-108">Reinicia el equipo cuando se te solicite.</span><span class="sxs-lookup"><span data-stu-id="21548-108">Restart your computer when prompted.</span></span>
 
-## <a name="install-your-linux-distribution-of-choice"></a><span data-ttu-id="9dbde-109">Instalación de la distribución de Linux de su elección</span><span class="sxs-lookup"><span data-stu-id="9dbde-109">Install your Linux Distribution of Choice</span></span>
-<span data-ttu-id="9dbde-110">Para descargar e instalar los distribución preferidos, tiene tres opciones:</span><span class="sxs-lookup"><span data-stu-id="9dbde-110">To download and install your preferred distro(s), you have three choices:</span></span>
-1. <span data-ttu-id="9dbde-111">Descargar e instalar desde el Microsoft Store (ver más abajo)</span><span class="sxs-lookup"><span data-stu-id="9dbde-111">Download and install from the Microsoft Store (see below)</span></span>
-1. <span data-ttu-id="9dbde-112">Descargar e instalar desde la línea de comandos/script ([Lea las instrucciones de instalación manual](install-manual.md))</span><span class="sxs-lookup"><span data-stu-id="9dbde-112">Download and install from the Command-Line/Script ([read the manual installation instructions](install-manual.md))</span></span>
-1. <span data-ttu-id="9dbde-113">Descargar y desempaquetar e instalar manualmente (para Windows Server- [instrucciones aquí](install-on-server.md))</span><span class="sxs-lookup"><span data-stu-id="9dbde-113">Download and manually unpack and install (for Windows Server - [instructions here](install-on-server.md))</span></span>
+## <a name="install-your-linux-distribution-of-choice"></a><span data-ttu-id="21548-109">Instalación de la distribución de Linux que quieras</span><span class="sxs-lookup"><span data-stu-id="21548-109">Install your Linux Distribution of Choice</span></span>
+<span data-ttu-id="21548-110">Para descargar e instalar las distribuciones que prefieras, tienes tres opciones:</span><span class="sxs-lookup"><span data-stu-id="21548-110">To download and install your preferred distro(s), you have three choices:</span></span>
+1. <span data-ttu-id="21548-111">Descargarlas e instalarlas de Microsoft Store (ver la información que hay a continuación).</span><span class="sxs-lookup"><span data-stu-id="21548-111">Download and install from the Microsoft Store (see below)</span></span>
+1. <span data-ttu-id="21548-112">Descargarlas e instalarlas desde la línea de comandos o el script ([lee las instrucciones de instalación del manual](install-manual.md)).</span><span class="sxs-lookup"><span data-stu-id="21548-112">Download and install from the Command-Line/Script ([read the manual installation instructions](install-manual.md))</span></span>
+1. <span data-ttu-id="21548-113">Descargarlas y desempaquetarlas e instalarlas manualmente (para Windows Server: [aquí están las instrucciones](install-on-server.md)).</span><span class="sxs-lookup"><span data-stu-id="21548-113">Download and manually unpack and install (for Windows Server - [instructions here](install-on-server.md))</span></span>
 
-### <a name="windows-10-fall-creators-update-and-later-install-from-the-microsoft-store"></a><span data-ttu-id="9dbde-114">Windows 10 Fall Creators Update y versiones posteriores: Instalar desde el Microsoft Store</span><span class="sxs-lookup"><span data-stu-id="9dbde-114">Windows 10 Fall Creators Update and later: Install from the Microsoft Store</span></span>
+### <a name="windows-10-fall-creators-update-and-later-install-from-the-microsoft-store"></a><span data-ttu-id="21548-114">Windows 10 Fall Creators Update y posteriores: Descargar desde Microsoft Store</span><span class="sxs-lookup"><span data-stu-id="21548-114">Windows 10 Fall Creators Update and later: Install from the Microsoft Store</span></span>
 
-> <span data-ttu-id="9dbde-115">Esta sección es para Windows Build 16215 o posterior.</span><span class="sxs-lookup"><span data-stu-id="9dbde-115">This section is for Windows build 16215 or later.</span></span>  <span data-ttu-id="9dbde-116">Siga estos pasos para [comprobar la compilación](troubleshooting.md#check-your-build-number).</span><span class="sxs-lookup"><span data-stu-id="9dbde-116">Follow these steps to [check your build](troubleshooting.md#check-your-build-number).</span></span> 
+> <span data-ttu-id="21548-115">Esta sección es para la compilación 16215 de Windows o posterior.</span><span class="sxs-lookup"><span data-stu-id="21548-115">This section is for Windows build 16215 or later.</span></span>  <span data-ttu-id="21548-116">Sigue estos pasos para [comprobar la compilación](troubleshooting.md#check-your-build-number).</span><span class="sxs-lookup"><span data-stu-id="21548-116">Follow these steps to [check your build](troubleshooting.md#check-your-build-number).</span></span> 
 
-1. <span data-ttu-id="9dbde-117">Abra el Microsoft Store y elija su distribución de Linux favorita.</span><span class="sxs-lookup"><span data-stu-id="9dbde-117">Open the Microsoft Store and choose your favorite Linux distribution.</span></span>
+1. <span data-ttu-id="21548-117">Abre Microsoft Store y elige tu distribución de Linux favorita.</span><span class="sxs-lookup"><span data-stu-id="21548-117">Open the Microsoft Store and choose your favorite Linux distribution.</span></span>
 
-    ![Vista de distribuciones de Linux en el Microsoft Store](media/store.png)
+    ![Vista de las distribuciones de Linux en Microsoft Store](media/store.png)
 
-    <span data-ttu-id="9dbde-119">En los vínculos siguientes se abrirá la página de Microsoft Store para cada distribución:</span><span class="sxs-lookup"><span data-stu-id="9dbde-119">The following links will open the Microsoft store page for each distribution:</span></span>
+    <span data-ttu-id="21548-119">En los vínculos siguientes se abrirá la página de Microsoft Store para cada distribución:</span><span class="sxs-lookup"><span data-stu-id="21548-119">The following links will open the Microsoft store page for each distribution:</span></span>
 
-    * [<span data-ttu-id="9dbde-120">Ubuntu 16,04 LTS</span><span class="sxs-lookup"><span data-stu-id="9dbde-120">Ubuntu 16.04 LTS</span></span>](https://www.microsoft.com/store/apps/9pjn388hp8c9)
-    * [<span data-ttu-id="9dbde-121">Ubuntu 18,04 LTS</span><span class="sxs-lookup"><span data-stu-id="9dbde-121">Ubuntu 18.04 LTS</span></span>](https://www.microsoft.com/store/apps/9N9TNGVNDL3Q)
-    * [<span data-ttu-id="9dbde-122">OpenSUSE Leap 15</span><span class="sxs-lookup"><span data-stu-id="9dbde-122">OpenSUSE Leap 15</span></span>](https://www.microsoft.com/store/apps/9n1tb6fpvj8c)
-    * [<span data-ttu-id="9dbde-123">OpenSUSE Leap 42</span><span class="sxs-lookup"><span data-stu-id="9dbde-123">OpenSUSE Leap 42</span></span>](https://www.microsoft.com/store/apps/9njvjts82tjx)
-    * [<span data-ttu-id="9dbde-124">SUSE Linux Enterprise Server 12</span><span class="sxs-lookup"><span data-stu-id="9dbde-124">SUSE Linux Enterprise Server 12</span></span>](https://www.microsoft.com/store/apps/9p32mwbh6cns)
-    * [<span data-ttu-id="9dbde-125">SUSE Linux Enterprise Server 15</span><span class="sxs-lookup"><span data-stu-id="9dbde-125">SUSE Linux Enterprise Server 15</span></span>](https://www.microsoft.com/store/apps/9pmw35d7fnlx)
-    * [<span data-ttu-id="9dbde-126">Kali Linux</span><span class="sxs-lookup"><span data-stu-id="9dbde-126">Kali Linux</span></span>](https://www.microsoft.com/store/apps/9PKR34TNCV07)
-    * [<span data-ttu-id="9dbde-127">Debian GNU/Linux</span><span class="sxs-lookup"><span data-stu-id="9dbde-127">Debian GNU/Linux</span></span>](https://www.microsoft.com/store/apps/9MSVKQC78PK6)
-    * [<span data-ttu-id="9dbde-128">Fedora Remix WSL</span><span class="sxs-lookup"><span data-stu-id="9dbde-128">Fedora Remix for WSL</span></span>](https://www.microsoft.com/store/apps/9n6gdm4k2hnc)
-    * [<span data-ttu-id="9dbde-129">Pengwin</span><span class="sxs-lookup"><span data-stu-id="9dbde-129">Pengwin</span></span>](https://www.microsoft.com/store/apps/9NV1GV1PXZ6P)
-    * [<span data-ttu-id="9dbde-130">Pengwin Enterprise</span><span class="sxs-lookup"><span data-stu-id="9dbde-130">Pengwin Enterprise</span></span>](https://www.microsoft.com/store/apps/9N8LP0X93VCP)
-    * [<span data-ttu-id="9dbde-131">Alpine WSL</span><span class="sxs-lookup"><span data-stu-id="9dbde-131">Alpine WSL</span></span>](https://www.microsoft.com/store/apps/9p804crf0395)
+    * [<span data-ttu-id="21548-120">Ubuntu 16.04 LTS</span><span class="sxs-lookup"><span data-stu-id="21548-120">Ubuntu 16.04 LTS</span></span>](https://www.microsoft.com/store/apps/9pjn388hp8c9)
+    * [<span data-ttu-id="21548-121">Ubuntu 18.04 LTS</span><span class="sxs-lookup"><span data-stu-id="21548-121">Ubuntu 18.04 LTS</span></span>](https://www.microsoft.com/store/apps/9N9TNGVNDL3Q)
+    * [<span data-ttu-id="21548-122">OpenSUSE Leap 15</span><span class="sxs-lookup"><span data-stu-id="21548-122">OpenSUSE Leap 15</span></span>](https://www.microsoft.com/store/apps/9n1tb6fpvj8c)
+    * [<span data-ttu-id="21548-123">OpenSUSE Leap 42</span><span class="sxs-lookup"><span data-stu-id="21548-123">OpenSUSE Leap 42</span></span>](https://www.microsoft.com/store/apps/9njvjts82tjx)
+    * [<span data-ttu-id="21548-124">SUSE Linux Enterprise Server 12</span><span class="sxs-lookup"><span data-stu-id="21548-124">SUSE Linux Enterprise Server 12</span></span>](https://www.microsoft.com/store/apps/9p32mwbh6cns)
+    * [<span data-ttu-id="21548-125">SUSE Linux Enterprise Server 15</span><span class="sxs-lookup"><span data-stu-id="21548-125">SUSE Linux Enterprise Server 15</span></span>](https://www.microsoft.com/store/apps/9pmw35d7fnlx)
+    * [<span data-ttu-id="21548-126">Kali Linux</span><span class="sxs-lookup"><span data-stu-id="21548-126">Kali Linux</span></span>](https://www.microsoft.com/store/apps/9PKR34TNCV07)
+    * [<span data-ttu-id="21548-127">Debian GNU/Linux</span><span class="sxs-lookup"><span data-stu-id="21548-127">Debian GNU/Linux</span></span>](https://www.microsoft.com/store/apps/9MSVKQC78PK6)
+    * [<span data-ttu-id="21548-128">Fedora Remix for WSL</span><span class="sxs-lookup"><span data-stu-id="21548-128">Fedora Remix for WSL</span></span>](https://www.microsoft.com/store/apps/9n6gdm4k2hnc)
+    * [<span data-ttu-id="21548-129">Pengwin</span><span class="sxs-lookup"><span data-stu-id="21548-129">Pengwin</span></span>](https://www.microsoft.com/store/apps/9NV1GV1PXZ6P)
+    * [<span data-ttu-id="21548-130">Pengwin Enterprise</span><span class="sxs-lookup"><span data-stu-id="21548-130">Pengwin Enterprise</span></span>](https://www.microsoft.com/store/apps/9N8LP0X93VCP)
+    * [<span data-ttu-id="21548-131">Alpine WSL</span><span class="sxs-lookup"><span data-stu-id="21548-131">Alpine WSL</span></span>](https://www.microsoft.com/store/apps/9p804crf0395)
 
-1. <span data-ttu-id="9dbde-132">En la página de distribución, seleccione "obtener".</span><span class="sxs-lookup"><span data-stu-id="9dbde-132">From the distro's page, select "Get"</span></span>
+1. <span data-ttu-id="21548-132">En la página de la distribución, selecciona "Obtener".</span><span class="sxs-lookup"><span data-stu-id="21548-132">From the distro's page, select "Get"</span></span>
 
-    ![Vista de distribuciones de Linux en Microsoft Store](media/UbuntuStore.png)
+    ![Vista de las distribuciones de Linux en Microsoft Store](media/UbuntuStore.png)
 
-## <a name="complete-initialization-of-your-distro"></a><span data-ttu-id="9dbde-134">Completar la inicialización de distribución</span><span class="sxs-lookup"><span data-stu-id="9dbde-134">Complete initialization of your distro</span></span>
-<span data-ttu-id="9dbde-135">Ahora que está instalado el distribución de Linux, debe [inicializar la nueva instancia de distribución](initialize-distro.md) una vez, antes de que se pueda usar.</span><span class="sxs-lookup"><span data-stu-id="9dbde-135">Now that your Linux distro is installed, you must [initialize your new distro instance](initialize-distro.md) once, before it can be used.</span></span>
+## <a name="complete-initialization-of-your-distro"></a><span data-ttu-id="21548-134">Completar la inicialización de la distribución</span><span class="sxs-lookup"><span data-stu-id="21548-134">Complete initialization of your distro</span></span>
+<span data-ttu-id="21548-135">Ahora que está instalada la distribución de Linux, debes [inicializar la nueva instancia de la distribución](initialize-distro.md) una vez, antes de que se pueda usar.</span><span class="sxs-lookup"><span data-stu-id="21548-135">Now that your Linux distro is installed, you must [initialize your new distro instance](initialize-distro.md) once, before it can be used.</span></span>
 
-## <a name="troubleshooting"></a><span data-ttu-id="9dbde-136">Solución de problemas:</span><span class="sxs-lookup"><span data-stu-id="9dbde-136">Troubleshooting:</span></span> 
+## <a name="troubleshooting"></a><span data-ttu-id="21548-136">Solución de problemas:</span><span class="sxs-lookup"><span data-stu-id="21548-136">Troubleshooting:</span></span> 
 
-<span data-ttu-id="9dbde-137">A continuación se muestran los errores relacionados y las correcciones sugeridas.</span><span class="sxs-lookup"><span data-stu-id="9dbde-137">Below are related errors and suggested fixes.</span></span> <span data-ttu-id="9dbde-138">Consulte la [Página de solución de problemas de WSL](troubleshooting.md) para ver otros errores comunes y sus soluciones.</span><span class="sxs-lookup"><span data-stu-id="9dbde-138">Refer to the [WSL troubleshooting page](troubleshooting.md) for other common errors and their solutions.</span></span>
+<span data-ttu-id="21548-137">A continuación se muestran errores relacionados y las correcciones sugeridas.</span><span class="sxs-lookup"><span data-stu-id="21548-137">Below are related errors and suggested fixes.</span></span> <span data-ttu-id="21548-138">Consulta la [página de solución de problemas de WSL](troubleshooting.md) para ver otros errores generales y sus soluciones.</span><span class="sxs-lookup"><span data-stu-id="21548-138">Refer to the [WSL troubleshooting page](troubleshooting.md) for other common errors and their solutions.</span></span>
 
-* <span data-ttu-id="9dbde-139">**Error de instalación con el error 0x80070003**</span><span class="sxs-lookup"><span data-stu-id="9dbde-139">**Installation failed with error 0x80070003**</span></span>
-    * <span data-ttu-id="9dbde-140">El subsistema de Windows para Linux solo se ejecuta en la unidad del sistema (normalmente `C:` se trata de la unidad).</span><span class="sxs-lookup"><span data-stu-id="9dbde-140">The Windows Subsystem for Linux only runs on your system drive (usually this is your `C:` drive).</span></span> <span data-ttu-id="9dbde-141">Asegúrese de que distribuciones se almacenan en la unidad del sistema:</span><span class="sxs-lookup"><span data-stu-id="9dbde-141">Make sure that distros are stored on your system drive:</span></span>  
-    * <span data-ttu-id="9dbde-142">Abra **configuración** -> \*\* almacenamiento\*\* -> **más opciones de almacenamiento: Cambiar dónde se guarda**
-    ![el nuevo contenido imagen de la configuración del sistema para instalar aplicaciones en la unidad C:](media/AppStorage.png)</span><span class="sxs-lookup"><span data-stu-id="9dbde-142">Open **Settings** -> **Storage** -> **More Storage Settings: Change where new content is saved**
+* <span data-ttu-id="21548-139">**Error 0x80070003 en la instalación**</span><span class="sxs-lookup"><span data-stu-id="21548-139">**Installation failed with error 0x80070003**</span></span>
+    * <span data-ttu-id="21548-140">El Subsistema de Windows para Linux solo se ejecuta en la unidad del sistema (normalmente se trata de la unidad `C:`).</span><span class="sxs-lookup"><span data-stu-id="21548-140">The Windows Subsystem for Linux only runs on your system drive (usually this is your `C:` drive).</span></span> <span data-ttu-id="21548-141">Asegúrate de que las distribuciones se almacenan en la unidad del sistema:</span><span class="sxs-lookup"><span data-stu-id="21548-141">Make sure that distros are stored on your system drive:</span></span>  
+    * <span data-ttu-id="21548-142">Abre **Configuración** -> **Almacenamiento** -> **Más opciones de almacenamiento: Cambia el lugar donde se guarda el nuevo contenido**
+    ![Imagen de la configuración del sistema para instalar aplicaciones en la unidad C:](media/AppStorage.png)</span><span class="sxs-lookup"><span data-stu-id="21548-142">Open **Settings** -> **Storage** -> **More Storage Settings: Change where new content is saved**
 ![Picture of system settings to install apps on C: drive](media/AppStorage.png)</span></span>
     
     
- * <span data-ttu-id="9dbde-143">**Error de WslRegisterDistribution con 0x8007019e**</span><span class="sxs-lookup"><span data-stu-id="9dbde-143">**WslRegisterDistribution failed with error 0x8007019e**</span></span>   
-  * <span data-ttu-id="9dbde-144">El componente opcional de subsistema de Windows para Linux no está habilitado:</span><span class="sxs-lookup"><span data-stu-id="9dbde-144">The Windows Subsystem for Linux optional component is not enabled:</span></span> 
-   * <span data-ttu-id="9dbde-145">Abra **Panel** -> de control**programas y características** -> **activar o desactivar** las características de Windows > el subsistema **de Windows para Linux** o con el cmdlet de PowerShell que se menciona al principio de este artículo.</span><span class="sxs-lookup"><span data-stu-id="9dbde-145">Open **Control Panel** -> **Programs and Features** -> **Turn Windows Feature on or off** -> Check **Windows Subsystem for Linux** or using the PowerShell cmdlet mentioned at the begining of this article.</span></span>
+ * <span data-ttu-id="21548-143">**Error 0x8007019e de WslRegisterDistribution**</span><span class="sxs-lookup"><span data-stu-id="21548-143">**WslRegisterDistribution failed with error 0x8007019e**</span></span>   
+  * <span data-ttu-id="21548-144">El componente opcional del Subsistema de Windows para Linux no está habilitado:</span><span class="sxs-lookup"><span data-stu-id="21548-144">The Windows Subsystem for Linux optional component is not enabled:</span></span> 
+   * <span data-ttu-id="21548-145">Abre el **Panel de control** -> **Programas y características** -> **Activa o desactiva la característica de Windows** -> Selecciona el **Subsistema de Windows para Linux** o usa el cmdlet de PowerShell mencionado al comienzo de este artículo.</span><span class="sxs-lookup"><span data-stu-id="21548-145">Open **Control Panel** -> **Programs and Features** -> **Turn Windows Feature on or off** -> Check **Windows Subsystem for Linux** or using the PowerShell cmdlet mentioned at the begining of this article.</span></span>
