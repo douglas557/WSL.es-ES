@@ -2,22 +2,20 @@
 title: Compilación de una distribución de Linux personalizada para WSL
 description: Obtenga información sobre cómo crear una distribución de Linux personalizada para el subsistema de Windows para Linux.
 keywords: BashOnWindows, bash, WSL, Windows, subsistema de Windows, distribución, personalizado
-author: taraj
-ms.author: taraj
 ms.date: 03/27/2018
 ms.topic: article
 ms.assetid: a5095219-0c82-4ce5-9a6d-5c2fc00835a3
 ms.custom: seodec18
-ms.openlocfilehash: 4072df5fa81f65fd9a3ff875ab887c03b234bce1
-ms.sourcegitcommit: cd239efc5c7c25ffbe5de25b2438d44181a838a9
+ms.openlocfilehash: 181badd4ee2f69e904099c12b54dfbdf3a37e294
+ms.sourcegitcommit: 0b5a9f8982dfff07fc8df32d74d97293654f8e12
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/14/2019
-ms.locfileid: "67040775"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71269698"
 ---
 # <a name="creating-a-custom-linux-distro-for-wsl"></a>Creación de una distribución de Linux personalizada para WSL
 
-Use nuestro ejemplo de WSL de código abierto para compilar paquetes de WSL distribución para el Microsoft Store y/o para crear paquetes de Linux distribución personalizados para la instalación de prueba. Puede encontrar el repositorio del iniciador de [distribución](https://github.com/Microsoft/WSL-DistroLauncher) en github.
+Use nuestro ejemplo de WSL de código abierto para compilar paquetes de WSL distribución para el Microsoft Store y/o para crear paquetes de Linux distribución personalizados para la instalación de prueba. Puede encontrar el [repositorio del iniciador de distribución](https://github.com/Microsoft/WSL-DistroLauncher) en github.
 
 Este proyecto permite:
 * Mantenimiento de la distribución de Linux para empaquetar y enviar una distribución de Linux como un appx que se ejecuta en WSL
@@ -34,7 +32,7 @@ Para configurar la máquina para la instalación de prueba de aplicaciones, tend
 Para enviarlo a la tienda, tendrá que trabajar con nosotros para recibir la aprobación de la publicación. Si es un propietario de la distribución de Linux interesado en agregar su distribución al Microsoft Store, póngase wslpartners@microsoft.comen contacto con.
 
 ## <a name="getting-started"></a>Introducción
-Siga las instrucciones del [repositorio de github](https://github.com/Microsoft/WSL-DistroLauncher) del iniciador de distribución para crear un paquete de distribución de Linux personalizado.
+Siga las instrucciones del [repositorio de github del iniciador de distribución](https://github.com/Microsoft/WSL-DistroLauncher) para crear un paquete de distribución de Linux personalizado.
 
  
 ## <a name="team-blogs"></a>Blogs de equipo
