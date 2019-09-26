@@ -1,7 +1,7 @@
 ---
 title: Más información sobre el subsistema de Windows para Linux
-description: Obtenga más información sobre cómo funciona el subsistema de Windows para Linux.
-keywords: BashOnWindows, bash, WSL, Windows, windowssubsystem, GNU, Linux
+description: Obtén más información sobre el funcionamiento del subsistema de Windows para Linux.
+keywords: BashOnWindows, bash, wsl, windows, subsistemawindows, gnu, linux
 author: scooley
 ms.author: scooley
 ms.date: 07/11/2016
@@ -11,42 +11,42 @@ ms.custom: seodec18
 ms.localizationpriority: high
 ms.openlocfilehash: 7c8e3b3f7ec13109485d7efa29739dadc8bfacf7
 ms.sourcegitcommit: 7af6b7a3f8cfa66cb25115bc26f44aa64ef22811
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: es-ES
 ms.lasthandoff: 08/28/2019
 ms.locfileid: "70122670"
 ---
-# <a name="windows-subsystem-for-linux-documentation"></a>Documentación de subsistema de Windows para Linux
+# <a name="windows-subsystem-for-linux-documentation"></a>Documentación del subsistema de Windows para Linux
 
-El subsistema de Windows para Linux permite a los desarrolladores ejecutar un entorno de GNU/Linux, incluidas la mayoría de herramientas de línea de comandos, utilidades y aplicaciones, directamente en Windows, sin modificar, sin la sobrecarga de una máquina virtual.  
+El subsistema de Windows para Linux permite a los desarrolladores ejecutar un entorno de GNU/Linux, incluida la mayoría de herramientas de línea de comandos, utilidades y aplicaciones, directamente en Windows, sin modificar y sin la sobrecarga de una máquina virtual.  
 
-Puede:
+Se puede hacer lo siguiente:
 
-1. Elija sus distribuciones de GNU/Linux favoritas [en el Microsoft Store](https://aka.ms/wslstore).
-1. Ejecute software gratuito de línea de comandos común, `grep`como `sed`, `awk`, u otros binarios de Elf-64. 
-1. Ejecutar scripts de Shell de bash y aplicaciones de línea de comandos de GNU/Linux, como:  
-    * Herramientas: VIM, Emacs, tmux
-    * Idiomas: JavaScript/node. js, Ruby, Python, C/C++, C# & F#, oxidación, Go, etc.
-    * Servicios: sshd, MySQL, Apache, lighttpd
-1. Instale software adicional mediante el administrador de paquetes de distribución de GNU/Linux.
-1. Invoque aplicaciones de Windows mediante un shell de línea de comandos de tipo UNIX.
-1. Invoque aplicaciones GNU/Linux en Windows.
+1. Elige tus distribuciones de GNU/Linux favoritas [de Microsoft Store](https://aka.ms/wslstore).
+1. Ejecuta software gratuito de línea de comandos común, como `grep`, `sed`, `awk` u otros archivos binarios ELF-64. 
+1. Ejecuta scripts de shell de Bash y aplicaciones de línea de comandos de GNU/Linux, como:  
+    * Herramientas: vim, emacs, tmux.
+    * Idiomas: Javascript/node.js, Ruby, Python, C/C++, C# & F#, Rust, Go, etc.
+    * Servicios: sshd, MySQL, Apache, lighttpd.
+1. Instala software adicional mediante el administrador de paquetes de distribución de GNU/Linux.
+1. Invoca aplicaciones de Windows mediante un shell de línea de comandos de tipo UNIX.
+1. Invoca aplicaciones de GNU/Linux en Windows.
 
 ## <a name="getting-started"></a>Introducción
 
 * [Instalación de Linux en Windows 10](install-win10.md)
-* [Visite la referencia de comandos](reference.md)
-* [Lea las preguntas más frecuentes](faq.md)
+* [Visita a la referencia de comandos](reference.md)
+* [Preguntas más frecuentes](faq.md)
 
-## <a name="team-blogs"></a>Blogs de equipo
-*  [Información general post con una colección de vídeos y blogs](https://blogs.msdn.microsoft.com/commandline/learn-about-windows-console-and-windows-subsystem-for-linux-wsl/)
-* [Blog de línea de comandos](https://blogs.msdn.microsoft.com/commandline/) Active
-* [Blog de Windows Subsystem for Linux](https://blogs.msdn.microsoft.com/wsl/) Balance
+## <a name="team-blogs"></a>Blogs del equipo
+*  [Publicación de información general con una colección de vídeos y blogs](https://blogs.msdn.microsoft.com/commandline/learn-about-windows-console-and-windows-subsystem-for-linux-wsl/)
+* [Blog de línea de comandos](https://blogs.msdn.microsoft.com/commandline/) (activo)
+* [Blog del subsistema de Windows para Linux](https://blogs.msdn.microsoft.com/wsl/) (historial)
 
-## <a name="posts--articles"></a>Publicaciones & artículos
-* [Ejecutar bash en Ubuntu en Windows](https://blogs.windows.com/buildingapps/2016/03/30/run-bash-on-ubuntu-on-windows/)
-* [Los desarrolladores pueden ejecutar archivos binarios de bash y de Ubuntu Linux en modo de Windows 10](https://www.hanselman.com/blog/DevelopersCanRunBashShellAndUsermodeUbuntuLinuxBinariesOnWindows10.aspx)
-* [Ubuntu en Windows: userspace de Ubuntu para desarrolladores de Windows](https://insights.ubuntu.com/2016/03/30/ubuntu-on-windows-the-ubuntu-userspace-for-windows-developers/) 
+## <a name="posts--articles"></a>Publicaciones y artículos
+* [Ejecución de Bash en Ubuntu en Windows](https://blogs.windows.com/buildingapps/2016/03/30/run-bash-on-ubuntu-on-windows/)
+* [Los desarrolladores pueden ejecutar archivos binarios de Linux de Ubuntu en modo de usuario y Bash en Windows 10](https://www.hanselman.com/blog/DevelopersCanRunBashShellAndUsermodeUbuntuLinuxBinariesOnWindows10.aspx)
+* [Ubuntu en Windows: espacio de usuarios de Ubuntu para desarrolladores de Windows](https://insights.ubuntu.com/2016/03/30/ubuntu-on-windows-the-ubuntu-userspace-for-windows-developers/) 
 
 ## <a name="provide-feedback"></a>Proporcionar comentarios
 * [Seguimiento de problemas de GitHub](https://github.com/Microsoft/BashOnWindows/issues)
