@@ -2,19 +2,17 @@
 title: Inicialización de una nueva distribución de WSL Linux
 description: Después de instalar una distribución de Linux para WSL, sigue estos sencillos pasos para completar la inicialización.
 keywords: BashOnWindows, bash, wsl, wsl2, windows, subsistema de windows para linux, windowssubsystem, ubuntu, debian, suse, windows 10
-author: taraj
-ms.author: taraj
 ms.date: 07/24/2018
 ms.topic: article
 ms.assetid: 7afaeacf-435a-4e58-bff0-a9f0d75b8a51
 ms.custom: seodec18
 ms.localizationpriority: high
-ms.openlocfilehash: e544dc461913c6e044c70f39103cced62167c4b8
-ms.sourcegitcommit: 7af6b7a3f8cfa66cb25115bc26f44aa64ef22811
+ms.openlocfilehash: c33d349a6d39c325b079ccbf7ed6350bed796e33
+ms.sourcegitcommit: 0b5a9f8982dfff07fc8df32d74d97293654f8e12
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70122713"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71269590"
 ---
 # <a name="initializing-a-newly-installed-distro"></a>Inicialización de una distribución recién instalada
 Una vez que se haya descargado e instalado la distribución, deberás completar la inicialización de la nueva distribución:
