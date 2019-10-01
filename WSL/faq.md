@@ -2,18 +2,16 @@
 title: Preguntas más frecuentes
 description: Preguntas más frecuentes sobre el Subsistema de Windows para Linux.
 keywords: BashOnWindows, bash, WSL, Windows, windowssubsystem, p + f
-author: taraj
-ms.author: taraj
 ms.date: 9/4/2018
 ms.topic: article
 ms.assetid: 129101ed-b88a-43c2-b6a2-cd2c4ff6fee1
 ms.localizationpriority: high
-ms.openlocfilehash: e3376f8dff83262577bc52fb3ac368b70b21d922
-ms.sourcegitcommit: 7af6b7a3f8cfa66cb25115bc26f44aa64ef22811
+ms.openlocfilehash: 78d0dc3db6f0c173cec64c9830df981568320717
+ms.sourcegitcommit: 0b5a9f8982dfff07fc8df32d74d97293654f8e12
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70122765"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71269744"
 ---
 # <a name="frequently-asked-questions-about-windows-subsystem-for-linux"></a>Preguntas más frecuentes sobre el subsistema de Windows para Linux
 
@@ -111,7 +109,7 @@ Para corregir los problemas relacionados con `udev`, sigue estos pasos:
     exit 101
     ```
 
-2. Agrega los permisos ejecución en `/usr/sbin/policy-rc.d`.
+2. Agrega los permisos de ejecución en `/usr/sbin/policy-rc.d`.
 
     ```bash
     chmod +x /usr/sbin/policy-rc.d
@@ -150,7 +148,7 @@ WSL no se puede ejecutar en una consola heredada. Para desactivar la consola her
 La característica "Subsistema de Windows para Linux" puede estar deshabilitada durante una actualización de Windows. Si esto ocurre, debes volver a habilitar la característica de Windows. Las instrucciones para habilitar la característica "Subsistema de Windows para Linux" se pueden encontrar en la [guía de instalación](https://msdn.microsoft.com/en-us/commandline/wsl/install_guide#enable-the-windows-subsystem-for-linux-feature-gui https://msdn.microsoft.com/en-us/commandline/wsl/install_guide#enable-the-windows-subsystem-for-linux-feature-gui).
 
 ## <a name="how-do-i-change-the-display-language-of-wsl"></a>¿Cómo cambio el idioma de visualización de WSL?
-La instalación de WSL intentará cambiar automáticamente la configuración regional de Ubuntu para que coincida con la configuración regional de la instalación de Windows. Si no quieres que esto pase, puedes ejecutar este comando para cambiar la configuración regional de Ubuntu una vez finalizada la instalación. Ten en cuenta que tendrás que reiniciar Bash.exe para que este cambio surta efecto.
+La instalación de WSL intentará cambiar automáticamente la configuración regional de Ubuntu para que coincida con la configuración regional de la instalación de Windows. Si no quieres que esto pase, puedes ejecutar este comando para cambiar la configuración regional de Ubuntu una vez finalizada la instalación. Ten en cuenta que tendrás que reiniciar bash.exe para que este cambio surta efecto.
 
 En el ejemplo siguiente se cambia la configuración regional a en-US:
 ```bash
@@ -164,7 +162,7 @@ Algunos usuarios han detectado problemas con aplicaciones de firewall específic
 1. AVG
 1. Avast
 
-En algunos casos, si desactivas el firewall podrás obtener acceso. En otros casos, simplemente tener instalado el firewall parece bloquear el acceso a Internet.
+En algunos casos, si desactivas el firewall podrás acceder. En otros casos, simplemente tener instalado el firewall parece bloquear el acceso a Internet.
 
 ## <a name="how-do-i-access-a-port-from-wsl-in-windows"></a>¿Cómo obtengo acceso a un puerto desde WSL en Windows?
 WSL comparte la dirección IP de Windows, ya que se ejecuta en Windows. Así pues, puedes obtener acceso a cualquier puerto en localhost; por ejemplo, si tienes contenido web en el puerto 1234, puedes obtener acceso https://localhost:1234 al explorador de Windows.
