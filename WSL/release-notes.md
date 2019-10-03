@@ -8,14 +8,22 @@ ms.topic: article
 ms.assetid: 36ea641e-4d49-4881-84eb-a9ca85b1cdf4
 ms.custom: seodec18
 ms.localizationpriority: high
-ms.openlocfilehash: 9dfd4704eee537c053d874d6fcee47b70efbc33c
-ms.sourcegitcommit: 212d3e0092dbc584a8422de47599a4ce46f0f016
+ms.openlocfilehash: 0dcf4519877fac5b838d4542dfd088cb6d233353
+ms.sourcegitcommit: 0fa3b02b36dc49779e165e689dfded4f3b727124
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70902423"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71249195"
 ---
 # <a name="release-notes-for-windows-subsystem-for-linux"></a>Notas de la versión del subsistema de Windows para Linux
+
+## <a name="build-18990"></a>Compilación 18990
+Para obtener información general de Windows sobre la compilación 18990, visita el [blog de Windows](https://blogs.windows.com/windowsexperience/2019/09/24/announcing-windows-10-insider-preview-build-18990/).
+
+* Mejorar el rendimiento de los listados de directorios en \\wsl$
+* [WSL2] Insertar entropía de arranque adicional [GH 4416]
+* [WSL2] Corrección para la interoperabilidad de Windows al usar su/sudo [GH 4465]
+
 
 ## <a name="build-18980"></a>Compilación 18980
 Para obtener información general de Windows sobre la compilación 18980, visita el [blog de Windows](https://blogs.windows.com/windowsexperience/2019/09/11/announcing-windows-10-insider-preview-build-18980/).
@@ -932,7 +940,7 @@ Para obtener información general de Windows sobre la compilación 16241, visita
 - No hay cambios relacionados con WSL en esta versión.
 
 #### <a name="console"></a>Console
-- Corrección para la generación de un carácter equivocado para DEC de líneas de paso, que se notificó originalmente aquí
+- Corrección para la generación de un carácter equivocado para DEC de líneas cruzadas, que se notificó originalmente [aquí](https://www.reddit.com/r/Windows10/comments/6in82t/i_believe_ive_found_the_most_obscure_bug_ever/)
 - Corrección para cuando no se muestre texto de salida en la página de códigos 65001 (utf8)
 - No transfieras los cambios hechos en los valores RGB de un color a otras partes de la paleta en el cambio de selección. Esto hará que la hoja de propiedades de la consola sea mucho más fácil de usar.
 - Ctrl+S no parece funcionar correctamente

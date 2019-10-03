@@ -2,19 +2,17 @@
 title: Solucionar problemas del subsistema de Windows para Linux
 description: Proporciona información detallada sobre los errores comunes y los problemas que se presentan a las personas cuando ejecutan Linux en el subsistema de Windows para Linux.
 keywords: BashOnWindows, bash, wsl, windows, subsistemawindows, ubuntu
-author: scooley
-ms.author: scooley
 ms.date: 11/15/2017
 ms.topic: article
 ms.assetid: 6753f1b2-200e-49cc-93a5-4323e1117246
 ms.custom: seodec18
 ms.localizationpriority: high
-ms.openlocfilehash: a73de13853c124de38cae1b9c6c51d0ee9978d44
-ms.sourcegitcommit: f1780bf174c67c531864497ae78cf3f26ef68503
+ms.openlocfilehash: 7b7938e7a6a636b012f4b84a8c93d5dfc0a4a4cf
+ms.sourcegitcommit: aef7bb1e851089b3311d497a3be0da79558feb4e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71205971"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71279251"
 ---
 # <a name="troubleshooting-windows-subsystem-for-linux"></a>Solucionar problemas del subsistema de Windows para Linux
 
@@ -188,3 +186,10 @@ sudo apt-get purge openssh-server
 sudo apt-get install openssh-server
 ```
 
+### <a name="the-referenced-assembly-could-not-be-found-when-enabling-the-wsl-optional-feature"></a>"No se pudo encontrar el ensamblado al que se hace referencia". al habilitar la característica opcional WSL
+
+Este error está relacionado con un estado de instalación incorrecta. Complete los pasos siguientes para intentar corregir este problema:
+
+* Si estás ejecutando el comando para habilitar la característica WSL desde PowerShell, intenta usar la GUI en su lugar desde el menú Inicio: busca "activar o desactivar las características de Windows" y, a continuación, en la lista, selecciona "Subsistema de Windows para Linux", lo que instalará el componente opcional.
+* Actualiza la versión de Windows. Para ello, ve a Configuración, Actualizaciones y haz clic en "Buscar actualizaciones".
+* Si se produce un error en ambos casos y necesitas acceder a WSL, considera la posibilidad de realizar una actualización local. Para ello, vuelve a instalar Windows 10 con los medios de instalación y selecciona "Conservar todo" para asegurarte de que las aplicaciones y los archivos se conservan. Puedes encontrar instrucciones sobre cómo hacerlo en la página [Reinstalar Windows 10](https://support.microsoft.com/en-us/help/4000735/windows-10-reinstall).
