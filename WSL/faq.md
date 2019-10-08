@@ -6,12 +6,12 @@ ms.date: 9/4/2018
 ms.topic: article
 ms.assetid: 129101ed-b88a-43c2-b6a2-cd2c4ff6fee1
 ms.localizationpriority: high
-ms.openlocfilehash: 78d0dc3db6f0c173cec64c9830df981568320717
-ms.sourcegitcommit: 0b5a9f8982dfff07fc8df32d74d97293654f8e12
+ms.openlocfilehash: 911bde69540bb8bb7a5ee40d8a9f4d6995f4fdaa
+ms.sourcegitcommit: 3f35034581456a2008aa5ed1b623715dfef64608
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71269744"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71934904"
 ---
 # <a name="frequently-asked-questions-about-windows-subsystem-for-linux"></a>Preguntas más frecuentes sobre el subsistema de Windows para Linux
 
@@ -145,7 +145,7 @@ WSL no se puede ejecutar en una consola heredada. Para desactivar la consola her
 1. Haga clic en Aceptar
 
 ## <a name="why-do-i-get-error-0x80040154-when-i-run-bashexe-after-upgrading-windows"></a>¿Por qué obtengo el mensaje "Error: 0x80040154 "cuando ejecuto Bash.exe después de actualizar Windows?
-La característica "Subsistema de Windows para Linux" puede estar deshabilitada durante una actualización de Windows. Si esto ocurre, debes volver a habilitar la característica de Windows. Las instrucciones para habilitar la característica "Subsistema de Windows para Linux" se pueden encontrar en la [guía de instalación](https://msdn.microsoft.com/en-us/commandline/wsl/install_guide#enable-the-windows-subsystem-for-linux-feature-gui https://msdn.microsoft.com/en-us/commandline/wsl/install_guide#enable-the-windows-subsystem-for-linux-feature-gui).
+La característica "Subsistema de Windows para Linux" puede estar deshabilitada durante una actualización de Windows. Si esto ocurre, debes volver a habilitar la característica de Windows. Las instrucciones para habilitar la característica "Subsistema de Windows para Linux" se pueden encontrar en la [guía de instalación](https://docs.microsoft.com/en-us/windows/wsl/install-win10#install-the-windows-subsystem-for-linux).
 
 ## <a name="how-do-i-change-the-display-language-of-wsl"></a>¿Cómo cambio el idioma de visualización de WSL?
 La instalación de WSL intentará cambiar automáticamente la configuración regional de Ubuntu para que coincida con la configuración regional de la instalación de Windows. Si no quieres que esto pase, puedes ejecutar este comando para cambiar la configuración regional de Ubuntu una vez finalizada la instalación. Ten en cuenta que tendrás que reiniciar bash.exe para que este cambio surta efecto.
