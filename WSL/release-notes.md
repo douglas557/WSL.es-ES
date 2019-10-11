@@ -8,19 +8,36 @@ ms.topic: article
 ms.assetid: 36ea641e-4d49-4881-84eb-a9ca85b1cdf4
 ms.custom: seodec18
 ms.localizationpriority: high
-ms.openlocfilehash: 0dcf4519877fac5b838d4542dfd088cb6d233353
-ms.sourcegitcommit: 0fa3b02b36dc49779e165e689dfded4f3b727124
+ms.openlocfilehash: b92c20bad50d0c58da05bb0c8f26a69d4c0b2970
+ms.sourcegitcommit: 050f6095e92469b903db8ddf9356df5b22b21804
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71249195"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71910304"
 ---
 # <a name="release-notes-for-windows-subsystem-for-linux"></a>Notas de la versión del subsistema de Windows para Linux
+
+## <a name="build-18995"></a>Compilación 18995
+Para obtener información general de Windows sobre la compilación 18995, visita el [blog de Windows](https://blogs.windows.com/windowsexperience/2019/10/03/announcing-windows-10-insider-preview-build-18995/).
+
+* [WSL2] Corrección de un problema que provocaba que los montajes DrvFs dejaran de funcionar después de que se interrumpiera una operación (por ejemplo, Ctrl-C) [GH 4377]
+* [WSL2] Corrección del control de mensajes hvsocket muy grandes [GH 4105]
+* [WSL2] Corrección de un problema con la interoperabilidad cuando stdin es un archivo [GH 4475]
+* [WSL2] Corrección de un bloqueo de servicio cuando se encontraba un estado de red inesperado [GH 4474]
+* [WSL2] Consulta del nombre de distribución desde el servidor de interoperabilidad si el proceso actual no tiene la variable de entorno
+* [WSL2] Corrección de un problema con la interoperabilidad cuando stdin es un archivo
+* [WSL2] Actualización de la versión del kernel de Linux a 4.19.72
+* [WSL2] Agrega la capacidad de especificar parámetros adicionales de línea de comandos de kernel mediante .wslconfig
+```
+[wsl2]
+kernelCommandLine = <string> # Additional kernel command line arguments
+
+```
 
 ## <a name="build-18990"></a>Compilación 18990
 Para obtener información general de Windows sobre la compilación 18990, visita el [blog de Windows](https://blogs.windows.com/windowsexperience/2019/09/24/announcing-windows-10-insider-preview-build-18990/).
 
-* Mejorar el rendimiento de los listados de directorios en \\wsl$
+* Mejorar el rendimiento de los listados de directorios en \\\\wsl$
 * [WSL2] Insertar entropía de arranque adicional [GH 4416]
 * [WSL2] Corrección para la interoperabilidad de Windows al usar su/sudo [GH 4465]
 
@@ -38,7 +55,7 @@ Para obtener información general de Windows sobre la compilación 18980, visita
 * Adición de la capacidad de establecer el nombre de usuario predeterminado en /etc/WSL.conf:
 ```
 [user]
-default=root
+default=<string>
 ```
 
 ## <a name="build-18975"></a>Compilación 18975
@@ -120,7 +137,7 @@ Para obtener información general de Windows sobre la compilación 18890, visita
 * Interbloqueo en código de eliminación de epoll [GH 3922]
 * Control de espacios de los argumentos en -import y -export [GH 3932]
 * La extensión de los archivos de mmap no funciona correctamente [GH 3939]
-* Corrección del problema por el que el acceso a ARM64 \\wsl$ no funciona correctamente
+* Corrección del problema de funcionamiento del acceso a ARM64 \\\\wsl$
 * Agrega el mejor icono predeterminado para wsl.exe
 
 ## <a name="build-18342"></a>Compilación 18342

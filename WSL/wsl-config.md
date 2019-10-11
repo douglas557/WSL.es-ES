@@ -7,12 +7,12 @@ ms.topic: article
 ms.assetid: 7ca59bd7-d9d3-4f6d-8b92-b8faa9bcf250
 ms.custom: seodec18
 ms.localizationpriority: high
-ms.openlocfilehash: 51099f21fe44fd8c7e8682332c939fbe6d5e5827
-ms.sourcegitcommit: 0b5a9f8982dfff07fc8df32d74d97293654f8e12
+ms.openlocfilehash: e69810625d08baf734683ff06231f79132ce1519
+ms.sourcegitcommit: e1cc2fe4de0fa03d5aea14f6b328f1bb9d0c59be
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71269870"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "71999394"
 ---
 # <a name="manage-and-configure-windows-subsystem-for-linux"></a>Administrar y configurar el subsistema de Windows para Linux
 
@@ -277,6 +277,20 @@ Sección: `[automount]`
 De manera predeterminada, WSL establece uid y gid en el valor del usuario predeterminado (en una distribución de Ubuntu, el usuario predeterminado se crea con uid=1000,gid=1000). Si el usuario especifica una opción gid o uid explícitamente a través de esta clave, se sobrescribirá el valor asociado. De lo contrario, siempre se anexará el valor predeterminado.
 
 **Nota:** Estas opciones se aplican como opciones de montaje para todas las unidades montadas automáticamente. Para cambiar las opciones solo para una unidad específica, usa /etc/fstab en su lugar.
+
+##### <a name="mount-options"></a>Opciones de montaje
+
+Establecer diferentes opciones de montaje para las unidades de Windows (DrvFs) puede controlar cómo se calculan los permisos de archivo para los archivos de Windows. Están disponibles las opciones siguientes:
+
+| Tecla | Descripción | Predeterminado |
+|:----|:----|:----|
+|uid| Id. de usuario que se usa para el propietario de todos los archivos | Id. de usuario predeterminado de su distribución WSL (en la primera instalación, el valor predeterminado es 1000)
+|gid| Id. de grupo que se usa para el propietario de todos los archivos | Id. de grupo predeterminado de su distribución WSL (en la primera instalación, el valor predeterminado es 1000)
+|umask | Máscara octal de permisos que se van a excluir para todos los archivos y directorios | 000
+|fmask | Máscara octal de permisos que se van a excluir para todos los archivos | 000
+|dmask | Máscara octal de permisos que se van a excluir para todos los directorios | 000
+
+**Nota:** Las máscaras de permisos se colocan a través de una operación OR lógica antes de aplicarse a archivos o directorios. 
 
 #### <a name="network"></a>red
 
