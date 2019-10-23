@@ -8,14 +8,21 @@ ms.topic: article
 ms.assetid: 36ea641e-4d49-4881-84eb-a9ca85b1cdf4
 ms.custom: seodec18
 ms.localizationpriority: high
-ms.openlocfilehash: b92c20bad50d0c58da05bb0c8f26a69d4c0b2970
-ms.sourcegitcommit: 050f6095e92469b903db8ddf9356df5b22b21804
+ms.openlocfilehash: dbc041c98081563d4f77b9fc186698fad8299c0d
+ms.sourcegitcommit: 4beb93f80749ab4c8c6f0e6920ab7f809567e243
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71910304"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72549571"
 ---
 # <a name="release-notes-for-windows-subsystem-for-linux"></a>Notas de la versión del subsistema de Windows para Linux
+
+## <a name="build-19002"></a>Compilación 19002
+Para obtener información general de Windows sobre la compilación 19002, visita el [blog de Windows](https://blogs.windows.com/windowsexperience/2019/10/17/announcing-windows-10-insider-preview-build-19002/).
+
+* [WSL] Corrección de un problema con el control de algunos caracteres Unicode: https://github.com/microsoft/terminal/issues/2770
+* [WSL] Corrección de casos poco frecuentes en los que se podría anular el registro de distribuciones si se iniciaban inmediatamente después de una actualización de una compilación a otra.
+* [WSL] Corrección de un problema leve por el que wsl.exe se apagaba cuando no se cancelaban los temporizadores de inactividad de la instancia.
 
 ## <a name="build-18995"></a>Compilación 18995
 Para obtener información general de Windows sobre la compilación 18995, visita el [blog de Windows](https://blogs.windows.com/windowsexperience/2019/10/03/announcing-windows-10-insider-preview-build-18995/).
@@ -40,7 +47,6 @@ Para obtener información general de Windows sobre la compilación 18990, visita
 * Mejorar el rendimiento de los listados de directorios en \\\\wsl$
 * [WSL2] Insertar entropía de arranque adicional [GH 4416]
 * [WSL2] Corrección para la interoperabilidad de Windows al usar su/sudo [GH 4465]
-
 
 ## <a name="build-18980"></a>Compilación 18980
 Para obtener información general de Windows sobre la compilación 18980, visita el [blog de Windows](https://blogs.windows.com/windowsexperience/2019/09/11/announcing-windows-10-insider-preview-build-18980/).
