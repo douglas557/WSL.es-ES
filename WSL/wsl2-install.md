@@ -6,12 +6,12 @@ ms.date: 05/30/2019
 ms.topic: article
 ms.assetid: 7afaeacf-435a-4e58-bff0-a9f0d75b8a51
 ms.custom: seodec18
-ms.openlocfilehash: 386b6793f00300bc9dabd1613cfd69b19d222f0b
-ms.sourcegitcommit: eb7b572388c6bddbf6e8ad8d01927660fe66aecf
+ms.openlocfilehash: d4ce22fda7baea77c0a8d3d7101d0ab09b78e8f8
+ms.sourcegitcommit: d110e2bbcd92438781453137ba0ab747cddb28e8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71692467"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72998249"
 ---
 # <a name="installation-instructions-for-wsl-2"></a>Instrucciones de instalación de WSL 2
 
@@ -21,7 +21,7 @@ Para instalar y empezar a usar WSL 2, sigue estos pasos:
 
 - Asegúrese de que ha instalado WSL (puede encontrar instrucciones para hacerlo [aquí](./install-win10.md)) y de que está ejecutando Windows 10 **Build 18917** o superior.
    - Para asegurarse de que está usando la compilación 18917 o posterior, únase [al programa Windows Insider](https://insider.windows.com/en-us/) y seleccione el anillo "rápido". 
-   - Para comprobar la versión de Windows, abra el símbolo del sistema y `ver` ejecute el comando.
+   - Para comprobar la versión de Windows, abra el símbolo del sistema y ejecute el comando `ver`.
 - Habilitación del componente opcional "Plataforma de máquina virtual"
 - Establecimiento de una distribución que respaldará WSL 2 mediante la línea de comandos
 - Comprobación de qué versiones de WSL están usando las distribuciones
@@ -68,3 +68,6 @@ A continuación se muestran errores relacionados con la instalación de WSL 2 y
    
 * **Error al intentar actualizar: `Invalid command line option: wsl --set-version Ubuntu 2`**
     * Asegúrate de que tienes el Subsistema de Windows para Linux habilitado y de que estás usando la compilación 18917 de Windows o posterior. Para habilitar WSL, ejecuta este comando en un símbolo del sistema de PowerShell con privilegios de administrador: `Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux`. Puedes encontrar las instrucciones de instalación de WSL completas [aquí](./install-win10.md).
+
+* **No se pudo completar la operación solicitada debido a una limitación del sistema de disco virtual. Los archivos de disco duro virtual deben estar sin comprimir y sin cifrar y no deben ser dispersos.**
+    * Consulte [WSL GitHub thread #4103](https://github.com/microsoft/WSL/issues/4103) en el que se realiza el seguimiento de este problema para obtener información actualizada.
