@@ -7,12 +7,12 @@ ms.topic: article
 ms.assetid: 6753f1b2-200e-49cc-93a5-4323e1117246
 ms.custom: seodec18
 ms.localizationpriority: high
-ms.openlocfilehash: 7b7938e7a6a636b012f4b84a8c93d5dfc0a4a4cf
-ms.sourcegitcommit: aef7bb1e851089b3311d497a3be0da79558feb4e
+ms.openlocfilehash: 24a899df78e705630c6cb95f8719594aec340c5c
+ms.sourcegitcommit: 600853005bd2b42d6e47bf36ebed4b868ff2af26
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71279251"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72987524"
 ---
 # <a name="troubleshooting-windows-subsystem-for-linux"></a>Solucionar problemas del subsistema de Windows para Linux
 
@@ -124,7 +124,7 @@ Se requieren privilegios de administrador en Windows para ejecutar ping en WSL. 
 Si mientras trabajas con Bash, ves que Bash se bloquea (o interbloquea) y no responde a las entradas, ayúdanos a diagnosticar el problema mediante la recopilación y la generación de informes de un volcado de memoria. Ten en cuenta que con estos pasos se bloqueará tu sistema. No lo hagas si no te sientes cómodo al hacerlo o guarda el trabajo antes de hacerlo.  <br/>
 Para recopilar un volcado de memoria:
 1. Cambia el tipo de volcado de memoria a "volcado de memoria completa". Al cambiar el tipo de volcado, toma nota del tipo actual.
-2. Sigue los [pasos](https://blogs.technet.microsoft.com/askpfeplat/2015/04/05/how-to-force-a-diagnostic-memory-dump-when-a-computer-hangs/) para configurar el bloqueo mediante el control de teclado.
+2. Sigue los [pasos](https://techcommunity.microsoft.com/t5/Core-Infrastructure-and-Security/How-to-Force-a-Diagnostic-Memory-Dump-When-a-Computer-Hangs/ba-p/257809) para configurar el bloqueo mediante el control de teclado.
 3. Reproduce el bloqueo o interbloqueo.
 4. Bloquea el sistema con la secuencia de claves de (2).
 5. El sistema se bloqueará y recopilará el volcado de memoria.
