@@ -8,14 +8,27 @@ ms.topic: article
 ms.assetid: 36ea641e-4d49-4881-84eb-a9ca85b1cdf4
 ms.custom: seodec18
 ms.localizationpriority: high
-ms.openlocfilehash: dbc041c98081563d4f77b9fc186698fad8299c0d
-ms.sourcegitcommit: 4beb93f80749ab4c8c6f0e6920ab7f809567e243
+ms.openlocfilehash: 63c0e14dab73faf7f835e9ae1eb23eb490b13c44
+ms.sourcegitcommit: 48ca05ce1ac8bf35408af3bc2a2b92a43adba0af
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72549571"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73166662"
 ---
 # <a name="release-notes-for-windows-subsystem-for-linux"></a>Notas de la versión del subsistema de Windows para Linux
+
+## <a name="build-19013"></a>Compilación 19013
+Para obtener información general de Windows sobre la compilación 19013, visita el [blog de Windows](https://blogs.windows.com/windowsexperience/2019/10/29/announcing-windows-10-insider-preview-build-19013/).
+
+* [WSL2] Mejora del rendimiento de memoria de la VM de la utilidad WSL. La memoria que ya no esté en uso se liberará de nuevo al host.
+* [WSL2] Actualización de la versión del kernel a 4.19.79. (Adición de CONFIG_HIGH_RES_TIMERS, CONFIG_TASK_XACCT, CONFIG_TASK_IO_ACCOUNTING, CONFIG_SCHED_HRTICK y CONFIG_BRIDGE_VLAN_FILTERING).
+* [WSL2] Corrección de la retransmisión de entrada para controlar los casos en los que stdin es un identificador de canalización que no está cerrado [GH 4424].
+* Comprobación de que \\\\wsl$ no distingue mayúsculas de minúsculas.
+```
+[wsl2]
+pageReporting = <bool>    # Enable or disable the free memory page reporting feature (default true).
+idleThreshold = <integer> # Set the idle threshold for memory compaction, 0 disables the feature (default 1).
+```
 
 ## <a name="build-19002"></a>Compilación 19002
 Para obtener información general de Windows sobre la compilación 19002, visita el [blog de Windows](https://blogs.windows.com/windowsexperience/2019/10/17/announcing-windows-10-insider-preview-build-19002/).
@@ -38,7 +51,6 @@ Para obtener información general de Windows sobre la compilación 18995, visita
 ```
 [wsl2]
 kernelCommandLine = <string> # Additional kernel command line arguments
-
 ```
 
 ## <a name="build-18990"></a>Compilación 18990
