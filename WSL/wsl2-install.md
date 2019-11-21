@@ -6,12 +6,12 @@ ms.date: 05/30/2019
 ms.topic: article
 ms.assetid: 7afaeacf-435a-4e58-bff0-a9f0d75b8a51
 ms.custom: seodec18
-ms.openlocfilehash: 91994f3a075436c022acb9dadeea072142687b72
-ms.sourcegitcommit: cf6d8e277ed3102f8f879b9f39ba0966d4ea6135
+ms.openlocfilehash: 8af5ffeffdeedc5298af8125cea5c7428c8f29f8
+ms.sourcegitcommit: 3c9ebe5f9ef5fb64070e21b479c2f2d31243f310
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/18/2019
-ms.locfileid: "74164337"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74248761"
 ---
 # <a name="installation-instructions-for-wsl-2"></a>Instrucciones de instalación de WSL 2
 
@@ -28,16 +28,11 @@ Para instalar y empezar a usar WSL 2, sigue estos pasos:
 
 ## <a name="enable-the-virtual-machine-platform-optional-component-and-make-sure-wsl-is-enabled"></a>Habilite el componente opcional "plataforma de máquina virtual" y asegúrese de que WSL está habilitado.
 
-Para habilitar el componente "plataforma de máquina virtual", abra PowerShell como administrador y ejecute el comando siguiente. Si va a instalar WSL por primera vez, seleccione "no" cuando se le solicite un reinicio, ya que tendrá que reiniciar el equipo después de instalar el componente opcional "subsistema de Windows para Linux".
+Tendrá que asegurarse de que tiene instalados los componentes opcionales del subsistema de Windows para Linux y de la plataforma de máquinas virtuales. Puede hacerlo mediante la ejecución del siguiente comando en PowerShell: 
 
 ```powershell
-Enable-WindowsOptionalFeature -Online -FeatureName VirtualMachinePlatform
-```
-
-También debe asegurarse de que está habilitado el componente opcional de subsistema de Windows para Linux. Para ello, ejecute el siguiente comando desde una ventana de PowerShell con privilegios de administrador: 
-
-```powershell
-Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
+dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
+dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
 ```
 
 Reinicie el equipo para finalizar la instalación de ambos componentes.
@@ -47,15 +42,19 @@ Reinicie el equipo para finalizar la instalación de ambos componentes.
 
 Si no tiene instalado un distribución de Linux, consulte la página de documentos [instalar en Windows 10](./install-win10.md#install-your-linux-distribution-of-choice) para obtener instrucciones sobre cómo instalar uno. 
 
-En PowerShell, ejecuta:
+Para establecer un distribución, ejecute: 
 
-`wsl --set-version <Distro> 2`
+```
+wsl --set-version <Distro> 2
+```
 
 Asegúrate de reemplazar `<Distro>` por el nombre real de tu distribución. (Puedes encontrarlo con el comando: `wsl -l`). Puedes volver a cambiar a WSL 1 en cualquier momento; para ello, ejecuta el mismo comando que antes, pero reemplaza "2" por "1".
 
 Además, si quieres que WSL 2 sea la arquitectura predeterminada, puedes hacerlo con este comando:
 
-`wsl --set-default-version 2`
+```
+wsl --set-default-version 2`
+```
 
 Esto hará que las nuevas distribuciones que instales se inicialicen como distribución de WSL 2.
 
@@ -79,3 +78,6 @@ A continuación se muestran errores relacionados con la instalación de WSL 2 y
 
 * **No se pudo completar la operación solicitada debido a una limitación del sistema de disco virtual. Los archivos de disco duro virtual deben estar sin comprimir y sin cifrar y no deben ser dispersos.**
     * Consulte [WSL GitHub thread #4103](https://github.com/microsoft/WSL/issues/4103) en el que se realiza el seguimiento de este problema para obtener información actualizada.
+
+* **El término ' WSL ' no se reconoce como nombre de un cmdlet, función, archivo de script o programa ejecutable.** 
+    * Asegúrese de que [está instalado el componente opcional de subsistema de Windows para Linux](./wsl2-install.md#enable-the-virtual-machine-platform-optional-component-and-make-sure-wsl-is-enabled).<br> Además, si usa un dispositivo Arm64 y ejecuta este comando desde PowerShell, recibirá este error. En su lugar, ejecute `wsl.exe` desde [PowerShell Core](https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershell-core-on-windows?view=powershell-6)o el símbolo del sistema. 
