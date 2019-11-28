@@ -7,12 +7,12 @@ ms.topic: article
 ms.assetid: 7afaeacf-435a-4e58-bff0-a9f0d75b8a51
 ms.custom: seodec18
 ms.localizationpriority: high
-ms.openlocfilehash: c53c4507fb56f8e4a3456963b1d6f50ceac8ef37
-ms.sourcegitcommit: 0b5a9f8982dfff07fc8df32d74d97293654f8e12
+ms.openlocfilehash: 17ca32db23b426ef1367ff9444b5924d9d7e1716
+ms.sourcegitcommit: 3be576f946611cf36e27745bdb7c4c52af1b9928
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71269811"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74200234"
 ---
 # <a name="windows-subsystem-for-linux-installation-guide-for-windows-10"></a>Guía de instalación del Subsistema de Windows para Linux para Windows 10
 
@@ -29,9 +29,9 @@ Antes de instalar cualquier distribución de Linux para WSL, debes asegurarte de
 
 ## <a name="install-your-linux-distribution-of-choice"></a>Instalación de la distribución de Linux que quieras
 Para descargar e instalar las distribuciones que prefieras, tienes tres opciones:
-1. Descargarlas e instalarlas de Microsoft Store (ver la información que hay a continuación).
-1. Descargarlas e instalarlas desde la línea de comandos o el script ([lee las instrucciones de instalación del manual](install-manual.md)).
-1. Descargarlas y desempaquetarlas e instalarlas manualmente (para Windows Server: [aquí están las instrucciones](install-on-server.md)).
+* Descargarlas e instalarlas de Microsoft Store (ver la información que hay a continuación).
+* Descargarlas e instalarlas desde la línea de comandos o el script ([lee las instrucciones de instalación del manual](install-manual.md)).
+* Descargarlas y desempaquetarlas e instalarlas manualmente (para Windows Server: [aquí están las instrucciones](install-on-server.md)).
 
 ### <a name="windows-10-fall-creators-update-and-later-install-from-the-microsoft-store"></a>Windows 10 Fall Creators Update y posteriores: Descargar desde Microsoft Store
 

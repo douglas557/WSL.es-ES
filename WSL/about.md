@@ -7,12 +7,12 @@ ms.topic: article
 ms.assetid: 3cefe0db-7616-4848-a2b6-9296746a178b
 ms.custom: seodec18
 ms.localizationpriority: high
-ms.openlocfilehash: 4e63fd186f11545937a4ce0a0fbd6071a4bf268d
-ms.sourcegitcommit: 0b5a9f8982dfff07fc8df32d74d97293654f8e12
+ms.openlocfilehash: fbb1ce5cf5d5c83e25d0a6a0cece7b70537a44a1
+ms.sourcegitcommit: 3be576f946611cf36e27745bdb7c4c52af1b9928
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71269716"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74200197"
 ---
 # <a name="windows-subsystem-for-linux-documentation"></a>Documentación del subsistema de Windows para Linux
 
@@ -48,4 +48,4 @@ Se puede hacer lo siguiente:
 
 ## <a name="provide-feedback"></a>Proporcionar comentarios
 * [Seguimiento de problemas de GitHub](https://github.com/Microsoft/BashOnWindows/issues)
-* [Portal de UserVoice de línea de comandos](https://wpdev.uservoice.com/forums/266908-command-prompt-console-bash-on-ubuntu-on-windo/category/161892-bash)
+
