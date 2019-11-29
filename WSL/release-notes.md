@@ -8,14 +8,22 @@ ms.topic: article
 ms.assetid: 36ea641e-4d49-4881-84eb-a9ca85b1cdf4
 ms.custom: seodec18
 ms.localizationpriority: high
-ms.openlocfilehash: 299b939383a98752cb54cafa23bb8b7662d53e0a
-ms.sourcegitcommit: ac6029d7d7440b8ed0e866fcea5b693edfdc163e
+ms.openlocfilehash: 2e1b8a2ae37568af273ac311572881daa8b55d4b
+ms.sourcegitcommit: 3be576f946611cf36e27745bdb7c4c52af1b9928
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/06/2019
-ms.locfileid: "73633853"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74200224"
 ---
 # <a name="release-notes-for-windows-subsystem-for-linux"></a>Notas de la versión del subsistema de Windows para Linux
+
+## <a name="build-19028"></a>Compilación 19028
+Para obtener información general de Windows sobre la compilación 19028, visita el [blog de Windows](https://blogs.windows.com/windowsexperience/2019/11/19/announcing-windows-10-insider-preview-build-19028/).
+
+* [WSL2] Actualización del kernel de Linux a la versión 4.19.81.
+* [WSL2] Cambiar el permiso predeterminado de/dev/net/tun a 0666 [GH 4629].
+* [WSL2] Ajustar la cantidad predeterminada de memoria asignada a la VM de Linux para que el 80 % sea parte de la memoria del host.
+* [WSL2] Corrección del servidor de interoperabilidad para controlar las solicitudes con tiempo de espera, para que los autores de llamadas incorrectas no puedan bloquear el servidor.
 
 ## <a name="build-19018"></a>Compilación 19018
 Para obtener información general de Windows sobre la compilación 19018, visita el [blog de Windows](https://blogs.windows.com/windowsexperience/2019/11/05/announcing-windows-10-insider-preview-build-19018/).
