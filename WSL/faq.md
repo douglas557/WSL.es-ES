@@ -6,12 +6,12 @@ ms.date: 9/4/2018
 ms.topic: article
 ms.assetid: 129101ed-b88a-43c2-b6a2-cd2c4ff6fee1
 ms.localizationpriority: high
-ms.openlocfilehash: 911bde69540bb8bb7a5ee40d8a9f4d6995f4fdaa
-ms.sourcegitcommit: 3f35034581456a2008aa5ed1b623715dfef64608
+ms.openlocfilehash: d5c4308c531e4df02acbfb17a76b3f83d912b512
+ms.sourcegitcommit: 33290fd88a461a1a36d6106e737490bd57dc77bd
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71934904"
+ms.lasthandoff: 01/14/2020
+ms.locfileid: "75951252"
 ---
 # <a name="frequently-asked-questions-about-windows-subsystem-for-linux"></a>Preguntas más frecuentes sobre el subsistema de Windows para Linux
 
@@ -177,8 +177,11 @@ Recuerda que los servicios de copia de seguridad tradicionales que copian los ar
 
 ## <a name="where-can-i-provide-feedback"></a>¿Dónde puedo enviar mis comentarios?
 
-Puedes compartir tus comentarios y formular preguntas a través de varios canales: Los comentarios y las preguntas se deben enviar a:
-* Nuestro canal de [seguimiento de problemas de GitHub](https://github.com/Microsoft/BashOnWindows/issues).
-* Nuestro [portal de UserVoice de línea de comandos](https://wpdev.uservoice.com/forums/266908-command-prompt/filters/top).
+Puedes compartir tus comentarios y formular preguntas a través de varios canales.
+
+Si tienes problemas técnicos o quieres solicitar nuevas características, visita nuestro seguimiento de problemas de GitHub:
+* [Seguimiento de problemas de GitHub](https://github.com/Microsoft/BashOnWindows/issues)
+
+Si quieres mantenerte al día con las últimas noticias de WSL, puedes hacerlo con:
 * Nuestro [blog del equipo de línea de comandos](https://blogs.msdn.microsoft.com/commandline/).
-* A través de Twitter. Sigue [@richturn_ms](https://twitter.com/richturn_MS) en Twitter para conocer las noticias, actualizaciones, etc.
+* Twitter. Sigue [@craigaloewen](https://twitter.com/craigaloewen) en Twitter para conocer las noticias, actualizaciones, etc.
