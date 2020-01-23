@@ -6,14 +6,18 @@ ms.date: 05/30/2019
 ms.topic: article
 ms.assetid: 7afaeacf-435a-4e58-bff0-a9f0d75b8a51
 ms.custom: seodec18
-ms.openlocfilehash: 65c0440a95637708881c00558cba6c7985f89ec0
-ms.sourcegitcommit: 522af20edfba4d4a9e429327389967a83e6d1156
+ms.openlocfilehash: 91bd479e922fc29bf11b89dcfe06fa381632c4fa
+ms.sourcegitcommit: 07eb5f2e1f4517928165dda4510012599b0d0e1e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/06/2019
-ms.locfileid: "74881374"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76520554"
 ---
 # <a name="installation-instructions-for-wsl-2"></a>Instrucciones de instalación de WSL 2
+
+Puede ver el vídeo siguiente o leer en este artículo para obtener información sobre cómo instalar WSL2. 
+
+> [!VIDEO https://channel9.msdn.com/Blogs/One-Dev-Minute/Learn-how-to-install-WSL-2/player]
 
 Para instalar y empezar a usar WSL 2, sigue estos pasos:
 

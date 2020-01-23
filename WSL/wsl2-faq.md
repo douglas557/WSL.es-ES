@@ -6,12 +6,12 @@ ms.date: 05/30/2019
 ms.topic: article
 ms.assetid: 7afaeacf-435a-4e58-bff0-a9f0d75b8a51
 ms.custom: seodec18
-ms.openlocfilehash: c4a8c02db6563d7ad572917578c1a49d419f1756
-ms.sourcegitcommit: 0b5a9f8982dfff07fc8df32d74d97293654f8e12
+ms.openlocfilehash: c694b3476976241422d079eb65e72beca415ff62
+ms.sourcegitcommit: 07eb5f2e1f4517928165dda4510012599b0d0e1e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71269572"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76520574"
 ---
 # <a name="wsl-2-faq"></a>PREGUNTAS MÁS FRECUENTES SOBRE WSL 2
 
@@ -35,7 +35,7 @@ Estamos investigando maneras de ayudar a resolver este problema. Por ejemplo, se
 
 ## <a name="can-i-access-the-gpu-in-wsl-2-are-there-plans-to-increase-hardware-support"></a>¿Puedo acceder a la GPU en WSL 2? ¿Hay planes para aumentar la compatibilidad de hardware?
 
-En las versiones iniciales de, la compatibilidad con el acceso al hardware de WSL 2 será limitada; por ejemplo, no podrá acceder a la GPU, en serie o en USBs. Sin embargo, agregar mejor compatibilidad con dispositivos es alto en nuestro trabajo pendiente, ya que se abren muchos más casos de uso para los desarrolladores que quieren interactuar con estos dispositivos. Mientras tanto, siempre puede usar WSL 1, que tiene el puerto serie y el acceso USB. Manténgase atento a este blog y WSL a los miembros del equipo en Twitter para mantenerse informado sobre las características más recientes que llegan a las compilaciones de Insider y ponerse en contacto con nosotros para enviarnos sus comentarios sobre los dispositivos con los que le gustaría interactuar.
+En las versiones iniciales de la compatibilidad con el acceso al hardware de WSL 2, se limitará, por ejemplo, no podrá tener acceso a los dispositivos de GPU, serie o USB. Sin embargo, agregar mejor compatibilidad con dispositivos es alto en nuestro trabajo pendiente, ya que se abren muchos más casos de uso para los desarrolladores que quieren interactuar con estos dispositivos. Mientras tanto, siempre puede usar WSL 1, que tiene acceso a puertos serie. Manténgase atento a este blog y WSL a los miembros del equipo en Twitter para mantenerse informado sobre las características más recientes que llegan a las compilaciones de Insider y ponerse en contacto con nosotros para enviarnos sus comentarios sobre los dispositivos con los que le gustaría interactuar.
 
 ## <a name="will-wsl-2-be-able-to-use-networking-applications"></a>¿WSL 2 podrá usar aplicaciones de red?
 
@@ -47,7 +47,7 @@ Sí. Debe asegurarse de que la máquina virtual tiene habilitada la virtualizaci
 
 `Set-VMProcessor -VMName <VMName> -ExposeVirtualizationExtensions $true`
 
-Asegúrese de reemplazar "&lt;VMName&gt;" por el nombre de la máquina virtual.
+Asegúrese de reemplazar '&lt;VMName&gt;' por el nombre de la máquina virtual.
 
 ## <a name="can-i-use-wslconf-in-wsl-2"></a>¿Puedo usar WSL. conf en WSL 2?
 

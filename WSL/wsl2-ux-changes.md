@@ -6,12 +6,12 @@ ms.date: 05/30/2019
 ms.topic: article
 ms.assetid: 7afaeacf-435a-4e58-bff0-a9f0d75b8a51
 ms.custom: seodec18
-ms.openlocfilehash: 635e4335bd3fe5dd1629faba0168ec4fa331e190
-ms.sourcegitcommit: 6f6b7b67dd35b5fc7b582bb7ac27b9936dedb23d
+ms.openlocfilehash: a8f298a69acf44f152da626a0ba571f6bba1970c
+ms.sourcegitcommit: 07eb5f2e1f4517928165dda4510012599b0d0e1e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/02/2019
-ms.locfileid: "74681644"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76520564"
 ---
 # <a name="user-experience-changes-between-wsl-1-and-wsl-2"></a>Cambios de experiencia del usuario entre WSL 1 y WSL 2
 
@@ -38,11 +38,16 @@ Para tener acceso a una aplicación de red de Windows, deberá usar la direcció
 - Para obtener la dirección IP de la máquina host, ejecute el comando `cat /etc/resolv.conf` y copie la dirección IP que sigue al término `nameserver`. 
 - Conéctese a cualquier servidor de Windows mediante la dirección IP copiada.
 
-En la imagen siguiente se muestra un ejemplo de esto mediante la conexión a un servidor node. js que se ejecuta en Windows a través de rizo. 
+En la imagen siguiente se muestra un ejemplo de esto mediante la conexión a un servidor node. js que se ejecuta en Windows a través de cURL. 
 
 ![Acceso a aplicaciones de red Linux desde Windows](media/wsl2-network-l2w.png)
 
-### <a name="accessing-linux-applications-from-windows-only-in-builds-lower-than-18945"></a>Acceso a aplicaciones de Linux desde Windows (solo en compilaciones inferiores a 18945)
+### <a name="accessing-linux-applications-from-windows"></a>Acceder a las aplicaciones de Linux desde Windows
+
+En función de la versión de Windows que use, es posible que necesite recuperar la dirección IP de la máquina virtual. Si la compilación es 18945 o una versión posterior, puede usar `localhost` como normal. 
+
+#### <a name="accessing-linux-on-builds-lower-than-18945httpsblogswindowscomwindowsexperience20190726announcing-windows-10-insider-preview-build-18945"></a>Acceder a Linux en compilaciones inferiores a [18945](https://blogs.windows.com/windowsexperience/2019/07/26/announcing-windows-10-insider-preview-build-18945/)
+
 Si tiene un servidor en un distribución de WSL, debe buscar la dirección IP de la máquina virtual que enciende su distribución y conectarse a él con esa dirección IP. Para ello, siga estos pasos:
 
 - Obtenga la dirección IP de su distribución ejecutando el comando `ip addr` dentro de la distribución de WSL y buscándola en el valor `inet` de la interfaz `eth0`.
@@ -52,8 +57,6 @@ Si tiene un servidor en un distribución de WSL, debe buscar la dirección IP de
 En la imagen siguiente se muestra un ejemplo de esto mediante la conexión a un servidor node. js con el explorador Edge.
 
 ![Acceso a aplicaciones de red Linux desde Windows](media/wsl2-network-w2l.jpg)
-
-Si la compilación es 18945 o una versión posterior, puede usar localhost como normal. 
 
 ### <a name="other-networking-considerations"></a>Otras consideraciones sobre redes
 
