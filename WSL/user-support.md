@@ -1,142 +1,48 @@
 ---
-title: Cuentas de usuario y permisos de Linux
+title: Creación y actualización de cuentas de usuario para distribuciones de WSL
 description: Material de referencia para la administración de permisos y cuentas de usuario con el subsistema de Windows para Linux.
 keywords: BashOnWindows, bash, wsl, windows, subsistema de windows para linux, subsistemawindows, ubuntu, cuentas de usuario
-ms.date: 09/11/2017
+ms.date: 01/20/2020
 ms.topic: article
 ms.assetid: f70e685f-24c6-4908-9546-bf4f0291d8fd
 ms.custom: seodec18
 ms.localizationpriority: high
-ms.openlocfilehash: d8434283e459ae25637fac0c0b1877ca07d9a255
-ms.sourcegitcommit: 0b5a9f8982dfff07fc8df32d74d97293654f8e12
+ms.openlocfilehash: 85bd8f05d041181c2cfb16f6fb55aaeea15b332c
+ms.sourcegitcommit: 07eb5f2e1f4517928165dda4510012599b0d0e1e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71269713"
+ms.lasthandoff: 01/22/2020
+ms.locfileid: "76520584"
 ---
-# <a name="user-accounts-and-permissions-for-windows-subsystem-for-linux"></a><span data-ttu-id="6d1c2-104">Cuentas de usuario y permisos para el subsistema de Windows para Linux</span><span class="sxs-lookup"><span data-stu-id="6d1c2-104">User Accounts and Permissions for Windows Subsystem for Linux</span></span>
+# <a name="create-and-update-user-accounts-for-wsl-distributions"></a><span data-ttu-id="d9068-104">Creación y actualización de cuentas de usuario para distribuciones de WSL</span><span class="sxs-lookup"><span data-stu-id="d9068-104">Create and update user accounts for WSL distributions</span></span>
 
-<span data-ttu-id="6d1c2-105">La creación de un usuario de Linux es el primer paso para configurar una nueva distribución de Linux en WSL.</span><span class="sxs-lookup"><span data-stu-id="6d1c2-105">Creating your Linux user is the first step in setting up a new Linux distribution on WSL.</span></span>  <span data-ttu-id="6d1c2-106">La primera cuenta de usuario que se crea se configura automáticamente con unos cuantos atributos especiales:</span><span class="sxs-lookup"><span data-stu-id="6d1c2-106">The first user account you create is automatically configured with a few special attributes:</span></span>
+<span data-ttu-id="d9068-105">Una vez hayas habilitado WSL e instalado una distribución de Linux de Microsoft Store, el primer paso que debes completar al abrir la distribución recién instalada de Linux es crear una cuenta que incluya un **nombre de usuario** y una **contraseña**.</span><span class="sxs-lookup"><span data-stu-id="d9068-105">Once you have enabled WSL and installed a Linux distribution from the Microsoft Store, the first step you will be asked to complete when opening your newly installed Linux distribution is to create an account, including a **User Name** and **Password**.</span></span>
 
-1. <span data-ttu-id="6d1c2-107">Se trata del usuario predeterminado: inicia sesión automáticamente en el inicio.</span><span class="sxs-lookup"><span data-stu-id="6d1c2-107">It is your default user -- it signs-in automatically on launch.</span></span>
-1. <span data-ttu-id="6d1c2-108">De manera predeterminada, es administrador de Linux (un miembro del grupo sudo).</span><span class="sxs-lookup"><span data-stu-id="6d1c2-108">It is Linux administrator (a member of the sudo group) by default.</span></span>
+- <span data-ttu-id="d9068-106">El **nombre de usuario** y la **contraseña** son específicos de la distribución de Linux y no tienen relación con tu nombre de usuario de Windows.</span><span class="sxs-lookup"><span data-stu-id="d9068-106">This **User Name** and **Password** is specific to your Linux distribution and has no bearing on your Windows user name.</span></span>
 
-<span data-ttu-id="6d1c2-109">Cada distribución de Linux que se ejecuta en el subsistema de Windows para Linux tiene sus propias cuentas de usuario y contraseñas de Linux.</span><span class="sxs-lookup"><span data-stu-id="6d1c2-109">Each Linux distribution running on the Windows Subsystem for Linux has its own Linux user accounts and passwords.</span></span>  <span data-ttu-id="6d1c2-110">Tendrás que configurar una cuenta de usuario de Linux cada vez que reinstales, restablezcas o agregues una distribución.</span><span class="sxs-lookup"><span data-stu-id="6d1c2-110">You will have to configure a Linux user account any time you add a distribution, reinstall, or reset.</span></span>  <span data-ttu-id="6d1c2-111">Las cuentas de usuario de Linux no solo son independientes por distribución, sino que también son independientes de la cuenta de usuario de Windows.</span><span class="sxs-lookup"><span data-stu-id="6d1c2-111">Linux user accounts are not only independent per distribution, they are also independent from your Windows user account.</span></span>
+- <span data-ttu-id="d9068-107">Cuando hayas creado el **nombre de usuario** y la **contraseña**, la cuenta será el usuario predeterminado de la distribución e iniciará sesión automáticamente al inicio.</span><span class="sxs-lookup"><span data-stu-id="d9068-107">Once you create this **User Name** and **Password**, the account will be your default user for the distribution and automatically sign-in on launch.</span></span>
 
-## <a name="resetting-your-linux-password"></a><span data-ttu-id="6d1c2-112">Restablecimiento de la contraseña de Linux</span><span class="sxs-lookup"><span data-stu-id="6d1c2-112">Resetting your Linux password</span></span>
+- <span data-ttu-id="d9068-108">Recuerda que esta cuenta se considerará el administrador de Linux y tendrá la capacidad de ejecutar comandos administrativos `sudo` (es decir, de superusuario).</span><span class="sxs-lookup"><span data-stu-id="d9068-108">This account will be considered the Linux administrator, with the ability to run `sudo` (Super User Do) administrative commands.</span></span>
 
-<span data-ttu-id="6d1c2-113">Si tienes acceso a la cuenta de usuario de Linux y conoces la contraseña actual, usa las herramientas de restablecimiento de contraseñas de Linux para cambiarla de esa distribución (que probablemente es `passwd`).</span><span class="sxs-lookup"><span data-stu-id="6d1c2-113">If you have access to your Linux user account and know your current password, change it using Linux password reset tools of that distribution -- most likely `passwd`.</span></span>
+- <span data-ttu-id="d9068-109">Cada distribución de Linux que se ejecuta en el subsistema de Windows para Linux tiene sus propias cuentas de usuario y contraseñas de Linux.</span><span class="sxs-lookup"><span data-stu-id="d9068-109">Each Linux distribution running on the Windows Subsystem for Linux has its own Linux user accounts and passwords.</span></span>  <span data-ttu-id="d9068-110">Tendrás que configurar una cuenta de usuario de Linux cada vez que reinstales, restablezcas o agregues una distribución.</span><span class="sxs-lookup"><span data-stu-id="d9068-110">You will have to configure a Linux user account every time you add a distribution, reinstall, or reset.</span></span>
 
-<span data-ttu-id="6d1c2-114">Si esto no es una opción, dependiendo de la distribución, es posible que se pueda restablecer la contraseña restableciendo el usuario predeterminado.</span><span class="sxs-lookup"><span data-stu-id="6d1c2-114">If that's not an option, depending on the distribution, you may be able to reset your password by resetting the default user.</span></span>
+## <a name="reset-your-linux-password"></a><span data-ttu-id="d9068-111">Restablecimiento de la contraseña de Linux</span><span class="sxs-lookup"><span data-stu-id="d9068-111">Reset your Linux password</span></span>
 
-<span data-ttu-id="6d1c2-115">WSL ofrece una etiqueta de usuario predeterminada para identificar la cuenta de usuario que inicia sesión automáticamente al iniciar un WSL.</span><span class="sxs-lookup"><span data-stu-id="6d1c2-115">WSL offers a default user tag to identify which user account automatically logs in when you start a WSL.</span></span>  <span data-ttu-id="6d1c2-116">Dado que muchas distribuciones incluyen comandos para establecer el usuario predeterminado en raíz y también un usuario raíz sin contraseña establecida, cambiar el usuario predeterminado a raíz es una herramienta útil para acciones como el restablecimiento de contraseñas.</span><span class="sxs-lookup"><span data-stu-id="6d1c2-116">Since many distributions include commands to set the default user to root and also a root user with no password set, changing the default user to root is a handy tool for things like password reset.</span></span>
+<span data-ttu-id="d9068-112">Para cambiar la contraseña, abre la distribución de Linux (Ubuntu, por ejemplo) y escribe el siguiente comando: `passwd`.</span><span class="sxs-lookup"><span data-stu-id="d9068-112">To change your password, open your Linux distribution (Ubuntu for example) and enter the command: `passwd`</span></span>
 
-### <a name="for-creators-update-and-earlier"></a><span data-ttu-id="6d1c2-117">Para la actualización Creators Update y versiones anteriores</span><span class="sxs-lookup"><span data-stu-id="6d1c2-117">For Creators Update and earlier</span></span>
-<span data-ttu-id="6d1c2-118">Si estás ejecutando Windows 10 Creators Update o una versión anterior, puedes cambiar el usuario de Bash predeterminado mediante la ejecución de los siguientes comandos:</span><span class="sxs-lookup"><span data-stu-id="6d1c2-118">If you're running Windows 10 Creators update or earlier, you can change the default Bash user by running the following commands:</span></span>
+<span data-ttu-id="d9068-113">Tendrás que escribir la contraseña actual, la contraseña nueva y, a continuación, confirmarla.</span><span class="sxs-lookup"><span data-stu-id="d9068-113">You will be asked to enter your current password, then asked to enter your new password, and then to confirm your new password.</span></span>
 
-1. <span data-ttu-id="6d1c2-119">Cambia el usuario predeterminado a `root`:</span><span class="sxs-lookup"><span data-stu-id="6d1c2-119">Change the default user to `root`:</span></span>
+### <a name="forgot-your-password"></a><span data-ttu-id="d9068-114">¿Olvidaste la contraseña?</span><span class="sxs-lookup"><span data-stu-id="d9068-114">Forgot your password</span></span>
 
-    ```console
-    C:\> lxrun /setdefaultuser root
-    ```
+<span data-ttu-id="d9068-115">Si olvidaste la contraseña de la distribución de Linux:</span><span class="sxs-lookup"><span data-stu-id="d9068-115">If you forgot the password for your Linux distribution:</span></span>
 
-1. <span data-ttu-id="6d1c2-120">Ejecuta `bash.exe` para iniciar sesión como `root`:</span><span class="sxs-lookup"><span data-stu-id="6d1c2-120">Run `bash.exe` to now login as `root`:</span></span>
+1. <span data-ttu-id="d9068-116">Abre PowerShell y escribe la raíz de la distribución de WSL predeterminada mediante el comando: `wsl -u root`.</span><span class="sxs-lookup"><span data-stu-id="d9068-116">Open PowerShell and enter the root of your default WSL distribution using the command: `wsl -u root`</span></span>
 
-    ```console
-    C:\> bash.exe
-    ```
+<span data-ttu-id="d9068-117">\- Si necesitas actualizar la contraseña olvidada de una distribución que no es la predeterminada, usa el comando: `wsl -d Debian -u root` (recuerda que debes reemplazar `Debian` con el nombre de la distribución de destino).</span><span class="sxs-lookup"><span data-stu-id="d9068-117">-- If you need to update the forgotten password on a distribution that is not your default, use the command: `wsl -d Debian -u root`, replacing `Debian` with the name of your targeted distribution.</span></span>
 
-1. <span data-ttu-id="6d1c2-121">Restablece la contraseña con el comando de contraseña de la distribución y cierra la consola de Linux:</span><span class="sxs-lookup"><span data-stu-id="6d1c2-121">Reset your password using the distribution's password command, and close the Linux Console:</span></span>
+2. <span data-ttu-id="d9068-118">Una vez hayas abierto la distribución de WSL en el nivel raíz en PowerShell, puedes usar este comando para actualizar la contraseña: `passwd`.</span><span class="sxs-lookup"><span data-stu-id="d9068-118">Once your WSL distribution has been opened at the root level inside PowerShell, you can use this command to update your password: `passwd`</span></span>
 
-    ```BASH
-    $ passwd username
-    $ exit
-    ```
+3. <span data-ttu-id="d9068-119">Tendrás que escribir una contraseña UNIX nueva y confirmarla.</span><span class="sxs-lookup"><span data-stu-id="d9068-119">You will be prompted to enter a new UNIX password and then confirm that password.</span></span> <span data-ttu-id="d9068-120">Cuando veas que la contraseña se ha actualizado correctamente, cierra WSL en PowerShell mediante el comando: `exit`.</span><span class="sxs-lookup"><span data-stu-id="d9068-120">Once you're told that the password has updated successfully, close WSL inside of PowerShell using the command: `exit`</span></span>
 
-1. <span data-ttu-id="6d1c2-122">Desde Windows CMD, restablece el usuario predeterminado de nuevo a la cuenta de usuario de Linux normal:</span><span class="sxs-lookup"><span data-stu-id="6d1c2-122">From Windows CMD, reset your default user back to your normal Linux user account:</span></span>
-
-    ```console
-    C:\> lxrun.exe /setdefaultuser username
-    ```
-
-### <a name="for-fall-creators-update-and-later"></a><span data-ttu-id="6d1c2-123">Para Fall Creators Update y versiones posteriores</span><span class="sxs-lookup"><span data-stu-id="6d1c2-123">For Fall Creators Update and later</span></span>
-<span data-ttu-id="6d1c2-124">Para ver qué comandos están disponibles para una distribución determinada, ejecuta `[distro.exe] /?`.</span><span class="sxs-lookup"><span data-stu-id="6d1c2-124">To see what commands are available for a particular distribution, run `[distro.exe] /?`.</span></span>
-    
-<span data-ttu-id="6d1c2-125">Por ejemplo, con Ubuntu instalado:</span><span class="sxs-lookup"><span data-stu-id="6d1c2-125">For example, with Ubuntu installed:</span></span>
-
-```console
-C:\> ubuntu.exe /?
-
-Launches or configures a linux distribution.
-
-Usage:
-    <no args>
-      - Launches the distro's default behavior. By default, this launches your default shell.
-
-    run <command line>
-      - Run the given command line in that distro, using the default configuration.
-      - Everything after `run ` is passed to the linux LaunchProcess cal
-
-    config [setting [value]]
-      - Configure certain settings for this distro.
-      - Settings are any of the following (by default)
-        - `--default-user <username>`: Set the default user for this distro to <username>
-
-    clean
-      - Uninstalls the distro. The appx remains on your machine. This can be
-        useful for "factory resetting" your instance. This removes the linux
-        filesystem from the disk, but not the app from your PC, so you don't
-        need to redownload the entire tar.gz again.
-
-    help
-      - Print this usage message.
-```
-
-<span data-ttu-id="6d1c2-126">Instrucciones paso a paso con Ubuntu:</span><span class="sxs-lookup"><span data-stu-id="6d1c2-126">Step by step instructions using Ubuntu:</span></span>
-
-1. <span data-ttu-id="6d1c2-127">Abre CMD.</span><span class="sxs-lookup"><span data-stu-id="6d1c2-127">Open CMD</span></span>
-1. <span data-ttu-id="6d1c2-128">Establece el usuario de Linux predeterminado en `root`:</span><span class="sxs-lookup"><span data-stu-id="6d1c2-128">Set the default Linux user to `root`:</span></span>
-
-    ```console
-    C:\> ubuntu config --default-user root
-    ```    
-
-1. <span data-ttu-id="6d1c2-129">Inicia la distribución de Linux (`ubuntu`).</span><span class="sxs-lookup"><span data-stu-id="6d1c2-129">Launch your Linux distribution (`ubuntu`).</span></span>  <span data-ttu-id="6d1c2-130">Iniciarás sesión automáticamente como `root`:</span><span class="sxs-lookup"><span data-stu-id="6d1c2-130">You will automatically login as `root`:</span></span>
-
-1. <span data-ttu-id="6d1c2-131">Restablece la contraseña con el comando `passwd`:</span><span class="sxs-lookup"><span data-stu-id="6d1c2-131">Reset your password using the `passwd` command:</span></span>
-
-    ```BASH
-    $ passwd username
-    ```
-
-1. <span data-ttu-id="6d1c2-132">Desde Windows CMD, restablece el usuario predeterminado de nuevo a la cuenta de usuario de Linux normal.</span><span class="sxs-lookup"><span data-stu-id="6d1c2-132">From Windows CMD, reset your default user back to your normal Linux user account.</span></span>
-
-    ```console
-    C:\> ubuntu config --default-user username
-    ```
-
-## <a name="permissions"></a><span data-ttu-id="6d1c2-133">Permisos</span><span class="sxs-lookup"><span data-stu-id="6d1c2-133">Permissions</span></span>
-
-<span data-ttu-id="6d1c2-134">Hay dos conceptos importantes que se deben tener en cuenta cuando se trata de permisos en WSL:</span><span class="sxs-lookup"><span data-stu-id="6d1c2-134">There are two important concepts to keep in mind when it comes to permissions in WSL:</span></span>
-
-1. <span data-ttu-id="6d1c2-135">El modelo de permisos de Windows rige los derechos de un proceso en los recursos de Windows.</span><span class="sxs-lookup"><span data-stu-id="6d1c2-135">The Windows permission model governs a process' rights to Windows resources</span></span>
-2. <span data-ttu-id="6d1c2-136">El modelo de permisos de Linux rige los derechos de un proceso en los recursos de Linux.</span><span class="sxs-lookup"><span data-stu-id="6d1c2-136">The Linux permission model controls a process' rights to Linux resources</span></span>
-
-<span data-ttu-id="6d1c2-137">Al ejecutar Linux en WSL, Linux tendrá los mismos permisos de Windows que el proceso que lo inicia.</span><span class="sxs-lookup"><span data-stu-id="6d1c2-137">When running Linux on WSL, Linux will have the same Windows permissions as the process that launches it.</span></span> <span data-ttu-id="6d1c2-138">Linux puede iniciarse en uno de los dos niveles de permiso:</span><span class="sxs-lookup"><span data-stu-id="6d1c2-138">Linux can be launched in one of two permission levels:</span></span>
-
-* <span data-ttu-id="6d1c2-139">Normal (no elevado): Linux se ejecuta con los permisos del usuario que ha iniciado sesión.</span><span class="sxs-lookup"><span data-stu-id="6d1c2-139">Normal (non-elevated): Linux runs with the permissions of the logged-in user</span></span>
-* <span data-ttu-id="6d1c2-140">Elevado/administrador: Linux se ejecuta con permisos de Windows elevados o de administrador.</span><span class="sxs-lookup"><span data-stu-id="6d1c2-140">Elevated/admin: Linux runs with elevated/admin Windows permissions</span></span>
-
-> <span data-ttu-id="6d1c2-141">Dado que los procesos elevados pueden tener acceso a la configuración de todo el sistema y los datos protegidos o de todo el sistema y modificarlos (y ,por consiguiente, dañarlos), **EVITA** el inicio de procesos elevados a menos que sea absolutamente necesario, ya se trate de aplicaciones, herramientas o shells de Windows o Linux.</span><span class="sxs-lookup"><span data-stu-id="6d1c2-141">Because elevated processes can access/modify (and therefore damage) system-wide settings and system-wide/protected data, **AVOID** launching elevated processes unless you absolutely have to - whether they're Windows or Linux applications/tools/shells!</span></span>
-
-<span data-ttu-id="6d1c2-142">Los permisos de Windows anteriores son independientes de los permisos de una instancia de Linux: Los "privilegios raíz" de Linux solo afectan a los derechos del usuario en el sistema de archivos y entorno de Linux; no tienen ningún impacto en los privilegios de Windows concedidos.</span><span class="sxs-lookup"><span data-stu-id="6d1c2-142">The above Windows permissions are independent of the permissions within a Linux instance: Linux "Root privileges" only impact the user’s rights within the Linux environment & filesystem; they have no impact on the Windows privileges granted.</span></span> <span data-ttu-id="6d1c2-143">Por lo tanto, la ejecución de un proceso de Linux como raíz (por ejemplo, a través de `sudo`) solo concede derechos de administrador de procesos en el entorno de Linux.</span><span class="sxs-lookup"><span data-stu-id="6d1c2-143">Thus, running a Linux process as root (e.g. via `sudo`) only grants that process admin rights within the Linux environment.</span></span>
-
-<span data-ttu-id="6d1c2-144">**Ejemplo:**   </span><span class="sxs-lookup"><span data-stu-id="6d1c2-144">**Example:**  </span></span>  
-<span data-ttu-id="6d1c2-145">Una sesión de Bash con privilegios de administrador de Windows puede tener acceso a `cd /mnt/c/Users/Administrator`, mientras que una sesión de Bash sin privilegios de administrador verá el error "Permiso denegado".</span><span class="sxs-lookup"><span data-stu-id="6d1c2-145">A Bash session with Windows admin privileges may access `cd /mnt/c/Users/Administrator` while a Bash session without admin privileges would see a "Permission Denied" error.</span></span>
-
-<span data-ttu-id="6d1c2-146">En Linux, al escribir `sudo cd /mnt/c/Users/Administrator` no se concederá acceso al directorio del administrador, ya que Windows administra los permisos dentro de Windows.</span><span class="sxs-lookup"><span data-stu-id="6d1c2-146">In Linux, typing `sudo cd /mnt/c/Users/Administrator` will not grant access to the Administrator’s directory since permissions within Windows are managed by Windows.</span></span>
-
-<span data-ttu-id="6d1c2-147">El modelo de permisos de Linux es importante en el entorno de Linux, donde el usuario tiene permisos basados en el usuario actual de Linux.</span><span class="sxs-lookup"><span data-stu-id="6d1c2-147">The Linux permission model is important when inside the Linux environment where the user has permissions based on the current Linux user.</span></span>
-
-<span data-ttu-id="6d1c2-148">**Ejemplo:**</span><span class="sxs-lookup"><span data-stu-id="6d1c2-148">**Example:**</span></span>  
-<span data-ttu-id="6d1c2-149">Un usuario del grupo sudo puede ejecutar `sudo apt update`.</span><span class="sxs-lookup"><span data-stu-id="6d1c2-149">A user in the sudo group may run `sudo apt update`.</span></span>
+> [!NOTE]
+> <span data-ttu-id="d9068-121">Si estás ejecutando una versión anterior del sistema operativo Windows, como 1703 (Creators Update) o 1709 (Fall Creators Update), consulta la [versión archivada de este documento de actualización de cuentas de usuario](./user-support-archived.md).</span><span class="sxs-lookup"><span data-stu-id="d9068-121">If you are running an early version of Windows operating system, like 1703 (Creators Update) or 1709 (Fall Creators Update), see the [archived version of this user account update doc](./user-support-archived.md).</span></span>
