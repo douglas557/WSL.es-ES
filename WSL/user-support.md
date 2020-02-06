@@ -7,12 +7,12 @@ ms.topic: article
 ms.assetid: f70e685f-24c6-4908-9546-bf4f0291d8fd
 ms.custom: seodec18
 ms.localizationpriority: high
-ms.openlocfilehash: 85bd8f05d041181c2cfb16f6fb55aaeea15b332c
-ms.sourcegitcommit: 07eb5f2e1f4517928165dda4510012599b0d0e1e
+ms.openlocfilehash: 30dea11adb68639f645ca800a695b0404661845a
+ms.sourcegitcommit: e5fb773dd44abab7bcf289340da00f59528b88f7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/22/2020
-ms.locfileid: "76520584"
+ms.lasthandoff: 02/03/2020
+ms.locfileid: "76973685"
 ---
 # <a name="create-and-update-user-accounts-for-wsl-distributions"></a>Creación y actualización de cuentas de usuario para distribuciones de WSL
 
@@ -38,7 +38,7 @@ Si olvidaste la contraseña de la distribución de Linux:
 
 1. Abre PowerShell y escribe la raíz de la distribución de WSL predeterminada mediante el comando: `wsl -u root`.
 
-\- Si necesitas actualizar la contraseña olvidada de una distribución que no es la predeterminada, usa el comando: `wsl -d Debian -u root` (recuerda que debes reemplazar `Debian` con el nombre de la distribución de destino).
+> Si necesitas actualizar la contraseña olvidada de una distribución que no es la predeterminada, usa el comando `wsl -d Debian -u root` (recuerda que debes reemplazar `Debian` por el nombre de la distribución de destino).
 
 2. Una vez hayas abierto la distribución de WSL en el nivel raíz en PowerShell, puedes usar este comando para actualizar la contraseña: `passwd`.
 

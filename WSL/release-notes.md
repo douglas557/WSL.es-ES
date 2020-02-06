@@ -8,14 +8,32 @@ ms.topic: article
 ms.assetid: 36ea641e-4d49-4881-84eb-a9ca85b1cdf4
 ms.custom: seodec18
 ms.localizationpriority: high
-ms.openlocfilehash: 2e1b8a2ae37568af273ac311572881daa8b55d4b
-ms.sourcegitcommit: 3be576f946611cf36e27745bdb7c4c52af1b9928
+ms.openlocfilehash: 31bf975afb202a6cfd9a2879cff29a77b2969fce
+ms.sourcegitcommit: 7069b8d452308c32cc7fa31d1158fcb130d42e06
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74200224"
+ms.lasthandoff: 02/01/2020
+ms.locfileid: "76911709"
 ---
 # <a name="release-notes-for-windows-subsystem-for-linux"></a>Notas de la versión del subsistema de Windows para Linux
+
+## <a name="build-19555"></a>Compilación 19555
+Para obtener información general de Windows sobre la compilación 19555, visita el [blog de Windows](https://blogs.windows.com/windowsexperience/2020/01/30/announcing-windows-10-insider-preview-build-19555/).
+
+* [WSL2] Uso de un grupo de memoria para limitar la cantidad de memoria que usan las operaciones de instalación y conversión [GH 4669]
+* Inclusión de wsl.exe cuando el componente opcional del Subsistema de Windows para Linux no esté habilitado para mejorar la detectabilidad de características.
+* Cambio de wsl.exe para imprimir el texto de ayuda si el componente opcional WSL no está instalado
+* Corrección de la condición de carrera al crear instancias
+* Creación de un archivo wslclient.dll que contiene toda la funcionalidad de la línea de comandos
+* Prevención de bloqueos durante la detención del servicio LxssManagerUser
+* Corrección del error rápido de wslapi.dll cuando el parámetro distroName es NULL
+
+## <a name="build-19041"></a>Compilación 19041
+Para obtener información general de Windows sobre la compilación 19041, visita el [blog de Windows](https://blogs.windows.com/windowsexperience/2019/12/10/announcing-windows-10-insider-preview-build-19041/).
+
+* [WSL2] Eliminación de la máscara de señal antes de iniciar los procesos
+* [WSL2] Actualización del kernel de Linux a la versión 4.19.84
+* Control de la creación de symlink /etc/resolv.conf cuando symlink no es relativo
 
 ## <a name="build-19028"></a>Compilación 19028
 Para obtener información general de Windows sobre la compilación 19028, visita el [blog de Windows](https://blogs.windows.com/windowsexperience/2019/11/19/announcing-windows-10-insider-preview-build-19028/).
@@ -513,7 +531,7 @@ Para obtener información general de Windows sobre la compilación 17627, visita
 * Informa de todas las interfaces de red como Ethernet. [GH 2996]
 * Mejor control del archivo /etc/passwd dañado. [GH 3001]
 
-### <a name="console"></a>Console
+### <a name="console"></a>Consola
 * Sin correcciones.
 
 ### <a name="ltp-results"></a>Resultados de LTP:
@@ -526,7 +544,7 @@ Para obtener información general de Windows sobre la compilación 17618, visita
 * Presenta la funcionalidad de pseudoconsola para la interoperabilidad de NT [GH 988, 1366, 1433, 1542, 2370, 2406].
 * El mecanismo de instalación heredado (lxrun.exe) está en desuso. El mecanismo admitido para la instalación de distribuciones es a través de Microsoft Store.
 
-### <a name="console"></a>Console
+### <a name="console"></a>Consola
 * Sin correcciones.
 
 ### <a name="ltp-results"></a>Resultados de LTP:
@@ -542,7 +560,7 @@ Para obtener información general de Windows sobre la compilación 17110, visita
     * Si tienes directorios existentes creados con WSL en una versión anterior de Windows que deben distinguir entre mayúsculas y minúsculas, usa fsutil.exe para marcarlos con distinción de mayúsculas y minúsculas:fsutil.exe file setcasesensitiveinfo <path> enable
 * La llamada del sistema uname devuelve cadenas de finalización NULL.
 
-### <a name="console"></a>Console
+### <a name="console"></a>Consola
 * Sin correcciones.
 
 ### <a name="ltp-results"></a>Resultados de LTP:
@@ -558,7 +576,7 @@ Para obtener información general de Windows sobre la compilación 17107, visita
 * Corrección de la carrera en la que los procesos de corta duración clonados con las marcas CLEARTID y SETTID podrían salir sin borrar la dirección de TID.
 * Muestra un mensaje al actualizar los directorios del sistema de archivos de Linux al pasar de una compilación anterior a 17093. Para más detalles sobre los cambios del sistema de archivos de 17093, consulta las notas de la versión de [17093](https://github.com/MicrosoftDocs/WSL/blob/live/WSL/release-notes.md#build-17093).
 
-### <a name="console"></a>Console
+### <a name="console"></a>Consola
 * Sin correcciones.
 
 ### <a name="ltp-results"></a>Resultados de LTP:
@@ -576,7 +594,7 @@ Para obtener información general de Windows sobre la compilación 17101, visita
 * Corrección de un problema que podría hacer que el servicio pudiera entrar en un bucle infinito cuando el Registro se haya alterado o esté dañado.
 * Corrección de los mensajes de netlink para trabajar con la versión más reciente (de nivel superior 4.14) de iproute2.
 
-### <a name="console"></a>Console
+### <a name="console"></a>Consola
 * Sin correcciones.
 
 ### <a name="ltp-results"></a>Resultados de LTP:
@@ -618,7 +636,7 @@ Las aplicaciones de WSL y Windows ahora pueden comunicarse entre sí a través d
 * Se eliminan los bytes de página finales al cargar imágenes.
 * Reduce los casos en los que execve finaliza el proceso de forma silenciosa
 
-### <a name="console"></a>Console
+### <a name="console"></a>Consola
 * Sin correcciones.
 
 ### <a name="ltp-results"></a>Resultados de LTP:
@@ -632,7 +650,7 @@ Para obtener información general de Windows sobre la compilación 17083, visita
 * Se han corregido bloqueos al desactivar ASLR [GH 1185, 2870]
 * Asegúrate de que las operaciones de mmap aparezcan como atómicas [GH 2732]
 
-### <a name="console"></a>Console
+### <a name="console"></a>Consola
 * Sin correcciones.
 
 ### <a name="ltp-results"></a>Resultados de LTP:
@@ -646,7 +664,7 @@ Para obtener información general de Windows sobre la compilación 17074, visita
 **Importante:** Los metadatos de DrvFs creados antes de esta compilación no se mostrarán correctamente o no se mostrarán en absoluto. Para corregir los archivos afectados, usa chmod y chown para volver a aplicar los metadatos.
 * Se ha corregido un problema con varias señales y llamadas del sistema reiniciables.
 
-### <a name="console"></a>Console
+### <a name="console"></a>Consola
 * Sin correcciones.
 
 ### <a name="ltp-results"></a>Resultados de LTP:
@@ -720,7 +738,7 @@ Para obtener información general de Windows sobre la compilación 17063, visita
 *   `AF_UNIX` está disponible en el SDK de Windows Insider (17061+).
   Lee [este blog](https://blogs.msdn.microsoft.com/commandline/2017/12/19/af_unix-comes-to-windows/) para más información sobre `AF_UNIX` y cómo pueden usarlo los desarrolladores de Windows.
 
-### <a name="console"></a>Console
+### <a name="console"></a>Consola
 * Sin correcciones.
 
 ### <a name="ltp-results"></a>Resultados de LTP:
@@ -752,7 +770,7 @@ Para obtener información general de Windows sobre la compilación 17046, visita
 
       EX: wslpath ‘c:\users’
   ```
-  #### <a name="console"></a>Console
+  #### <a name="console"></a>Consola
 - Sin correcciones.
 
 ### <a name="ltp-results"></a>Resultados de LTP:
@@ -768,7 +786,7 @@ Para obtener información general de Windows sobre la compilación 17040, visita
 #### <a name="wsl"></a>WSL
 - No hay correcciones desde 17035.
 
-#### <a name="console"></a>Console
+#### <a name="console"></a>Consola
 - No hay correcciones desde 17035.
 
 ### <a name="ltp-results"></a>Resultados de LTP:
@@ -783,7 +801,7 @@ Para obtener información general de Windows sobre la compilación 17035, visita
 #### <a name="wsl"></a>WSL
 - En ocasiones, el acceso a los archivos de DrvFs puede producir errores con EINVAL. [GH 2448]
 
-#### <a name="console"></a>Console
+#### <a name="console"></a>Consola
 - Algo de pérdida de color al insertar o eliminar líneas en modo VT.
 
 ### <a name="ltp-results"></a>Resultados de LTP:
@@ -803,7 +821,7 @@ Para obtener información general de Windows sobre la compilación 17025, visita
 - Más correcciones de la canalización stdout/stderr de interoperabilidad.
 - Llamada del sistema syncfs de código auxiliar.
 
-#### <a name="console"></a>Console
+#### <a name="console"></a>Consola
 - Corrección de la traducción de VT de entrada para consolas de terceros [GH 111]
 
 ### <a name="ltp-results"></a>Resultados de LTP:
@@ -829,7 +847,7 @@ Para obtener información general de Windows sobre la compilación 17017, visita
 - Compatibilidad de O_ASYNC con archivos tty/pty.
 - Mejoras y correcciones de errores adicionales
 
-#### <a name="console"></a>Console
+#### <a name="console"></a>Consola
 - No hay cambios relacionados con la consola en esta versión.
 
 ### <a name="ltp-results"></a>Resultados de LTP:
@@ -847,7 +865,7 @@ Para obtener información general de Windows sobre la compilación 16288, visita
 - Inicializa y notifica correctamente uid, gid y mode para los descriptores de archivo de socket [GH 2490]
 - Mejoras y correcciones de errores adicionales
 
-#### <a name="console"></a>Console
+#### <a name="console"></a>Consola
 - No hay cambios relacionados con la consola en esta versión.
 
 ### <a name="ltp-results"></a>Resultados de LTP:
@@ -863,7 +881,7 @@ Para obtener información general de Windows sobre la compilación 162738, visit
 - Anula explícitamente la asignación de las vistas asignadas de secciones basadas en archivos al anular el estado de LX MM [GH 2415]
 - Mejoras y correcciones de errores adicionales
 
-#### <a name="console"></a>Console
+#### <a name="console"></a>Consola
 - No hay cambios relacionados con la consola en esta versión.
 
 ### <a name="ltp-results"></a>Resultados de LTP:
@@ -878,7 +896,7 @@ Para obtener información general de Windows sobre la compilación 162735, visit
 #### <a name="wsl"></a>WSL
 - No hay cambios relacionados con WSL en esta versión.
 
-#### <a name="console"></a>Console
+#### <a name="console"></a>Consola
 - No hay cambios relacionados con la consola en esta versión.
 
 ### <a name="ltp-results"></a>Resultados de LTP:
@@ -909,7 +927,7 @@ Para obtener información general de Windows sobre la compilación 16273, visita
 - Corrección de bloqueo de prueba de socket de Python desde UDP::msg_peek
 - Mejoras y correcciones de errores adicionales
 
-#### <a name="console"></a>Console
+#### <a name="console"></a>Consola
 - No hay cambios relacionados con la consola en esta versión.
 
 ### <a name="ltp-results"></a>Resultados de LTP:
@@ -936,7 +954,7 @@ Para obtener información general de Windows sobre la compilación 16257, visita
 - /dev/ptmx se bloquea después de un uso pesado [GH 1882]
 - Mejoras y correcciones de errores adicionales
 
-#### <a name="console"></a>Console
+#### <a name="console"></a>Consola
 - Corrección para líneas horizontales o guiones bajos en todas partes [GH 2168]
 - Corrección para el orden de procesamiento cambiado hace que NPM sea más difícil de cerrar [GH 2170]
 - Se ha agregado la nueva combinación de colores: https://blogs.msdn.microsoft.com/commandline/2017/08/02/updating-the-windows-console-colors/
@@ -970,7 +988,7 @@ Para obtener información general de Windows sobre la compilación 16251, visita
 - Se ha corregido ptrace para que se detenga en las señales omitidas
 - Mejoras y correcciones de errores adicionales
 
-#### <a name="console"></a>Console
+#### <a name="console"></a>Consola
 - No hay cambios relacionados con la consola en esta versión.
 
 ### <a name="ltp-results"></a>Resultados de LTP:
@@ -990,7 +1008,7 @@ Para obtener información general de Windows sobre la compilación 16241, visita
 #### <a name="wsl"></a>WSL
 - No hay cambios relacionados con WSL en esta versión.
 
-#### <a name="console"></a>Console
+#### <a name="console"></a>Consola
 - Corrección para la generación de un carácter equivocado para DEC de líneas cruzadas, que se notificó originalmente [aquí](https://www.reddit.com/r/Windows10/comments/6in82t/i_believe_ive_found_the_most_obscure_bug_ever/)
 - Corrección para cuando no se muestre texto de salida en la página de códigos 65001 (utf8)
 - No transfieras los cambios hechos en los valores RGB de un color a otras partes de la paleta en el cambio de selección. Esto hará que la hoja de propiedades de la consola sea mucho más fácil de usar.
@@ -1821,7 +1839,7 @@ Para obtener información general de Windows sobre la compilación 14361, visita
 - Se ha actualizado el tamaño inicial de la pila de subprocesos para que coincida con la configuración predeterminada de Ubuntu, y se notifica el tamaño correctamente a la llamada del sistema get_rlimit (GH 172, 258)
 - Se ha mejorado la notificación de nombres de imagen de proceso PICO (por ejemplo, para auditoría)
 - Se ha implementado el comando /proc/mountinfo para df
-- Se ha corregido el código de error de vínculo simbólico para el nombre secundario . y ..
+- Se ha corregido el código de error de vínculo simbólico para el nombre secundario . y .
 - Correcciones de errores y mejoras adicionales
 
 ### <a name="syscall-support"></a>Compatibilidad con llamadas del sistema
