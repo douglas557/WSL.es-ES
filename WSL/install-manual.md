@@ -6,12 +6,12 @@ ms.date: 07/24/2018
 ms.topic: article
 ms.assetid: 9281ffa2-4fa9-4078-bf6f-b51c967617e3
 ms.custom: seodec18
-ms.openlocfilehash: 99215a3bccc3d0b07e8ed4b7629913af3765aec0
-ms.sourcegitcommit: d35870009477813aa4c8fe4e401af4bddef4a47c
+ms.openlocfilehash: aa0b42748115045105bb4e6eae91493bfee11d09
+ms.sourcegitcommit: 467b6c8e9716d1a60dbf9f7658fd9579da365b58
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/22/2019
-ms.locfileid: "72778824"
+ms.lasthandoff: 02/26/2020
+ms.locfileid: "77624929"
 ---
 # <a name="manually-download-windows-subsystem-for-linux-distro-packages"></a>Descargar manualmente el subsistema de Windows para paquetes distribución de Linux
 
@@ -24,8 +24,10 @@ En estos casos, aunque WSL está disponible, ¿cómo se descarga e instala Linux
 ## <a name="downloading-distros"></a>Descarga de distribuciones
 
 Si la aplicación Microsoft Store no está disponible, puede descargar e instalar manualmente Linux distribuciones haciendo clic en estos vínculos:
-* [Ubuntu 18,04](https://aka.ms/wsl-ubuntu-1804)
-* [ARM de Ubuntu 18,04](https://aka.ms/wsl-ubuntu-1804-arm)
+<!-- * [Ubuntu 18.04](https://aka.ms/wsl-ubuntu-1804)
+* [Ubuntu 18.04 ARM](https://aka.ms/wsl-ubuntu-1804-arm) -->
+* Ubuntu 18,04
+* ARM de Ubuntu 18,04
 * [Ubuntu 16,04](https://aka.ms/wsl-ubuntu-1604)
 * [Debian GNU/Linux](https://aka.ms/wsl-debian-gnulinux)
 * [Kali Linux](https://aka.ms/wsl-kali-linux-new)
@@ -57,7 +59,7 @@ curl.exe -L -o ubuntu-1604.appx https://aka.ms/wsl-ubuntu-1604
 
 En el ejemplo anterior, se ejecuta `curl.exe` (no solo `curl`) para asegurarse de que, en PowerShell, se invoca el ejecutable de rizo real, no el alias de rizo de PowerShell para [Invoke-WebRequest](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/invoke-webrequest?view=powershell-6) .
 
-> Nota: el uso de `curl` podría ser preferible si tiene que invocar o crear scripts de pasos de descarga con el shell de CMD o `.bat`  /  scripts `.cmd`.
+> Nota: el uso de `curl` podría ser preferible si tiene que invocar o crear scripts de pasos de descarga con el shell de CMD o `.bat` / scripts `.cmd`.
 
 ## <a name="installing-your-distro"></a>Instalación de distribución
 Si usa Windows 10, puede instalar el distribución con PowerShell. Simplemente vaya a la carpeta que contiene el distribución descargado de arriba y, en ese directorio, ejecute el siguiente comando, donde `app_name` es el nombre del archivo distribución. appx.  
