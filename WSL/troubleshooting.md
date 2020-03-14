@@ -5,12 +5,12 @@ keywords: BashOnWindows, bash, wsl, windows, subsistemawindows, ubuntu
 ms.date: 01/20/2020
 ms.topic: article
 ms.localizationpriority: high
-ms.openlocfilehash: b66392f6ad37af9d61e8b4fb6bb477d0d774ccb6
-ms.sourcegitcommit: f1e471bca7a65073135365e49c0d4e59227bdf25
+ms.openlocfilehash: 9028f1e89e92da94d82b16603b3af60876a4cb86
+ms.sourcegitcommit: 8795e1c4c5d2efdc8a9c78af05fb7be3ac1eef3d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/25/2020
-ms.locfileid: "77575287"
+ms.lasthandoff: 03/13/2020
+ms.locfileid: "79318149"
 ---
 # <a name="troubleshooting-windows-subsystem-for-linux"></a>Solucionar problemas del subsistema de Windows para Linux
 
@@ -86,20 +86,20 @@ Para corregir los problemas relacionados con `udev`, sigue estos pasos:
 
 1. Escribe lo siguiente en `/usr/sbin/policy-rc.d` y guarda los cambios.
   
-   ``` BASH
+   ```bash
    #!/bin/sh
    exit 101
    ```
   
 2. Agrega los permisos de ejecución en `/usr/sbin/policy-rc.d`:
 
-   ``` BASH
+   ```bash
    chmod +x /usr/sbin/policy-rc.d
    ```
   
 3. Ejecute los siguientes comandos:
 
-   ``` BASH
+   ```bash
    dpkg-divert --local --rename --add /sbin/initctl
    ln -s /bin/true /sbin/initctl
    ```
@@ -123,7 +123,7 @@ La instalación de WSL intentará cambiar automáticamente la configuración reg
 
 En el ejemplo siguiente se cambia la configuración regional a en-US:
 
-``` BASH
+```bash
 sudo update-locale LANG=en_US.UTF8
 ```
 
@@ -200,7 +200,7 @@ Al intentar conectarte al servidor SSH se produce el error siguiente: "Connectio
 
 1. Asegúrate de que el servidor OpenSSH esté en ejecución:
 
-   ``` BASH
+   ```bash
    sudo service ssh status
    ```
 
@@ -208,7 +208,7 @@ Al intentar conectarte al servidor SSH se produce el error siguiente: "Connectio
 
 2. Detén el servicio sshd e inicia sshd en modo de depuración:
 
-   ``` BASH
+   ```bash
    sudo service ssh stop
    sudo /usr/sbin/sshd -d
    ```
