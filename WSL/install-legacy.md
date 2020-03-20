@@ -27,14 +27,14 @@ Si no puede actualizar a Fall Creators Update o posterior, siga estos pasos para
 
 1. Activar el modo de desarrollador para ejecutar WSL en la actualización de aniversario de Windows 10 o en Creators Update, debe habilitar el modo de Desarrollador:
 
-    Abrir **configuración** -> **actualizar y seguridad** -> **para desarrolladores**
+    Abrir **configuración** ->  -> de **seguridad y actualización** **para desarrolladores**
 
     Seleccionar el botón de radio modo de desarrollador  
     ![Habilitar el modo de desarrollador](media/updateAndSecurity.png)
 
     > El requisito de habilitar el modo de desarrollador se [quitó en Windows 10 Fall Creators Update](https://blogs.msdn.microsoft.com/commandline/2017/06/08/developer-mode-no-longer-required-for-windows-subsystem-for-linux/)
 
-1. Abra un símbolo del sistema.  Escriba `bash` y presione Entrar
+1. Abra un símbolo del sistema.  Escriba `bash` y presione Entrar.
 
     La primera vez que ejecute bash en Ubuntu en Windows, se le pedirá que acepte la licencia de Canonical. Una vez aceptado, WSL descargará e instalará la instancia de Ubuntu en el equipo y se agregará un acceso directo "Bash on Ubuntu on Windows" al menú Inicio.
 
@@ -56,14 +56,14 @@ Para quitar el distribución heredado de la máquina, ejecute lo siguiente desde
 wsl --unregister Legacy
 ```
 
-Si no usa la versión 1903 o posterior de Windows, es posible que deba ejecutar `wslconfig /u Legacy` o `lxrun /uninstall /full` en su lugar. 
+Si no usa la versión 1903 o posterior de Windows, es posible que tenga que ejecutar `wslconfig /u Legacy` o `lxrun /uninstall /full` en su lugar. 
 
 ### <a name="manually-deleting-the-legacy-distro"></a>Eliminar manualmente el distribución heredado
-Si lo desea, puede eliminar manualmente la instancia heredada. Esto puede ser necesario si se producen problemas al desinstalar el distribución heredado `lxrun.exe`mediante o si se ejecuta Windows 10 Spring 2018 Update (o una versión posterior) que no `lxrun.exe`se distribuyen con.
+Si lo desea, puede eliminar manualmente la instancia heredada. Esto puede ser necesario si se producen problemas al desinstalar el distribución heredado mediante `lxrun.exe`o si se ejecuta Windows 10 Spring 2018 Update (o una versión posterior) que no se distribuyen con `lxrun.exe`.
 
 Para forzar la eliminación de la distribución de WSL heredada, elimine la `%localappdata%\lxss\` carpeta (y todo su subcontenido) mediante el explorador de archivos de Windows o la línea de comandos:
 
-Con PowerShell
+Uso de PowerShell
 ```powershell
 rm -Recurse $env:localappdata/lxss/
 ```

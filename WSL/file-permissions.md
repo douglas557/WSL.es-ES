@@ -25,7 +25,7 @@ Cuando se habilitan los metadatos como una opción de montaje en WSL, se pueden 
 
 WSL puede agregar cuatro atributos extendidos NTFS:
 
-| Nombre de atributo | Descripción |
+| Nombre del atributo | Descripción |
 | --- | --- |
 | $LXUID | IDENTIFICADOR del propietario del usuario |
 | $LXGID | IDENTIFICADOR del propietario del grupo |
