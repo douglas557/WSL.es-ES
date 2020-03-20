@@ -968,7 +968,7 @@ A continuación se muestra una lista de llamadas del sistema nuevas o mejoradas 
 `prlimit64`<br/>
 
 ### <a name="known-issues"></a>Problemas conocidos
-#### <a name="github-issue-2392-windows-folders-not-recognized-by-wsl-httpsgithubcommicrosoftbashonwindowsissues2392"></a>[Problema de GitHub 2392: WSL no reconoce carpetas de Windows…](https://github.com/Microsoft/BashOnWindows/issues/2392)
+#### <a name="github-issue-2392-windows-folders-not-recognized-by-wsl-"></a>[Problema de GitHub 2392: WSL no reconoce carpetas de Windows…](https://github.com/Microsoft/BashOnWindows/issues/2392)
 En la compilación 16257, WSL tiene problemas al enumerar archivos o carpetas de Windows a través de `/mnt/c/...`.
 Este problema se ha corregido y debe publicarse en la compilación de Insider durante la semana que comienza el 14/8/2017.
 

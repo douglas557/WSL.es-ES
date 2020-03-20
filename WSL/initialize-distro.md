@@ -56,7 +56,7 @@ Has terminado. Disfruta con la nueva distribución de Linux en WSL. Para obtener
 
 ![Disfruta del uso de Linux en WSL.](media/linux-on-wsl.png)
 
-## <a name="troubleshooting"></a>Solución de problemas
+## <a name="troubleshooting"></a>Solucionar problemas
 
 A continuación, se muestran errores relacionados y las correcciones sugeridas. Consulta la [página de solución de problemas de WSL](troubleshooting.md) para ver otros errores generales y sus soluciones.
 

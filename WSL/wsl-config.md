@@ -267,7 +267,7 @@ WSL admite dos secciones: `automount` y `network`.
 Sección: `[automount]`
 
 
-| key        | value                          | valor predeterminado      | notas                                                                                                                                                                                                                                                                                                                          |
+| key        | value                          | default      | notas                                                                                                                                                                                                                                                                                                                          |
 |:-----------|:-------------------------------|:-------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | enabled    | boolean                        | true         | `true` hace que las unidades fijas (es decir, `C:/` o `D:/`) se monten automáticamente con DrvFs en `/mnt`.  `false` significa que las unidades no se montarán automáticamente, pero podrías montarlas de forma manual o a través de `fstab`.                                                                                                             |
 | mountFsTab | boolean                        | true         | `true` establece `/etc/fstab` para que se procese en el inicio de WSL. /etc/fstab es un archivo donde puedes declarar otros sistemas de archivos, como un recurso compartido de SMB. Por lo tanto, puedes montar estos sistemas de archivos automáticamente en WSL en el inicio.                                                                                                                |
@@ -282,7 +282,7 @@ De manera predeterminada, WSL establece uid y gid en el valor del usuario predet
 
 Establecer diferentes opciones de montaje para las unidades de Windows (DrvFs) puede controlar cómo se calculan los permisos de archivo para los archivos de Windows. Están disponibles las opciones siguientes:
 
-| Tecla | Descripción | Predeterminado |
+| Clave | Descripción | Valor predeterminado |
 |:----|:----|:----|
 |uid| Id. de usuario que se usa para el propietario de todos los archivos | Id. de usuario predeterminado de su distribución WSL (en la primera instalación, el valor predeterminado es 1000)
 |gid| Id. de grupo que se usa para el propietario de todos los archivos | Id. de grupo predeterminado de su distribución WSL (en la primera instalación, el valor predeterminado es 1000)
@@ -296,7 +296,7 @@ Establecer diferentes opciones de montaje para las unidades de Windows (DrvFs) p
 
 Etiqueta de la sección: `[network]`
 
-| key | value | valor predeterminado | notas|
+| key | value | default | notas|
 |:----|:----|:----|:----|
 | generateHosts | boolean | `true` | `true` establece WSL para generar `/etc/hosts`. El archivo `hosts` contiene una asignación estática de direcciones IP correspondientes a nombres de host. |
 | generateResolvConf | boolean | `true` | `true` establece WSL para generar `/etc/resolv.conf`. `resolv.conf` contiene una lista de DNS que es capaz de resolver un nombre de host determinado en su dirección IP. | 
@@ -307,7 +307,7 @@ Etiqueta de la sección: `[interop]`
 
 Estas opciones están disponibles en la compilación 17713 de Insider y versiones posteriores.
 
-| key | value | valor predeterminado | notas|
+| key | value | default | notas|
 |:----|:----|:----|:----|
 | enabled | boolean | `true` | La configuración de esta clave determinará si WSL admitirá el inicio de procesos de Windows. |
 | appendWindowsPath | boolean | `true` | Establecer esta clave determinará si WSL agregará elementos de ruta de acceso de Windows a la variable de entorno $PATH. | 
