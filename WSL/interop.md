@@ -7,10 +7,10 @@ ms.assetid: 3cefe0db-7616-4848-a2b6-9296746a178b
 ms.custom: seodec18
 ms.localizationpriority: high
 ms.openlocfilehash: f8b0150c044f5011b84e80cac4befd752c4dc552
-ms.sourcegitcommit: 0b5a9f8982dfff07fc8df32d74d97293654f8e12
+ms.sourcegitcommit: 39d3a2f0f4184eaec8d8fec740aff800e8ea9ac7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 04/24/2020
 ms.locfileid: "71269805"
 ---
 # <a name="windows-subsystem-for-linux-interoperability-with-windows"></a>Interoperabilidad del subsistema de Windows para Linux con Windows
@@ -89,7 +89,7 @@ Las aplicaciones que se ejecutan de esta manera tienen las siguientes propiedade
 1. Se ejecutan como el usuario activo de Windows.
 1. Aparecen en el administrador de tareas de Windows como si se ejecutaran directamente desde el símbolo del sistema de CMD.
 
-Ejemplo:
+Por ejemplo:
 
 ``` BASH
 $ notepad.exe
@@ -215,7 +215,7 @@ Los archivos binarios de Linux se pueden invocar desde el símbolo del sistema d
 1. Se ejecutan como usuario predeterminado de WSL.
 1. Tienen los mismos derechos administrativos de Windows que el terminal y el proceso de llamada.
 
-Ejemplo:
+Por ejemplo:
 
 ```console
 C:\temp> bash -c "ls -la"
@@ -238,7 +238,7 @@ C:\temp> dir | bash -c "grep foo"
 C:\temp> bash -c "ls -la" > out.txt
 ```
 
-Los comandos de WSL pasados a `bash -c` se reenvían al proceso de WSL sin modificaciones.  Las rutas de acceso de archivo deben especificarse en el formato de WSL y se debe tener cuidado al escapar caracteres relevantes. Ejemplo:
+Los comandos de WSL pasados a `bash -c` se reenvían al proceso de WSL sin modificaciones.  Las rutas de acceso de archivo deben especificarse en el formato de WSL y se debe tener cuidado al escapar caracteres relevantes. Por ejemplo:
 
 ```console
 C:\temp> bash -c "ls -la /proc/cpuinfo"
@@ -257,7 +257,7 @@ El subsistema de Windows para Linux puede invocar archivos binarios de Windows d
 1. Se ejecutan como el usuario activo de Windows.
 1. Aparecen en el administrador de tareas de Windows como si se ejecutaran directamente desde el símbolo del sistema de CMD.
 
-Ejemplo:
+Por ejemplo:
 
 ``` BASH
 $ /mnt/c/Windows/System32/notepad.exe
