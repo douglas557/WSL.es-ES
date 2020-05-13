@@ -1,0 +1,40 @@
+- name: Documentación de WPF
+  href: index.md
+- name: Introducción
+  items:
+    - name: ¿Qué es WSL?
+      href: about.md
+    - name: "Novedades de WSL\_2"
+      href: wsl2-index.md
+    - name: "Comparación de WSL\_2 con WSL\_1"
+      href: compare-versions.md
+- name: Inicio rápido
+  items:
+    - name: "Instalación de WSL y actualización a WSL\_2"
+      href: install-win10.md
+    - name: "Instalar en Windows\_Server"
+      href: install-on-server.md
+    - name: Creación de una cuenta de usuario y una contraseña
+      href: user-support.md
+- name: Procedimientos
+  items:
+    - name: Comandos de interoperabilidad
+      href: interop.md
+    - name: Comandos de inicio y configuraciones
+      href: wsl-config.md
+    - name: Permisos de archivo
+      href: file-permissions.md
+    - name: Configuración de WSL para su empresa
+      href: enterprise.md
+    - name: Compilación d una distribución personalizada
+      href: build-custom-distro.md
+    - name: Referencia de la línea de comandos
+      href: reference.md
+- name: Preguntas más frecuentes
+  href: faq.md
+- name: "P+F sobre WSL\_2"
+  href: wsl2-faq.md
+- name: Solucionar problemas
+  href: troubleshooting.md
+- name: Notas de la versión
+  href: release-notes.md
