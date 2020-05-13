@@ -4,12 +4,12 @@ description: Lista de referencia y configuración de varias distribuciones de Li
 keywords: BashOnWindows, bash, wsl, windows, subsistema de windows para linux, subsistemawindows, ubuntu, wsl.conf, wslconfig
 ms.date: 05/12/2020
 ms.topic: article
-ms.openlocfilehash: 59419919be138a20ab57e1a6d26a411e1531bf9f
-ms.sourcegitcommit: 3fb40fd65b34a5eb26b213a0df6a3b2746b7a9b4
+ms.openlocfilehash: e72822bdec0ef5788bd384a5795a91d746428800
+ms.sourcegitcommit: e6e888f2b88a2d9c105cee46e5ab5b70aa43dd80
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83235903"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83343903"
 ---
 # <a name="wsl-commands-and-launch-configurations"></a>Comandos WSL y configuraciones de inicio
 
@@ -161,6 +161,17 @@ Para reinstalar, busque la distribución en Microsoft Store y seleccione "Inicia
 
 Ejecuta WSL como el usuario especificado. Ten en cuenta que el usuario debe existir dentro de la distribución de WSL.
 
+## <a name="change-the-default-user-for-a-distribution"></a>Cambiar el usuario predeterminado para una distribución
+
+`<DistributionName> config --default-user <Username>`
+
+Cambie el usuario predeterminado para el inicio de sesión de distribución. El usuario ya debe existir dentro de la distribución para convertirse en el usuario predeterminado. 
+
+Por ejemplo: `ubuntu config --default-user johndoe` cambiaría el usuario predeterminado de la distribución de Ubuntu al usuario "\ \ \".
+
+> [!NOTE]
+> Si tiene problemas para averiguar el nombre de la distribución, consulte [lista de distribuciones](https://docs.microsoft.com/windows/wsl/wsl-config#list-distributions) para que el comando muestre el nombre oficial de las distribuciones instaladas. 
+
 ## <a name="run-a-specific-distribution"></a>Ejecutar una distribución específica
 
 `wsl -d <DistributionName>`, `wsl --distribution <DistributionName>`
@@ -247,11 +258,11 @@ WSL admite dos secciones: `automount` y `network`.
 
 Sección: `[automount]`
 
-| key        | value                          | default      | HDInsight                                                                                                                                                                                                                                                                                                                          |
+| key        | value                          | default      | notas                                                                                                                                                                                                                                                                                                                          |
 |:-----------|:-------------------------------|:-------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | enabled    | boolean                        | true         | `true` hace que las unidades fijas (es decir, `C:/` o `D:/`) se monten automáticamente con DrvFs en `/mnt`.  `false`significa que las unidades no se montarán automáticamente, pero podría montarlas de forma manual o a través de `fstab` .                                                                                                             |
 | mountFsTab | boolean                        | true         | `true` establece `/etc/fstab` para que se procese en el inicio de WSL. /etc/fstab es un archivo donde puedes declarar otros sistemas de archivos, como un recurso compartido de SMB. Por lo tanto, puedes montar estos sistemas de archivos automáticamente en WSL en el inicio.                                                                                                                |
-| root       | String                         | `/mnt/`      | Establece el directorio donde se montarán automáticamente las unidades fijas. Por ejemplo, si tienes un directorio en WSL en `/windir/` y lo especificas como raíz, esperarías ver que las unidades fijas se monten en `/windir/c`                                                                                              |
+| root       | Cadena                         | `/mnt/`      | Establece el directorio donde se montarán automáticamente las unidades fijas. Por ejemplo, si tienes un directorio en WSL en `/windir/` y lo especificas como raíz, esperarías ver que las unidades fijas se monten en `/windir/c`                                                                                              |
 | opciones    | lista de valores separados por comas | cadena vacía | Este valor se anexa a la cadena predeterminada de opciones de montaje de DrvFs. **Solo se pueden especificar opciones específicas de DrvFs.** No se admiten las opciones que el binario de montaje analizaría normalmente en una marca. Si quieres especificar explícitamente esas opciones, tienes que incluir en /etc/fstab cada unidad para la que quieras hacerlo. |
 
 De manera predeterminada, WSL establece uid y gid en el valor del usuario predeterminado (en una distribución de Ubuntu, el usuario predeterminado se crea con uid=1000,gid=1000). Si el usuario especifica una opción gid o uid explícitamente a través de esta clave, se sobrescribirá el valor asociado. De lo contrario, siempre se anexará el valor predeterminado.
@@ -260,9 +271,9 @@ De manera predeterminada, WSL establece uid y gid en el valor del usuario predet
 
 #### <a name="mount-options"></a>Opciones de montaje
 
-Establecer diferentes opciones de montaje para las unidades de Windows (DrvFs) puede controlar cómo se calculan los permisos de archivo para los archivos de Windows. Están disponibles las siguientes opciones:
+Establecer diferentes opciones de montaje para las unidades de Windows (DrvFs) puede controlar cómo se calculan los permisos de archivo para los archivos de Windows. Están disponibles las opciones siguientes:
 
-| Clave | Descripción | Default |
+| Clave | Descripción | Valor predeterminado |
 |:----|:----|:----|
 |uid| Id. de usuario que se usa para el propietario de todos los archivos | Id. de usuario predeterminado de su distribución WSL (en la primera instalación, el valor predeterminado es 1000)
 |gid| Id. de grupo que se usa para el propietario de todos los archivos | Id. de grupo predeterminado de su distribución WSL (en la primera instalación, el valor predeterminado es 1000)
@@ -276,7 +287,7 @@ Establecer diferentes opciones de montaje para las unidades de Windows (DrvFs) p
 
 Etiqueta de la sección: `[network]`
 
-| key | value | default | HDInsight|
+| key | value | default | notas|
 |:----|:----|:----|:----|
 | generateHosts | boolean | `true` | `true` establece WSL para generar `/etc/hosts`. El archivo `hosts` contiene una asignación estática de direcciones IP correspondientes a nombres de host. |
 | generateResolvConf | boolean | `true` | `true` establece WSL para generar `/etc/resolv.conf`. `resolv.conf` contiene una lista de DNS que es capaz de resolver un nombre de host determinado en su dirección IP. | 
@@ -287,7 +298,7 @@ Etiqueta de la sección: `[interop]`
 
 Estas opciones están disponibles en la compilación 17713 de Insider y versiones posteriores.
 
-| key | value | default | HDInsight|
+| key | value | default | notas|
 |:----|:----|:----|:----|
 | enabled | boolean | `true` | La configuración de esta clave determinará si WSL admitirá el inicio de procesos de Windows. |
 | appendWindowsPath | boolean | `true` | Establecer esta clave determinará si WSL agregará elementos de ruta de acceso de Windows a la variable de entorno $PATH. |
