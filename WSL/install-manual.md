@@ -7,12 +7,12 @@ ms.topic: article
 ms.assetid: 9281ffa2-4fa9-4078-bf6f-b51c967617e3
 ms.custom: seodec18
 ms.localizationpriority: high
-ms.openlocfilehash: 37d8ad589d0108534c27137614a005c0c0ac55bc
-ms.sourcegitcommit: 39d3a2f0f4184eaec8d8fec740aff800e8ea9ac7
+ms.openlocfilehash: b1720d01d492f1dccce8c2e1d2ff430f7769a42e
+ms.sourcegitcommit: 3fb40fd65b34a5eb26b213a0df6a3b2746b7a9b4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "80256378"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83235819"
 ---
 # <a name="manually-download-windows-subsystem-for-linux-distro-packages"></a>Descarga manual de paquetes de distribuciones del subsistema de Windows para Linux
 
@@ -56,7 +56,7 @@ Windows 10 Spring 2018 Update (o posterior) incluye la popular [utilidad de lín
 curl.exe -L -o ubuntu-1604.appx https://aka.ms/wsl-ubuntu-1604
 ```
 
-En el ejemplo anterior, se ejecuta `curl.exe` (no solo `curl`) para garantizar que, en PowerShell, se invoque el ejecutable de curl real, no el alias de curl de PowerShell para [Invoke-WebRequest](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.utility/invoke-webrequest?view=powershell-6).
+En el ejemplo anterior, se ejecuta `curl.exe` (no solo `curl`) para garantizar que, en PowerShell, se invoque el ejecutable de curl real, no el alias de curl de PowerShell para [Invoke-WebRequest](https://docs.microsoft.com/powershell/module/microsoft.powershell.utility/invoke-webrequest?view=powershell-6).
 
 > Nota: El uso de `curl` podría ser preferible si tienes que invocar o crear scripts de pasos de descarga con el shell de Cmd o los scripts `.bat` / `.cmd`.
 

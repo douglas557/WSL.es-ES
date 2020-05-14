@@ -1,68 +1,66 @@
 ---
 title: Windows Subsystem for Linux para empresas
-description: Recursos e instrucciones sobre cómo usar mejor el subsistema de Windows para Linux en un entorno empresarial.
-keywords: BashOnWindows, bash, WSL, Windows, subsistema de Windows para Linux, windowssubsystem, Ubuntu, Debian, SuSE, Windows 10, Enterprise, implementación, sin conexión, empaquetado, almacenamiento, distribución, instalación, instalación
-ms.date: 09/04/2018
+description: Recursos e instrucciones sobre cómo usar mejor el Subsistema de Windows para Linux en un entorno empresarial.
+keywords: BashOnWindows, bash, WSL, Windows, subsistema de windows para linux, subsistemawindows, ubuntu, debian, suse, windows 10, empresa, implementación, sin conexión, empaquetado, almacenamiento, distribución, instalación, instalar
+ms.date: 05/15/2020
 ms.topic: article
-ms.assetid: 7afaeacf-435a-4e58-bff0-a9f0d75b8a51
-ms.custom: seodec18
-ms.openlocfilehash: c32d62267c77d87fb200cfe43b8e6f43b4e3a56d
-ms.sourcegitcommit: 0b5a9f8982dfff07fc8df32d74d97293654f8e12
-ms.translationtype: MT
+ms.localizationpriority: high
+ms.openlocfilehash: 02f4ff41614f78c0e588f329c777a87f8b416233
+ms.sourcegitcommit: 3fb40fd65b34a5eb26b213a0df6a3b2746b7a9b4
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71269861"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83235828"
 ---
-# <a name="windows-subsystem-for-linux-for-enterprise"></a>Windows Subsystem for Linux para empresas
+# <a name="set-up-windows-subsystem-for-linux-for-your-enterprise-company"></a>Configuración del Subsistema de Windows para Linux para tu empresa
 
-El Microsoft Store para la empresa ofrece una gran variedad de soluciones a las empresas que desean implementar WSL en su empresa. Los [documentos en línea](https://docs.microsoft.com/en-us/microsoft-store/) de la Microsoft Store para empresas son un excelente recurso para averiguar información general sobre la experiencia de la tienda.
+Microsoft Store para Empresas ofrece una gran variedad de soluciones a las empresas que buscan implementar WSL en su empresa. Los [documentos de Microsoft Store para Empresas y Educación](https://docs.microsoft.com/microsoft-store/) son un excelente recurso para obtener información general sobre la experiencia de Store.
 
-Si es una empresa que solo está pensando en empezar a implementar WSL, puede seguir estos pasos, que se explican en la Microsoft Store docs:
+Si perteneces a una empresa que solo busca prepararse para empezar a implementar WSL, sigue estos pasos:
 
-* [Regístrese en el Microsoft Store para empresas y empiece a trabajar](https://docs.microsoft.com/en-us/microsoft-store/sign-up-microsoft-store-for-business-overview)
-* [Administre sus productos y servicios (incluyendo quién puede acceder a qué aplicaciones de su tienda privada)](https://docs.microsoft.com/en-us/microsoft-store/manage-apps-microsoft-store-for-business-overview). Aquí puede Agregar WSL distribuciones a su tienda y controlar quién puede instalarlos.
-* [Use un método de distribución de su elección para implementar el software en su empresa.](https://docs.microsoft.com/en-us/microsoft-store/distribute-apps-to-your-employees-microsoft-store-for-business)
-* Comunique a los usuarios que tienen acceso a WSL distribuciones que pueden [usar estos pasos](https://docs.microsoft.com/en-us/windows/wsl/install-win10) para instalar el distribución o distribuciones de su elección 
+* [Regístrate en Microsoft Store para Empresas y empieza a trabajar](https://docs.microsoft.com/microsoft-store/sign-up-microsoft-store-for-business-overview).
+* [Administra tus productos y servicios (incluido quien puede acceder a cada aplicación de tu tienda privada)](https://docs.microsoft.com/microsoft-store/manage-apps-microsoft-store-for-business-overview). Aquí puedes agregar distribuciones de WSL a tu tienda y controlar quién puede instalarlas.
+* [Usa un método de distribución de tu elección para implementar el software en tu empresa](https://docs.microsoft.com/microsoft-store/distribute-apps-to-your-employees-microsoft-store-for-business).
+* Comunica a los empleados de tu empresa que pueden usar este vínculo de documentación para instalar WSL: [Instalar el Subsistema de Windows para Linux](./install-win10.md)
 
-## <a name="how-to-distribute-a-distro-offline"></a>Cómo distribuir un distribución sin conexión
+## <a name="how-to-distribute-a-linux-distribution-on-windows-offline"></a>Instalación de una distribución de Linux en Windows sin conexión
 
-Si los equipos de su empresa no tienen acceso al Microsoft Store o al Microsoft Store para empresas, puede descargar el instalador de un distribución de Linux que tenga una licencia sin conexión siguiendo estos pasos. 
+Si los equipos de tu empresa no tienen acceso a Microsoft Store o a Microsoft Store para Empresas, puedes seguir los pasos que hay a continuación para descargar el instalador de una distribución de Linux que tenga una licencia sin conexión.
 
-### <a name="set-up-an-azure-active-directory-ad-account"></a>Configuración de una cuenta de Azure Active Directory (AD) 
+### <a name="set-up-an-azure-active-directory-account"></a>Configuración de una cuenta de Azure Active Directory
 
-Debe tener una cuenta de Azure AD y ser el administrador global de su organización para obtener el instalador de Microsoft Store aplicaciones. Si ya tiene una cuenta, puede omitir este paso.
+Tienes que [suscribirte para obtener una cuenta de Azure AD](https://docs.microsoft.com/azure/active-directory/fundamentals/sign-up-organization?WT.mc_id=windows-c9-niner) y ser el administrador global de tu organización a fin de obtener el instalador de las aplicaciones de Microsoft Store. Si ya tienes una cuenta, puedes omitir este paso.
 
-Las instrucciones para registrar una cuenta se pueden encontrar aquí: https://docs.microsoft.com/en-us/microsoft-store/sign-up-microsoft-store-for-business
+### <a name="set-up-wsl-using-your-microsoft-store-for-business-account"></a>Configuración de WSL con una cuenta de Microsoft Store para Empresas
 
-### <a name="sign-into-the-store-for-business-and-go-to-the-homepage"></a>Inicie sesión en la tienda para empresas y vaya a la Página principal.
-Iniciar sesión aquí: www.microsoft.com/business-store
+Las instrucciones para registrar una cuenta se encuentran en el vínculo siguiente: https://docs.microsoft.com/microsoft-store/sign-up-microsoft-store-for-business
 
-![Página principal de la tienda de Microsoft para empresas](media/offlineinstallscreens/1-screen.png)
+1. Inicia sesión en Store para Empresas y ve a la página principal: https://www.microsoft.com/business-store
 
-### <a name="go-to-manage-settings-and-enable-show-offline-apps"></a>Vaya a administrar-> configuración y habilite "Mostrar aplicaciones sin conexión".
+    ![Página principal de MS Store para Empresas](media/offlineinstallscreens/1-screen.png)
 
-![Página de configuración de la tienda Microsoft para empresas](media/offlineinstallscreens/2-screen.png)
+2. Ve a Administrar > Configuración y habilita "Show offline apps" (Mostrar aplicaciones sin conexión).
 
-### <a name="go-back-to-the-main-page-by-clicking-shop-for-my-group"></a>Vuelva a la Página principal haciendo clic en "comprar para mi grupo".
+    ![Página Configuración de MS Store para Empresas](media/offlineinstallscreens/2-screen.png)
 
-![Página principal de la tienda de Microsoft para empresas](media/offlineinstallscreens/1-screen.png)
+3. Para volver a la Página principal, selecciona "Shop for my group" (Comprar para mi grupo).
 
-### <a name="search-for-your-desired-distro-and-select-it"></a>Busque el distribución deseado y selecciónelo.
+    ![Página principal de MS Store para Empresas](media/offlineinstallscreens/1-screen.png)
 
-![Página principal de la tienda de Microsoft para empresas con búsqueda activa](media/offlineinstallscreens/3-screen.png)
+4. Busca la distribución que quieras y selecciónala.
 
-### <a name="select-an-offline-license-in-the-license-type-dropdown-menu-and-click-get-the-app"></a>Seleccione una licencia "sin conexión" en el menú desplegable tipo de licencia y haga clic en "obtener la aplicación".
+    ![Página principal de MS Store para Empresas con búsqueda activa](media/offlineinstallscreens/3-screen.png)
 
-![Página del producto de Microsoft Store for Business Ubuntu](media/offlineinstallscreens/4-screen.png)
+5. Selecciona una licencia "Sin conexión" en el menú desplegable Tipo de licencia y elige "Obtén la aplicación". (Es posible que algunas distribuciones de Linux no proporcionen ninguna licencia sin conexión).
 
-Tenga en cuenta que algunos distribuciones pueden optar por no tener una licencia sin conexión.
+    ![Página del producto de Microsoft Store para Empresas para Ubuntu](media/offlineinstallscreens/4-screen.png)
 
-### <a name="click-the-manage-button-to-get-to-the-apps-product-page"></a>Haga clic en el botón "administrar" para ir a la página del producto de la aplicación.
+6. Selecciona el botón "Administrar" para ir a la página del producto de la aplicación.
 
-![Página del producto de Microsoft Store for Business Ubuntu](media/offlineinstallscreens/5-screen.png)
+    ![Página del producto de Microsoft Store para Empresas para Ubuntu](media/offlineinstallscreens/5-screen.png)
 
-### <a name="select-your-architecture-and-download-the-package-for-offline-use"></a>Seleccione la arquitectura y descargue el paquete para su uso sin conexión
+7. Selecciona la arquitectura y descarga el paquete para su uso sin conexión.
 
-![Página de detalles del producto de Microsoft Store for Business Ubuntu](media/offlineinstallscreens/6-screen.png)
+    ![Página de detalles del producto de Microsoft Store para Empresas para Ubuntu](media/offlineinstallscreens/6-screen.png)
 
-A continuación, este instalador se puede distribuir a cualquier equipo en el que desee instalar WSL.
+A continuación, este instalador se puede distribuir a cualquier equipo en el que quieras instalar WSL.
