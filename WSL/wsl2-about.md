@@ -7,12 +7,12 @@ ms.topic: article
 ms.assetid: 7afaeacf-435a-4e58-bff0-a9f0d75b8a51
 ms.custom: seodec18
 ms.localizationpriority: high
-ms.openlocfilehash: f11aed3a5583d1a68f4a0e095103eb0315ca2c45
-ms.sourcegitcommit: 39d3a2f0f4184eaec8d8fec740aff800e8ea9ac7
+ms.openlocfilehash: 70044105820dd485246ae3fc731cbd6f06183f8a
+ms.sourcegitcommit: e6e888f2b88a2d9c105cee46e5ab5b70aa43dd80
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "80256388"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83343887"
 ---
 # <a name="about-wsl-2"></a>Acerca de WSL 2
 
@@ -34,4 +34,4 @@ Las operaciones de uso intensivo de archivos, como `git clone`, `npm install`, `
 
 ## <a name="full-system-call-compatibility"></a>Compatibilidad completa con las llamadas del sistema
 
-Los archivos binarios de Linux usan llamadas del sistema para ejecutar muchas funciones, como el acceso a archivos, la solicitud de memoria, la creación de procesos, etc. Mientras que WSL 1 usaba una capa de traducción creada por el equipo de WSL, WSL 2 incluye su propio kernel de Linux con total compatibilidad con las llamadas del sistema. Presenta un nuevo y completo conjunto de aplicaciones que se pueden ejecutar en WSL, como Docker. Además, las actualizaciones del kernel de Linux pueden estar listas para agregarse inmediatamente al equipo, en lugar de tener que esperar a que el equipo de WSL implemente los cambios y, después, los agregue.
+Los archivos binarios de Linux usan llamadas del sistema para ejecutar muchas funciones, como el acceso a archivos, la solicitud de memoria, la creación de procesos, etc. Mientras que WSL 1 usaba una capa de traducción creada por el equipo de WSL, WSL 2 incluye su propio kernel de Linux con total compatibilidad con las llamadas del sistema. Presenta un nuevo y completo conjunto de aplicaciones que se pueden ejecutar en WSL, como Docker. Además, las actualizaciones del kernel de Linux pueden agregarse inmediatamente al equipo, en lugar de tener que esperar a que el equipo de WSL implemente los cambios y, después, los agregue.

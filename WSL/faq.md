@@ -6,12 +6,12 @@ ms.date: 9/4/2018
 ms.topic: article
 ms.assetid: 129101ed-b88a-43c2-b6a2-cd2c4ff6fee1
 ms.localizationpriority: high
-ms.openlocfilehash: 5651b0869ff97899a768985ce6efa006afa77a9b
-ms.sourcegitcommit: 39d3a2f0f4184eaec8d8fec740aff800e8ea9ac7
+ms.openlocfilehash: 3c3681b0e0e8317917b4ec7c37c9bb2f0bbe9c95
+ms.sourcegitcommit: e6e888f2b88a2d9c105cee46e5ab5b70aa43dd80
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "77624939"
+ms.lasthandoff: 05/13/2020
+ms.locfileid: "83343907"
 ---
 # <a name="frequently-asked-questions-about-windows-subsystem-for-linux"></a>Preguntas más frecuentes sobre el subsistema de Windows para Linux
 
@@ -202,9 +202,9 @@ En algunos casos, si desactivas el firewall podrás acceder. En otros casos, sim
 ## <a name="how-do-i-access-a-port-from-wsl-in-windows"></a>¿Cómo obtengo acceso a un puerto desde WSL en Windows?
 WSL comparte la dirección IP de Windows, ya que se ejecuta en Windows. Así pues, puedes obtener acceso a cualquier puerto en localhost; por ejemplo, si tienes contenido web en el puerto 1234, puedes obtener acceso https://localhost:1234 al explorador de Windows.
 
-## <a name="how-can-i-back-up-my-wsl-distros"></a>¿Cómo puedo realizar una copia de seguridad de mi distribución de WSL?
+## <a name="how-can-i-back-up-my-wsl-distros-or-move-them-from-one-drive-to-another"></a>¿Cómo puedo hacer una copia de seguridad de mis distribuciones de WSL, o bien moverlas de una unidad a otra?
 
-La mejor manera de hacer una copia de seguridad de la distribución está disponible en la versión 1809 y en versiones posteriores de Windows. Puedes exportar toda la distribución a un tarball mediante el comando `wsl --export`. A continuación, puedes importar de nuevo esta distribución en WSL mediante el comando `wsl --import`, lo que te permitirá realizar copias de seguridad y guardar los estados de las distribuciones de WSL. 
+La mejor manera de hacer una copia de seguridad de la distribución o moverla es mediante los comandos de importación y exportación disponibles en la versión 1809 de Windows, así como en versiones posteriores. Puedes exportar toda la distribución a un tarball mediante el comando `wsl --export`. A continuación, puedes importar de nuevo esta distribución en WSL mediante el comando `wsl --import`, que puede asignar una nueva ubicación de disco para la importación, lo que te permitirá realizar copias de seguridad y guardar (o mover) los estados de las distribuciones de WSL. 
 
 Recuerda que los servicios de copia de seguridad tradicionales que copian los archivos de las carpetas AppData (por ejemplo, copias de seguridad de Windows) no dañarán los archivos de Linux.
 

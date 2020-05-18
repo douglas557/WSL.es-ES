@@ -1,19 +1,17 @@
 ---
 title: Notas de la versión del subsistema de Windows para Linux
 description: Notas de la versión del subsistema de Windows para Linux.  Actualizado semanalmente.
-keywords: BashOnWindows, bash, wsl, windows, subsistema de windows para linux, subsistemawindows, ubuntu
+keywords: release notes, wsl, windows, windows subsystem for linux, windowssubsystem, ubuntu
 author: benhillis
-ms.date: 07/31/2017
+ms.date: 05/15/2020
 ms.topic: article
-ms.assetid: 36ea641e-4d49-4881-84eb-a9ca85b1cdf4
-ms.custom: seodec18
 ms.localizationpriority: high
-ms.openlocfilehash: 31bf975afb202a6cfd9a2879cff29a77b2969fce
-ms.sourcegitcommit: 39d3a2f0f4184eaec8d8fec740aff800e8ea9ac7
+ms.openlocfilehash: 3df4d4b4e0c542a3e87306c01a14b7073eb5e677
+ms.sourcegitcommit: 3fb40fd65b34a5eb26b213a0df6a3b2746b7a9b4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/24/2020
-ms.locfileid: "76911709"
+ms.lasthandoff: 05/12/2020
+ms.locfileid: "83235944"
 ---
 # <a name="release-notes-for-windows-subsystem-for-linux"></a>Notas de la versión del subsistema de Windows para Linux
 
@@ -188,7 +186,7 @@ Para obtener información general de Windows sobre la compilación 18890, visita
 * Actualización del encabezado de resolv.conf para hacer referencia a wsl.conf [descrito en GH 3928]
 * Interbloqueo en código de eliminación de epoll [GH 3922]
 * Control de espacios de los argumentos en -import y -export [GH 3932]
-* La extensión de los archivos de mmap no funciona correctamente [GH 3939]
+* La extensión de los archivos mmap no funciona correctamente [GH 3939]
 * Corrección del problema de funcionamiento del acceso a ARM64 \\\\wsl$
 * Agrega el mejor icono predeterminado para wsl.exe
 
@@ -219,7 +217,7 @@ Para obtener información general de Windows sobre la compilación 18305, visita
 
 ### <a name="wsl"></a>WSL
 * pthreads pierden acceso a los archivos cuando sale el subproceso principal [GH 3589]
-* TIOCSCTTY debe omitir el parámetro "force", a menos que sea necesario [GH 3652]
+* TIOCSCTTY debe omitir el parámetro "force", a menos que sea necesario [GH 3652]
 * Mejoras en la línea de comandos de wsl.exe y adición de la funcionalidad de importación y exportación.
 ```
 Usage: wsl.exe [Argument] [Options...] [CommandLine]
@@ -291,7 +289,7 @@ Para obtener información general de Windows sobre la compilación 18277, visita
 Para obtener información general de Windows sobre la compilación 18272, visita el [blog de Windows](https://blogs.windows.com/windowsexperience/2018/10/31/announcing-windows-10-insider-preview-build-18272/).
 
 ### <a name="wsl"></a>WSL
-* **ADVERTENCIA:** Hay un problema en esta compilación que hace que WSL sea inoperable. Al intentar iniciar la distribución, verás el error "Interfaz no compatible". El problema se ha solucionado y estará en la compilación del modo anticipado de Insider de la próxima semana. Si has instalado esta compilación, puedes revertir a la compilación anterior de Windows mediante "Volver a la versión anterior de Windows 10" en Configuración-> Actualización y seguridad > Recuperación.
+* **ADVERTENCIA:** Hay un problema en esta compilación que hace que WSL sea inoperable. Al intentar iniciar la distribución, verás el error "Interfaz no compatible". El problema se ha solucionado y estará en la compilación del modo anticipado de Insider de la próxima semana. Si instalaste esta compilación, puedes revertir a la compilación anterior de Windows desde "Volver a la versión anterior de Windows 10" en Configuración-> Actualización y seguridad > Recuperación.
 
 ## <a name="build-18267"></a>Compilación 18267
 Para obtener información general de Windows sobre la compilación 18267, visita el [blog de Windows](https://blogs.windows.com/windowsexperience/2018/10/24/announcing-windows-10-insider-preview-build-18267/).
@@ -526,7 +524,7 @@ Para obtener información general de Windows sobre la compilación 17627, visita
     * Ten en cuenta que las prioridades no son actualmente una característica admitida de WSL, por lo que hay limitaciones, pero el uso estándar debería estar desbloqueado.
 * Compatibilidad con el Firewall de Windows para los procesos de WSL. [GH 1852]
     * Por ejemplo, para permitir que el proceso de Python de WSL escuche en cualquier puerto, use el cmd de Windows con privilegios elevados: ```netsh.exe advfirewall firewall add rule name=wsl_python dir=in action=allow program="C:\users\<username>\appdata\local\packages\canonicalgrouplimited.ubuntuonwindows_79rhkp1fndgsc\localstate\rootfs\usr\bin\python2.7" enable=yes```
-    * Para más información sobre cómo agregar reglas de firewall, consulte el [vínculo](https://support.microsoft.com/en-us/help/947709/how-to-use-the-netsh-advfirewall-firewall-context-instead-of-the-netsh)
+    * Para más información sobre cómo agregar reglas de firewall, consulte el [vínculo](https://support.microsoft.com/help/947709/how-to-use-the-netsh-advfirewall-firewall-context-instead-of-the-netsh)
 * Respeta el shell predeterminado del usuario al usar wsl.exe. [GH 2372]
 * Informa de todas las interfaces de red como Ethernet. [GH 2996]
 * Mejor control del archivo /etc/passwd dañado. [GH 3001]
@@ -556,7 +554,7 @@ Para obtener información general de Windows sobre la compilación 17110, visita
 ### <a name="wsl"></a>WSL
 * Permite que/init finalice desde Windows [GH 2928].
 * DrvFs ahora usa la distinción de mayúsculas y minúsculas por directorio de manera predeterminada (equivalente a la opción de montaje "case=dir").
-    * El uso de "case=force" (el comportamiento anterior) requiere el establecimiento de una clave del Registro. Ejecuta el siguiente comando para habilitar "case=force" si necesitas usarlo: reg add HKLM\SYSTEM\CurrentControlSet\Services\lxss /v DrvFsAllowForceCaseSensitivity /t REG_DWORD /d 1
+    * El uso de "case=force" (el comportamiento anterior) requiere del establecimiento de una clave de registro. Ejecuta el siguiente comando para habilitar "case=force" si necesitas usarlo: reg add HKLM\SYSTEM\CurrentControlSet\Services\lxss /v DrvFsAllowForceCaseSensitivity /t REG_DWORD /d 1
     * Si tienes directorios existentes creados con WSL en una versión anterior de Windows que deben distinguir entre mayúsculas y minúsculas, usa fsutil.exe para marcarlos con distinción de mayúsculas y minúsculas:fsutil.exe file setcasesensitiveinfo <path> enable
 * La llamada del sistema uname devuelve cadenas de finalización NULL.
 
@@ -611,7 +609,7 @@ Al iniciar WSL por primera vez después de actualizar a esta compilación, tiene
         * case=force: todos los directorios se tratan con distinción de mayúsculas y minúsculas (excepto la raíz de la unidad). Los nuevos directorios creados con WSL se marcan con distinción de mayúsculas y minúsculas. Este es el comportamiento heredado, excepto para marcar los nuevos directorios que distinguen mayúsculas de minúsculas.
         * case=dir: solo los directorios con la marca de distinción de mayúsculas y minúsculas por directorio se tratan como que distinguen mayúsculas de minúsculas; los otros directorios no distinguen mayúsculas de minúsculas. Los nuevos directorios creados con WSL se marcan con distinción de mayúsculas y minúsculas.
         * case=off: solo los directorios con la marca de distinción de mayúsculas y minúsculas por directorio se tratan como que distinguen mayúsculas de minúsculas; los otros directorios no distinguen mayúsculas de minúsculas. Los nuevos directorios creados con WSL se marcan como sin distinción de mayúsculas y minúsculas.
-    * Nota: Los directorios creados por WSL en versiones anteriores no tienen esta marca establecida, por lo que no se tratará como con distinción entre mayúsculas y minúsculas si usas la opción "case=dir". Próximamente se presentará una manera de establecer esta marca en los directorios existentes.
+    * Nota: Los directorios creados por WSL en versiones anteriores no tienen esta marca establecida, por lo que no se tratarán con la distinción entre mayúsculas y minúsculas si usas la opción "case=dir". Próximamente se presentará una manera de establecer esta marca en los directorios existentes.
     * Ejemplo de montaje con estas opciones (en el caso de las unidades existentes, primero debes desmontar antes de poder montar con distintas opciones): sudo mount -t drvfs C: /mnt/c -o case=dir
     * Por ahora, case=force sigue siendo la opción predeterminada. Se cambiará a case=dir en el futuro.
 * Ahora puedes usar barras diagonales en las rutas de acceso de Windows al montar DrvFs, por ejemplo: sudo mount -t drvfs //server/share /mnt/share
@@ -733,7 +731,7 @@ Para obtener información general de Windows sobre la compilación 17063, visita
 ### <a name="linux-tools-available-to-developers-on-windows"></a>Herramientas de Linux disponibles para desarrolladores en Windows
 
 * La cadena de herramientas de la línea de comandos de Windows incluye bsdtar (tar) y curl.
-  Lee [este blog](https://aka.ms/tarcurlwindows) para más información acerca de cómo agregar estas dos nuevas herramientas y ver cómo dan forma a la experiencia de los desarrolladores en Windows.
+  Lee [este blog](https://aka.ms/tarcurlwindows) para obtener más información acerca de cómo agregar estas dos nuevas herramientas y ver cómo dan forma a la experiencia de los desarrolladores en Windows.
 
 *   `AF_UNIX` está disponible en el SDK de Windows Insider (17061+).
   Lee [este blog](https://blogs.msdn.microsoft.com/commandline/2017/12/19/af_unix-comes-to-windows/) para más información sobre `AF_UNIX` y cómo pueden usarlo los desarrolladores de Windows.
@@ -766,9 +764,9 @@ Para obtener información general de Windows sobre la compilación 17046, visita
       -a    force result to absolute path format
       -u    translate from a Windows path to a WSL path (default)
       -w    translate from a WSL path to a Windows path
-      -m    translate from a WSL path to a Windows path, with ‘/’ instead of ‘\\’
+      -m    translate from a WSL path to a Windows path, with '/' instead of '\\'
 
-      EX: wslpath ‘c:\users’
+      EX: wslpath 'c:\users'
   ```
   #### <a name="console"></a>Consola
 - Sin correcciones.
@@ -1315,7 +1313,7 @@ Para obtener información general de Windows sobre la compilación 15007, visita
 
 ### <a name="known-issue"></a>Problema conocido
 
-- Hay un error conocido en el que la consola no reconoce algunas entradas Ctrl + <key>.  Esto incluye el comando Ctrl-C, que actuará como una presión normal de "c".
+- Hay un error conocido en el que la consola no reconoce algunas entradas Ctrl + <key>.  Esto incluye al comando Ctrl-C, que actuará como una pulsación normal de la tecla "c".
 
   - Solución: Asigna una tecla alternativa a Ctrl+C. Por ejemplo, para asignar Ctrl+K a Ctrl+C, haz lo siguiente: `stty intr \^k`.  Esta asignación es por terminal y tendrá que hacerse *cada* vez que se inicie Bash. Los usuarios pueden explorar la opción para incluirlo en su `.bashrc`
 
@@ -1341,7 +1339,7 @@ Para obtener información general de Windows sobre la compilación 15002, visita
 ### <a name="known-issue"></a>Problema conocido
 
 Dos problemas conocidos:
-- Hay un error conocido en el que la consola no reconoce algunas entradas Ctrl + <key>.  Esto incluye el comando Ctrl-C, que actuará como una presión normal de "c".
+- Hay un error conocido en el que la consola no reconoce algunas entradas Ctrl + <key>.  Esto incluye al comando Ctrl-C, que actuará como una pulsación normal de la tecla "c".
 
   - Solución: Asigna una tecla alternativa a Ctrl+C. Por ejemplo, para asignar Ctrl+K a Ctrl+C, haz lo siguiente: `stty intr \^k`.  Esta asignación es por terminal y tendrá que hacerse *cada* vez que se inicie Bash. Los usuarios pueden explorar la opción para incluirlo en su `.bashrc`
 
@@ -1371,7 +1369,7 @@ Dos problemas conocidos:
 - Se ha corregido el error en el que el nombre de acceso directo se localizaba incorrectamente (GH 696)
 - Se ha corregido la lógica de análisis de elf que valida incorrectamente los encabezados de programa debe ser menor que (o igual a) PATH_MAX. (GH 1048)
 - Se ha implementado la devolución de llamada de statfs para procfs, sysfs, cgroupfs y binfmtfs (GH 1378)
-- Se han corregido ventanas de AptPackageIndexUpdate que no se cierran (GH 1184, también se describe en GH 1193).
+- Se han corregido ventanas de AptPackageIndexUpdate que no se cerraban (GH 1184, también se describe en GH 1193)
 - Se ha agregado compatibilidad con la personalidad de ASLR ADDR_NO_RANDOMIZE. (GH 1148, 1128)
 - Se han mejorado PTRACE_GETSIGINFO, SIGSEGV para los seguimientos de la pila gdb adecuados durante AV (GH 875)
 - Ya no se produce un error en el análisis de elf para los archivos binarios de patchelf. (GH 471)
@@ -1416,7 +1414,7 @@ Para obtener información general de Windows sobre la compilación 14986, visita
 - Se ha corregido un problema en el que ping devolvía una hora de 0,000 ms (GH 1296)
 - Devuelve el código de error correcto cuando se abran demasiados archivos.
 - Se ha corregido un problema en WSL donde la solicitud de NetLink de datos de la interfaz de red generaba un error con EINVAL si la dirección de hardware de la interfaz es de 32 bytes (por ejemplo, la interfaz Teredo)
-   - Ten en cuenta que la utilidad "ip" de Linux contiene un error en el que se bloqueará si WSL informa de una dirección de hardware de 32 bytes. Se trata de un error en "ip", no en WSL. La utilidad "ip" codifica de forma rígida la longitud del búfer de cadena usado para imprimir la dirección de hardware, y el búfer es demasiado pequeño para imprimir una dirección de hardware de 32 bytes.
+   - Ten en cuenta que la utilidad "ip" de Linux contiene un error en el que se bloqueará si WSL informa de una dirección de hardware de 32 bytes. Se trata de un error en "ip", no en WSL. La utilidad "ip" codifica de forma rígida la longitud del búfer de cadena que se usa para imprimir la dirección de hardware, y el búfer es demasiado pequeño como para imprimir una dirección de hardware de 32 bytes.
 - Mejoras y correcciones adicionales
 
 ### <a name="ltp-results"></a>Resultados de LTP:
@@ -1544,7 +1542,7 @@ Ahora se pueden invocar archivos binarios de Windows directamente desde la líne
 Puedes encontrar más información en:
 
 - [Blog del equipo de WSL para Interop](https://blogs.msdn.microsoft.com/wsl/2016/10/19/windows-and-ubuntu-interoperability/)<br/>
-- [Documentación de interoperabilidad de MSDN](https://msdn.microsoft.com/en-us/commandline/wsl/interop)<br/>
+- [Documentación de interoperabilidad de MSDN](https://msdn.microsoft.com/commandline/wsl/interop)<br/>
 
 ### <a name="fixed"></a>Fijo
 
@@ -1594,7 +1592,7 @@ Para obtener información general de Windows sobre la compilación 14942, visita
 
 ### <a name="fixed"></a>Fijo
 
-- Un número de comprobaciones de error direccionadas, incluido el bloqueo de red "ATTEMPTED EXECUTE OF NOEXECUTE MEMORY" que bloqueaba SSH
+- Se solucionaron varias comprobaciones de errores, incluido el bloqueo de red "ATTEMPTED EXECUTE OF NOEXECUTE MEMORY" que bloqueaba SSH
 - Ahora se incluye la compatibilidad de inotifiy con las notificaciones generadas desde aplicaciones Windows en DrvFs
 - Implementa TCP_KEEPIDLE y TCP_KEEPINTVL para mongod. (GH 695)
 - Implementa la llamada del sistema pivot_root
@@ -1621,7 +1619,7 @@ Para obtener información general de Windows sobre la compilación 14936, visita
 Nota: WSL instalará Ubuntu versión 16.04 (Xenial) en lugar de Ubuntu 14.04 (Trusty) en una próxima versión.  Este cambio se aplicará a los usuarios de Insider que instalen nuevas instancias (lxrun.exe /install o a la primera ejecución de bash.exe).  Las instancias existentes con Trusty no se actualizarán automáticamente. Los usuarios pueden actualizar su imagen de Trusty a Xenial con el comando do-release-upgrade.
 
 ### <a name="known-issue"></a>Problema conocido
-WSL está experimentando un problema con algunas implementaciones de sockets.  La comprobación de errores se manifiesta como bloqueo con el error "ATTEMPTED EXECUTE OF NOEXECUTE MEMORY".  La manifestación más común de este problema es un bloqueo cuando se usa ssh.  La causa principal se ha corregido en las compilaciones internas y se enviará a los usuarios de Insider lo antes posible.
+WSL está experimentando un problema con algunas implementaciones de sockets.  La comprobación de errores se manifiesta como un bloqueo con el error "ATTEMPTED EXECUTE OF NOEXECUTE MEMORY".  La manifestación más común de este problema es un bloqueo cuando se usa ssh.  La causa principal se ha corregido en las compilaciones internas y se enviará a los usuarios de Insider lo antes posible.
 
 ### <a name="fixed"></a>Fijo
 
@@ -1816,7 +1814,7 @@ Para obtener información general de Windows sobre la compilación 14361, visita
   - Los usuarios pueden usar case.txt y CASE.TXT en sus unidades de /mnt/c
   - La distinción de mayúsculas y minúsculas solo se admite en Bash en Ubuntu en Windows. Fuera de Bash, NTFS notificará los archivos correctamente, pero puede producirse un comportamiento inesperado al interactuar con los archivos de Windows.
   - La raíz de cada volumen (es decir, /mnt/c) no distingue entre mayúsculas y minúsculas
-  - Puedes encontrar más información sobre cómo controlar estos archivos en Windows [aquí](https://support.microsoft.com/en-us/kb/100625).
+  - Puedes encontrar más información sobre cómo controlar estos archivos en Windows [aquí](https://support.microsoft.com/kb/100625).
 - Compatibilidad con pty/tty considerablemente mejorada.  Ahora se admiten aplicaciones como TMUX (GH 40)
 - Se ha corregido el problema de instalación por el que las cuentas de usuario no siempre se creaban
 - Se ha optimizado la estructura de argumentos de línea de comandos que permite una lista de argumentos extremadamente larga. (GH 153)
@@ -1831,7 +1829,7 @@ Para obtener información general de Windows sobre la compilación 14361, visita
 - strace ahora se cierra correctamente
 - Permite que las canalizaciones se vuelvan a abrir a través de /proc/self/fd (GH 222)
 - Oculta directorios en %LOCALAPPDATA%\lxss de DrvFs (GH 270)
-- Mejor control de bash.exe ~.  Ahora se admiten comandos como "bash ~-c ls" (GH 467)
+- Mejor control de bash.exe ~.  Ahora se admiten comandos como "bash ~ -c ls" (GH 467)
 - Ahora, los sockets notifican las lecturas de epoll disponibles durante el cierre (GH 271)
 - lxrun /uninstall funciona mejor para eliminar archivos y carpetas
 - Se ha corregido ps -f (GH 246)
@@ -1864,8 +1862,8 @@ Para obtener información general de Windows sobre la compilación 14352, visita
 - Se ha corregido un problema con WSL que permite nombres de archivo de más de 255 caracteres
 - Se ha mejorado la compatibilidad con caracteres distintos del inglés
 - Agrega datos de zona horaria de Windows actuales y los establece como valores predeterminados
-- Id. de dispositivo único para cada punto de montaje (corrección de jre, GH 49)
-- Corrige el problema con rutas de acceso que contienen "." y ".."
+- Id. de dispositivo único para cada punto de montaje (corrección de JRE: GH 49)
+- Se ha corregido el problema con rutas de acceso que contienen "." y ".."
 - Se ha agregado compatibilidad con Fifo (GH 71)
 - Se ha actualizado el formato de resolv.conf para que coincida con el formato nativo de Ubuntu
 - Algunas limpiezas de procfs
