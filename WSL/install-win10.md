@@ -5,12 +5,12 @@ keywords: BashOnWindows, bash, wsl, wsl2, windows, subsistema de windows para li
 ms.date: 05/12/2020
 ms.topic: article
 ms.localizationpriority: high
-ms.openlocfilehash: acb83234a90dc5e65c98518b869f29c4ecf973d8
-ms.sourcegitcommit: e6e888f2b88a2d9c105cee46e5ab5b70aa43dd80
+ms.openlocfilehash: ec24bbe6ed3ecc4413e623d12d12f9a92c6db9e6
+ms.sourcegitcommit: f0b33cdd1ce7b461e7f657d44e9798094ef55b55
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83343917"
+ms.lasthandoff: 05/20/2020
+ms.locfileid: "83683030"
 ---
 # <a name="windows-subsystem-for-linux-installation-guide-for-windows-10"></a>Guía de instalación del Subsistema de Windows para Linux para Windows 10
 
@@ -93,13 +93,13 @@ Tendrás que [crear una cuenta de usuario y una contraseña para la nueva distri
 
 Para comprobar la versión de WSL asignada a cada una de las distribuciones de Linux que tienes instaladas, abre la línea de comandos de PowerShell y escribe el comando (solo disponible en [Windows, compilación 19041 o posterior](ms-settings:windowsupdate)) `wsl -l -v`.
 
-```bash
+```powershell
 wsl --list --verbose
 ```
 
 Para establecer que una distribución esté respaldada por una de las dos versiones de WSL, ejecuta:
 
-```bash
+```powershell
 wsl --set-version <distribution name> <versionNumber>
 ```
 
@@ -107,7 +107,7 @@ Asegúrate de reemplazar `<distribution name>` por el nombre real de tu distribu
 
 Además, si quieres que WSL 2 sea la arquitectura predeterminada, puedes hacerlo con este comando:
 
-```bash
+```powershell
 wsl --set-default-version 2
 ```
 
