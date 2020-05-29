@@ -4,12 +4,12 @@ description: Lista de referencia y configuración de varias distribuciones de Li
 keywords: BashOnWindows, bash, wsl, windows, subsistema de windows para linux, subsistemawindows, ubuntu, wsl.conf, wslconfig
 ms.date: 05/12/2020
 ms.topic: article
-ms.openlocfilehash: 914bce22b789d379420823d44d063bc84ec39ac1
-ms.sourcegitcommit: 509691ed3d42c9e0171e6a44e09003d4eb24f9ae
+ms.openlocfilehash: dc488ab988d8e158b5eff7a486a2fe707dbedfd7
+ms.sourcegitcommit: 90f7caeefe886bf6c0ba2b90c1b56b5f9795ad1b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83380432"
+ms.lasthandoff: 05/28/2020
+ms.locfileid: "84153118"
 ---
 # <a name="wsl-commands-and-launch-configurations"></a>Comandos WSL y configuraciones de inicio
 
@@ -311,7 +311,7 @@ Estas opciones están disponibles en la compilación 18980 y versiones posterior
 
 | key | value | default | HDInsight|
 |:----|:----|:----|:----|
-| default | cadena | El nombre de usuario inicial creado en la primera ejecución | Al establecer esta clave, se especifica el usuario que se debe ejecutar como cuando se inicia por primera vez una sesión de WSL. |
+| default | string | El nombre de usuario inicial creado en la primera ejecución | Al establecer esta clave, se especifica el usuario que se debe ejecutar como cuando se inicia por primera vez una sesión de WSL. |
 
 ## <a name="configure-global-options-with-wslconfig"></a>Configurar opciones globales con. wslconfig
 
@@ -338,13 +338,13 @@ Esta configuración afecta a la máquina virtual que alimenta cualquier distribu
 
 | key | value | default | HDInsight|
 |:----|:----|:----|:----|
-| kernel | cadena | Bandeja de entrada proporcionada por el kernel de Microsoft | Una ruta de acceso de Windows absoluta a un kernel de Linux personalizado. |
+| kernel | string | Bandeja de entrada proporcionada por el kernel de Microsoft | Una ruta de acceso de Windows absoluta a un kernel de Linux personalizado. |
 | memoria | tamaño | 80% de la memoria total en Windows | Cantidad de memoria que se va a asignar a la máquina virtual WSL 2. |
-| procesadores | number | El mismo número de procesadores en Windows | El número de procesadores que se asignan a la máquina virtual WSL 2. |
+| procesadores | número | El mismo número de procesadores en Windows | Cuántos procesadores asignar a la máquina virtual WSL 2. |
 | localhostForwarding | boolean | `true` | Valor booleano que especifica si los puertos enlazados a un carácter comodín o localhost en la máquina virtual WSL 2 deben poder conectarse desde el host a través de localhost: Port. |
-| kernelCommandLine | cadena | En blanco | Argumentos adicionales de la línea de comandos del kernel. |
+| kernelCommandLine | string | En blanco | Argumentos adicionales de la línea de comandos del kernel. |
 | swap | tamaño | 25% de tamaño de memoria en Windows redondeado a los GB más cercanos | Cantidad de espacio de intercambio que se va a agregar a la máquina virtual WSL 2, 0 para ningún archivo de intercambio. |
-| Intercambio | tamaño | %USERPROFILE%\AppData\Local\Temp\swap.vhdx | Una ruta de acceso de Windows absoluta al disco duro virtual de intercambio. |
+| Intercambio | string | %USERPROFILE%\AppData\Local\Temp\swap.vhdx | Una ruta de acceso de Windows absoluta al disco duro virtual de intercambio. |
 
 Las entradas con el `path` valor deben ser rutas de acceso de Windows con barras diagonales inversas de escape; por ejemplo:`C:\\Temp\\myCustomKernel`
 
