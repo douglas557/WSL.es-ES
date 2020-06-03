@@ -7,12 +7,12 @@ ms.topic: article
 ms.assetid: 7afaeacf-435a-4e58-bff0-a9f0d75b8a51
 ms.custom: seodec18
 ms.localizationpriority: high
-ms.openlocfilehash: 9cd38fbe3781fd0cd45bcd52c278de548d3da38f
-ms.sourcegitcommit: 3fb40fd65b34a5eb26b213a0df6a3b2746b7a9b4
+ms.openlocfilehash: 6ed12ba9d63d3f4038b67489035e13113a372928
+ms.sourcegitcommit: 9f12e168b80775cd967f22f97376e51043c3667e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83270553"
+ms.lasthandoff: 06/02/2020
+ms.locfileid: "84301206"
 ---
 # <a name="install-windows-subsystem-for-linux"></a>Instalación del Subsistema de Windows para Linux
 
@@ -36,7 +36,7 @@ Existen tres maneras de descargar e instalar tus distribuciones de Linux preferi
 
 - Descargarlas e instalarlas de Microsoft Store (ver la información que hay a continuación).
 - [Descargarlas e instalarlas manualmente desde la línea de comandos](install-manual.md)
-- [Instalarlas en Windows Server]](install-on-server.md)
+- [Instalar en Windows Server](install-on-server.md)
 
 ### <a name="install-from-the-microsoft-store"></a>Descargar desde Microsoft Store
 
