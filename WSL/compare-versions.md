@@ -5,12 +5,12 @@ keywords: BashOnWindows, bash, wsl, windows, subsistemawindows, gnu, linux, ubun
 ms.date: 05/12/2020
 ms.topic: article
 ms.localizationpriority: high
-ms.openlocfilehash: 299caaaeb1bac60d2af780dfdd10a64b218ab1f1
-ms.sourcegitcommit: 1b6191351bbf9e95f3c28fc67abe4bf1bcfd3336
+ms.openlocfilehash: aa656d2e5a301d3f5519065246ba99941e74f642
+ms.sourcegitcommit: 53e6a01cbb989dc1aeaba465af4730afe71beb40
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83270859"
+ms.lasthandoff: 06/01/2020
+ms.locfileid: "84256690"
 ---
 # <a name="comparing-wsl-2-and-wsl-1"></a>Comparación de WSL 2 con WSL 1
 
@@ -28,12 +28,15 @@ Característica | WSL 1 | WSL 2
  VM administradas| ❌ | ✅
  Kernel de Linux completo| ❌ |✅
  Compatibilidad completa con las llamadas del sistema| ❌ | ✅
- Se ejecuta con VMware y VirtualBox| ✅ |❌
+ Se ejecuta con las versiones actuales de VM Ware y VirtualBox| ✅ | ❌
  Rendimiento entre sistemas de archivos del sistema operativo| ✅ | ❌
 
 ¿Ya usas WSL 1 y quieres actualizar a WSL 2? Sigue las instrucciones para [realizar la actualización a WSL 2](./install-win10.md#update-to-wsl-2).
 
-WSL 2 solo está disponible en Windows 10, versión 2004, compilación 19041 o posteriores. Tendrás que [actualizar la versión de Windows](ms-settings:windowsupdate) y [unirte al programa Windows Insider](https://insider.windows.com/insidersigninboth/) en el anillo "Versión preliminar" hasta el lanzamiento de la versión pública a finales de mayo.
+WSL 2 solo está disponible en Windows 10, versión 2004, compilación 19041 o posteriores. Para comprobar la versión de Windows, selecciona la **tecla del logotipo de Windows + R**, escribe **winver** y selecciona **Aceptar**. (También puedes escribir el comando `ver` en el símbolo del sistema de Windows). Es posible que tengas que [actualizar a la versión más reciente de Windows](ms-settings:windowsupdate). En el caso de las compilaciones inferiores a 19041, no se admite WSL en absoluto.
+
+> [!NOTE]
+> WSL 2 funcionará con las [versiones preliminares de VM Ware](https://blogs.vmware.com/workstation/2020/01/vmware-workstation-tech-preview-20h1.html) y [VirtualBox 6.x](https://www.virtualbox.org/wiki/Changelog-6.0).
 
 ## <a name="use-the-linux-file-system-for-faster-performance"></a>Uso del sistema de archivos de Linux para obtener un mayor rendimiento
 
