@@ -5,12 +5,12 @@ keywords: WSL, Windows, windowssubsystem, GNU, Linux, bash, GIT, GitHub, control
 ms.date: 06/04/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 94166371fc0928d6be3b3cfd6cb595c6fac76608
-ms.sourcegitcommit: d95bdbc2fea991ba14a4c9ec53ee0ec19d6bbdb4
+ms.openlocfilehash: 687a12186d11343a2d4131e0fdeeef3bcec902fb
+ms.sourcegitcommit: 5d3898772851e6ac9a310f219cc0d71278f95d22
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84457797"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84671016"
 ---
 # <a name="get-started-using-git-on-windows-subsystem-for-linux"></a>Introducción al uso de Git en el subsistema de Windows para Linux
 
@@ -18,12 +18,12 @@ Git es el sistema de control de versiones que se usa con más frecuencia. Con gi
 
 ## <a name="git-can-be-installed-on-windows-and-on-wsl"></a>GIT se puede instalar en Windows y en WSL
 
-Una consideración importante: al habilitar WSL e instalar una distribución de Linux, está instalando un nuevo sistema de archivos, separado de Windows NTFS C:\. en el equipo. En Linux, las unidades no tienen letras. Se les proporcionan puntos de montaje. La raíz del sistema de archivos `/` es el punto de montaje de la partición raíz, o carpeta, en el caso de WSL. No todo lo `/` que hay en es la misma unidad. Por ejemplo, en mi portátil, he instalado dos versiones de Ubuntu (20,04 y 18,01), así como Debian. Si abro esas distribuciones, selecciona el directorio raíz con el comando `cd ~` y, a continuación, escribe el comando `explorer.exe .` , se abrirá el explorador de archivos de Windows y se mostrará la ruta de acceso del directorio para esa distribución.
+Una consideración importante: al habilitar WSL e instalar una distribución de Linux, está instalando un nuevo sistema de archivos, separado de Windows NTFS C:\. en el equipo. En Linux, las unidades no tienen letras. Se les proporcionan puntos de montaje. La raíz del sistema de archivos `/` es el punto de montaje de la partición raíz, o carpeta, en el caso de WSL. No todo lo `/` que hay en es la misma unidad. Por ejemplo, en mi portátil, he instalado dos versiones de Ubuntu (20,04 y 18,04), así como Debian. Si abro esas distribuciones, selecciona el directorio raíz con el comando `cd ~` y, a continuación, escribe el comando `explorer.exe .` , se abrirá el explorador de archivos de Windows y se mostrará la ruta de acceso del directorio para esa distribución.
 
 | Distribución de Linux | Ruta de acceso de Windows para acceder a la carpeta principal |
 | ----------- | ----------- |
 | Ubuntu 20.04 | `\\wsl$\Ubuntu-20.04\home\username` |
-| Ubuntu 18,01 | `\\wsl$\Ubuntu-18.04\home\username` |
+| Ubuntu 18.04 | `\\wsl$\Ubuntu-18.04\home\username` |
 | Debian | `\\wsl$\Debian\home\username` |
 | Windows PowerShell | `C:\Users\username` |
 
