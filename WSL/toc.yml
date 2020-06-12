@@ -43,4 +43,8 @@
 - name: Solucionar problemas
   href: troubleshooting.md
 - name: Notas de la versión
-  href: release-notes.md
+  items:
+    - name: Notas de la versión generales
+      href: release-notes.md
+    - name: Notas de la versión del kernel de Linux
+      href: kernel-release-notes.md
