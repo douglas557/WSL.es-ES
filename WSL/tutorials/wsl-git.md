@@ -5,12 +5,12 @@ keywords: WSL, Windows, windowssubsystem, GNU, Linux, bash, GIT, GitHub, control
 ms.date: 06/04/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 687a12186d11343a2d4131e0fdeeef3bcec902fb
-ms.sourcegitcommit: 5d3898772851e6ac9a310f219cc0d71278f95d22
+ms.openlocfilehash: 550355ea77c97d68130c8d85e9aef2a6b49ffe63
+ms.sourcegitcommit: eaceda3589b9bd777e0fead5ef33bb16060a55d2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84671016"
+ms.lasthandoff: 06/18/2020
+ms.locfileid: "84978248"
 ---
 # <a name="get-started-using-git-on-windows-subsystem-for-linux"></a>Introducción al uso de Git en el subsistema de Windows para Linux
 
@@ -36,13 +36,32 @@ Deberá instalar git en cada sistema de archivos con el que quiera usarlo.
 
 ## <a name="installing-git"></a>Installing Git
 
-Git ya está instalado con la mayoría de las distribuciones del subsistema de Windows para Linux. sin embargo, es posible que quiera actualizar a la versión más reciente y que tendrá que configurar el archivo de configuración de Git.
+Git ya está instalado con la mayoría de las distribuciones del subsistema de Windows para Linux. sin embargo, es posible que desee actualizar a la versión más reciente. También tendrá que configurar el archivo de configuración de Git.
 
-Para instalar GIT, consulte el sitio [de descarga de Git para Linux](https://git-scm.com/download/linux) . Cada distribución de Linux tiene su propio administrador de paquetes e comando de instalación. Por ejemplo, para instalar git en la distribución Alpine, use: `apk add git` . También puede que desee [instalar git para Windows](https://git-scm.com/download/win) si aún no lo ha hecho.
+Para instalar GIT, consulte el sitio [de descarga de Git para Linux](https://git-scm.com/download/linux) . Cada distribución de Linux tiene su propio administrador de paquetes e comando de instalación.
+
+Para la última versión estable de GIt en Ubuntu/Debian, escriba el comando:
+
+```bash
+sudo apt-get install git
+```
+
+> [!NOTE]
+> También puede que desee [instalar git para Windows](https://git-scm.com/download/win) si aún no lo ha hecho.
 
 ## <a name="git-config-file-setup"></a>Configuración del archivo de configuración de Git
 
-Para configurar el archivo de configuración de Git, abra una línea de comandos para la distribución en la que está trabajando y escriba: `git config --global user.name "Your Name"` y, después, `git config --global user.email "youremail@domain.com"` . Reemplazar el contenido entre comillas por el nombre y la dirección de correo electrónico que usó para crear su cuenta de Git.
+Para configurar el archivo de configuración de Git, abra una línea de comandos para la distribución en la que está trabajando y establezca su nombre con este comando (reemplace "your name" por su nombre de usuario de Git):
+
+```bash
+ `git config --global user.name "Your Name"`
+```
+
+Establezca el correo electrónico con este comando (reemplazando " youremail@domain.com " por el correo electrónico que usa en su cuenta de Git):
+
+```bash
+`git config --global user.email "youremail@domain.com"`
+```
 
 > [!TIP]
 > Si aún no tienes una cuenta de GIT, puedes [registrarte para crear una en GitHub](https://github.com/join). Si nunca has trabajado con GIT, las [guías de GitHub](https://guides.github.com/) pueden resultarte de ayuda para empezar. Si tienes que editar la configuración de GIT, puedes hacerlo con un editor de texto integrado como nano: `nano ~/.gitconfig`.
@@ -61,9 +80,12 @@ git config --global credential.helper "/mnt/c/Program\ Files/Git/mingw64/libexec
 
 Ahora, cualquier operación de GIT que realice dentro de la distribución de WSL usará el Administrador de credenciales. Si ya tiene credenciales almacenadas en caché para un host, accederá a estas desde el Administrador de credenciales. Si no es así, recibirá una respuesta de diálogo que le solicitará sus credenciales, aunque esté en una consola Linux.
 
+> [!NOTE]
+> Si usa una clave de GPG para la seguridad de la firma de código, puede que tenga que [asociar la clave GPG con el correo electrónico de github](https://help.github.com/en/github/authenticating-to-github/associating-an-email-with-your-gpg-key).
+
 ## <a name="adding-a-git-ignore-file"></a>Agregar un archivo de omisión de Git
 
-Se recomienda agregar un [archivo. gitignore](https://help.github.com/en/articles/ignoring-files) a los proyectos. GitHub ofrece [una colección de plantillas. gitignore útiles con las](https://github.com/github/gitignore) configuraciones de archivos. gitignore recomendadas organizadas según el caso de uso.
+Se recomienda agregar un [archivo. gitignore](https://help.github.com/en/articles/ignoring-files) a los proyectos. GitHub ofrece [una colección de plantillas. gitignore útiles con las](https://github.com/github/gitignore) configuraciones de archivos. gitignore recomendadas organizadas según el caso de uso. Por ejemplo, esta es [la plantilla gitignore predeterminada de github para un proyecto Node.js](https://github.com/github/gitignore/blob/master/Node.gitignore).
 
 Si decide [crear un nuevo repositorio mediante el sitio web de github](https://help.github.com/articles/create-a-repo), hay casillas disponibles para inicializar el repositorio con un archivo Léame, el archivo. gitignore configurado para el tipo de proyecto específico y las opciones para agregar una licencia, si es necesario.
 
