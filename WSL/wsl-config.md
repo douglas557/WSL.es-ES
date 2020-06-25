@@ -4,12 +4,12 @@ description: Lista de referencia y configuración de varias distribuciones de Li
 keywords: BashOnWindows, bash, wsl, windows, subsistema de windows para linux, subsistemawindows, ubuntu, wsl.conf, wslconfig
 ms.date: 05/12/2020
 ms.topic: article
-ms.openlocfilehash: dc488ab988d8e158b5eff7a486a2fe707dbedfd7
-ms.sourcegitcommit: 90f7caeefe886bf6c0ba2b90c1b56b5f9795ad1b
+ms.openlocfilehash: e97b1030d5891bf8aa1cb656646a4d9e1d480a3d
+ms.sourcegitcommit: f1b049a1276782d4f2754f46a8d2025b598a0784
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84153118"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85336088"
 ---
 # <a name="wsl-commands-and-launch-configurations"></a>Comandos WSL y configuraciones de inicio
 
@@ -317,7 +317,7 @@ Estas opciones están disponibles en la compilación 18980 y versiones posterior
 
 > **Disponible en Windows Build 19041 y versiones posteriores**
 
-Puede configurar las opciones de WSL globales colocando un `.wslconfig` archivo en el directorio raíz de la carpeta de los usuarios: `C:\Users\<yourUserName>\.wslconfig` . 
+Puede configurar las opciones de WSL globales colocando un `.wslconfig` archivo en el directorio raíz de la carpeta de los usuarios: `C:\Users\<yourUserName>\.wslconfig` . Muchos de estos archivos están relacionados con WSL 2. tenga en cuenta que es posible que tenga que ejecutar `wsl --shutdown` para apagar la máquina virtual WSL 2 y, a continuación, reiniciar la instancia de WSL para que estos cambios surtan efecto.
 
 Este es un archivo. wslconfig de ejemplo:
 
@@ -340,7 +340,7 @@ Esta configuración afecta a la máquina virtual que alimenta cualquier distribu
 |:----|:----|:----|:----|
 | kernel | string | Bandeja de entrada proporcionada por el kernel de Microsoft | Una ruta de acceso de Windows absoluta a un kernel de Linux personalizado. |
 | memoria | tamaño | 80% de la memoria total en Windows | Cantidad de memoria que se va a asignar a la máquina virtual WSL 2. |
-| procesadores | número | El mismo número de procesadores en Windows | Cuántos procesadores asignar a la máquina virtual WSL 2. |
+| procesadores | number | El mismo número de procesadores en Windows | Cuántos procesadores asignar a la máquina virtual WSL 2. |
 | localhostForwarding | boolean | `true` | Valor booleano que especifica si los puertos enlazados a un carácter comodín o localhost en la máquina virtual WSL 2 deben poder conectarse desde el host a través de localhost: Port. |
 | kernelCommandLine | string | En blanco | Argumentos adicionales de la línea de comandos del kernel. |
 | swap | tamaño | 25% de tamaño de memoria en Windows redondeado a los GB más cercanos | Cantidad de espacio de intercambio que se va a agregar a la máquina virtual WSL 2, 0 para ningún archivo de intercambio. |
