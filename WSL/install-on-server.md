@@ -5,12 +5,12 @@ keywords: BashOnWindows, bash, wsl, windows, subsistema de windows para linux, s
 ms.date: 05/12/2020
 ms.topic: article
 ms.localizationpriority: high
-ms.openlocfilehash: 805b7d266020c62e0c6f58889541517d44db3726
-ms.sourcegitcommit: 90f7caeefe886bf6c0ba2b90c1b56b5f9795ad1b
+ms.openlocfilehash: ebcd7f6b10d2b734b1f2a66f64a5e3292855bcf4
+ms.sourcegitcommit: 5d3898772851e6ac9a310f219cc0d71278f95d22
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2020
-ms.locfileid: "84153078"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84671025"
 ---
 # <a name="windows-server-installation-guide"></a>Guía de instalación de Windows Server
 
@@ -25,20 +25,6 @@ Abre PowerShell como administrador y ejecuta:
 ```powershell
     Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
 
-```
-
-**Si buscas obtener una compatibilidad completa con las llamadas del sistema y un mayor rendimiento de E/S, lee la documentación que hay a continuación para instalar WSL 2.**
-
-WSL 2 solo está disponible en Windows 10, versión 2004, compilación 19041 o posteriores. Es posible que tengas que [actualizar la versión de Windows](ms-settings:windowsupdate).
-
-**Si continúas con WSL 1, reinicia la máquina cuando se te pida y sigue con la instalación [aquí](./install-on-server.md#download-a-linux-distribution)** .
-
-## <a name="enable-the-virtual-machine-platform-optional-component"></a>Habilitación del componente opcional Plataforma de máquina virtual
-
-Asegúrate de que el componente opcional "Plataforma de máquina virtual" esté instalado. Para hacerlo ejecuta el siguiente comando en PowerShell:
-
-```powershell
-dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
 ```
 
 ## <a name="download-a-linux-distribution"></a>Descarga de una distribución de Linux
