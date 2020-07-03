@@ -4,12 +4,12 @@ description: Describe la interoperabilidad de Windows con distribuciones de Linu
 ms.date: 05/12/2020
 ms.topic: article
 ms.localizationpriority: high
-ms.openlocfilehash: b1c7a64a86cf088159d1abee3b341328151428f6
-ms.sourcegitcommit: 1b6191351bbf9e95f3c28fc67abe4bf1bcfd3336
+ms.openlocfilehash: 2a9b6c8ac65fe28e029ada7f86475c44220a93fe
+ms.sourcegitcommit: cb8a61e7de08b1c18622fc78bc5dfa38786e921a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83270849"
+ms.lasthandoff: 06/10/2020
+ms.locfileid: "84663138"
 ---
 # <a name="windows-interoperability-with-linux"></a>Interoperabilidad de Windows con Linux
 
@@ -147,6 +147,7 @@ Propiedades de la variable `WSLENV`:
 * Se comparte; existe en entornos de Windows y WSL.
 * Se trata de una lista de variables de entorno que se pueden compartir entre Windows y WSL.
 * Puede formatear variables de entorno para que funcionen correctamente en Windows y WSL.
+* Puede ayudar en el flujo entre WSL y Win32.
 
 > [!NOTE]
 > Antes de la versión 17063, la única variable de entorno de Windows a la que podía tener acceso WSL era `PATH`, por lo que se podían iniciar ejecutables de Win32 desde WSL. A partir de 17063, `WSLENV` comienza a ser compatible.
@@ -163,6 +164,8 @@ Marcas `WSLENV`:
 * `/w`: indica que esta variable de entorno solo debe incluirse al ejecutar Win32 desde WSL.
 
 Las marcas se pueden combinar según sea necesario.
+
+[Obtenga más información sobre WSLENV](https://devblogs.microsoft.com/commandline/share-environment-vars-between-wsl-and-windows/), incluidas las preguntas más frecuentes y ejemplos de configuración del valor de WSLENV en una concatenación de otras variables de entorno predefinidas, cada una con una barra diagonal como sufijo seguida de marcas para especificar cómo se debe traducir el valor y pasar las variables con un script. En este artículo también se incluye un ejemplo para configurar un entorno de desarrollo con el [lenguaje de programación Go](https://golang.org/), configurado para compartir una variable GOPATH entre WSL y Win32.
 
 ## <a name="disable-interoperability"></a>Deshabilitación de la interoperabilidad
 

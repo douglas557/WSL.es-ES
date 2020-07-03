@@ -6,14 +6,30 @@ author: benhillis
 ms.date: 05/15/2020
 ms.topic: article
 ms.localizationpriority: high
-ms.openlocfilehash: 3df4d4b4e0c542a3e87306c01a14b7073eb5e677
-ms.sourcegitcommit: 3fb40fd65b34a5eb26b213a0df6a3b2746b7a9b4
+ms.openlocfilehash: 2fcf24719f037a29bab7652fc75ac82cc0b6176a
+ms.sourcegitcommit: 031a74801e03a90aed4b34c4fd5bfe964fc30994
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83235944"
+ms.lasthandoff: 06/17/2020
+ms.locfileid: "84942599"
 ---
 # <a name="release-notes-for-windows-subsystem-for-linux"></a>Notas de la versión del subsistema de Windows para Linux
+
+## <a name="build-20150"></a>Compilación 20150
+Para obtener información general de Windows sobre la compilación 20150, visite el [blog de Windows](https://blogs.windows.com/windowsexperience/2020/06/17/announcing-windows-10-insider-preview-build-20150/).
+
+* Para obtener más información sobre el proceso de GPU WSL2, consulte el [blog de Windows](https://blogs.windows.com/windowsexperience/2020/06/17/announcing-windows-10-insider-preview-build-20150/).
+* Introduzca la opción de la línea de comandos wsl.exe --install para configurar fácilmente WSL.
+* Introduzca la opción de la línea de comandos wsl.exe --update para administrar las actualizaciones en el kernel de WSL2. 
+* Establezca WSL2 como valor predeterminado.
+* Aumente el tiempo de espera de cierre correcto de la VM WSL2.
+* Corrija la condición de carrera virtio-9p al asignar la memoria del dispositivo.
+* No ejecute un servidor 9p con privilegios elevados si UAC está deshabilitado.
+
+## <a name="build-19640"></a>Compilación 19640
+Para obtener información general de Windows sobre la compilación 19640, visite el [blog de Windows](https://blogs.windows.com/windowsexperience/2020/06/03/announcing-windows-10-insider-preview-build-19640/).
+
+* [WSL2] Mejoras de estabilidad para Virtio-9p (drvfs).
 
 ## <a name="build-19555"></a>Compilación 19555
 Para obtener información general de Windows sobre la compilación 19555, visita el [blog de Windows](https://blogs.windows.com/windowsexperience/2020/01/30/announcing-windows-10-insider-preview-build-19555/).

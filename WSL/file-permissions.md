@@ -6,12 +6,12 @@ ms.date: 01/14/2020
 ms.topic: article
 ms.assetid: 7afaeacf-435a-4e58-bff0-a9f0d75b8a51
 ms.localizationpriority: high
-ms.openlocfilehash: 66cded36fb7182a54a05e7794250808665bd4cf1
-ms.sourcegitcommit: 3fb40fd65b34a5eb26b213a0df6a3b2746b7a9b4
+ms.openlocfilehash: 81d4cfa1ae57cdd077ba8cbd614111881724718a
+ms.sourcegitcommit: f1b049a1276782d4f2754f46a8d2025b598a0784
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83235848"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85336078"
 ---
 # <a name="file-permissions-for-wsl"></a>Permisos de archivo para WSL
 
@@ -108,4 +108,4 @@ Los archivos creados, modificados o a los que se accede en el sistema de archivo
 
 Puedes configurar los permisos de archivo dentro de las unidades de Windows mediante las opciones de montaje de wsl.conf. Las opciones de montaje te permiten establecer las máscaras de permisos `umask`, `dmask` y `fmask`. `umask` se aplica a todos los archivos, `dmask` se aplica solo a los directorios y `fmask` se aplica solo a los archivos. Luego, estas máscaras de permisos se someten a una operación OR lógica cuando se aplican a archivos, por ejemplo: Si tienes un valor de `umask` de `023` y uno de `fmask` de `022`, la máscara de permisos resultante para los archivos será `023`.
 
-Consulta el artículo [Configuración de las opciones de inicio con wslconf](./wsl-config.md#configure-launch-settings-with-wslconf) para obtener instrucciones sobre cómo hacerlo.
+Consulte el artículo [Configuración de las opciones de inicio por distribución con wslconf](./wsl-config.md#configure-per-distro-launch-settings-with-wslconf) para obtener instrucciones sobre cómo hacerlo.

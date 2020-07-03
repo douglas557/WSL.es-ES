@@ -6,23 +6,25 @@ ms.date: 05/12/2020
 ms.topic: article
 ms.assetid: 3cefe0db-7616-4848-a2b6-9296746a178b
 ms.localizationpriority: high
-ms.openlocfilehash: 90a661c408cacbef95a869ac896a40381120d52e
-ms.sourcegitcommit: 1b6191351bbf9e95f3c28fc67abe4bf1bcfd3336
+ms.openlocfilehash: 75da6389beec4af7ac684ec7ee2ef31431e14071
+ms.sourcegitcommit: f1b049a1276782d4f2754f46a8d2025b598a0784
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83270799"
+ms.lasthandoff: 06/24/2020
+ms.locfileid: "85336068"
 ---
 # <a name="what-is-the-windows-subsystem-for-linux"></a>¿Qué es el Subsistema de Windows para Linux?
 
-El subsistema de Windows para Linux permite a los desarrolladores ejecutar un entorno de GNU/Linux, incluida la mayoría de herramientas de línea de comandos, utilidades y aplicaciones, directamente en Windows, sin modificar y sin la sobrecarga de una máquina virtual.
+El Subsistema de Windows para Linux permite a los desarrolladores ejecutar un entorno de GNU/Linux, incluida la mayoría de herramientas de línea de comandos, utilidades y aplicaciones, directamente en Windows, sin modificar y sin la sobrecarga de una máquina virtual tradicional o una configuración de arranque dual.
 
 Se puede hacer lo siguiente:
 
 * Elige tus distribuciones de GNU/Linux favoritas [de Microsoft Store](https://aka.ms/wslstore).
 * Ejecuta herramientas comunes de línea de comandos, como `grep`, `sed`, `awk` u otros archivos binarios ELF-64.
 * Ejecuta scripts de shell de Bash y aplicaciones de línea de comandos de GNU/Linux, como:  
-    * Herramientas: vim, emacs y tmux. *Lenguajes: [NodeJS](https://docs.microsoft.com/windows/nodejs/setup-on-wsl2), Javascript, [Python](https://docs.microsoft.com/windows/python/web-frameworks), Ruby, C/C++, C# & F#, Rust, Go, etc. *Servicios: SSHD, MySQL, Apache, lighttpd, [MongoDB](https://docs.microsoft.com/windows/nodejs/databases) y [PostgreSQL](https://docs.microsoft.com/windows/python/databases).
+    * Herramientas: vim, emacs, tmux.
+    * Idiomas: [NodeJS](https://docs.microsoft.com/windows/nodejs/setup-on-wsl2), Javascript, [Python](https://docs.microsoft.com/windows/python/web-frameworks), Ruby, C/C++, C# & F#, Rust, Go, etc.
+    * Servicios: SSHD, MySQL, Apache, lighttpd, [MongoDB](https://docs.microsoft.com/windows/nodejs/databases) y [PostgreSQL](https://docs.microsoft.com/windows/python/databases).
 * Instala software adicional mediante el administrador de paquetes de distribución de GNU/Linux.
 * Invoca aplicaciones de Windows mediante un shell de línea de comandos de tipo UNIX.
 * Invoca aplicaciones de GNU/Linux en Windows.
