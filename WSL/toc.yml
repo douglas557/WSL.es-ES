@@ -22,6 +22,8 @@
       href: tutorials/wsl-vscode.md
     - name: Introducción a Git
       href: tutorials/wsl-git.md
+    - name: Introducción a las bases de datos
+      href: tutorials/wsl-database.md
     - name: Configuración de la aceleración de GPU (NVIDIA CUDA/DirectML)
       href: tutorials/gpu-compute.md
 - name: Procedimientos
