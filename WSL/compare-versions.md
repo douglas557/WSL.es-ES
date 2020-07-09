@@ -5,12 +5,12 @@ keywords: BashOnWindows, bash, wsl, windows, subsistemawindows, gnu, linux, ubun
 ms.date: 05/12/2020
 ms.topic: article
 ms.localizationpriority: high
-ms.openlocfilehash: bbd5b36f7857d136d3eb2f75eb3d1a36ac2b94f7
-ms.sourcegitcommit: eaceda3589b9bd777e0fead5ef33bb16060a55d2
+ms.openlocfilehash: 8354e9c35d1e97f38c4cf6aa53a861c2c5e290be
+ms.sourcegitcommit: 386d47a1c53a85b91f5a2b0f1f99ce2c46b20a77
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84978268"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86093272"
 ---
 # <a name="comparing-wsl-2-and-wsl-1"></a>Comparación de WSL 2 con WSL 1
 
@@ -25,10 +25,10 @@ Característica | WSL 1 | WSL 2
  Integración entre Windows y Linux| ✅|✅
  Tiempos de arranque rápidos| ✅ | ✅
  Superficie de recursos pequeña| ✅ |✅
+ Se ejecuta con las versiones actuales de VMWare y VirtualBox| ✅ | ✅
  VM administradas| ❌ | ✅
  Kernel de Linux completo| ❌ |✅
  Compatibilidad completa con las llamadas del sistema| ❌ | ✅
- Se ejecuta con las versiones actuales de VMWare y VirtualBox| ✅ | ❌
  Rendimiento entre sistemas de archivos del sistema operativo| ✅ | ❌
 
 ¿Ya usas WSL 1 y quieres actualizar a WSL 2? Sigue las instrucciones para [realizar la actualización a WSL 2](./install-win10.md#update-to-wsl-2).
@@ -36,7 +36,7 @@ Característica | WSL 1 | WSL 2
 WSL 2 solo está disponible en Windows 10, versión 2004, compilación 19041 o posteriores. Para comprobar la versión de Windows, selecciona la **tecla del logotipo de Windows + R**, escribe **winver** y selecciona **Aceptar**. (También puedes escribir el comando `ver` en el símbolo del sistema de Windows). Es posible que tengas que [actualizar a la versión más reciente de Windows](ms-settings:windowsupdate). En el caso de las compilaciones inferiores a 19041, no se admite WSL en absoluto.
 
 > [!NOTE]
-> WSL 2 funcionará con las [versiones preliminares de VMWare](https://blogs.vmware.com/workstation/2020/01/vmware-workstation-tech-preview-20h1.html) y [VirtualBox 6.x](https://www.virtualbox.org/wiki/Changelog-6.0).
+> WSL 2 funcionará con [VMWare 15.5.5 y versiones posteriores](https://blogs.vmware.com/workstation/2020/05/vmware-workstation-now-supports-hyper-v-mode.html) y [VirtualBox 6 y versiones posteriores](https://www.virtualbox.org/wiki/Changelog-6.0).
 
 ## <a name="use-the-linux-file-system-for-faster-performance"></a>Uso del sistema de archivos de Linux para obtener un mayor rendimiento
 

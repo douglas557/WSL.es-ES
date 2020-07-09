@@ -4,12 +4,12 @@ description: Describe la interoperabilidad de Windows con distribuciones de Linu
 ms.date: 05/12/2020
 ms.topic: article
 ms.localizationpriority: high
-ms.openlocfilehash: 2a9b6c8ac65fe28e029ada7f86475c44220a93fe
-ms.sourcegitcommit: cb8a61e7de08b1c18622fc78bc5dfa38786e921a
+ms.openlocfilehash: d78cc53aa40f896c20e40a5ef00570a97ccac258
+ms.sourcegitcommit: 386d47a1c53a85b91f5a2b0f1f99ce2c46b20a77
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/10/2020
-ms.locfileid: "84663138"
+ms.lasthandoff: 07/08/2020
+ms.locfileid: "86093264"
 ---
 # <a name="windows-interoperability-with-linux"></a>Interoperabilidad de Windows con Linux
 
@@ -151,6 +151,7 @@ Propiedades de la variable `WSLENV`:
 
 > [!NOTE]
 > Antes de la versión 17063, la única variable de entorno de Windows a la que podía tener acceso WSL era `PATH`, por lo que se podían iniciar ejecutables de Win32 desde WSL. A partir de 17063, `WSLENV` comienza a ser compatible.
+> WSLENV distingue entre mayúsculas y minúsculas.
 
 ## <a name="wslenv-flags"></a>Marcas de WSLENV
 

@@ -5,12 +5,12 @@ keywords: BashOnWindows, bash, wsl, wsl2, windows, subsistema de windows para li
 ms.date: 05/12/2020
 ms.topic: article
 ms.localizationpriority: high
-ms.openlocfilehash: 0f59fda8aa093487f09c1817acf47bd88eaae8cc
-ms.sourcegitcommit: f1b049a1276782d4f2754f46a8d2025b598a0784
+ms.openlocfilehash: 222afa3ee2a4e8948cd0159d794fc7a4375e7ba7
+ms.sourcegitcommit: 16ffb1a096a4a7fbb77c58f92258051930cc82da
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85336098"
+ms.lasthandoff: 07/09/2020
+ms.locfileid: "86157941"
 ---
 # <a name="windows-subsystem-for-linux-installation-guide-for-windows-10"></a>Guía de instalación del Subsistema de Windows para Linux para Windows 10
 
@@ -57,7 +57,9 @@ wsl --set-default-version 2
 Es posible que vea este mensaje después de ejecutar el comando: `WSL 2 requires an update to its kernel component. For information please visit https://aka.ms/wsl2kernel`. Siga el vínculo ([https://aka.ms/wsl2kernel](https://aka.ms/wsl2kernel)) e instale MSI desde esa página en nuestra documentación para instalar un kernel de Linux en la máquina para que lo use WSL 2. Una vez instalado el kernel, vuelva a ejecutar el comando, que debería completarse correctamente sin mostrar el mensaje. 
 
 > [!NOTE]
-> La actualización de WSL 1 a WSL 2 puede tardar varios minutos en completarse, en función del tamaño de la distribución de destino. Si ejecuta una instalación anterior (heredada) de WSL 1 de la Actualización de aniversario de Windows 10 o de Creators Update, es posible que se produzca un error de actualización. Siga estas instrucciones para [desinstalar y quitar las distribuciones heredadas](https://docs.microsoft.com/windows/wsl/install-legacy#uninstallingremoving-the-legacy-distro).
+> La actualización de WSL 1 a WSL 2 puede tardar varios minutos en completarse, en función del tamaño de la distribución de destino. Si ejecuta una instalación anterior (heredada) de WSL 1 de la Actualización de aniversario de Windows 10 o de Creators Update, es posible que se produzca un error de actualización. Siga estas instrucciones para [desinstalar y quitar las distribuciones heredadas](https://docs.microsoft.com/windows/wsl/install-legacy#uninstallingremoving-the-legacy-distro). 
+>
+> Si `wsl --set-default-version` resulta en un comando no válido, especifique `wsl --help`. Si `--set-default-version` no aparece, significa que el sistema operativo no lo admite y debe actualizar a la versión 2004, compilación 19041 o posterior.
 
 ## <a name="install-your-linux-distribution-of-choice"></a>Instalación de la distribución de Linux que quieras
 
