@@ -6,12 +6,12 @@ ms.date: 9/4/2018
 ms.topic: article
 ms.assetid: 129101ed-b88a-43c2-b6a2-cd2c4ff6fee1
 ms.localizationpriority: high
-ms.openlocfilehash: 3c3681b0e0e8317917b4ec7c37c9bb2f0bbe9c95
-ms.sourcegitcommit: e6e888f2b88a2d9c105cee46e5ab5b70aa43dd80
+ms.openlocfilehash: 8e3ebb44c139b5e7b8c25e8e813766b0107426dc
+ms.sourcegitcommit: 97cc93f8e26391c09a31a4ab42c4b5e9d98d1c32
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83343907"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86948639"
 ---
 # <a name="frequently-asked-questions-about-windows-subsystem-for-linux"></a>Preguntas más frecuentes sobre el subsistema de Windows para Linux
 
@@ -34,6 +34,10 @@ WSL proporciona una aplicación llamada Bash.exe que, cuando se inicia, abre una
 También puedes tener obtener acceso al sistema de archivos de la máquina local desde el shell de Bash de Linux; encontrarás las unidades locales montadas en la carpeta `/mnt`. Por ejemplo, la unidad `C:` se monta en `/mnt/c`:  
 
 ![Captura de pantalla de la unidad C montada](media/ls.png)
+
+## <a name="could-you-describe-a-typical-development-workflow-that-incorporates-wsl"></a>¿Puede describir un flujo de trabajo de desarrollo típico que incorpore WSL?
+
+WSL va destinado a personas desarrolladoras y está pensado para usarse como parte de un bucle de desarrollo interno. Supongamos que Sam crea una canalización de CI/CD (integración y entrega continuas) y quiere probarla primero en una máquina local (portátil) antes de implementarla en la nube. Sam puede habilitar WSL (y WSL 2 para mejorar la velocidad y el rendimiento) y, después, usar una instancia original de Ubuntu Linux (en el portátil) con el comando y la herramienta de Bash que prefiera. Después de verificar localmente la canalización del desarrollo, Sam puede insertar esa canalización de CI/CD en la nube. Para ello, debe convertirla en un contenedor de Docker e insertar dicho contenedor en una instancia en la nube, que se ejecute en una máquina virtual Ubuntu preparada para producción.
 
 ## <a name="what-is-bash"></a>¿Qué es Bash?
 
@@ -83,7 +87,7 @@ WSL admite las CPU x64 y ARM.
 
 Los puntos de montaje de los discos duros en la máquina local se crean automáticamente y proporcionan un fácil acceso al sistema de archivos de Windows.
 
-**/mnt/\<letra de unidad>/**
+**/mnt/\<drive letter>/**
 
 Un ejemplo de uso sería `cd /mnt/c` para acceder a c:\
 

@@ -1,17 +1,17 @@
 ---
-title: Introducción al Subsistema de Windows para Linux
+title: Sobre el Subsistema de Windows para Linux
 description: Obtén información sobre el Subsistema de Windows para Linux, las diferentes versiones y las formas en que puedes usarlas.
 keywords: BashOnWindows, bash, wsl, windows, subsistemawindows, gnu, linux
 ms.date: 05/12/2020
 ms.topic: article
 ms.assetid: 3cefe0db-7616-4848-a2b6-9296746a178b
-ms.localizationpriority: high
-ms.openlocfilehash: 75da6389beec4af7ac684ec7ee2ef31431e14071
-ms.sourcegitcommit: f1b049a1276782d4f2754f46a8d2025b598a0784
+ROBOTS: NOINDEX
+ms.openlocfilehash: ddc242360adf67e3c5b6cd14d35fb6c869b83b2d
+ms.sourcegitcommit: 97cc93f8e26391c09a31a4ab42c4b5e9d98d1c32
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85336068"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86948629"
 ---
 # <a name="what-is-the-windows-subsystem-for-linux"></a>¿Qué es el Subsistema de Windows para Linux?
 

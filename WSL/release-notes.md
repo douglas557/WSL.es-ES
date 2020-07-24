@@ -6,14 +6,24 @@ author: benhillis
 ms.date: 05/15/2020
 ms.topic: article
 ms.localizationpriority: high
-ms.openlocfilehash: 2fcf24719f037a29bab7652fc75ac82cc0b6176a
-ms.sourcegitcommit: 031a74801e03a90aed4b34c4fd5bfe964fc30994
+ms.openlocfilehash: 1de8f5e287d70c4992e9e6694d8980cbd305957b
+ms.sourcegitcommit: 97cc93f8e26391c09a31a4ab42c4b5e9d98d1c32
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/17/2020
-ms.locfileid: "84942599"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86948689"
 ---
 # <a name="release-notes-for-windows-subsystem-for-linux"></a>Notas de la versión del subsistema de Windows para Linux
+
+## <a name="build-20175"></a>Compilación 20175
+Para obtener información general de Windows sobre la compilación 20175, visite el [blog de Windows](https://blogs.windows.com/windowsexperience/2020/07/22/announcing-windows-10-insider-preview-build-20175/).
+
+* Se ajustó la asignación de memoria predeterminada de la máquina virtual WSL2 para que sea un 50 % de la memoria del host o 8 GB, el tamaño que sea inferior [GH 4166].
+* Se cambió el \\\\prefijo wsl$ por \\\\wsl para admitir el análisis de URI. Todavía se admite la ruta de acceso \\\\wsl$ anterior.
+* Se habilitó la virtualización anidada para WSL2 de forma predeterminada en amd64. Puede deshabilitarla en %userprofile%\\.wslconfig ([wsl2] nestedVirtualization=false).
+* Se modificó el comando wsl.exe --update para que exija iniciar Microsoft Update.
+* Se agregó compatibilidad para cambiar el nombre de un archivo de solo lectura en DrvFs.
+* Se garantizó que los mensajes de error siempre se muestren en la página de códigos correcta.
 
 ## <a name="build-20150"></a>Compilación 20150
 Para obtener información general de Windows sobre la compilación 20150, visite el [blog de Windows](https://blogs.windows.com/windowsexperience/2020/06/17/announcing-windows-10-insider-preview-build-20150/).
@@ -1547,13 +1557,13 @@ Para obtener información general de Windows sobre la compilación 14951, visita
 ### <a name="new-feature-windows--ubuntu-interoperability"></a>Nueva característica: Interoperabilidad de Windows/Ubuntu
 Ahora se pueden invocar archivos binarios de Windows directamente desde la línea de comandos de WSL.  Esto da a los usuarios la capacidad de interactuar con el entorno y el sistema Windows de una manera que antes no era posible.  Como ejemplo rápido, ahora es posible que los usuarios ejecuten los siguientes comandos:
 
-    ```
-    $ export PATH=$PATH:/mnt/c/Windows/System32
-    $ notepad.exe
-    $ ipconfig.exe | grep IPv4 | cut -d: -f2
-    $ ls -la | findstr.exe foo.txt
-    $ cmd.exe /c dir
-    ```
+```bash
+$ export PATH=$PATH:/mnt/c/Windows/System32
+$ notepad.exe
+$ ipconfig.exe | grep IPv4 | cut -d: -f2
+$ ls -la | findstr.exe foo.txt
+$ cmd.exe /c dir
+```
 
 Puedes encontrar más información en:
 

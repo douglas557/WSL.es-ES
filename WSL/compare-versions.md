@@ -1,18 +1,18 @@
 ---
-title: Introducción al Subsistema de Windows para Linux
+title: Comparación de las versiones 1 y 2 de WSL
 description: Obtén información sobre el Subsistema de Windows para Linux, las diferentes versiones y las formas en que puedes usarlas.
 keywords: BashOnWindows, bash, wsl, windows, subsistemawindows, gnu, linux, ubuntu, debian, suse, windows 10, cambios en la experiencia de usuario, WSL 2, kernel de linux, aplicaciones de red, localhost, IPv6, disco de hardware virtual, VHD, limitaciones de VHD, error de VHD
-ms.date: 05/12/2020
+ms.date: 07/22/2020
 ms.topic: article
 ms.localizationpriority: high
-ms.openlocfilehash: 8354e9c35d1e97f38c4cf6aa53a861c2c5e290be
-ms.sourcegitcommit: 386d47a1c53a85b91f5a2b0f1f99ce2c46b20a77
+ms.openlocfilehash: 139bf2200b47f7d1465312f16ed0a3449491dc89
+ms.sourcegitcommit: 97cc93f8e26391c09a31a4ab42c4b5e9d98d1c32
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/08/2020
-ms.locfileid: "86093272"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86948649"
 ---
-# <a name="comparing-wsl-2-and-wsl-1"></a>Comparación de WSL 2 con WSL 1
+# <a name="comparing-wsl-1-and-wsl-2"></a>Comparación de WSL 1 con WSL 2
 
 Los principales objetivos de actualizar el Subsistema de Windows para Linux a una nueva versión son **aumentar el rendimiento del sistema de archivos** y admitir la **compatibilidad completa con las llamadas del sistema**. 
 
