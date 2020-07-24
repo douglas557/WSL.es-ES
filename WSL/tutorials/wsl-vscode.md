@@ -5,12 +5,12 @@ keywords: WSL, Windows, windowssubsystem, GNU, Linux, bash, vs Code, extensión 
 ms.date: 05/28/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 416862201094ba28474918dca8e7d9ce316844cc
-ms.sourcegitcommit: d95bdbc2fea991ba14a4c9ec53ee0ec19d6bbdb4
+ms.openlocfilehash: f5d7bd4f582f504ea3c4bd814454b1dc881ffed2
+ms.sourcegitcommit: 97cc93f8e26391c09a31a4ab42c4b5e9d98d1c32
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2020
-ms.locfileid: "84457787"
+ms.lasthandoff: 07/22/2020
+ms.locfileid: "86948659"
 ---
 # <a name="get-started-using-visual-studio-code-with-windows-subsystem-for-linux"></a>Introducción al uso de Visual Studio Code con el subsistema de Windows para Linux
 
@@ -34,7 +34,7 @@ Visual Studio Code, junto con la extensión Remote-WSL, le permite usar WSL como
 * Instale el [paquete de extensión de desarrollo remoto](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack). Este paquete de extensión incluye la extensión Remote-WSL, además de las extensiones remotas y de contenedores remotos, lo que permite abrir cualquier carpeta en un contenedor, en un equipo remoto o en WSL.
 
 > [!IMPORTANT]
-> Para instalar la extensión Remote-WSL, necesitará la versión [1,35](https://code.visualstudio.com/updates/v1_35) o posterior de vs Code. No se recomienda el uso de WSL en VS Code sin la extensión Remote-WSL, ya que se perderá la compatibilidad con Autocompletar, depuración, detección de errores, etc. Diversión: esta extensión WSL se instala en $HOME/.vscode-Server/Extensions.
+> Para instalar la extensión Remote-WSL, necesitará la versión [1,35](https://code.visualstudio.com/updates/v1_35) o posterior de vs Code. No se recomienda el uso de WSL en VS Code sin la extensión Remote-WSL, ya que se perderá la compatibilidad con Autocompletar, depuración, detección de errores, etc. Diversión: esta extensión WSL se instala en $HOME/.vscode/Extensions (escriba el comando `ls $HOME\.vscode\extensions\` en PowerShell).
 
 ## <a name="update-your-linux-distribution"></a>Actualización de la distribución de Linux
 
@@ -94,7 +94,7 @@ Para instalar GIT, consulte [configuración de Git para trabajar con el subsiste
 
 El nuevo terminal de Windows habilita varias pestañas (Cambie rápidamente entre el símbolo del sistema, PowerShell o varias distribuciones de Linux), enlaces de teclado personalizados (cree sus propias teclas de método abreviado para abrir o cerrar pestañas, copiar y pegar, etc.), emojis ☺ y temas personalizados (esquemas de colores, estilos y tamaños de fuente, imagen de fondo Obtenga más información en los [documentos de Windows terminal](https://docs.microsoft.com/windows/terminal).
 
-1. Obtener [Windows terminal en el Microsoft Store](https://www.microsoft.com/store/apps/9n0dx20hk701): al instalar a través de la tienda, las actualizaciones se controlan automáticamente.
+1. Obtenga [Terminal Windows en Microsoft Store](https://www.microsoft.com/store/apps/9n0dx20hk701): al instalar a través de Microsoft Store, las actualizaciones se controlan automáticamente.
 
 2. Una vez instalado, abre Terminal Windows y selecciona **Configuración** para personalizar el terminal con el archivo `profile.json`.
 
