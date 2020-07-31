@@ -1,16 +1,16 @@
 ---
-title: Comparación de las versiones 1 y 2 de WSL
-description: Obtén información sobre el Subsistema de Windows para Linux, las diferentes versiones y las formas en que puedes usarlas.
+title: Comparación de WSL 2 con WSL 1
+description: 'Compare la versión 1 y la versión 2 del Subsistema de Windows para Linux. Sugerencia: La versión 2 ejecuta un kernel de Linux real y tiene una velocidad de rendimiento más rápida, pero WSL 1 funciona mejor si se trabaja en sistemas de archivos tanto Windows como Linux.'
 keywords: BashOnWindows, bash, wsl, windows, subsistemawindows, gnu, linux, ubuntu, debian, suse, windows 10, cambios en la experiencia de usuario, WSL 2, kernel de linux, aplicaciones de red, localhost, IPv6, disco de hardware virtual, VHD, limitaciones de VHD, error de VHD
 ms.date: 07/22/2020
 ms.topic: article
 ms.localizationpriority: high
-ms.openlocfilehash: 139bf2200b47f7d1465312f16ed0a3449491dc89
-ms.sourcegitcommit: 97cc93f8e26391c09a31a4ab42c4b5e9d98d1c32
+ms.openlocfilehash: ea2c92030a895076be17ad2b99fe34719f84a47f
+ms.sourcegitcommit: b494c8a76f867d69fa7fff4878c4e38140eaeb8a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86948649"
+ms.lasthandoff: 07/28/2020
+ms.locfileid: "87235469"
 ---
 # <a name="comparing-wsl-1-and-wsl-2"></a>Comparación de WSL 1 con WSL 2
 
