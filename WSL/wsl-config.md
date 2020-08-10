@@ -4,12 +4,12 @@ description: Lista de referencia y configuración de varias distribuciones de Li
 keywords: BashOnWindows, bash, wsl, windows, subsistema de windows para linux, subsistemawindows, ubuntu, wsl.conf, wslconfig
 ms.date: 05/12/2020
 ms.topic: article
-ms.openlocfilehash: e97b1030d5891bf8aa1cb656646a4d9e1d480a3d
-ms.sourcegitcommit: f1b049a1276782d4f2754f46a8d2025b598a0784
+ms.openlocfilehash: b8aa740233f3ac9517744212eb7b362a18378822
+ms.sourcegitcommit: 90577817a9321949da2a3971b4c78bb00f6d977f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85336088"
+ms.lasthandoff: 08/10/2020
+ms.locfileid: "88039418"
 ---
 # <a name="wsl-commands-and-launch-configurations"></a>Comandos WSL y configuraciones de inicio
 
@@ -118,7 +118,7 @@ PS C:\Users\sarah>
 
 En Windows 10 versión 1903 [y versiones posteriores](ms-settings:windowsupdate), puede usar `wsl.exe` para administrar las distribuciones en el subsistema de Windows para Linux (WSL), incluida la lista de distribuciones disponibles, la configuración de una distribución predeterminada y la desinstalación de distribuciones.
 
-Cada distribución de Linux administra de forma independiente sus propias configuraciones. Para ver los comandos específicos de la distribución, ejecuta `[distro.exe] /?`.  Por ejemplo, `ubuntu /?`.
+Cada distribución de Linux administra de forma independiente sus propias configuraciones. Para ver los comandos específicos de la distribución, ejecuta `[distro.exe] /?`.  Por ejemplo: `ubuntu /?`.
 
 ## <a name="list-distributions"></a>Enumerar distribuciones
 
@@ -182,7 +182,7 @@ Ejecuta una distribución especificada de WSL, se puede usar para enviar comando
 
 En Windows 10 anterior a la versión 1903, `wslconfig.exe` se debe usar la herramienta de línea de comandos WSL config () para administrar las distribuciones de Linux que se ejecutan en el subsistema de Windows para Linux (WSL).  Te permite enumerar las distribuciones disponibles, establecer una distribución predeterminada y desinstalar las distribuciones.
 
-Si bien WSL Config es útil para las configuraciones que abarcan o coordinan las distribuciones, cada distribución de Linux administra de forma independiente sus propias configuraciones.  Para ver los comandos específicos de la distribución, ejecuta `[distro.exe] /?`.  Por ejemplo, `ubuntu /?`.
+Si bien WSL Config es útil para las configuraciones que abarcan o coordinan las distribuciones, cada distribución de Linux administra de forma independiente sus propias configuraciones.  Para ver los comandos específicos de la distribución, ejecuta `[distro.exe] /?`.  Por ejemplo: `ubuntu /?`.
 
 Para ver todas las opciones disponibles para wslconfig, ejecuta: `wslconfig /?`
 
@@ -339,12 +339,14 @@ Esta configuración afecta a la máquina virtual que alimenta cualquier distribu
 | key | value | default | HDInsight|
 |:----|:----|:----|:----|
 | kernel | string | Bandeja de entrada proporcionada por el kernel de Microsoft | Una ruta de acceso de Windows absoluta a un kernel de Linux personalizado. |
-| memoria | tamaño | 80% de la memoria total en Windows | Cantidad de memoria que se va a asignar a la máquina virtual WSL 2. |
+| memoria | tamaño | 80% de la memoria total en Windows * | Cantidad de memoria que se va a asignar a la máquina virtual WSL 2. |
 | procesadores | number | El mismo número de procesadores en Windows | Cuántos procesadores asignar a la máquina virtual WSL 2. |
 | localhostForwarding | boolean | `true` | Valor booleano que especifica si los puertos enlazados a un carácter comodín o localhost en la máquina virtual WSL 2 deben poder conectarse desde el host a través de localhost: Port. |
 | kernelCommandLine | string | En blanco | Argumentos adicionales de la línea de comandos del kernel. |
 | swap | tamaño | 25% de tamaño de memoria en Windows redondeado a los GB más cercanos | Cantidad de espacio de intercambio que se va a agregar a la máquina virtual WSL 2, 0 para ningún archivo de intercambio. |
 | Intercambio | string | %USERPROFILE%\AppData\Local\Temp\swap.vhdx | Una ruta de acceso de Windows absoluta al disco duro virtual de intercambio. |
+
+* Nota: este valor es true para la compilación 19041 de Windows y puede ser diferente en las compilaciones de Windows del programa Insider.
 
 Las entradas con el `path` valor deben ser rutas de acceso de Windows con barras diagonales inversas de escape; por ejemplo:`C:\\Temp\\myCustomKernel`
 
