@@ -5,12 +5,12 @@ keywords: wsl, windows, kernel de linux, subsistema de windows para linux, kerne
 ms.date: 03/12/2020
 ms.topic: article
 ms.localizationpriority: high
-ms.openlocfilehash: bef722f5653380d9f6d104f1a7c116a7599658c9
-ms.sourcegitcommit: ba52d673c123fe8ae61e872a33e218cfc30a1f82
+ms.openlocfilehash: a718c4a880e2c3147900143c24983835d269a4bc
+ms.sourcegitcommit: a5534257c236cefeebe86e6b3fc4be0be8fac24e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86033039"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88714830"
 ---
 # <a name="updating-the-wsl-2-linux-kernel"></a>Actualización del kernel de Linux en WSL 2
 
@@ -43,7 +43,7 @@ Para obtener más información, consulta el artículo [cambios en la actualizaci
 ## <a name="troubleshooting"></a>Solucionar problemas
 
 ### <a name="this-update-only-applies-to-machines-with-the-windows-subsystem-for-linux"></a>Esta actualización solo se aplica a las máquinas con el subsistema de Windows para Linux.
-Para instalar el kernel de MSI, se requiere WSL y debe habilitarse primero. Si se produce un error, verá el mensaje: `This update only applies to machines with the Windows Subsytem for Linux`. 
+Para instalar el kernel de MSI, se requiere WSL y debe habilitarse primero. Si se produce un error, verá el mensaje: `This update only applies to machines with the Windows Subsystem for Linux`. 
 
 Hay tres posibles motivos para ver este mensaje:
 
