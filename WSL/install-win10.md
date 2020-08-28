@@ -1,16 +1,16 @@
 ---
 title: Instalar el Subsistema de Windows para Linux (WSL) en Windows 10
-description: Instrucciones de instalación para el Subsistema de Windows para Linux en Windows 10.
+description: Obtenga información sobre cómo instalar el Subsistema de Windows para Linux en Windows 10. Windows 10 debe actualizarse a la versión 2004, compilación 19041 o posterior.
 keywords: BashOnWindows, bash, wsl, wsl2, windows, subsistema de windows para linux, subsistemawindows, ubuntu, debian, suse, windows 10, instalación, instalar, habilitación, habilitar, WSL2, versión 2
 ms.date: 05/12/2020
 ms.topic: article
 ms.localizationpriority: high
-ms.openlocfilehash: bab21722e77a0879db70e21003fb237491d99218
-ms.sourcegitcommit: 90577817a9321949da2a3971b4c78bb00f6d977f
+ms.openlocfilehash: 23c72c0e82c90c23fc0406b56dbf8accad0e39df
+ms.sourcegitcommit: fb79750bd71d6ebaed5203b3de71ba85a67227b1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "88039447"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88866165"
 ---
 # <a name="windows-subsystem-for-linux-installation-guide-for-windows-10"></a>Guía de instalación del Subsistema de Windows para Linux para Windows 10
 
@@ -30,9 +30,9 @@ Para instalar solo WSL 1, debes reiniciar la máquina ahora y pasar a la secci�
 
 Para actualizar a WSL 2, debe cumplir los siguientes criterios:
 
-- Ejecutar Windows 10, [actualizado a la versión 2004](ms-settings:windowsupdate), **compilación 19041** o posterior.
+- Ejecutar Windows 10, [actualizado a la versión 1903 o posterior](ms-settings:windowsupdate), **compilación 18362** o posterior.
 
-- Para comprobar la versión de Windows, selecciona la **tecla del logotipo de Windows + R**, escribe **winver** y selecciona **Aceptar**. (También puedes escribir el comando `ver` en el símbolo del sistema de Windows). [Actualiza a la versión más reciente de Windows](ms-settings:windowsupdate) si la compilación es anterior a la 19041. [Obtén el Asistente de Windows Update](https://www.microsoft.com/software-download/windows10).
+- Para comprobar la versión de Windows, selecciona la **tecla del logotipo de Windows + R**, escribe **winver** y selecciona **Aceptar**. (También puedes escribir el comando `ver` en el símbolo del sistema de Windows). [Actualice a la versión más reciente de Windows](ms-settings:windowsupdate) si su compilación es anterior a la 18361. [Obtén el Asistente de Windows Update](https://www.microsoft.com/software-download/windows10).
 
 ### <a name="enable-the-virtual-machine-platform-optional-component"></a>Habilitación del componente opcional "Plataforma de máquina virtual"
 
@@ -59,7 +59,7 @@ Es posible que vea este mensaje después de ejecutar el comando: `WSL 2 requires
 > [!NOTE]
 > La actualización de WSL 1 a WSL 2 puede tardar varios minutos en completarse, en función del tamaño de la distribución de destino. Si ejecuta una instalación anterior (heredada) de WSL 1 de la Actualización de aniversario de Windows 10 o de Creators Update, es posible que se produzca un error de actualización. Siga estas instrucciones para [desinstalar y quitar las distribuciones heredadas](https://docs.microsoft.com/windows/wsl/install-legacy#uninstallingremoving-the-legacy-distro). 
 >
-> Si `wsl --set-default-version` resulta en un comando no válido, especifique `wsl --help`. Si `--set-default-version` no aparece, significa que el sistema operativo no lo admite y debe actualizar a la versión 2004, compilación 19041 o posterior.
+> Si `wsl --set-default-version` resulta en un comando no válido, especifique `wsl --help`. Si `--set-default-version` no aparece, significa que el sistema operativo no lo admite y debe actualizar a la versión 1903, compilación 18362 o posterior.
 
 ## <a name="install-your-linux-distribution-of-choice"></a>Instalación de la distribución de Linux que quieras
 
@@ -96,7 +96,7 @@ Tendrás que [crear una cuenta de usuario y una contraseña para la nueva distri
 
 ## <a name="set-your-distribution-version-to-wsl-1-or-wsl-2"></a>Definición de la versión de la distribución en WSL 1 o WSL 2
 
-Para comprobar la versión de WSL asignada a cada una de las distribuciones de Linux que tienes instaladas, abre la línea de comandos de PowerShell y escribe el comando (solo disponible en [Windows, compilación 19041 o posterior](ms-settings:windowsupdate)) `wsl -l -v`.
+Para comprobar la versión de WSL asignada a cada una de las distribuciones de Linux que tienes instaladas, abre la línea de comandos de PowerShell y escribe el comando (solo disponible en [Windows, compilación 18362 o posterior](ms-settings:windowsupdate)): `wsl -l -v`.
 
 ```powershell
 wsl --list --verbose
@@ -135,7 +135,7 @@ A continuación, se muestran errores relacionados y las correcciones sugeridas. 
   - Asegúrate de que la virtualización está habilitada dentro del BIOS del equipo. Las instrucciones sobre cómo hacerlo variarán de un equipo a otro y lo más probable es que esta característica esté en opciones relacionadas con la CPU.
 
 - **Error al intentar actualizar: `Invalid command line option: wsl --set-version Ubuntu 2`**
-  - Asegúrese de que tiene el Subsistema de Windows para Linux habilitado y de que usa la compilación 19041 de Windows o posterior. Para habilitar WSL, ejecute este comando en un símbolo del sistema de PowerShell con privilegios de administrador: `Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux`.
+  - Asegúrese de que tiene el Subsistema de Windows para Linux habilitado y de que usa la compilación 18362 de Windows o posterior. Para habilitar WSL, ejecute este comando en un símbolo del sistema de PowerShell con privilegios de administrador: `Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux`.
 
 - **La operación solicitada no se pudo completar debido a una limitación del sistema de disco virtual. Los archivos de disco duro virtual deben estar sin comprimir y sin cifrar y no deben ser dispersos.**
   - Anule la selección de la casilla "Compress contents" ("Comprimir contenido") (y también la de "Cifrar los contenidos" si está activada). Para ello, abra la carpeta de perfil de la distribución de Linux. Debe encontrarse en una carpeta del sistema de archivos de Windows, como `USERPROFILE%\AppData\Local\Packages\CanonicalGroupLimited...`.

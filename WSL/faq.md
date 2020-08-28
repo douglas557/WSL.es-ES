@@ -1,17 +1,17 @@
 ---
 title: Preguntas más frecuentes
-description: Preguntas más frecuentes sobre el Subsistema de Windows para Linux.
+description: Encuentre respuestas a las preguntas más frecuentes (P+F) sobre el Subsistema de Windows para Linux 2, como "¿Qué puedo hacer con WSL?".
 keywords: BashOnWindows, bash, WSL, Windows, windowssubsystem, p + f
 ms.date: 9/4/2018
 ms.topic: article
 ms.assetid: 129101ed-b88a-43c2-b6a2-cd2c4ff6fee1
 ms.localizationpriority: high
-ms.openlocfilehash: 8e3ebb44c139b5e7b8c25e8e813766b0107426dc
-ms.sourcegitcommit: 97cc93f8e26391c09a31a4ab42c4b5e9d98d1c32
+ms.openlocfilehash: 9a9f287ceb2ae93286999ed32d655198c8a390c8
+ms.sourcegitcommit: fb79750bd71d6ebaed5203b3de71ba85a67227b1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/22/2020
-ms.locfileid: "86948639"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88866158"
 ---
 # <a name="frequently-asked-questions-about-windows-subsystem-for-linux"></a>Preguntas más frecuentes sobre el subsistema de Windows para Linux
 

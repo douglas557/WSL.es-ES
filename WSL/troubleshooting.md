@@ -5,12 +5,12 @@ keywords: BashOnWindows, bash, wsl, windows, subsistemawindows, ubuntu
 ms.date: 01/20/2020
 ms.topic: article
 ms.localizationpriority: high
-ms.openlocfilehash: cc8f032a99fb087b7ef614dd3a3574cb8ee3f2da
-ms.sourcegitcommit: ba52d673c123fe8ae61e872a33e218cfc30a1f82
+ms.openlocfilehash: 84aecf4f6111cca47ece3c2421be659fb5a27771
+ms.sourcegitcommit: a5534257c236cefeebe86e6b3fc4be0be8fac24e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/07/2020
-ms.locfileid: "86033065"
+ms.lasthandoff: 08/21/2020
+ms.locfileid: "88714853"
 ---
 # <a name="troubleshooting-windows-subsystem-for-linux"></a>Solucionar problemas del subsistema de Windows para Linux
 
@@ -39,6 +39,22 @@ Para contribuir a la documentación de WSL, envía una solicitud de incorporaci�
 Por último, si tu problema está relacionado con el Terminal Windows, la consola de Windows o la interfaz de usuario de la línea de comandos, usa el repositorio del Terminal Windows: https://github.com/microsoft/terminal.
 
 ## <a name="common-issues"></a>Problemas comunes
+
+### <a name="error-0x1bc-when-wsl---set-default-version-2"></a>Error: 0x1bc cuando `wsl --set-default-version 2`
+Puede ocurrir cuando el valor de "Mostrar idioma" o "Configuración regional del sistema" no es Inglés.
+```
+wsl --set-default-version 2
+Error: 0x1bc
+For information on key differences with WSL 2 please visit https://aka.ms/wsl2
+```
+
+El error real de `0x1bc` es:
+```
+WSL 2 requires an update to its kernel component. For information please visit https://aka.ms/wsl2kernel
+```
+
+Para obtener más información, consulte el problema [5749](https://github.com/microsoft/WSL/issues/5749).
+
 
 ### <a name="cannot-access-wsl-files-from-windows"></a>No se puede acceder a los archivos WSL desde Windows
 Un servidor de archivos de protocolo 9P proporciona el servicio en el lado de Linux para permitir que Windows tenga acceso al sistema de archivos de Linux. Si no puede acceder a WSL con `\\wsl$` en Windows, podría deberse a que 9P no se inició correctamente.

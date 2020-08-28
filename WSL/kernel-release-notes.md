@@ -5,16 +5,24 @@ keywords: notas de la versión, wsl, windows, subsistema de windows para linux, 
 ms.date: 06/09/2020
 ms.topic: article
 ms.localizationpriority: high
-ms.openlocfilehash: e2409fccada9077adbeac3843c31b8faa2c93208
-ms.sourcegitcommit: f1b049a1276782d4f2754f46a8d2025b598a0784
+ms.openlocfilehash: ffec37d179005eb7015a8f9af8de0ac185710bec
+ms.sourcegitcommit: fb79750bd71d6ebaed5203b3de71ba85a67227b1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85336058"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88866117"
 ---
 # <a name="release-notes-for-windows-subsystem-for-linux-kernel"></a>Notas de la versión del Subsistema de Windows para el kernel de Linux
 
 Hemos agregado compatibilidad con distribuciones de WSL 2, [que usan un kernel de Linux completo](https://devblogs.microsoft.com/commandline/shipping-a-linux-kernel-with-windows/). Este kernel de Linux es de código abierto y su código fuente está disponible en el repositorio [WSL2-Linux-Kernel](https://github.com/microsoft/WSL2-Linux-Kernel). Este kernel de Linux se entrega al equipo a través de Microsoft Update, y sigue una programación de versiones independiente del Subsistema de Windows para Linux, que se entrega como parte de la imagen de Windows.
+
+## <a name="419128-microsoft-standard"></a>4.19.128-microsoft-standard
+*Fecha de lanzamiento*: Versión preliminar
+
+[Vínculo a la versión oficial de GitHub](https://github.com/microsoft/WSL2-Linux-Kernel/releases/tag/4.19.128-microsoft-standard).
+
+* Versión estable de 4.19.128
+* Corrección de los daños en la memoria IOCTL del controlador dxgkrnl
 
 ## <a name="419121-microsoft-standard"></a>4.19.121-microsoft-standard
 *Fecha de lanzamiento*: Versión preliminar

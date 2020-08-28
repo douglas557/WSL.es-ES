@@ -1,17 +1,17 @@
 ---
 title: Notas de la versión del subsistema de Windows para Linux
-description: Notas de la versión del subsistema de Windows para Linux.  Actualizado semanalmente.
+description: Lea las notas de la versión del Subsistema de Windows para Linux. Estas notas de la versión incluyen problemas corregidos y se actualizan semanalmente.
 keywords: release notes, wsl, windows, windows subsystem for linux, windowssubsystem, ubuntu
 author: benhillis
 ms.date: 05/15/2020
 ms.topic: article
 ms.localizationpriority: high
-ms.openlocfilehash: 751f7dd73abeefe7be0406c17b95158ee21b9199
-ms.sourcegitcommit: b79bf1d5f158f09e858184a6dfd096e212c1a231
+ms.openlocfilehash: 57d06a8666f8003b187f043bd18655a9287d8a63
+ms.sourcegitcommit: fb79750bd71d6ebaed5203b3de71ba85a67227b1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/12/2020
-ms.locfileid: "88161047"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88866102"
 ---
 # <a name="release-notes-for-windows-subsystem-for-linux"></a>Notas de la versión del subsistema de Windows para Linux
 

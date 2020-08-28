@@ -1,16 +1,16 @@
 ---
 title: Material de referencia de comandos del subsistema de Windows para Linux
-description: Lista de comandos que administran el subsistema de Windows para Linux
+description: Vea una lista de comandos que administran el Subsistema de Windows para Linux, como argumentos para ejecutar comandos de Linux.
 keywords: BashOnWindows, bash, wsl, windows, subsistema de windows para linux, subsistemawindows, ubuntu
 ms.date: 07/31/2017
 ms.topic: article
 ms.localizationpriority: high
-ms.openlocfilehash: 72b78a73bf68b28dd14b4826943a0c81ea04bbad
-ms.sourcegitcommit: 1b6191351bbf9e95f3c28fc67abe4bf1bcfd3336
+ms.openlocfilehash: fc5c9e06c597092a3790ba7f9eb06054a33450c1
+ms.sourcegitcommit: fb79750bd71d6ebaed5203b3de71ba85a67227b1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/13/2020
-ms.locfileid: "83270879"
+ms.lasthandoff: 08/26/2020
+ms.locfileid: "88866136"
 ---
 # <a name="command-reference-for-windows-subsystem-for-linux"></a>Material de referencia de comandos del subsistema de Windows para Linux
 
