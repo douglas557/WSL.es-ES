@@ -5,12 +5,12 @@ keywords: WSL, Windows, windowssubsystem, GNU, Linux, bash, GIT, GitHub, control
 ms.date: 06/04/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 550355ea77c97d68130c8d85e9aef2a6b49ffe63
-ms.sourcegitcommit: eaceda3589b9bd777e0fead5ef33bb16060a55d2
+ms.openlocfilehash: c48234be5c3867d771363aaa5e630d8ebe378364
+ms.sourcegitcommit: 6ff046993e9f196cdfa04f5f91130e0e4ff1e7fa
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/18/2020
-ms.locfileid: "84978248"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89427222"
 ---
 # <a name="get-started-using-git-on-windows-subsystem-for-linux"></a>Introducción al uso de Git en el subsistema de Windows para Linux
 
@@ -54,13 +54,13 @@ sudo apt-get install git
 Para configurar el archivo de configuración de Git, abra una línea de comandos para la distribución en la que está trabajando y establezca su nombre con este comando (reemplace "your name" por su nombre de usuario de Git):
 
 ```bash
- `git config --global user.name "Your Name"`
+git config --global user.name "Your Name"
 ```
 
 Establezca el correo electrónico con este comando (reemplazando " youremail@domain.com " por el correo electrónico que usa en su cuenta de Git):
 
 ```bash
-`git config --global user.email "youremail@domain.com"`
+git config --global user.email "youremail@domain.com"
 ```
 
 > [!TIP]
