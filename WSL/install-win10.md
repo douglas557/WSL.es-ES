@@ -5,12 +5,12 @@ keywords: BashOnWindows, bash, wsl, wsl2, windows, subsistema de windows para li
 ms.date: 05/12/2020
 ms.topic: article
 ms.localizationpriority: high
-ms.openlocfilehash: 23c72c0e82c90c23fc0406b56dbf8accad0e39df
-ms.sourcegitcommit: fb79750bd71d6ebaed5203b3de71ba85a67227b1
+ms.openlocfilehash: 14e1697d1f2ac7a1efa17368be830a5c22973bc6
+ms.sourcegitcommit: 910845e9b3f980b2c5b9b4968331a706720603c6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88866165"
+ms.lasthandoff: 08/28/2020
+ms.locfileid: "89058500"
 ---
 # <a name="windows-subsystem-for-linux-installation-guide-for-windows-10"></a>Guía de instalación del Subsistema de Windows para Linux para Windows 10
 
@@ -30,7 +30,9 @@ Para instalar solo WSL 1, debes reiniciar la máquina ahora y pasar a la secci�
 
 Para actualizar a WSL 2, debe cumplir los siguientes criterios:
 
-- Ejecutar Windows 10, [actualizado a la versión 1903 o posterior](ms-settings:windowsupdate), **compilación 18362** o posterior.
+- Ejecutar Windows 10, [actualizado a la versión 1903 o posterior](ms-settings:windowsupdate), **compilación 18362** o posterior para sistemas x64.
+- Ejecutar Windows 10, actualizado a la versión 2004 o posterior, **compilación 19041**, para sistemas ARM64.
+- Tenga en cuenta que, si se encuentra en Windows 10, versión 1903 o 1909, deberá asegurarse de que tiene la corrección compatible adecuada. Se pueden encontrar instrucciones [aquí](https://devblogs.microsoft.com/commandline/wsl-2-support-is-coming-to-windows-10-versions-1903-and-1909/#how-do-i-get-it). 
 
 - Para comprobar la versión de Windows, selecciona la **tecla del logotipo de Windows + R**, escribe **winver** y selecciona **Aceptar**. (También puedes escribir el comando `ver` en el símbolo del sistema de Windows). [Actualice a la versión más reciente de Windows](ms-settings:windowsupdate) si su compilación es anterior a la 18361. [Obtén el Asistente de Windows Update](https://www.microsoft.com/software-download/windows10).
 
