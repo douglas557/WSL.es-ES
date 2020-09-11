@@ -5,12 +5,12 @@ keywords: BashOnWindows, bash, wsl, windows, subsistemawindows, gnu, linux, ubun
 ms.date: 07/22/2020
 ms.topic: article
 ms.localizationpriority: high
-ms.openlocfilehash: 15f1528332345f0bea829b9606372ed7346e6dff
-ms.sourcegitcommit: fb79750bd71d6ebaed5203b3de71ba85a67227b1
+ms.openlocfilehash: 930fbdc0b86396f41fbb1189f4a651bb03e05f22
+ms.sourcegitcommit: 6ff046993e9f196cdfa04f5f91130e0e4ff1e7fa
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88866025"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89427182"
 ---
 # <a name="comparing-wsl-1-and-wsl-2"></a>Comparación de WSL 1 con WSL 2
 
@@ -33,7 +33,7 @@ Característica | WSL 1 | WSL 2
 
 ¿Ya usas WSL 1 y quieres actualizar a WSL 2? Sigue las instrucciones para [realizar la actualización a WSL 2](./install-win10.md#update-to-wsl-2).
 
-WSL 2 solo está disponible en Windows 10, versión 2004, compilación 19041 o posteriores. Para comprobar la versión de Windows, selecciona la **tecla del logotipo de Windows + R**, escribe **winver** y selecciona **Aceptar**. (También puedes escribir el comando `ver` en el símbolo del sistema de Windows). Es posible que tengas que [actualizar a la versión más reciente de Windows](ms-settings:windowsupdate). En el caso de las compilaciones inferiores a 19041, no se admite WSL en absoluto.
+WSL 2 solo está disponible en Windows 10, versión 1903, compilación 18362 o superior. Para comprobar la versión de Windows, selecciona la **tecla del logotipo de Windows + R**, escribe **winver** y selecciona **Aceptar**. (También puedes escribir el comando `ver` en el símbolo del sistema de Windows). Es posible que tengas que [actualizar a la versión más reciente de Windows](ms-settings:windowsupdate). En el caso de las compilaciones inferiores a 18362, no se admite WSL en absoluto.
 
 > [!NOTE]
 > WSL 2 funcionará con [VMWare 15.5.5 y versiones posteriores](https://blogs.vmware.com/workstation/2020/05/vmware-workstation-now-supports-hyper-v-mode.html) y [VirtualBox 6 y versiones posteriores](https://www.virtualbox.org/wiki/Changelog-6.0).
