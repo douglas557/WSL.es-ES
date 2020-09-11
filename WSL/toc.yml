@@ -1,6 +1,6 @@
 - name: Documentación de WPF
   href: index.md
-- name: Introducción
+- name: Información general
   items:
     - name: ¿Qué es WSL?
       href: about.md
@@ -40,6 +40,8 @@
       href: enterprise.md
     - name: Compilación d una distribución personalizada
       href: build-custom-distro.md
+    - name: Montaje de un disco en WSL 2 (versión preliminar)
+      href: wsl2-mount-disk.md
     - name: Referencia de la línea de comandos
       href: reference.md
 - name: Preguntas más frecuentes
