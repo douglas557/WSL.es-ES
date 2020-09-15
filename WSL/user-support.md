@@ -5,12 +5,12 @@ keywords: BashOnWindows, bash, wsl, windows, subsistema de windows para linux, s
 ms.date: 05/12/2020
 ms.topic: article
 ms.localizationpriority: high
-ms.openlocfilehash: 551cc66b1648a66717163d1d8e19a78d28bff342
-ms.sourcegitcommit: 3fb40fd65b34a5eb26b213a0df6a3b2746b7a9b4
+ms.openlocfilehash: cdb510b8195f18f89ea475889c34850234b7c0e8
+ms.sourcegitcommit: 6ff046993e9f196cdfa04f5f91130e0e4ff1e7fa
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83235909"
+ms.lasthandoff: 09/03/2020
+ms.locfileid: "89427192"
 ---
 # <a name="create-a-user-account-and-password-for-your-new-linux-distribution"></a>Creación de una cuenta de usuario y una contraseña para la nueva distribución de Linux
 
@@ -50,7 +50,7 @@ Si olvidaste la contraseña de la distribución de Linux:
 
     > Si necesitas actualizar la contraseña olvidada de una distribución que no es la predeterminada, usa el comando `wsl -d Debian -u root` (recuerda que debes reemplazar `Debian` por el nombre de la distribución de destino).
 
-2. Una vez hayas abierto la distribución de WSL en el nivel raíz en PowerShell, puedes usar este comando para actualizar la contraseña: `passwd`.
+2. Una vez abierta la distribución de WSL en el nivel raíz en PowerShell, puede usar este comando para actualizar la contraseña: `passwd <WSLUsername>` donde `<WSLUsername>` es el nombre de usuario de la cuenta en la distribución cuya contraseña ha olvidado.
 
 3. Tendrás que escribir una contraseña UNIX nueva y confirmarla. Cuando veas que la contraseña se ha actualizado correctamente, cierra WSL en PowerShell mediante el comando: `exit`.
 

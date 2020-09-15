@@ -5,19 +5,19 @@ keywords: notas de la versión, wsl, windows, subsistema de windows para linux, 
 ms.date: 06/09/2020
 ms.topic: article
 ms.localizationpriority: high
-ms.openlocfilehash: ffec37d179005eb7015a8f9af8de0ac185710bec
-ms.sourcegitcommit: fb79750bd71d6ebaed5203b3de71ba85a67227b1
+ms.openlocfilehash: 32b65bcde3df01b25f0361493a172e754e78e101
+ms.sourcegitcommit: 43d4056eefe0c71ecd9a0fbd5a7a58dd18fa9829
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88866117"
+ms.lasthandoff: 09/09/2020
+ms.locfileid: "89615545"
 ---
 # <a name="release-notes-for-windows-subsystem-for-linux-kernel"></a>Notas de la versión del Subsistema de Windows para el kernel de Linux
 
 Hemos agregado compatibilidad con distribuciones de WSL 2, [que usan un kernel de Linux completo](https://devblogs.microsoft.com/commandline/shipping-a-linux-kernel-with-windows/). Este kernel de Linux es de código abierto y su código fuente está disponible en el repositorio [WSL2-Linux-Kernel](https://github.com/microsoft/WSL2-Linux-Kernel). Este kernel de Linux se entrega al equipo a través de Microsoft Update, y sigue una programación de versiones independiente del Subsistema de Windows para Linux, que se entrega como parte de la imagen de Windows.
 
 ## <a name="419128-microsoft-standard"></a>4.19.128-microsoft-standard
-*Fecha de lanzamiento*: Versión preliminar
+*Fecha de lanzamiento*: versión preliminar y disponible a través de la instalación manual
 
 [Vínculo a la versión oficial de GitHub](https://github.com/microsoft/WSL2-Linux-Kernel/releases/tag/4.19.128-microsoft-standard).
 

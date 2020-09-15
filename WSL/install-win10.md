@@ -5,12 +5,12 @@ keywords: BashOnWindows, bash, wsl, wsl2, windows, subsistema de windows para li
 ms.date: 05/12/2020
 ms.topic: article
 ms.localizationpriority: high
-ms.openlocfilehash: 14e1697d1f2ac7a1efa17368be830a5c22973bc6
-ms.sourcegitcommit: 910845e9b3f980b2c5b9b4968331a706720603c6
+ms.openlocfilehash: 50b434e288ba90173875cf5e7cd5fe9e6c3d8a16
+ms.sourcegitcommit: 498592fa4b09015be3ee9a8913e5e3cf755de24b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89058500"
+ms.lasthandoff: 09/08/2020
+ms.locfileid: "89559295"
 ---
 # <a name="windows-subsystem-for-linux-installation-guide-for-windows-10"></a>Guía de instalación del Subsistema de Windows para Linux para Windows 10
 
@@ -31,6 +31,7 @@ Para instalar solo WSL 1, debes reiniciar la máquina ahora y pasar a la secci�
 Para actualizar a WSL 2, debe cumplir los siguientes criterios:
 
 - Ejecutar Windows 10, [actualizado a la versión 1903 o posterior](ms-settings:windowsupdate), **compilación 18362** o posterior para sistemas x64.
+   - Si tiene la versión 1903 o 1909 de Windows 10, asegúrese de que el número de compilación menor es 1049 o superior. Consulte las [instrucciones de solución de problemas completas aquí](https://docs.microsoft.com/windows/wsl/troubleshooting#im-on-windows-10-version-1903-and-i-still-do-not-see-options-for-wsl-2).
 - Ejecutar Windows 10, actualizado a la versión 2004 o posterior, **compilación 19041**, para sistemas ARM64.
 - Tenga en cuenta que, si se encuentra en Windows 10, versión 1903 o 1909, deberá asegurarse de que tiene la corrección compatible adecuada. Se pueden encontrar instrucciones [aquí](https://devblogs.microsoft.com/commandline/wsl-2-support-is-coming-to-windows-10-versions-1903-and-1909/#how-do-i-get-it). 
 
@@ -141,7 +142,7 @@ A continuación, se muestran errores relacionados y las correcciones sugeridas. 
 
 - **La operación solicitada no se pudo completar debido a una limitación del sistema de disco virtual. Los archivos de disco duro virtual deben estar sin comprimir y sin cifrar y no deben ser dispersos.**
   - Anule la selección de la casilla "Compress contents" ("Comprimir contenido") (y también la de "Cifrar los contenidos" si está activada). Para ello, abra la carpeta de perfil de la distribución de Linux. Debe encontrarse en una carpeta del sistema de archivos de Windows, como `USERPROFILE%\AppData\Local\Packages\CanonicalGroupLimited...`.
-  - En este perfil de distribución de Linux, debe haber una carpeta denominada LocalState. Haga clic con el botón derecho en ella para mostrar un menú de opciones. Seleccione Propiedades > Opciones avanzadas y, a continuación, asegúrese de que las casillas "Comprimir contenido para ahorrar espacio en disco" y "Cifrar contenido para proteger datos" no estén seleccionadas (activadas). Si se le pregunta si quiere aplicar esto solo a la carpeta actual o a todas las subcarpetas y archivos, seleccione "solo esta carpeta", ya que solo quiere borrar la marca de compresión. A continuación, el comando `wsl –set-version` debería funcionar.
+  - En este perfil de distribución de Linux, debe haber una carpeta denominada LocalState. Haga clic con el botón derecho en ella para mostrar un menú de opciones. Seleccione Propiedades > Opciones avanzadas y, a continuación, asegúrese de que las casillas "Comprimir contenido para ahorrar espacio en disco" y "Cifrar contenido para proteger datos" no estén seleccionadas (activadas). Si se le pregunta si quiere aplicar esto solo a la carpeta actual o a todas las subcarpetas y archivos, seleccione "solo esta carpeta", ya que solo quiere borrar la marca de compresión. A continuación, el comando `wsl --set-version` debería funcionar.
 
 ![Captura de pantalla de la configuración de la propiedad de distribución de WSL](media/troubleshooting-virtualdisk-compress.png)
 
