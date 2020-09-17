@@ -5,12 +5,12 @@ keywords: WSL, Windows, windowssubsystem, MySQL MongoDB, PostgreSQL, SQLite, Mic
 ms.date: 07/07/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 8ffd40ef21e8fb8ece529157852ba5d8bb676076
-ms.sourcegitcommit: 16ffb1a096a4a7fbb77c58f92258051930cc82da
+ms.openlocfilehash: 561af482e245892156a02fe287b95867ef80ded1
+ms.sourcegitcommit: ba3399a5ffeffd23551315acd04ea6848d30693b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/09/2020
-ms.locfileid: "86160230"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90719134"
 ---
 # <a name="get-started-with-databases-on-windows-subsystem-for-linux"></a>Introducción a las bases de datos en el subsistema de Windows para Linux
 
@@ -20,8 +20,8 @@ Esta guía paso a paso le ayudará a comenzar a conectar el proyecto en WSL a un
 
 - Ejecutar Windows 10, [actualizado a la versión 2004](ms-settings:windowsupdate), **compilación 19041** o posterior.
 - [WSL habilitado e instalado y actualizado a WSL 2](https://docs.microsoft.com/windows/wsl/install-win10).
-- [Distribución de Linux instalada](https://docs.microsoft.com/windows/wsl/install-win10#install-your-linux-distribution-of-choice) (Ubuntu 18,04 para nuestros ejemplos).
-- Asegúrese de que la distribución de Ubuntu 18,04 se está [ejecutando en el modo WSL 2](https://docs.microsoft.com/windows/wsl/install-win10#set-your-distribution-version-to-wsl-1-or-wsl-2). (WSL puede ejecutar distribuciones en el modo V1 o V2). Para comprobarlo, abra PowerShell y escriba:`wsl -l -v`
+- [Distribución de Linux instalada](https://docs.microsoft.com/windows/wsl/install-win10#step-6---install-your-linux-distribution-of-choice) (Ubuntu 18,04 para nuestros ejemplos).
+- Asegúrese de que la distribución de Ubuntu 18,04 se está [ejecutando en el modo WSL 2](https://docs.microsoft.com/windows/wsl/install-win10#set-your-distribution-version-to-wsl-1-or-wsl-2). (WSL puede ejecutar distribuciones en el modo V1 o V2). Para comprobarlo, abra PowerShell y escriba: `wsl -l -v`
 
 ## <a name="differences-between-database-systems"></a>Diferencias entre los sistemas de base de datos
 
@@ -29,7 +29,7 @@ Las [opciones más populares](https://insights.stackoverflow.com/survey/2019#tec
 
 - [MySQL](https://www.mysql.com/why-mysql/) (SQL)
 - [PostgreSQL](https://www.postgresql.org/about/) (SQL)
-- [Microsoft SQL Server](https://docs.microsoft.com/sql/?view=sql-server-ver15) (SQL)
+- [Microsoft SQL Server](https://docs.microsoft.com/sql) (SQL)
 - [SQLite](https://www.sqlite.org/about.html) (SQL)
 - [MongoDB](https://www.mongodb.com/what-is-mongodb) (NoSQL)
 - [Redis](https://redis.io/topics/introduction) (NoSQL)
@@ -54,22 +54,22 @@ Para instalar MySQL en WSL (Ubuntu 18,04):
 
 1. Abre el terminal de WSL (es decir, Ubuntu 18.04).
 2. Actualiza los paquetes de Ubuntu: `sudo apt update`.
-3. Una vez actualizados los paquetes, instale MySQL con:`sudo apt install mysql-server`
+3. Una vez actualizados los paquetes, instale MySQL con: `sudo apt install mysql-server`
 4. Confirma la instalación y obtén el número de versión `mysql --version`.
 
 También puede que desee ejecutar el script de seguridad incluido. Esto cambia algunas de las opciones predeterminadas menos seguras para elementos como inicios de sesión de raíz remota y usuarios de ejemplo. Para ejecutar el script de seguridad:
 
-1. Iniciar un servidor de MySQL:`sudo /etc/init.d/mysql start`
-2. Iniciar los mensajes del script de seguridad:`sudo mysql_secure_installation`
+1. Iniciar un servidor de MySQL: `sudo /etc/init.d/mysql start`
+2. Iniciar los mensajes del script de seguridad: `sudo mysql_secure_installation`
 3. En el primer mensaje se le preguntará si desea configurar el complemento validar contraseña, que se puede usar para probar la seguridad de la contraseña de MySQL. A continuación, establecerá una contraseña para el usuario raíz de MySQL, decidirá si desea quitar usuarios anónimos, decidir si desea permitir que el usuario raíz inicie sesión tanto de forma local como remota, decidir si desea quitar la base de datos de prueba y, por último, decidir si desea recargar las tablas de privilegios inmediatamente.
 
-Para abrir el símbolo del sistema de MySQL, escriba:`sudo mysql`
+Para abrir el símbolo del sistema de MySQL, escriba: `sudo mysql`
 
-Para ver las bases de datos que tiene disponibles, en el símbolo del sistema de MySQL, escriba:`SHOW DATABASES;`
+Para ver las bases de datos que tiene disponibles, en el símbolo del sistema de MySQL, escriba: `SHOW DATABASES;`
 
-Para crear una nueva base de datos, escriba:`CREATE DATABASE database_name;`
+Para crear una nueva base de datos, escriba: `CREATE DATABASE database_name;`
 
-Para eliminar una base de datos, escriba:` DROP DATABASE database_name;`
+Para eliminar una base de datos, escriba: ` DROP DATABASE database_name;`
 
 Para más información sobre cómo trabajar con las bases de datos de MySQL, consulte los [documentos de MySQL](https://dev.mysql.com/doc/mysql-getting-started/en/).
 
@@ -157,7 +157,7 @@ Obtenga más información en los documentos de MongoDB:
 
 ## <a name="install-microsoft-sql-server"></a>Instalar Microsoft SQL Server
 
-Para instalar SQL Server en WSL (Ubuntu 18,04), siga esta guía de inicio rápido: [instalación de SQL Server y creación de una base de datos en Ubuntu](https://docs.microsoft.com/sql/linux/quickstart-install-connect-ubuntu?view=sql-server-ver15).
+Para instalar SQL Server en WSL (Ubuntu 18,04), siga esta guía de inicio rápido: [instalación de SQL Server y creación de una base de datos en Ubuntu](https://docs.microsoft.com/sql/linux/quickstart-install-connect-ubuntu).
 
 Para trabajar con bases de datos de Microsoft SQL Server en VS Code, pruebe la [extensión MSSQL](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql).
 
@@ -167,16 +167,16 @@ Para instalar SQLite en WSL (Ubuntu 18,04):
 
 1. Abre el terminal de WSL (es decir, Ubuntu 18.04).
 2. Actualiza los paquetes de Ubuntu: `sudo apt update`.
-3. Una vez actualizados los paquetes, instale SQLite3 con:`sudo apt install sqlite3`
+3. Una vez actualizados los paquetes, instale SQLite3 con: `sudo apt install sqlite3`
 4. Confirma la instalación y obtén el número de versión `sqlite3 --version`.
 
-Para crear una base de datos de prueba, denominada "example. dB", escriba:`sqlite3 example.db`
+Para crear una base de datos de prueba, denominada "example. dB", escriba: `sqlite3 example.db`
 
-Para ver una lista de las bases de datos de SQLite, escriba:`.databases`
+Para ver una lista de las bases de datos de SQLite, escriba: `.databases`
 
-Para ver el estado de la base de datos, escriba:`.dbinfo ?DB?`
+Para ver el estado de la base de datos, escriba: `.dbinfo ?DB?`
 
-Para salir del aviso de SQLite, escriba:`.exit`
+Para salir del aviso de SQLite, escriba: `.exit`
 
 Para obtener más información sobre cómo trabajar con una base de datos de SQLite, consulte los [documentos de SQLite](https://www.sqlite.org/quickstart.html).
 
@@ -188,14 +188,14 @@ Para instalar Redis en WSL (Ubuntu 18,04):
 
 1. Abre el terminal de WSL (es decir, Ubuntu 18.04).
 2. Actualiza los paquetes de Ubuntu: `sudo apt update`.
-3. Una vez actualizados los paquetes, instale Redis con:`sudo apt install redis-server`
+3. Una vez actualizados los paquetes, instale Redis con: `sudo apt install redis-server`
 4. Confirma la instalación y obtén el número de versión `redis-server --version`.
 
-Para empezar a ejecutar el servidor de Redis:`sudo service redis-server start`
+Para empezar a ejecutar el servidor de Redis: `sudo service redis-server start`
 
 Compruebe si Redis funciona (Redis-CLI es la utilidad de la interfaz de la línea de comandos para comunicarse con Redis): `redis-cli ping` debe devolver una respuesta de "pong".
 
-Para detener la ejecución del servidor de Redis:`sudo service redis-server stop`
+Para detener la ejecución del servidor de Redis: `sudo service redis-server stop`
 
 Para obtener más información sobre cómo trabajar con una base de datos de Redis, consulte los [documentos de Redis](https://redis.io/topics/quickstart).
 
@@ -203,7 +203,7 @@ Para trabajar con las bases de datos de Redis en VS Code, pruebe la [extensión 
 
 ## <a name="see-services-running-and-set-up-profile-aliases"></a>Ver los servicios en ejecución y configurar alias de perfil
 
-Para ver los servicios que se están ejecutando actualmente en la distribución de WSL, escriba:`service --status-all`
+Para ver los servicios que se están ejecutando actualmente en la distribución de WSL, escriba: `service --status-all`
 
 Escribir `sudo service mongodb start` o `sudo service postgres start` y `sudo -u postgrest psql` puede resultar tedioso.  Sin embargo, puedes considerar la posibilidad de configurar los alias en el archivo `.profile` de WSL para que estos comandos sean más rápidos de usar y más fáciles de recordar.
 
