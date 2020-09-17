@@ -4,8 +4,6 @@
   items:
     - name: ¿Qué es WSL?
       href: about.md
-    - name: "Novedades de WSL\_2"
-      href: wsl2-index.md
     - name: "Comparación de WSL\_2 con WSL\_1"
       href: compare-versions.md
 - name: Inicio rápido
