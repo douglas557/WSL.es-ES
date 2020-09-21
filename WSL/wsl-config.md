@@ -4,12 +4,12 @@ description: Lista de referencia y configuración de varias distribuciones de Li
 keywords: BashOnWindows, bash, wsl, windows, subsistema de windows para linux, subsistemawindows, ubuntu, wsl.conf, wslconfig
 ms.date: 05/12/2020
 ms.topic: article
-ms.openlocfilehash: b8aa740233f3ac9517744212eb7b362a18378822
-ms.sourcegitcommit: 90577817a9321949da2a3971b4c78bb00f6d977f
+ms.openlocfilehash: 0a127d376a8606a1a13ea88c9efed161e18a161d
+ms.sourcegitcommit: 69fc9d3ca22cf3f07622db4cdf80c8ec751fe620
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/10/2020
-ms.locfileid: "88039418"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90818737"
 ---
 # <a name="wsl-commands-and-launch-configurations"></a>Comandos WSL y configuraciones de inicio
 
@@ -118,16 +118,16 @@ PS C:\Users\sarah>
 
 En Windows 10 versión 1903 [y versiones posteriores](ms-settings:windowsupdate), puede usar `wsl.exe` para administrar las distribuciones en el subsistema de Windows para Linux (WSL), incluida la lista de distribuciones disponibles, la configuración de una distribución predeterminada y la desinstalación de distribuciones.
 
-Cada distribución de Linux administra de forma independiente sus propias configuraciones. Para ver los comandos específicos de la distribución, ejecuta `[distro.exe] /?`.  Por ejemplo: `ubuntu /?`.
+Cada distribución de Linux administra de forma independiente sus propias configuraciones. Para ver los comandos específicos de la distribución, ejecuta `[distro.exe] /?`.  Por ejemplo, `ubuntu /?`.
 
 ## <a name="list-distributions"></a>Enumerar distribuciones
 
 `wsl -l` , `wsl --list`  
 Enumera las distribuciones de Linux disponibles para WSL.  Si se enumera una distribución, está instalada y lista para usar.
 
-`wsl --list --all`Muestra todas las distribuciones, incluidas las que no se pueden usar actualmente.  Pueden encontrarse en proceso de instalación, desinstalación o tener un estado interrumpido.  
+`wsl --list --all` Muestra todas las distribuciones, incluidas las que no se pueden usar actualmente.  Pueden encontrarse en proceso de instalación, desinstalación o tener un estado interrumpido.  
 
-`wsl --list --running`Muestra todas las distribuciones que se están ejecutando actualmente.
+`wsl --list --running` Muestra todas las distribuciones que se están ejecutando actualmente.
 
 ## <a name="set-a-default-distribution"></a>Establecer una distribución predeterminada
 
@@ -182,7 +182,7 @@ Ejecuta una distribución especificada de WSL, se puede usar para enviar comando
 
 En Windows 10 anterior a la versión 1903, `wslconfig.exe` se debe usar la herramienta de línea de comandos WSL config () para administrar las distribuciones de Linux que se ejecutan en el subsistema de Windows para Linux (WSL).  Te permite enumerar las distribuciones disponibles, establecer una distribución predeterminada y desinstalar las distribuciones.
 
-Si bien WSL Config es útil para las configuraciones que abarcan o coordinan las distribuciones, cada distribución de Linux administra de forma independiente sus propias configuraciones.  Para ver los comandos específicos de la distribución, ejecuta `[distro.exe] /?`.  Por ejemplo: `ubuntu /?`.
+Si bien WSL Config es útil para las configuraciones que abarcan o coordinan las distribuciones, cada distribución de Linux administra de forma independiente sus propias configuraciones.  Para ver los comandos específicos de la distribución, ejecuta `[distro.exe] /?`.  Por ejemplo, `ubuntu /?`.
 
 Para ver todas las opciones disponibles para wslconfig, ejecuta: `wslconfig /?`
 
@@ -208,7 +208,7 @@ Enumera todas las distribuciones, incluidas las que no se pueden usar actualment
 
 Para establecer una distribución predeterminada que se ejecuta cuando se ejecuta `wsl` en una línea de comandos:
 
-`wslconfig /setdefault <DistributionName>`Establece la distribución predeterminada en `<DistributionName>` .
+`wslconfig /setdefault <DistributionName>` Establece la distribución predeterminada en `<DistributionName>` .
 
 **Ejemplo: (con PowerShell)**  
 `wslconfig /setdefault Ubuntu` establecería la distribución predeterminada en Ubuntu.  Ahora, al ejecutar `wsl npm init`, se ejecutará en Ubuntu.  Si se ejecuta `wsl`, se abrirá una sesión de Ubuntu.
@@ -260,7 +260,7 @@ Sección: `[automount]`
 
 | key        | value                          | default      | notas                                                                                                                                                                                                                                                                                                                          |
 |:-----------|:-------------------------------|:-------------|:-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| enabled    | boolean                        | true         | `true` hace que las unidades fijas (es decir, `C:/` o `D:/`) se monten automáticamente con DrvFs en `/mnt`.  `false`significa que las unidades no se montarán automáticamente, pero podría montarlas de forma manual o a través de `fstab` .                                                                                                             |
+| enabled    | boolean                        | true         | `true` hace que las unidades fijas (es decir, `C:/` o `D:/`) se monten automáticamente con DrvFs en `/mnt`.  `false` significa que las unidades no se montarán automáticamente, pero podría montarlas de forma manual o a través de `fstab` .                                                                                                             |
 | mountFsTab | boolean                        | true         | `true` establece `/etc/fstab` para que se procese en el inicio de WSL. /etc/fstab es un archivo donde puedes declarar otros sistemas de archivos, como un recurso compartido de SMB. Por lo tanto, puedes montar estos sistemas de archivos automáticamente en WSL en el inicio.                                                                                                                |
 | root       | Cadena                         | `/mnt/`      | Establece el directorio donde se montarán automáticamente las unidades fijas. Por ejemplo, si tienes un directorio en WSL en `/windir/` y lo especificas como raíz, esperarías ver que las unidades fijas se monten en `/windir/c`                                                                                              |
 | opciones    | lista de valores separados por comas | cadena vacía | Este valor se anexa a la cadena predeterminada de opciones de montaje de DrvFs. **Solo se pueden especificar opciones específicas de DrvFs.** No se admiten las opciones que el binario de montaje analizaría normalmente en una marca. Si quieres especificar explícitamente esas opciones, tienes que incluir en /etc/fstab cada unidad para la que quieras hacerlo. |
@@ -339,7 +339,7 @@ Esta configuración afecta a la máquina virtual que alimenta cualquier distribu
 | key | value | default | HDInsight|
 |:----|:----|:----|:----|
 | kernel | string | Bandeja de entrada proporcionada por el kernel de Microsoft | Una ruta de acceso de Windows absoluta a un kernel de Linux personalizado. |
-| memoria | tamaño | 80% de la memoria total en Windows * | Cantidad de memoria que se va a asignar a la máquina virtual WSL 2. |
+| memoria | tamaño | 50% de la memoria total en Windows o 8 GB, lo que sea menor. en compilaciones anteriores al 20175:80% de la memoria total en Windows | Cantidad de memoria que se va a asignar a la máquina virtual WSL 2. |
 | procesadores | number | El mismo número de procesadores en Windows | Cuántos procesadores asignar a la máquina virtual WSL 2. |
 | localhostForwarding | boolean | `true` | Valor booleano que especifica si los puertos enlazados a un carácter comodín o localhost en la máquina virtual WSL 2 deben poder conectarse desde el host a través de localhost: Port. |
 | kernelCommandLine | string | En blanco | Argumentos adicionales de la línea de comandos del kernel. |
@@ -348,6 +348,6 @@ Esta configuración afecta a la máquina virtual que alimenta cualquier distribu
 
 * Nota: este valor es true para la compilación 19041 de Windows y puede ser diferente en las compilaciones de Windows del programa Insider.
 
-Las entradas con el `path` valor deben ser rutas de acceso de Windows con barras diagonales inversas de escape; por ejemplo:`C:\\Temp\\myCustomKernel`
+Las entradas con el `path` valor deben ser rutas de acceso de Windows con barras diagonales inversas de escape; por ejemplo: `C:\\Temp\\myCustomKernel`
 
 Las entradas con el `size` valor deben ser de un tamaño seguido de una unidad, por ejemplo, `8GB` o `512MB` .

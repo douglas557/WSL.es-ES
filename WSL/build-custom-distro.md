@@ -4,12 +4,12 @@ description: Obtenga información sobre cómo crear una distribución de Linux p
 keywords: BashOnWindows, bash, WSL, Windows, subsistema de Windows, distribución, personalizado
 ms.date: 09/15/2020
 ms.topic: article
-ms.openlocfilehash: 8b898cbee12aaff6e575afbeaa57d52c3a2c9e75
-ms.sourcegitcommit: ba3399a5ffeffd23551315acd04ea6848d30693b
+ms.openlocfilehash: 2882cccac6c34cd52529dbf7e42c8d35907d8241
+ms.sourcegitcommit: 69fc9d3ca22cf3f07622db4cdf80c8ec751fe620
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90719154"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90818707"
 ---
 # <a name="creating-a-custom-linux-distribution-for-wsl"></a>Creación de una distribución de Linux personalizada para WSL
 
@@ -46,4 +46,3 @@ Siga las instrucciones del [repositorio de github del iniciador de distribución
 
 - [Repositorio de GitHub del iniciador de distribución](https://github.com/Microsoft/WSL-DistroLauncher)
 - [Seguimiento de problemas de GitHub para WSL](https://github.com/Microsoft/BashOnWindows/issues)
-- [Portal de UserVoice de línea de comandos](https://wpdev.uservoice.com/forums/266908-command-prompt-console-bash-on-ubuntu-on-windo/category/161892-bash)

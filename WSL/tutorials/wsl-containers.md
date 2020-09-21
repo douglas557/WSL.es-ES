@@ -5,12 +5,12 @@ keywords: WSL, Windows, windowssubsystem, Windows 10, Docker, contenedores
 ms.date: 08/28/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: a972cd6f179059e0841e1aef4bc3929fa46fcc4d
-ms.sourcegitcommit: 1c7f2e9928672ad3941a9327162595cb73ef5a3f
+ms.openlocfilehash: 2ae9da815335f99a9b4a75334a02d2730ddd08c6
+ms.sourcegitcommit: 69fc9d3ca22cf3f07622db4cdf80c8ec751fe620
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/09/2020
-ms.locfileid: "89609727"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90818757"
 ---
 # <a name="get-started-with-docker-remote-containers-on-wsl-2"></a>Introducción a los contenedores remotos de Docker en WSL 2
 
