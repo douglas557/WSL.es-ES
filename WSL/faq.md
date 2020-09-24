@@ -2,16 +2,16 @@
 title: Preguntas más frecuentes
 description: Encuentre respuestas a las preguntas más frecuentes (P+F) sobre el Subsistema de Windows para Linux 2, como "¿Qué puedo hacer con WSL?".
 keywords: BashOnWindows, bash, WSL, Windows, windowssubsystem, p + f
-ms.date: 9/4/2018
+ms.date: 09/15/2020
 ms.topic: article
 ms.assetid: 129101ed-b88a-43c2-b6a2-cd2c4ff6fee1
 ms.localizationpriority: high
-ms.openlocfilehash: 9a9f287ceb2ae93286999ed32d655198c8a390c8
-ms.sourcegitcommit: fb79750bd71d6ebaed5203b3de71ba85a67227b1
+ms.openlocfilehash: 0f16471968151fa040d41baa90af6aedfb6fee79
+ms.sourcegitcommit: ba3399a5ffeffd23551315acd04ea6848d30693b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88866158"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90719194"
 ---
 # <a name="frequently-asked-questions-about-windows-subsystem-for-linux"></a>Preguntas más frecuentes sobre el subsistema de Windows para Linux
 
@@ -181,7 +181,7 @@ WSL no se puede ejecutar en una consola heredada. Para desactivar la consola her
 
 ## <a name="why-do-i-get-error-0x80040154-when-i-run-bashexe-after-upgrading-windows"></a>¿Por qué obtengo el mensaje "Error: 0x80040154 "cuando ejecuto Bash.exe después de actualizar Windows?
 
-La característica "Subsistema de Windows para Linux" puede estar deshabilitada durante una actualización de Windows. Si esto ocurre, debes volver a habilitar la característica de Windows. Las instrucciones para habilitar la característica "Subsistema de Windows para Linux" se pueden encontrar en la [guía de instalación](https://docs.microsoft.com/windows/wsl/install-win10#install-the-windows-subsystem-for-linux).
+La característica "Subsistema de Windows para Linux" puede estar deshabilitada durante una actualización de Windows. Si esto ocurre, debes volver a habilitar la característica de Windows. Las instrucciones para habilitar la característica "Subsistema de Windows para Linux" se pueden encontrar en la [guía de instalación](https://docs.microsoft.com/windows/wsl/install-win10).
 
 ## <a name="how-do-i-change-the-display-language-of-wsl"></a>¿Cómo cambio el idioma de visualización de WSL?
 

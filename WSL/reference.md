@@ -2,15 +2,15 @@
 title: Material de referencia de comandos del subsistema de Windows para Linux
 description: Vea una lista de comandos que administran el Subsistema de Windows para Linux, como argumentos para ejecutar comandos de Linux.
 keywords: BashOnWindows, bash, wsl, windows, subsistema de windows para linux, subsistemawindows, ubuntu
-ms.date: 07/31/2017
+ms.date: 09/15/2020
 ms.topic: article
 ms.localizationpriority: high
-ms.openlocfilehash: fc5c9e06c597092a3790ba7f9eb06054a33450c1
-ms.sourcegitcommit: fb79750bd71d6ebaed5203b3de71ba85a67227b1
+ms.openlocfilehash: 6f98cb7b238e4b38c1a931a0e77e419efbcc319d
+ms.sourcegitcommit: ba3399a5ffeffd23551315acd04ea6848d30693b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88866136"
+ms.lasthandoff: 09/17/2020
+ms.locfileid: "90719174"
 ---
 # <a name="command-reference-for-windows-subsystem-for-linux"></a>Material de referencia de comandos del subsistema de Windows para Linux
 
@@ -169,7 +169,7 @@ Con `bash [Options...]`
 
 `lxrun.exe` fue el primer comando usado para instalar y administrar el subsistema de Windows para Linux. Está en desuso desde la versión 1803 de Windows 10 y versiones posteriores.
 
-El comando `lxrun.exe` se puede usar para interactuar con el [subsistema de Windows para Linux (WSL)](https://msdn.microsoft.com/commandline/wsl/faq#what-windows-subsystem-for-linux-wsl-) directamente.  Estos comandos se instalan en el directorio `\Windows\System32` y se pueden ejecutar en un símbolo del sistema de Windows o en PowerShell.
+El comando `lxrun.exe` se puede usar para interactuar con el subsistema de Windows para Linux (WSL) directamente.  Estos comandos se instalan en el directorio `\Windows\System32` y se pueden ejecutar en un símbolo del sistema de Windows o en PowerShell.
 
 | Comando                     | Descripción                     |
 |:----------------------------|:---------------------------|
