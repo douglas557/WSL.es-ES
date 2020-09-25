@@ -5,20 +5,20 @@ keywords: BashOnWindows, bash, wsl, windows, subsistema de windows para linux, s
 ms.date: 05/12/2020
 ms.topic: article
 ms.localizationpriority: high
-ms.openlocfilehash: cdb510b8195f18f89ea475889c34850234b7c0e8
-ms.sourcegitcommit: 6ff046993e9f196cdfa04f5f91130e0e4ff1e7fa
+ms.openlocfilehash: 7f1ad56a6f4261ad0455ee93bdeb5e31d0ed10d1
+ms.sourcegitcommit: 69fc9d3ca22cf3f07622db4cdf80c8ec751fe620
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89427192"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90818727"
 ---
 # <a name="create-a-user-account-and-password-for-your-new-linux-distribution"></a>Creación de una cuenta de usuario y una contraseña para la nueva distribución de Linux
 
 Una vez hayas [habilitado WSL e instalado una distribución de Linux de Microsoft Store](./install-win10.md), el primer paso que debes completar al abrir la distribución recién instalada de Linux es crear una cuenta, incluido un **nombre de usuario** y una **contraseña**.
 
-- El **nombre de usuario** y la **contraseña** son específicos de la distribución de Linux y no tienen relación con tu nombre de usuario de Windows.
+- El **nombre de usuario** y la **contraseña** son específicos de cada distribución de Linux individual que instala y no tienen relación con su nombre de usuario de Windows.
 
-- Cuando hayas creado el **nombre de usuario** y la **contraseña**, la cuenta será el usuario predeterminado de la distribución e iniciará sesión automáticamente al inicio.
+- Cuando haya creado el **nombre de usuario** y la **contraseña**, la cuenta será el usuario predeterminado de la distribución e iniciará sesión automáticamente al inicio.
 
 - Recuerda que esta cuenta se considerará el administrador de Linux y tendrá la capacidad de ejecutar comandos administrativos `sudo` (es decir, de superusuario).
 

@@ -6,21 +6,31 @@ author: benhillis
 ms.date: 05/15/2020
 ms.topic: article
 ms.localizationpriority: high
-ms.openlocfilehash: 57d06a8666f8003b187f043bd18655a9287d8a63
-ms.sourcegitcommit: fb79750bd71d6ebaed5203b3de71ba85a67227b1
+ms.openlocfilehash: f79acbbc7f6436bae54c5160e769cababa76a341
+ms.sourcegitcommit: 69fc9d3ca22cf3f07622db4cdf80c8ec751fe620
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/26/2020
-ms.locfileid: "88866102"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90818697"
 ---
 # <a name="release-notes-for-windows-subsystem-for-linux"></a>Notas de la versión del subsistema de Windows para Linux
+
+## <a name="build-20211"></a>Compilación 20211
+Para obtener información general de Windows sobre la compilación 20211, visite el [blog de Windows](https://blogs.windows.com/windows-insider/2020/09/10/announcing-windows-10-insider-preview-build-20211/).
+
+* Introduzca `wsl.exe --mount` para montar discos físicos o virtuales. Para obtener más información, consulte el tema sobre el [acceso a los sistemas de archivos de Linux en Windows y WSL 2](https://devblogs.microsoft.com/commandline/access-linux-filesystems-in-windows-and-wsl-2/).
+* Se corrigió el bloqueo en el servicio LxssManager al comprobar si la VM estaba inactiva. [GH 5768]
+* Se agregó compatibilidad con los archivos VHD comprimidos. [GH 4103]
+* Se garantizó que las bibliotecas del modo de usuario de Linux instaladas en c:\windows\system32\lxss\lib se conservan en la actualización del sistema operativo. [GH 5848]
+* Se agregó la capacidad de enumerar las distribuciones disponibles que se pueden instalar con `wsl --install --list-distributions`.
+* Las instancias de WSL ahora se terminan cuando el usuario cierra la sesión.
 
 ## <a name="build-20190"></a>Compilación 20190
 Para obtener información general de Windows sobre la compilación 20190, visite el [blog de Windows](https://blogs.windows.com/windowsexperience/2020/08/12/announcing-windows-10-insider-preview-build-20190/).
 
-* Se corrigieron los errores que impedían que se iniciaran las instancias de WSL1 [GH 5633].
-* Se corrigió un bloqueo que se producía al redirigir la salida del proceso de Windows [GH 5648].
-* Se agregó la opción %userprofile%\\.wslconfig para controlar el tiempo de espera de inactividad de la máquina virtual (wsl2.vmIdleTimeout=<time_in_ms>).
+* Se corrigieron los errores que impedían que se iniciaran las instancias de WSL1. [GH 5633]
+* Se corrigió un bloqueo que se producía al redirigir la salida del proceso de Windows. [GH 5648]
+* Se agregó la opción %userprofile%\\.wslconfig para controlar el tiempo de espera de inactividad de la VM (wsl2.vmIdleTimeout=<time_in_ms>).
 * Se agregó compatibilidad para iniciar alias de ejecución de la aplicación desde WSL.
 * Se agregó compatibilidad para la instalación del kernel y las distribuciones de WSL2 en wsl.exe --install.
 

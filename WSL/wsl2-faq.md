@@ -7,12 +7,12 @@ ms.topic: article
 ms.assetid: 7afaeacf-435a-4e58-bff0-a9f0d75b8a51
 ms.custom: seodec18
 ms.localizationpriority: high
-ms.openlocfilehash: a021dc3c6c3c2a14fea631f2733d2b846c6fe3ad
-ms.sourcegitcommit: 910845e9b3f980b2c5b9b4968331a706720603c6
+ms.openlocfilehash: 458aadc89e0f8e63e7d7bad780ed8c5fad0de702
+ms.sourcegitcommit: 69fc9d3ca22cf3f07622db4cdf80c8ec751fe620
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/28/2020
-ms.locfileid: "89058490"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90818687"
 ---
 # <a name="wsl-2-faqs"></a>P+F sobre WSL 2
 
@@ -30,13 +30,13 @@ Actualmente no tenemos planes para dejar en desuso WSL 1. Puedes ejecutar distr
 
 ## <a name="will-i-be-able-to-run-wsl-2-and-other-3rd-party-virtualization-tools-such-as-vmware-or-virtualbox"></a>¿Podré ejecutar WSL 2 y otras herramientas de virtualización de terceros, como VMware o VirtualBox?
 
-Algunas aplicaciones de terceros, como VMware y VirtualBox, no pueden funcionar cuando Hyper-V está en uso, lo que significa que no podrán ejecutarse mientras WSL 2 esté habilitado. Sin embargo, VirtualBox y VMware han publicado versiones compatibles con Hyper-V y WSL2 recientemente. Puede obtener más información sobre los [cambios de VirtualBox aquí][1] y sobre los [cambios de VMware aquí][4].
+Algunas aplicaciones de terceros, como VMware y VirtualBox, no pueden funcionar cuando Hyper-V está en uso, lo que significa que no podrán ejecutarse mientras WSL 2 esté habilitado. Sin embargo, VirtualBox y VMware han publicado versiones compatibles con Hyper-V y WSL2 recientemente. Puede obtener más información sobre los [cambios de VirtualBox aquí][1] y sobre los [cambios de VMware aquí][4]. Para solucionar problemas, eche un vistazo a las [discusiones de problemas de VirtualBox en el repositorio de WSL en GitHub](https://github.com/MicrosoftDocs/WSL/issues?q=is%3Aissue+virtualbox+sort%3Acomments-desc).
 
 Trabajamos de forma constante en las soluciones para admitir la integración de terceros de Hyper-V. Por ejemplo, exponemos un conjunto de API llamado [Hypervisor Platform][2] que los proveedores de virtualización externos pueden usar para hacer que su software sea compatible con Hyper-V. Esto permite que las aplicaciones usen la arquitectura de Hyper-V para su emulación, como [Google Android Emulator][3] y VirtualBox 6 y versiones posteriores, que ahora son compatibles con Hyper-V.
 
 ## <a name="can-i-access-the-gpu-in-wsl-2-are-there-plans-to-increase-hardware-support"></a>¿Puedo acceder a la GPU en WSL 2? ¿Hay planes para aumentar la compatibilidad de hardware?
 
-Hemos publicado compatibilidad para acceder a la GPU dentro de las distribuciones de WSL 2. Esto significa que ahora puede usar WSL para escenarios de aprendizaje automático, inteligencia artificial y ciencia de datos más fácilmente cuando hay involucrados conjuntos de macrodatos. Puede encontrar un tutorial de [introducción a la compatibilidad con GPU aquí](./tutorials/gpu-compute). A partir de ahora, WSL 2 no incluye compatibilidad de serie ni compatibilidad con dispositivos USB. Estamos investigando la mejor manera de agregar estas características.
+Hemos publicado compatibilidad para acceder a la GPU dentro de las distribuciones de WSL 2. Esto significa que ahora puede usar WSL para escenarios de aprendizaje automático, inteligencia artificial y ciencia de datos más fácilmente cuando hay involucrados conjuntos de macrodatos. Consulte el tutorial [Introducción a la compatibilidad con GPU](./tutorials/gpu-compute.md). A partir de ahora, WSL 2 no incluye compatibilidad de serie ni compatibilidad con dispositivos USB. Estamos investigando la mejor manera de agregar estas características.
 
 ## <a name="will-wsl-2-be-able-to-use-networking-applications"></a>¿WSL 2 podrá usar aplicaciones de redes?
 

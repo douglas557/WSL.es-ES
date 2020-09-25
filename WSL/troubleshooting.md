@@ -5,16 +5,16 @@ keywords: BashOnWindows, bash, wsl, windows, subsistemawindows, ubuntu
 ms.date: 01/20/2020
 ms.topic: article
 ms.localizationpriority: high
-ms.openlocfilehash: 2335db4daf8b9c5c67ad04a1fc94339b6c01e546
-ms.sourcegitcommit: 6ff046993e9f196cdfa04f5f91130e0e4ff1e7fa
+ms.openlocfilehash: 83c73e99afd4745081290340a67edee3ec26dc60
+ms.sourcegitcommit: 69fc9d3ca22cf3f07622db4cdf80c8ec751fe620
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89427202"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90818717"
 ---
 # <a name="troubleshooting-windows-subsystem-for-linux"></a>Solucionar problemas del subsistema de Windows para Linux
 
-Para obtener ayuda para solucionar problemas relacionados con WSL, consulta nuestro repositorio de GitHub:
+Para obtener ayuda para solucionar problemas relacionados con WSL, consulta nuestro repositorio de GitHub: https://github.com/Microsoft/wsl/issues
 
 ## <a name="search-for-any-existing-issues-related-to-your-problem"></a>Búsqueda de cualquier problema existente relacionado con tu problema
 
@@ -44,7 +44,7 @@ Por último, si tu problema está relacionado con el Terminal Windows, la consol
 
 Probablemente, se debe a que la máquina aún no ha adquirido la adaptación para WSL 2. La forma más sencilla de resolverlo es dirigirse a Configuración de Windows y hacer clic en "Buscar actualizaciones" para instalar las actualizaciones más recientes en el sistema. Puede ver las instrucciones completas sobre cómo adquirir la adaptación [aquí](https://devblogs.microsoft.com/commandline/wsl-2-support-is-coming-to-windows-10-versions-1903-and-1909/#how-do-i-get-it). 
 
-Si pulsa "Buscar actualizaciones" y sigue sin recibir la actualización, puede instalar KB KB4566116 manualmente [siguiendo este vínculo](http://www.catalog.update.microsoft.com/Search.aspx?q=KB4566116).  
+Si pulsa "Buscar actualizaciones" y sigue sin recibir la actualización, puede instalar KB KB4566116 manualmente [siguiendo este vínculo](https://www.catalog.update.microsoft.com/Search.aspx?q=KB4566116).  
 
 ### <a name="error-0x1bc-when-wsl---set-default-version-2"></a>Error: 0x1bc cuando `wsl --set-default-version 2`
 Puede ocurrir cuando el valor de "Mostrar idioma" o "Configuración regional del sistema" no es Inglés.

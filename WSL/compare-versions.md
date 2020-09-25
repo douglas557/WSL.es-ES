@@ -1,22 +1,29 @@
 ---
 title: Comparación de WSL 2 con WSL 1
-description: Compare la versión 1 y la versión 2 del Subsistema de Windows para Linux. WSL 2 ejecuta un kernel de Linux real, lo que aumenta la velocidad y la compatibilidad completa con las llamadas del sistema. WSL 1 funciona mejor si trabaja en ambos sistemas de archivos Windows y Linux.
+description: 'Compare la versión 1 y la versión 2 del Subsistema de Windows para Linux. Conozca las novedades de WSL 2: kernel de Linux real, velocidad más rápida, compatibilidad completa con las llamadas del sistema. WSL 1 funciona mejor si almacena archivos en los sistemas de archivos operativos. Puede ampliar el tamaño del disco de hardware virtual (VHD) de WSL 2.'
 keywords: BashOnWindows, bash, wsl, windows, subsistemawindows, gnu, linux, ubuntu, debian, suse, windows 10, cambios en la experiencia de usuario, WSL 2, kernel de linux, aplicaciones de red, localhost, IPv6, disco de hardware virtual, VHD, limitaciones de VHD, error de VHD
-ms.date: 07/22/2020
-ms.topic: article
+ms.date: 09/15/2020
+ms.topic: conceptual
 ms.localizationpriority: high
-ms.openlocfilehash: 930fbdc0b86396f41fbb1189f4a651bb03e05f22
-ms.sourcegitcommit: 6ff046993e9f196cdfa04f5f91130e0e4ff1e7fa
+ms.custom: contperfq1
+ms.openlocfilehash: e8a8fc2c5e844ae5b6a62b2a4f7844e674bdcfd9
+ms.sourcegitcommit: 69fc9d3ca22cf3f07622db4cdf80c8ec751fe620
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/03/2020
-ms.locfileid: "89427182"
+ms.lasthandoff: 09/19/2020
+ms.locfileid: "90818747"
 ---
 # <a name="comparing-wsl-1-and-wsl-2"></a>Comparación de WSL 1 con WSL 2
 
-Los principales objetivos de actualizar el Subsistema de Windows para Linux a una nueva versión son **aumentar el rendimiento del sistema de archivos** y admitir la **compatibilidad completa con las llamadas del sistema**. 
+La diferencia y los motivos principales para actualizar el Subsistema de Windows para Linux de WSL 1 a WSL 2 son:
 
-WSL 2 usa la tecnología de virtualización más reciente y óptima para ejecutar un kernel de Linux en una máquina virtual (VM) de utilidad ligera. Sin embargo, WSL 2 no es una experiencia de VM tradicional. [Obtén más información sobre la arquitectura de WSL 2](#wsl-2-architecture).
+- **Aumento del rendimiento del sistema de archivos**.
+- **Compatibilidad completa con las llamadas del sistema**.
+
+WSL 2 usa la tecnología de virtualización más reciente y óptima para ejecutar un kernel de Linux en una máquina virtual (VM) de utilidad ligera. Sin embargo, WSL 2 no es una experiencia de VM tradicional.
+
+> [!div class="nextstepaction"]
+> [Instalación de WSL 1 y actualización a WSL 2](install-win10.md)
 
 ## <a name="comparing-features"></a>Comparación de características
 
@@ -31,39 +38,33 @@ Característica | WSL 1 | WSL 2
  Compatibilidad completa con las llamadas del sistema| ❌ | ✅
  Rendimiento entre sistemas de archivos del sistema operativo| ✅ | ❌
 
-¿Ya usas WSL 1 y quieres actualizar a WSL 2? Sigue las instrucciones para [realizar la actualización a WSL 2](./install-win10.md#update-to-wsl-2).
+Como puede ver en la tabla de comparación anterior, la arquitectura de WSL 2 supera a la de WSL 1 de varias maneras, con la excepción del rendimiento en los sistemas de archivos del sistema operativo.
+
+## <a name="performance-across-os-file-systems"></a>Rendimiento entre sistemas de archivos del sistema operativo
+
+Se recomienda no trabajar en los sistemas operativos con los archivos, a menos que tenga una razón específica para hacerlo. Para lograr la máxima velocidad de rendimiento, almacene los archivos en el sistema de archivos de WSL si está trabajando en una línea de comandos de Linux (Ubuntu, OpenSUSE, etc.). Si trabaja en una línea de comandos de Windows (PowerShell, símbolo del sistema), almacene los archivos en el sistema de archivos de Windows.
+
+Por ejemplo, al almacenar los archivos de proyecto de WSL, haz lo siguiente:
+
+- Usa el directorio raíz del sistema de archivos de Linux: `\\wsl$\Ubuntu-18.04\home\<user name>\Project`
+- No uses el directorio raíz del sistema de archivos de Windows: `C:\Users\<user name>\Project`
+
+Puedes acceder al sistema de archivos raíz de Linux con las aplicaciones y herramientas de Windows, como el Explorador de archivos. Intenta abrir una distribución de Linux (como Ubuntu). Para asegurarte de que estás en el directorio principal de Linux, escribe este comando: `cd ~`. Después, abre el sistema de archivos de Linux en el Explorador de archivos. Para ello, escribe *(no olvides el punto al final)* : `explorer.exe .`
 
 WSL 2 solo está disponible en Windows 10, versión 1903, compilación 18362 o superior. Para comprobar la versión de Windows, selecciona la **tecla del logotipo de Windows + R**, escribe **winver** y selecciona **Aceptar**. (También puedes escribir el comando `ver` en el símbolo del sistema de Windows). Es posible que tengas que [actualizar a la versión más reciente de Windows](ms-settings:windowsupdate). En el caso de las compilaciones inferiores a 18362, no se admite WSL en absoluto.
 
 > [!NOTE]
-> WSL 2 funcionará con [VMWare 15.5.5 y versiones posteriores](https://blogs.vmware.com/workstation/2020/05/vmware-workstation-now-supports-hyper-v-mode.html) y [VirtualBox 6 y versiones posteriores](https://www.virtualbox.org/wiki/Changelog-6.0).
+> WSL 2 funcionará con [VMWare 15.5.5 y versiones posteriores](https://blogs.vmware.com/workstation/2020/05/vmware-workstation-now-supports-hyper-v-mode.html) y [VirtualBox 6 y versiones posteriores](https://www.virtualbox.org/wiki/Changelog-6.0). Obtenga más información en las [preguntas más frecuentes sobre WSL 2](./wsl2-faq.md#will-i-be-able-to-run-wsl-2-and-other-3rd-party-virtualization-tools-such-as-vmware-or-virtualbox).
 
-## <a name="use-the-linux-file-system-for-faster-performance"></a>Uso del sistema de archivos de Linux para obtener un mayor rendimiento
+## <a name="whats-new-in-wsl-2"></a>Novedades de WSL 2
 
-Para lograr la mayor velocidad de rendimiento, asegúrate de almacenar los archivos de proyecto en el sistema de archivos de Linux (no en el sistema de archivos de Windows).
+WSL 2 es una revisión importante de la arquitectura subyacente y usa tecnología de virtualización y un kernel de Linux para habilitar las nuevas características. Los principales objetivos de esta actualización son aumentar el rendimiento del sistema de archivos y agregar compatibilidad completa con las llamadas del sistema.
 
-Por ejemplo, al almacenar los archivos de proyecto de WSL, haz lo siguiente:
+- [Requisitos del sistema de VSL 2](./install-win10.md#step-2---update-to-wsl-2)
+- [Actualización de WSL 1 a WSL 2](./install-win10.md#step-2---update-to-wsl-2)
+- [Preguntas más frecuentes sobre WSL 2](./wsl2-faq.md)
 
-* Usa el directorio raíz del sistema de archivos de Linux: `\\wsl$\Ubuntu-18.04\home\<user name>\Project`
-* No uses el directorio raíz del sistema de archivos de Windows: `C:\Users\<user name>\Project`
-
-Los archivos de proyecto con los que trabajes usando una distribución de WSL (como Ubuntu) deben estar en el sistema de archivos raíz de Linux para aprovechar el acceso más rápido al sistema de archivos.
-
-Puedes acceder al sistema de archivos raíz de Linux con las aplicaciones y herramientas de Windows, como el Explorador de archivos. Intenta abrir una distribución de Linux (como Ubuntu). Para asegurarte de que estás en el directorio principal de Linux, escribe este comando: `cd ~`. Después, abre el sistema de archivos de Linux en el Explorador de archivos. Para ello, escribe *(no olvides el punto al final)* : `explorer.exe .`
-
-## <a name="exceptions-for-using-wsl-1-rather-than-wsl-2"></a>Excepciones para usar WSL 1 en lugar de WSL 2
-
-Te recomendamos que uses WSL 2, ya que ofrece un rendimiento mayor y compatibilidad completa con las llamadas del sistema. Sin embargo, hay algunos escenarios específicos en los que podrías preferir el uso de WSL 1. Considera el uso de WSL 1 en los casos siguientes:
-
-* Los archivos de proyecto se deben almacenar en el sistema de archivos de Windows.
-  * Si vas a usar tu distribución de WSL para Linux para acceder a los archivos de proyecto en el sistema de archivos de Windows, y estos archivos no se pueden almacenar en el sistema de archivos de Linux, obtendrás un mayor rendimiento en los sistemas de archivos del sistema operativo mediante WSL 1.
-* Un proyecto requiere la compilación cruzada con las herramientas de Windows y Linux en los mismos archivos.
-  * El rendimiento de los archivos en los sistemas operativos Windows y Linux es mayor en WSL 1 que en WSL 2, por lo que, si usas aplicaciones Windows para acceder a archivos de Linux, obtendrás un mayor rendimiento con WSL 1.
-
-> [!NOTE]
-> Considera la posibilidad de probar la [extensión Remote WSL](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl) de VS Code para poder almacenar los archivos de proyecto en el sistema de archivos de Linux, mediante las herramientas de línea de comandos de Linux, pero también con VS Code en Windows para crear, editar, depurar o ejecutar el proyecto en un explorador de Internet, sin experimentar las ralentizaciones de rendimiento asociadas con el trabajo en los sistemas de archivos de Windows. [Más información](https://code.visualstudio.com/docs/remote/wsl).
-
-## <a name="wsl-2-architecture"></a>Arquitectura de WSL 2
+### <a name="wsl-2-architecture"></a>Arquitectura de WSL 2
 
 Una experiencia de VM tradicional puede presentar un arranque lento, aislamiento y un consumo excesivo de recursos, además de exigir tiempo para su administración. WSL 2 no tiene estos atributos.
 
@@ -85,13 +86,25 @@ El aumento de la velocidad real dependerá de la aplicación que se esté ejecut
 
 Los archivos binarios de Linux usan llamadas del sistema para ejecutar funciones, como el acceso a archivos, la solicitud de memoria, la creación de procesos, etc. Mientras que WSL 1 usaba una capa de traducción creada por el equipo de WSL, WSL 2 incluye su propio kernel de Linux con total compatibilidad con las llamadas del sistema. Entre las ventajas se incluyen las siguientes:
 
-* Un conjunto de aplicaciones nuevo y completo que se pueden ejecutar en WSL, como **[Docker](https://code.visualstudio.com/blogs/2020/03/02/docker-in-wsl2)** , entre otros.
+- Un conjunto de aplicaciones nuevo y completo que se pueden ejecutar en WSL, como **[Docker](tutorials/wsl-containers.md)** , entre otros.
 
-* Todas las actualizaciones del kernel de Linux están listas para su uso inmediato. (No tienes que esperar a que el equipo de WSL implemente actualizaciones y agregue los cambios).
+- Todas las actualizaciones del kernel de Linux están listas para su uso inmediato. (No tienes que esperar a que el equipo de WSL implemente actualizaciones y agregue los cambios).
 
 ### <a name="wsl-2-uses-a-smaller-amount-of-memory-on-startup"></a>WSL 2 usa una cantidad menor de memoria en el inicio
 
 WSL 2 usa una VM de utilidad ligera en un kernel de Linux real con una superficie de memoria pequeña. La utilidad asignará memoria respaldada por direcciones virtuales al iniciarse. Está configurada para empezar con una pequeña proporción de la memoria total que se necesitaba para WSL 1.
+
+## <a name="exceptions-for-using-wsl-1-rather-than-wsl-2"></a>Excepciones para usar WSL 1 en lugar de WSL 2
+
+Te recomendamos que uses WSL 2, ya que ofrece un rendimiento mayor y compatibilidad completa con las llamadas del sistema. Sin embargo, hay algunos escenarios específicos en los que podrías preferir el uso de WSL 1. Considera el uso de WSL 1 en los casos siguientes:
+
+- Los archivos de proyecto se deben almacenar en el sistema de archivos de Windows. WSL 1 ofrece un acceso más rápido a los archivos montados desde Windows.
+  - Si vas a usar tu distribución de WSL para Linux para acceder a los archivos de proyecto en el sistema de archivos de Windows, y estos archivos no se pueden almacenar en el sistema de archivos de Linux, obtendrás un mayor rendimiento en los sistemas de archivos del sistema operativo mediante WSL 1.
+- Un proyecto requiere la compilación cruzada con las herramientas de Windows y Linux en los mismos archivos.
+  - El rendimiento de los archivos en los sistemas operativos Windows y Linux es mayor en WSL 1 que en WSL 2, por lo que, si usas aplicaciones Windows para acceder a archivos de Linux, obtendrás un mayor rendimiento con WSL 1.
+
+> [!NOTE]
+> Considera la posibilidad de probar la [extensión Remote WSL](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl) de VS Code para poder almacenar los archivos de proyecto en el sistema de archivos de Linux, mediante las herramientas de línea de comandos de Linux, pero también con VS Code en Windows para crear, editar, depurar o ejecutar el proyecto en un explorador de Internet, sin experimentar las ralentizaciones de rendimiento asociadas con el trabajo en los sistemas de archivos de Windows. [Más información](tutorials/wsl-vscode.md).
 
 ## <a name="accessing-network-applications"></a>Acceso a aplicaciones de red
 
@@ -103,14 +116,14 @@ Sin embargo, si ejecutas una versión anterior de Windows (compilación 18945 o
 
 Para buscar la dirección IP de la máquina virtual que habilita tu distribución de Linux:
 
-* Desde la distribución de WSL (por ejemplo, Ubuntu), ejecuta el comando: `ip addr`
-* Busca la dirección en el valor `inet` de la interfaz `eth0` y cópiala.
-* Si tienes instalada la herramienta grep, puedes buscarla más fácilmente filtrando el resultado con el comando: `ip addr | grep eth0`
-* Conéctate al servidor de Linux con esta dirección IP.
+- Desde la distribución de WSL (por ejemplo, Ubuntu), ejecuta el comando: `ip addr`
+- Busca la dirección en el valor `inet` de la interfaz `eth0` y cópiala.
+- Si tienes instalada la herramienta grep, puedes buscarla más fácilmente filtrando el resultado con el comando: `ip addr | grep eth0`
+- Conéctate al servidor de Linux con esta dirección IP.
 
 La imagen siguiente muestra un ejemplo con la conexión a un servidor de Node.js mediante el navegador Edge.
 
-![Acceso a aplicaciones de red de Linux desde Windows](media/wsl2-network-w2l.jpg)
+![Conexión al servidor de NodeJS con Edge](media/wsl2-network-w2l.jpg)
 
 ### <a name="accessing-windows-networking-apps-from-linux-host-ip"></a>Acceso a aplicaciones de red de Windows desde Linux (dirección IP del host)
 
@@ -121,7 +134,7 @@ Si quieres acceder a una aplicación de red que se ejecuta en Windows (por ejemp
 
 La imagen siguiente muestra un ejemplo con la conexión a un servidor de Node.js que se ejecuta en Windows a través de curl.
 
-![Acceso a aplicaciones de red de Linux desde Windows](media/wsl2-network-l2w.png)
+![Conexión al servidor de NodeJS en Windows a través de cURL](media/wsl2-network-l2w.png)
 
 ### <a name="additional-networking-considerations"></a>Consideraciones adicionales sobre redes
 
@@ -138,6 +151,7 @@ Al usar una distribución de WSL 1, si el equipo está configurado para ser acc
 Esto no ocurre de forma predeterminada en WSL 2. WSL 2 tiene un adaptador Ethernet virtualizado con su propia dirección IP única. Actualmente, para habilitar este flujo de trabajo, tendrás que seguir los mismos pasos que para una máquina virtual normal. (Estamos buscando maneras de mejorar esta experiencia).
 
 Este es un ejemplo de un comando de PowerShell para agregar un proxy de puerto que realiza escuchas en el puerto 4000 del host y lo conecta al puerto 4000 de la máquina virtual WSL 2 con la dirección IP 192.168.101.100.
+
 ```powershell
 netsh interface portproxy add v4tov4 listenport=4000 listenaddress=0.0.0.0 connectport=4000 connectaddress=192.168.101.100
 ```
@@ -157,26 +171,26 @@ Para ampliar el tamaño máximo del VHD más allá de 256 GB:
 1. Finaliza todas las instancias de WSL mediante el comando `wsl --shutdown`.
 
 2. Busca el nombre del paquete de instalación de la distribución ("PackageFamilyName").
-    * En PowerShell (en que "distro" es el nombre de tu distribución), escribe el comando siguiente:
-    * `Get-AppxPackage -Name "*<distro>*" | Select PackageFamilyName`
+    - En PowerShell (en que "distro" es el nombre de tu distribución), escribe el comando siguiente:
+    - `Get-AppxPackage -Name "*<distro>*" | Select PackageFamilyName`
 
 3. Busca el archivo VHD `fullpath` que se usa en tu instalación de WSL 2, que será tu valor de `pathToVHD`:
-     * `%LOCALAPPDATA%\Packages\<PackageFamilyName>\LocalState\<disk>.vhdx`
+     - `%LOCALAPPDATA%\Packages\<PackageFamilyName>\LocalState\<disk>.vhdx`
 
 4. Cambia el tamaño del VHD de WSL 2 mediante los comandos siguientes:
-   * Abre el símbolo del sistema de Windows con privilegios de administrador y escribe:
-      * `diskpart`
-      * `Select vdisk file="<pathToVHD>"`
-      * `expand vdisk maximum="<sizeInMegaBytes>"`
+   - Abre el símbolo del sistema de Windows con privilegios de administrador y escribe:
+      - `diskpart`
+      - `Select vdisk file="<pathToVHD>"`
+      - `expand vdisk maximum="<sizeInMegaBytes>"`
 
 5. Inicia la distribución de WSL (Ubuntu, por ejemplo).
 
 6. Para indicar a WSL que puede expandir el tamaño del sistema de archivos, ejecuta estos comandos desde la línea de comandos de tu distribución de Linux:
-    * `sudo mount -t devtmpfs none /dev`
-    * `mount | grep ext4`
-    * Copia el nombre de esta entrada, que tendrá el siguiente aspecto: `/dev/sdXX` (en que la X representa cualquier otro carácter).
-    * `sudo resize2fs /dev/sdXX`
-    * Usa el valor que copiaste antes. También puede que necesites instalar resize2fs: `apt install resize2fs`
+    - `sudo mount -t devtmpfs none /dev`
+    - `mount | grep ext4`
+    - Copia el nombre de esta entrada, que tendrá el siguiente aspecto: `/dev/sdXX` (en que la X representa cualquier otro carácter).
+    - `sudo resize2fs /dev/sdXX`
+    - Usa el valor que copiaste antes. También puede que necesites instalar resize2fs: `apt install resize2fs`
 
 > [!NOTE]
 > En general, no debes modificar ni mover los archivos relacionados con WSL ubicados en la carpeta AppData mediante herramientas o editores de Windows. Tampoco tienes que acceder a estos archivos. Al hacerlo, podrías dañar tu distribución de Linux.
