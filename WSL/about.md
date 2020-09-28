@@ -6,12 +6,12 @@ ms.date: 07/21/2020
 ms.topic: article
 ms.assetid: 3cefe0db-7616-4848-a2b6-9296746a178b
 ms.localizationpriority: high
-ms.openlocfilehash: 2b79473f620c39084bc9b7a385d4e16e3fe34d77
-ms.sourcegitcommit: 69fc9d3ca22cf3f07622db4cdf80c8ec751fe620
+ms.openlocfilehash: 0c6fa3d0c5483a7ffd1fb95f13ca62666a7c1e72
+ms.sourcegitcommit: b15b847b87d29a40de4a1517315949bce9c7a3d5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90818682"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91413086"
 ---
 # <a name="what-is-the-windows-subsystem-for-linux"></a>¿Qué es el Subsistema de Windows para Linux?
 
@@ -23,7 +23,7 @@ Se puede hacer lo siguiente:
 * Ejecuta herramientas comunes de línea de comandos, como `grep`, `sed`, `awk` u otros archivos binarios ELF-64.
 * Ejecuta scripts de shell de Bash y aplicaciones de línea de comandos de GNU/Linux, como:  
     * Herramientas: vim, emacs, tmux.
-    * Idiomas: [NodeJS](https://docs.microsoft.com/windows/nodejs/setup-on-wsl2), Javascript, [Python](https://docs.microsoft.com/windows/python/web-frameworks), Ruby, C/C++, C# & F#, Rust, Go, etc.
+    * Idiomas: [NodeJS](/windows/nodejs/setup-on-wsl2), Javascript, [Python](/windows/python/web-frameworks), Ruby, C/C++, C# & F#, Rust, Go, etc.
     * Servicios: SSHD, [MySQL](./tutorials/wsl-database.md), Apache, lighttpd, [MongoDB](./tutorials/wsl-database.md), [PostgreSQL](./tutorials/wsl-database.md).
 * Instala software adicional mediante el administrador de paquetes de distribución de GNU/Linux.
 * Invoca aplicaciones de Windows mediante un shell de línea de comandos de tipo UNIX.

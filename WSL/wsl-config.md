@@ -4,12 +4,12 @@ description: Lista de referencia y configuración de varias distribuciones de Li
 keywords: BashOnWindows, bash, wsl, windows, subsistema de windows para linux, subsistemawindows, ubuntu, wsl.conf, wslconfig
 ms.date: 05/12/2020
 ms.topic: article
-ms.openlocfilehash: 0a127d376a8606a1a13ea88c9efed161e18a161d
-ms.sourcegitcommit: 69fc9d3ca22cf3f07622db4cdf80c8ec751fe620
+ms.openlocfilehash: 73544d4d8c8eda462194f213a0f093b21ab6d90e
+ms.sourcegitcommit: b15b847b87d29a40de4a1517315949bce9c7a3d5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90818737"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91413326"
 ---
 # <a name="wsl-commands-and-launch-configurations"></a>Comandos WSL y configuraciones de inicio
 
@@ -170,7 +170,7 @@ Cambie el usuario predeterminado para el inicio de sesión de distribución. El 
 Por ejemplo: `ubuntu config --default-user johndoe` cambiaría el usuario predeterminado de la distribución de Ubuntu al usuario "\ \ \".
 
 > [!NOTE]
-> Si tiene problemas para averiguar el nombre de la distribución, consulte [lista de distribuciones](https://docs.microsoft.com/windows/wsl/wsl-config#list-distributions) para que el comando muestre el nombre oficial de las distribuciones instaladas. 
+> Si tiene problemas para averiguar el nombre de la distribución, consulte [lista de distribuciones](#list-distributions) para que el comando muestre el nombre oficial de las distribuciones instaladas. 
 
 ## <a name="run-a-specific-distribution"></a>Ejecutar una distribución específica
 

@@ -5,12 +5,12 @@ keywords: WSL, Windows, windowssubsystem, Windows 10, Docker, contenedores
 ms.date: 08/28/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 2ae9da815335f99a9b4a75334a02d2730ddd08c6
-ms.sourcegitcommit: 69fc9d3ca22cf3f07622db4cdf80c8ec751fe620
+ms.openlocfilehash: 5a1187336341d73f662b7e9f27b19df4fd0e1e73
+ms.sourcegitcommit: b15b847b87d29a40de4a1517315949bce9c7a3d5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90818757"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91413336"
 ---
 # <a name="get-started-with-docker-remote-containers-on-wsl-2"></a>Introducción a los contenedores remotos de Docker en WSL 2
 
@@ -24,17 +24,17 @@ Docker es una herramienta que se usa para crear, implementar y ejecutar aplicaci
 
 Los contenedores de Docker son similares a las máquinas virtuales, pero no crean un sistema operativo virtual completo. En su lugar, Docker permite a la aplicación usar el mismo kernel de Linux que el sistema en el que se ejecuta. Esto permite que el paquete de la aplicación solo requiera partes que aún no existen en el equipo host, lo que reduce el tamaño del paquete y mejora el rendimiento.
 
-La disponibilidad continua, mediante el uso de contenedores de Docker con herramientas como [Kubernetes](https://docs.microsoft.com/azure/aks/), es otro motivo para la popularidad de los contenedores. Esto permite crear varias versiones del contenedor de la aplicación en momentos diferentes. En lugar de tener que deshacer todo el sistema para las actualizaciones o el mantenimiento, cada contenedor y sus microservicios específicos se pueden reemplazar sobre la marcha. Puedes preparar un nuevo contenedor con todas las actualizaciones, configurar el contenedor para producción y simplemente apuntar al nuevo contenedor una vez que esté listo. También puedes archivar versiones diferentes de la aplicación mediante contenedores y mantenerlas en ejecución como reserva de seguridad si es necesario.
+La disponibilidad continua, mediante el uso de contenedores de Docker con herramientas como [Kubernetes](/azure/aks/), es otro motivo para la popularidad de los contenedores. Esto permite crear varias versiones del contenedor de la aplicación en momentos diferentes. En lugar de tener que deshacer todo el sistema para las actualizaciones o el mantenimiento, cada contenedor y sus microservicios específicos se pueden reemplazar sobre la marcha. Puedes preparar un nuevo contenedor con todas las actualizaciones, configurar el contenedor para producción y simplemente apuntar al nuevo contenedor una vez que esté listo. También puedes archivar versiones diferentes de la aplicación mediante contenedores y mantenerlas en ejecución como reserva de seguridad si es necesario.
 
-Para obtener más información, consulte la [Introducción a los contenedores de Docker](https://docs.microsoft.com/learn/modules/intro-to-docker-containers/) en Microsoft Learn.
+Para obtener más información, consulte la [Introducción a los contenedores de Docker](/learn/modules/intro-to-docker-containers/) en Microsoft Learn.
 
 ## <a name="prerequisites"></a>Requisitos previos
 
 - Asegúrese de que el equipo ejecuta Windows 10, [actualizado a la versión 2004](ms-settings:windowsupdate), **compilación 18362** o posterior.
-- [Habilite WSL, instale una distribución de Linux y actualice a WSL 2](https://docs.microsoft.com/windows/wsl/install-win10).
-- [Descargue e instale el paquete de actualización del kernel de Linux](https://docs.microsoft.com/windows/wsl/wsl2-kernel).
+- [Habilite WSL, instale una distribución de Linux y actualice a WSL 2](../install-win10.md).
+- [Descargue e instale el paquete de actualización del kernel de Linux](/windows/wsl/wsl2-kernel).
 - [Instale Visual Studio Code](https://code.visualstudio.com/download) *(opcional)*. Esto proporcionará la mejor experiencia, incluida la capacidad de codificar y depurar dentro de un contenedor de Docker remoto y conectarse a la distribución de Linux.
-- [Instale Windows terminal](https://docs.microsoft.com/windows/terminal/get-started) *(opcional)*. Esto proporcionará la mejor experiencia, incluida la capacidad de personalizar y abrir varios terminales en la misma interfaz (como Ubuntu, Debian, PowerShell, CLI de Azure o cualquier cosa que prefiera usar).
+- [Instale Windows terminal](/windows/terminal/get-started) *(opcional)*. Esto proporcionará la mejor experiencia, incluida la capacidad de personalizar y abrir varios terminales en la misma interfaz (como Ubuntu, Debian, PowerShell, CLI de Azure o cualquier cosa que prefiera usar).
 - [Regístrese para obtener un ID. de Docker en Docker Hub](https://hub.docker.com/signup) *(opcional)*.
 
 > [!NOTE]
@@ -46,7 +46,7 @@ Para obtener más información, consulte la [Introducción a los contenedores de
 
 Con el back-end de WSL 2 compatible con Docker Desktop para Windows, puede trabajar en un entorno de desarrollo basado en Linux y compilar contenedores basados en Linux, mientras usa Visual Studio Code para la edición y depuración de código, y para ejecutar el contenedor en el explorador Microsoft Edge en Windows.
 
-Para instalar Docker (después de [instalar WSL 2](https://docs.microsoft.com/windows/wsl/install-win10)):
+Para instalar Docker (después de [instalar WSL 2](../install-win10.md)):
 
 1. Descargue [Docker Desktop](https://docs.docker.com/docker-for-windows/wsl/#download) y siga las instrucciones de instalación.
 
@@ -84,7 +84,7 @@ Para empezar a desarrollar aplicaciones mediante Docker con WSL 2, se recomienda
 
 Vamos a usar Docker para crear un contenedor de desarrollo para un proyecto de aplicación existente.
 
-1. En este ejemplo, usaré el código fuente del tutorial de [Hola mundo para Django](https://docs.microsoft.com/windows/python/web-frameworks#hello-world-tutorial-for-django) en el entorno de desarrollo de Python configurar docs. Puede omitir este paso si prefiere usar su propio código fuente del proyecto. Para descargar mi aplicación web HelloWorld-Django desde GitHub, abra un terminal de WSL (por ejemplo, Ubuntu) y escriba: `git clone https://github.com/mattwojo/helloworld-django.git`
+1. En este ejemplo, usaré el código fuente del tutorial de [Hola mundo para Django](/windows/python/web-frameworks#hello-world-tutorial-for-django) en el entorno de desarrollo de Python configurar docs. Puede omitir este paso si prefiere usar su propio código fuente del proyecto. Para descargar mi aplicación web HelloWorld-Django desde GitHub, abra un terminal de WSL (por ejemplo, Ubuntu) y escriba: `git clone https://github.com/mattwojo/helloworld-django.git`
 
     > [!NOTE]
     > Almacene siempre el código en el mismo sistema de archivos en el que está usando las herramientas de. Esto dará lugar a un rendimiento de acceso a archivos más rápido. En este ejemplo, se usa un distribución de Linux (Ubuntu) y se quieren almacenar los archivos de proyecto en el sistema de archivos WSL `\\wsl\` . El almacenamiento de archivos de proyecto en el sistema de archivos de Windows ralentizaría considerablemente el uso de las herramientas de Linux en WSL para tener acceso a esos archivos.

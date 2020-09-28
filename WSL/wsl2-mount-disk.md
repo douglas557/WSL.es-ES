@@ -5,12 +5,12 @@ keywords: WSL, Windows, windowssubsystem, GNU, Linux, bash, Disk, ext4, filesyst
 ms.date: 06/08/2020
 ms.topic: article
 ms.localizationpriority: medium
-ms.openlocfilehash: 8053b817dab0639789401e2fcfb116f6f8e722a7
-ms.sourcegitcommit: a949595f3947c733f0bcdc54b30ccda5ae61577c
+ms.openlocfilehash: 5ea7d7adae42a44b040408575e7345c456f3acac
+ms.sourcegitcommit: b15b847b87d29a40de4a1517315949bce9c7a3d5
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/10/2020
-ms.locfileid: "89671212"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91413286"
 ---
 # <a name="get-started-mounting-a-linux-disk-in-wsl-2-preview"></a>Introducción al montaje de un disco de Linux en WSL 2 (versión preliminar)
 
@@ -127,7 +127,7 @@ De forma predeterminada, WSL 2 intenta montar todo el disco. Para montar una par
 wsl --mount <Diskpath> -p <PartitionIndex>
 ```
 
-Esto solo funciona si el disco es MBR (registro de arranque maestro) o GPT (tabla de particiones GUID). [Lea acerca de los estilos de partición: MBR y GPT](https://docs.microsoft.com/windows-server/storage/disk-management/initialize-new-disks#about-partition-styles---gpt-and-mbr).
+Esto solo funciona si el disco es MBR (registro de arranque maestro) o GPT (tabla de particiones GUID). [Lea acerca de los estilos de partición: MBR y GPT](/windows-server/storage/disk-management/initialize-new-disks#about-partition-styles---gpt-and-mbr).
 
 ### <a name="specifying-mount-options"></a>Especificar opciones de montaje
 
