@@ -6,12 +6,12 @@ ms.date: 01/14/2020
 ms.topic: article
 ms.assetid: 7afaeacf-435a-4e58-bff0-a9f0d75b8a51
 ms.localizationpriority: high
-ms.openlocfilehash: 81d4cfa1ae57cdd077ba8cbd614111881724718a
-ms.sourcegitcommit: f1b049a1276782d4f2754f46a8d2025b598a0784
+ms.openlocfilehash: 3de8553baf616ee8d5d45f0738615f83df952942
+ms.sourcegitcommit: b15b847b87d29a40de4a1517315949bce9c7a3d5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/24/2020
-ms.locfileid: "85336078"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91413226"
 ---
 # <a name="file-permissions-for-wsl"></a>Permisos de archivo para WSL
 
@@ -32,7 +32,7 @@ WSL puede agregar cuatro atributos extendidos de NTFS:
 | $LXMOD | Modo de archivo (octales y tipo de permisos de sistemas de archivos; por ejemplo: 0777) |
 | $LXDEV | Dispositivo, si es un archivo de dispositivo |
 
-Además, cualquier archivo que no sea un archivo o directorio normal (por ejemplo, vínculos simbólicos, FIFO [PEPS], dispositivos de bloques, sockets de UNIX y dispositivos de caracteres) también tiene un [punto de repetición de análisis](https://docs.microsoft.com/windows/win32/fileio/reparse-points) de NTFS. De este modo, es mucho más rápido determinar el tipo de archivo en un directorio específico sin tener que consultar sus atributos extendidos.
+Además, cualquier archivo que no sea un archivo o directorio normal (por ejemplo, vínculos simbólicos, FIFO [PEPS], dispositivos de bloques, sockets de UNIX y dispositivos de caracteres) también tiene un [punto de repetición de análisis](/windows/win32/fileio/reparse-points) de NTFS. De este modo, es mucho más rápido determinar el tipo de archivo en un directorio específico sin tener que consultar sus atributos extendidos.
 
 ## <a name="file-access-scenarios"></a>Escenarios de acceso a archivos
 

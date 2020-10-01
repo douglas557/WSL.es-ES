@@ -6,12 +6,12 @@ ms.date: 09/15/2020
 ms.topic: article
 ms.assetid: 129101ed-b88a-43c2-b6a2-cd2c4ff6fee1
 ms.localizationpriority: high
-ms.openlocfilehash: 0f16471968151fa040d41baa90af6aedfb6fee79
-ms.sourcegitcommit: ba3399a5ffeffd23551315acd04ea6848d30693b
+ms.openlocfilehash: f769261bab35619b034e2a84e4f308eeb0a93cb4
+ms.sourcegitcommit: b15b847b87d29a40de4a1517315949bce9c7a3d5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/17/2020
-ms.locfileid: "90719194"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91413245"
 ---
 # <a name="frequently-asked-questions-about-windows-subsystem-for-linux"></a>Preguntas más frecuentes sobre el subsistema de Windows para Linux
 
@@ -45,7 +45,7 @@ WSL va destinado a personas desarrolladoras y está pensado para usarse como par
 
 ## <a name="how-does-this-work"></a>¿Cómo funciona?
 
-Echa un vistazo a nuestro [blog](https://blogs.msdn.microsoft.com/wsl/); en él detallaremos la tecnología subyacente.
+Echa un vistazo a nuestro [blog](/archive/blogs/wsl/); en él detallaremos la tecnología subyacente.
 
 ## <a name="why-would-i-use-wsl-rather-than-linux-in-a-vm"></a>¿Por qué debo usar WSL en lugar de Linux en una VM?
 
@@ -103,7 +103,7 @@ git config --global credential.helper "/mnt/c/Program\ Files/Git/mingw64/libexec
 
 Ahora, cualquier operación de GIT que realice dentro de la distribución de WSL usará el Administrador de credenciales. Si ya tiene credenciales almacenadas en caché para un host, accederá a estas desde el Administrador de credenciales. Si no es así, recibirá una respuesta de diálogo que le solicitará sus credenciales, aunque esté en una consola Linux.
 
-Esta compatibilidad se basa en la interoperabilidad de [ entre el Subsistema de Windows para Linux y Windows propiamente](https://docs.microsoft.com/windows/wsl/interop).
+Esta compatibilidad se basa en la interoperabilidad de [ entre el Subsistema de Windows para Linux y Windows propiamente](./interop.md).
 
 ## <a name="how-do-i-use-a-windows-file-with-a-linux-app"></a>¿Cómo uso un archivo de Windows con una aplicación de Linux?
 
@@ -161,7 +161,7 @@ En las compilaciones anteriores a 1709 (16299), abre un símbolo del sistema y e
   lxrun /uninstall /full
   ```
   
-Las distribuciones de WSL instaladas desde Store se pueden desinstalar como cualquier otra aplicación de Windows; para ello, haz clic con el botón derecho en el icono de la aplicación y haz clic en Desinstalar; también puedes desinstalarlas a través de PowerShell mediante el cmdlet [`Remove-AppxPackage`](https://technet.microsoft.com/library/hh856038.aspx).
+Las distribuciones de WSL instaladas desde Store se pueden desinstalar como cualquier otra aplicación de Windows; para ello, haz clic con el botón derecho en el icono de la aplicación y haz clic en Desinstalar; también puedes desinstalarlas a través de PowerShell mediante el cmdlet [`Remove-AppxPackage`](/previous-versions//hh856038(v=technet.10)).
 
 ## <a name="why-does-ping-generate-permission-denied-errors"></a>¿Por qué el ping genera errores de tipo "Permiso denegado"?
 
@@ -181,7 +181,7 @@ WSL no se puede ejecutar en una consola heredada. Para desactivar la consola her
 
 ## <a name="why-do-i-get-error-0x80040154-when-i-run-bashexe-after-upgrading-windows"></a>¿Por qué obtengo el mensaje "Error: 0x80040154 "cuando ejecuto Bash.exe después de actualizar Windows?
 
-La característica "Subsistema de Windows para Linux" puede estar deshabilitada durante una actualización de Windows. Si esto ocurre, debes volver a habilitar la característica de Windows. Las instrucciones para habilitar la característica "Subsistema de Windows para Linux" se pueden encontrar en la [guía de instalación](https://docs.microsoft.com/windows/wsl/install-win10).
+La característica "Subsistema de Windows para Linux" puede estar deshabilitada durante una actualización de Windows. Si esto ocurre, debes volver a habilitar la característica de Windows. Las instrucciones para habilitar la característica "Subsistema de Windows para Linux" se pueden encontrar en la [guía de instalación](./install-win10.md).
 
 ## <a name="how-do-i-change-the-display-language-of-wsl"></a>¿Cómo cambio el idioma de visualización de WSL?
 

@@ -6,12 +6,12 @@ author: benhillis
 ms.date: 05/15/2020
 ms.topic: article
 ms.localizationpriority: high
-ms.openlocfilehash: f79acbbc7f6436bae54c5160e769cababa76a341
-ms.sourcegitcommit: 69fc9d3ca22cf3f07622db4cdf80c8ec751fe620
+ms.openlocfilehash: d7b868f959c62879524dcbdad20509ef35fecfce
+ms.sourcegitcommit: b15b847b87d29a40de4a1517315949bce9c7a3d5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90818697"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91413276"
 ---
 # <a name="release-notes-for-windows-subsystem-for-linux"></a>Notas de la versión del subsistema de Windows para Linux
 
@@ -1184,14 +1184,14 @@ Para obtener información general de Windows sobre la compilación 16176, visita
 
 ### <a name="fixed"></a>Fijo
 
-- [Se ha habilitado la compatibilidad serie](https://blogs.msdn.microsoft.com/wsl/2017/04/14/serial-support-on-the-windows-subsystem-for-linux/)
+- [Se ha habilitado la compatibilidad serie](/archive/blogs/wsl/serial-support-on-the-windows-subsystem-for-linux)
 - Se ha agregado la opción de socket de IP IP_OPTIONS [GH 1116]
 - Se ha implementado la función pwritev (al cargar el archivo en nginx/PHP-FPM) [GH 1506]
 - Se han agregado opciones de socket IP IP_MULTICAST_IF e IPV6_MULTICAST_IF [GH 990]
 - Compatibilidad con la opción de socket IP_MULTICAST_LOOP e IPV6_MULTICAST_LOOP [GH 1678]
 - Se ha agregado la opción de socket IP(V6)_MTU para el nodo de aplicaciones, traceroute, dig, nslookup, host
 - Se ha agregado la opción de socket de IP IPV6_UNICAST_HOPS
-- [Mejoras del sistema de archivos](https://blogs.msdn.microsoft.com/wsl/2017/04/18/file-system-improvements-to-the-windows-subsystem-for-linux/)
+- [Mejoras del sistema de archivos](/archive/blogs/wsl/file-system-improvements-to-the-windows-subsystem-for-linux)
     * Permite el montaje de rutas UNC
     * Habilita la compatibilidad con CDFS en drvfs
     * Controla correctamente los permisos para los sistemas de archivos de red en drvfs
@@ -1208,7 +1208,7 @@ Sin cambios desde 15042
 
 Para obtener información general de Windows sobre la compilación 16170, visita el [blog de Windows](https://blogs.windows.com/windowsexperience/2017/04/07/announcing-windows-10-insider-preview-build-16170-pc/).<br/>
 
-Hemos lanzado una nueva [publicación de blog](https://blogs.msdn.microsoft.com/wsl/2017/04/11/testing-the-windows-subsystem-for-linux/) en la que se describen nuestros esfuerzos para probar WSL.
+Hemos lanzado una nueva [publicación de blog](/archive/blogs/wsl/testing-the-windows-subsystem-for-linux) en la que se describen nuestros esfuerzos para probar WSL.
 
 ### <a name="fixed"></a>Fijo
 
@@ -1540,7 +1540,7 @@ Para obtener información general de Windows sobre la compilación 14959, visita
 
 ### <a name="fixed"></a>Fijo
 
-- Se ha mejorado la notificación del proceso PICO para Windows.  Encuentra información adicional en el [blog de WSL](https://blogs.msdn.microsoft.com/wsl/2016/11/01/wsl-antivirus-and-firewall-compatibility/).
+- Se ha mejorado la notificación del proceso PICO para Windows.  Encuentra información adicional en el [blog de WSL](/archive/blogs/wsl/wsl-antivirus-and-firewall-compatibility).
 - Se ha mejorado la estabilidad de interoperabilidad con Windows
 - Se ha corregido el error 0x80070057 al iniciar bash.exe cuando Protección de datos de empresa (EDP) está habilitado
 - Correcciones de errores y mejoras adicionales
@@ -1586,8 +1586,8 @@ $ cmd.exe /c dir
 
 Puedes encontrar más información en:
 
-- [Blog del equipo de WSL para Interop](https://blogs.msdn.microsoft.com/wsl/2016/10/19/windows-and-ubuntu-interoperability/)<br/>
-- [Documentación de interoperabilidad de MSDN](https://msdn.microsoft.com/commandline/wsl/interop)<br/>
+- [Blog del equipo de WSL para Interop](/archive/blogs/wsl/windows-and-ubuntu-interoperability)<br/>
+- [Documentación de interoperabilidad de MSDN](./interop.md)<br/>
 
 ### <a name="fixed"></a>Fijo
 
@@ -1807,7 +1807,7 @@ Para obtener información general de Windows sobre la compilación 14388, visita
 
 ### <a name="fixed"></a>Fijo
 - Correcciones para prepararse para la Actualización de aniversario de Windows 10 el 2/8
-  - Puedes encontrar más información sobre WSL en la Actualización de aniversario en nuestro [blog](https://blogs.msdn.microsoft.com/wsl/)
+  - Puedes encontrar más información sobre WSL en la Actualización de aniversario en nuestro [blog](/archive/blogs/wsl/)
 
 <br/>
 
@@ -1926,7 +1926,7 @@ A continuación se muestra una lista de llamadas del sistema nuevas o mejoradas 
 ## <a name="build-14342"></a>Compilación 14342
 Para obtener información general de Windows sobre la compilación 14342, visita el [blog de Windows](https://aka.ms/wip14342). <br/>
 
-Puedes encontrar información sobre VolFs y DriveFs en el [blog de WSL](https://blogs.msdn.microsoft.com/wsl). <br/>
+Puedes encontrar información sobre VolFs y DriveFs en el [blog de WSL](/archive/blogs/wsl/). <br/>
 
 ### <a name="fixed"></a>Fijo
 - Se ha corregido el problema de instalación cuando el usuario de Windows tenía caracteres Unicode en el nombre de usuario

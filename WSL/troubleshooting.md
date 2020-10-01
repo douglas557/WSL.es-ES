@@ -5,12 +5,12 @@ keywords: BashOnWindows, bash, wsl, windows, subsistemawindows, ubuntu
 ms.date: 01/20/2020
 ms.topic: article
 ms.localizationpriority: high
-ms.openlocfilehash: 83c73e99afd4745081290340a67edee3ec26dc60
-ms.sourcegitcommit: 69fc9d3ca22cf3f07622db4cdf80c8ec751fe620
+ms.openlocfilehash: 78d122ce22e3ab4d67339cc6f0d6038502e23dbb
+ms.sourcegitcommit: b15b847b87d29a40de4a1517315949bce9c7a3d5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/19/2020
-ms.locfileid: "90818717"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91413296"
 ---
 # <a name="troubleshooting-windows-subsystem-for-linux"></a>Solucionar problemas del subsistema de Windows para Linux
 
@@ -87,8 +87,8 @@ Para resolver este problema, visite `https://aka.ms/wsl2kernel` e instale el ker
 
 ### <a name="please-enable-the-virtual-machine-platform-windows-feature-and-ensure-virtualization-is-enabled-in-the-bios"></a>Habilite la característica de Windows de plataforma de máquina virtual y asegúrese de que la virtualización esté habilitada en el BIOS.
 
-1. Consulte [Requisitos de sistema de Hyper-V](https://docs.microsoft.com/windows-server/virtualization/hyper-v/system-requirements-for-hyper-v-on-windows#:~:text=on%20Windows%20Server.-,General%20requirements,the%20processor%20must%20have%20SLAT.).
-2. Si el equipo es una máquina virtual, habilite la [virtualización anidada](https://docs.microsoft.com/windows/wsl/wsl2-faq#can-i-run-wsl-2-in-a-virtual-machine) de forma manual. Inicie PowerShell como administrador y ejecute: 
+1. Consulte [Requisitos de sistema de Hyper-V](/windows-server/virtualization/hyper-v/system-requirements-for-hyper-v-on-windows#:~:text=on%20Windows%20Server.-,General%20requirements,the%20processor%20must%20have%20SLAT.).
+2. Si el equipo es una máquina virtual, habilite la [virtualización anidada](./wsl2-faq.md#can-i-run-wsl-2-in-a-virtual-machine) de forma manual. Inicie PowerShell como administrador y ejecute: 
 
 ```powershell
 Set-VMProcessor -VMName <VMName> -ExposeVirtualizationExtensions $true

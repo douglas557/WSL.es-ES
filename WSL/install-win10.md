@@ -5,12 +5,12 @@ keywords: BashOnWindows, bash, wsl, wsl2, windows, subsistema de windows para li
 ms.date: 09/15/2020
 ms.topic: article
 ms.localizationpriority: high
-ms.openlocfilehash: f617f006ae8067da8adbe1449bfcfe5bf32e73a3
-ms.sourcegitcommit: 1232d3b3becc4ceaa113f8ffb0b935c5550f99a2
+ms.openlocfilehash: 74a5960609e058b2f2da6160ecd04dc48f666a69
+ms.sourcegitcommit: b15b847b87d29a40de4a1517315949bce9c7a3d5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/18/2020
-ms.locfileid: "90777656"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91413122"
 ---
 # <a name="windows-subsystem-for-linux-installation-guide-for-windows-10"></a>Guía de instalación del Subsistema de Windows para Linux para Windows 10
 
@@ -43,7 +43,7 @@ Para actualizar a WSL 2, debe ejecutar Windows 10.
 Para comprobar la versión y el número de compilación, seleccione la **tecla del logotipo de Windows + R**, escriba **winver** y seleccione **Aceptar**. (También puedes escribir el comando `ver` en el símbolo del sistema de Windows). [Actualice a la versión más reciente de Windows](ms-settings:windowsupdate) en el menú Configuración.
 
 > [!NOTE]
-> Si está ejecutando Windows 10, versión 1903 o 1909, abra "Configuración" en el menú de Windows, vaya a "Actualización y seguridad" y seleccione "Buscar actualizaciones". El número de compilación debe ser 18362.1049 o posterior o 18363.1049 o posterior, con la compilación secundaria posterior a .1049. Leer más: [La compatibilidad con WSL 2 estará disponible en breve para las versiones 1903 y 1909 de Windows 10](https://devblogs.microsoft.com/commandline/wsl-2-support-is-coming-to-windows-10-versions-1903-and-1909/). Consulte las [instrucciones de solución de problemas](https://docs.microsoft.com/windows/wsl/troubleshooting#im-on-windows-10-version-1903-and-i-still-do-not-see-options-for-wsl-2).
+> Si está ejecutando Windows 10, versión 1903 o 1909, abra "Configuración" en el menú de Windows, vaya a "Actualización y seguridad" y seleccione "Buscar actualizaciones". El número de compilación debe ser 18362.1049 o posterior o 18363.1049 o posterior, con la compilación secundaria posterior a .1049. Leer más: [La compatibilidad con WSL 2 estará disponible en breve para las versiones 1903 y 1909 de Windows 10](https://devblogs.microsoft.com/commandline/wsl-2-support-is-coming-to-windows-10-versions-1903-and-1909/). Consulte las [instrucciones de solución de problemas](./troubleshooting.md#im-on-windows-10-version-1903-and-i-still-do-not-see-options-for-wsl-2).
 
 ## <a name="step-3---enable-virtual-machine-feature"></a>Paso 3: Habilitación de la característica Máquina virtual
 
@@ -81,7 +81,7 @@ wsl --set-default-version 2
 ```
 
 > [!NOTE]
-> La actualización de WSL 1 a WSL 2 puede tardar varios minutos en completarse, en función del tamaño de la distribución de destino. Si ejecuta una instalación anterior (heredada) de WSL 1 de la Actualización de aniversario de Windows 10 o de Creators Update, es posible que se produzca un error de actualización. Siga estas instrucciones para [desinstalar y quitar las distribuciones heredadas](https://docs.microsoft.com/windows/wsl/install-legacy#uninstallingremoving-the-legacy-distro).
+> La actualización de WSL 1 a WSL 2 puede tardar varios minutos en completarse, en función del tamaño de la distribución de destino. Si ejecuta una instalación anterior (heredada) de WSL 1 de la Actualización de aniversario de Windows 10 o de Creators Update, es posible que se produzca un error de actualización. Siga estas instrucciones para [desinstalar y quitar las distribuciones heredadas](./install-legacy.md#uninstallingremoving-the-legacy-distro).
 >
 > Si `wsl --set-default-version` resulta en un comando no válido, especifique `wsl --help`. Si `--set-default-version` no aparece, significa que el sistema operativo no lo admite y debe actualizar a la versión 1903, compilación 18362 o posterior.
 >
@@ -124,9 +124,9 @@ Tendrás que [crear una cuenta de usuario y una contraseña para la nueva distri
 
 ## <a name="install-windows-terminal-optional"></a>Instalación de Terminal Windows (opcional)
 
-Terminal Windows permite habilitar varias pestañas (cambiar rápidamente entre varias líneas de comandos de Linux, el símbolo del sistema de Windows, PowerShell, la CLI de Azure, etc.), crear enlaces de teclado personalizados (teclas de método abreviado para abrir o cerrar pestañas, copiar y pegar, etc.), usar la característica de búsqueda y configurar temas personalizados (esquemas de colores, estilos y tamaños de fuente, imagen de fondo/desenfoque/transparencia). [Más información.](https://docs.microsoft.com/windows/terminal)
+Terminal Windows permite habilitar varias pestañas (cambiar rápidamente entre varias líneas de comandos de Linux, el símbolo del sistema de Windows, PowerShell, la CLI de Azure, etc.), crear enlaces de teclado personalizados (teclas de método abreviado para abrir o cerrar pestañas, copiar y pegar, etc.), usar la característica de búsqueda y configurar temas personalizados (esquemas de colores, estilos y tamaños de fuente, imagen de fondo/desenfoque/transparencia). [Más información.](/windows/terminal)
 
-[Instalación de Terminal Windows](https://docs.microsoft.com/windows/terminal/get-started).
+[Instalación de Terminal Windows](/windows/terminal/get-started).
 
   ![Terminal Windows](media/terminal.png)
 
@@ -185,7 +185,7 @@ A continuación, se muestran errores relacionados y las correcciones sugeridas. 
 > Consulte el [subproceso n.º 4103 de la documentación sobre WSL en GitHub](https://github.com/microsoft/WSL/issues/4103), en el que se realiza el seguimiento de este problema para obtener información actualizada.
 
 - **El término 'wsl' no se reconoce como nombre de cmdlet, función, archivo de script o programa ejecutable.**
-  - Asegúrate de que el [componente opcional del Subsistema de Windows para Linux esté instalado](./install-win10.md#step-3---enable-virtual-machine-feature). Además, si usa un dispositivo ARM64 y ejecuta este comando desde PowerShell, recibirá este error. En su lugar, ejecuta `wsl.exe` desde [PowerShell Core](https://docs.microsoft.com/powershell/scripting/install/installing-powershell-core-on-windows) o el símbolo del sistema.
+  - Asegúrate de que el [componente opcional del Subsistema de Windows para Linux esté instalado](./install-win10.md#step-3---enable-virtual-machine-feature). Además, si usa un dispositivo ARM64 y ejecuta este comando desde PowerShell, recibirá este error. En su lugar, ejecuta `wsl.exe` desde [PowerShell Core](/powershell/scripting/install/installing-powershell-core-on-windows) o el símbolo del sistema.
 
 - **Error: Esta actualización solo se aplica a las máquinas con el Subsistema de Windows para Linux.**
   - Para instalar el paquete MSI de actualización del kernel de Linux, WSL es necesario y debe habilitarse primero. Si se produce un error, verá el mensaje: `This update only applies to machines with the Windows Subsystem for Linux`.

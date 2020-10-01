@@ -5,12 +5,12 @@ keywords: BashOnWindows, bash, wsl, wsl2, windows, subsistema de windows para li
 ms.date: 07/24/2018
 ms.topic: article
 ms.localizationpriority: high
-ms.openlocfilehash: 7ce4455dd4ab5e75d69ba841d7dfb7963af9c891
-ms.sourcegitcommit: 3fb40fd65b34a5eb26b213a0df6a3b2746b7a9b4
+ms.openlocfilehash: 11dc84d3a58b51241c7c63e8ca35eba94a12508b
+ms.sourcegitcommit: b15b847b87d29a40de4a1517315949bce9c7a3d5
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/12/2020
-ms.locfileid: "83235791"
+ms.lasthandoff: 09/28/2020
+ms.locfileid: "91413216"
 ---
 # <a name="initializing-a-newly-installed-distribution"></a>Inicialización de una distribución recién instalada
 
@@ -52,7 +52,7 @@ sudo apt update && sudo apt upgrade
 
 > Windows no actualiza automáticamente las distribuciones de Linux: Se trata de una tarea que los usuarios de Linux prefieren controlar.
 
-Has terminado. Disfruta con la nueva distribución de Linux en WSL. Para obtener más información sobre WSL, revisa los otros [documentos de WSL](https://aka.ms/wsldocs) o la [página de recursos de aprendizaje de WSL](https://aka.ms/learnwsl).
+Has terminado. Disfruta con la nueva distribución de Linux en WSL. Para obtener más información sobre WSL, revisa los otros [documentos de WSL](./index.md) o la [página de recursos de aprendizaje de WSL](https://aka.ms/learnwsl).
 
 ![Disfruta del uso de Linux en WSL.](media/linux-on-wsl.png)
 
