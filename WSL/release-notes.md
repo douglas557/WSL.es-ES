@@ -6,14 +6,19 @@ author: benhillis
 ms.date: 05/15/2020
 ms.topic: article
 ms.localizationpriority: high
-ms.openlocfilehash: d7b868f959c62879524dcbdad20509ef35fecfce
-ms.sourcegitcommit: b15b847b87d29a40de4a1517315949bce9c7a3d5
+ms.openlocfilehash: c772185501b009369d7d47752dc792b8f90b482d
+ms.sourcegitcommit: dee2bf22c0c9f5725122a155d2876fcb2b7427d0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/28/2020
-ms.locfileid: "91413276"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92211749"
 ---
 # <a name="release-notes-for-windows-subsystem-for-linux"></a>Notas de la versión del subsistema de Windows para Linux
+
+## <a name="build-20226"></a>Compilación 20226
+Para obtener información general de Windows sobre la compilación 20226, visite el [blog de Windows](https://blogs.windows.com/windows-insider/2020/09/10/announcing-windows-10-insider-preview-build-20226/).
+
+* Se corrigió el bloqueo en el servicio LxssManager. [GH 5902]
 
 ## <a name="build-20211"></a>Compilación 20211
 Para obtener información general de Windows sobre la compilación 20211, visite el [blog de Windows](https://blogs.windows.com/windows-insider/2020/09/10/announcing-windows-10-insider-preview-build-20211/).

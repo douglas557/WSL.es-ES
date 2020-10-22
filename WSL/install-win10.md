@@ -5,12 +5,12 @@ keywords: BashOnWindows, bash, wsl, wsl2, windows, subsistema de windows para li
 ms.date: 09/15/2020
 ms.topic: article
 ms.localizationpriority: high
-ms.openlocfilehash: 74a5960609e058b2f2da6160ecd04dc48f666a69
-ms.sourcegitcommit: b15b847b87d29a40de4a1517315949bce9c7a3d5
+ms.openlocfilehash: cf349615dc40f1912fdb4dff3f5593627fa246e6
+ms.sourcegitcommit: dee2bf22c0c9f5725122a155d2876fcb2b7427d0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/28/2020
-ms.locfileid: "91413122"
+ms.lasthandoff: 10/20/2020
+ms.locfileid: "92211779"
 ---
 # <a name="windows-subsystem-for-linux-installation-guide-for-windows-10"></a>Guía de instalación del Subsistema de Windows para Linux para Windows 10
 
@@ -28,7 +28,7 @@ Abre PowerShell como administrador y ejecuta:
 dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
 ```
 
-Ahora se recomienda continuar con el paso 2, actualizar a WSL 2, pero si solo desea instalar WSL 1, ahora puede reiniciar el equipo y dirigirse al [Paso 6: Instalación de la distribución de Linux que quiera](./install-win10.md#step-6---install-your-linux-distribution-of-choice). Para actualizar a WSL 2, espere a reiniciar la máquina y continúe con el paso siguiente.
+Ahora se recomienda continuar con el paso 2, Actualización a WSL 2, pero si solo quiere instalar WSL 1, ahora puede **reiniciar** el equipo y dirigirse al [Paso 6: Instalación de la distribución de Linux que quiera](./install-win10.md#step-6---install-your-linux-distribution-of-choice). Para actualizar a WSL 2, **espere para reiniciar** la máquina y continúe con el paso siguiente.
 
 ## <a name="step-2---update-to-wsl-2"></a>Paso 2: Actualización a WSL 2
 
@@ -74,7 +74,7 @@ Una vez completada la instalación, vaya al paso siguiente: configuración de WS
 
 ## <a name="step-5---set-wsl-2-as-your-default-version"></a>Paso 5: Definición de WSL 2 como versión predeterminada
 
-Abra PowerShell como Administrador y ejecute este comando para establecer WSL 2 como versión predeterminada al instalar una nueva distribución de Linux:
+Abra PowerShell y ejecute este comando para establecer WSL 2 como versión predeterminada al instalar una nueva distribución de Linux:
 
 ```powershell
 wsl --set-default-version 2
@@ -160,7 +160,7 @@ A continuación, se muestran errores relacionados y las correcciones sugeridas. 
 
 - **Error 0x80070003 en la instalación**
   - El Subsistema de Windows para Linux solo se ejecuta en la unidad del sistema (normalmente se trata de la unidad `C:`). Asegúrate de que las distribuciones estén almacenadas en la unidad del sistema:  
-  - Abre **Configuración** -> **Almacenamiento** -> **Más opciones de almacenamiento: Cambia el lugar donde se guarda el nuevo contenido**
+  - Abra **Configuración** -> **Sistema --> **Almacenamiento** -> **Más configuraciones de almacenamiento: Cambia el lugar donde se guarda el nuevo contenido**
     ![Imagen de la configuración del sistema para instalar aplicaciones en la unidad C:](media/AppStorage.png)
 
 - **Error 0x8007019e de WslRegisterDistribution**
